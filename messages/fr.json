@@ -1,0 +1,76 @@
+{
+  "Navigation": {
+    "home": "Maison",
+    "services": "Expertises",
+    "projects": "Projets",
+    "about": "À Propos",
+    "contact": "Contact",
+    "startProject": "Démarrer un projet"
+  },
+  "Hero": {
+    "label": "[ Architecture & Ingénierie — Casablanca ]",
+    "titleLine1": "L'Architecture",
+    "titleLine2": "comme acte",
+    "titleLine3": "de vision.",
+    "description": "Fondée par Soukaina Elaouad, EAI conçoit des architectures qui défient l'ordinaire — de la vision initiale à la livraison finale, avec la même exigence absolue.",
+    "primaryCta": "Découvrir nos projets",
+    "secondaryCta": "Notre démarche →",
+    "scroll": "Défiler",
+    "stats": "500+ projets livrés"
+  },
+  "Manifesto": {
+    "label": "[ Notre Philosophie ]",
+    "line1": "Nous ne construisons pas des bâtiments.",
+    "line2": "Nous gravons des intentions dans la pierre.",
+    "stats": {
+      "projects": "Projets livrés",
+      "experience": "Années d'expertise",
+      "countries": "Pays d'intervention",
+      "team": "Collaborateurs"
+    }
+  },
+  "Services": {
+    "label": "[ Nos Expertises ]",
+    "title": "Trois disciplines, une signature.",
+    "architecture": "Architecture",
+    "bim": "BIM Consulting",
+    "interior": "Design Intérieur",
+    "explore": "Explorer →"
+  },
+  "Projets": {
+    "label": "[ Portfolio ]",
+    "title": "Projets Signature",
+    "viewAll": "Voir tous les projets →"
+  },
+  "Apropos": {
+    "label": "[ Derrière la Transformation ]",
+    "founder": "Soukaina Elaouad",
+    "role": "Architecte fondatrice, DG",
+    "quote": "L'architecture est à la fois un acte artistique et une responsabilité technique. Chaque projet que nous livrons doit être beau, solide, durable et utile.",
+    "cred1": "Architecte DPLG — École Nationale Supérieure d'Architecture",
+    "cred2": "Fondatrice d'EAI depuis 2009",
+    "cred3": "Membre de l'Ordre National des Architectes du Maroc"
+  },
+  "Events": {
+    "label": "[ Événements ]",
+    "event": "FORUM INTERNATIONAL DE LA DÉCORATION INTÉRIEURE",
+    "date": "3 — 5 Décembre 2026",
+    "location": "Casablanca, Maroc",
+    "cta": "En savoir plus →"
+  },
+  "Testimonials": {
+    "label": "[ L'Excellence Prouvée ]",
+    "title": "Ce que disent nos clients."
+  },
+  "CallToAction": {
+    "label": "[ Initier une Collaboration ]",
+    "line1": "Votre projet mérite",
+    "line2": "l'excellence.",
+    "primaryCta": "Contactez-nous",
+    "secondaryCta": "Voir notre démarche"
+  },
+  "Footer": {
+    "tagline": "Précision. Ambition. Vision.",
+    "copyright": "© 2025 ELAOUAD Architecture et Ingénierie. Tous droits réservés."
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "Navigation": {
+    "home": "Home",
+    "services": "Expertise",
+    "projects": "Projects",
+    "about": "About",
+    "contact": "Contact",
+    "startProject": "Start a Project"
+  },
+  "Hero": {
+    "label": "[ Architecture & Engineering — Casablanca ]",
+    "titleLine1": "Architecture",
+    "titleLine2": "as an act",
+    "titleLine3": "of vision.",
+    "description": "Founded by Soukaina Elaouad, EAI designs architectures that defy the ordinary — from the initial vision to final delivery, with the same absolute rigor.",
+    "primaryCta": "Discover our projects",
+    "secondaryCta": "Our approach →",
+    "scroll": "Scroll",
+    "stats": "500+ delivered projects"
+  },
+  "Manifesto": {
+    "label": "[ Our Philosophy ]",
+    "line1": "We don't just build buildings.",
+    "line2": "We carve intentions into stone.",
+    "stats": {
+      "projects": "Delivered projects",
+      "experience": "Years of expertise",
+      "countries": "Countries",
+      "team": "Collaborators"
+    }
+  },
+  "Services": {
+    "label": "[ Our Expertise ]",
+    "title": "Three disciplines, one signature.",
+    "architecture": "Architecture",
+    "bim": "BIM Consulting",
+    "interior": "Interior Design",
+    "explore": "Explore →"
+  },
+  "Projets": {
+    "label": "[ Portfolio ]",
+    "title": "Signature Projects",
+    "viewAll": "View all projects →"
+  },
+  "Apropos": {
+    "label": "[ Behind the Transformation ]",
+    "founder": "Soukaina Elaouad",
+    "role": "Founding Architect, CEO",
+    "quote": "Architecture is both an artistic act and a technical responsibility. Every project we deliver must be beautiful, solid, durable, and useful.",
+    "cred1": "Architect DPLG — National School of Architecture",
+    "cred2": "Founder of EAI since 2009",
+    "cred3": "Member of the National Order of Architects of Morocco"
+  },
+  "Events": {
+    "label": "[ Events ]",
+    "event": "INTERNATIONAL INTERIOR DECORATION FORUM",
+    "date": "December 3 — 5, 2026",
+    "location": "Casablanca, Morocco",
+    "cta": "Learn more →"
+  },
+  "Testimonials": {
+    "label": "[ Proven Excellence ]",
+    "title": "What our clients say."
+  },
+  "CallToAction": {
+    "label": "[ Initiate a Collaboration ]",
+    "line1": "Your project deserves",
+    "line2": "excellence.",
+    "primaryCta": "Contact us",
+    "secondaryCta": "View our approach"
+  },
+  "Footer": {
+    "tagline": "Precision. Ambition. Vision.",
+    "copyright": "© 2025 ELAOUAD Architecture & Engineering. All rights reserved."
+  }
+}
