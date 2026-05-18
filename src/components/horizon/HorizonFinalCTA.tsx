@@ -108,14 +108,14 @@ export function HorizonFinalCTA() {
           >
             <div className="flex flex-col gap-3">
               <span className="text-[10px] text-eai-brass mb-1">{t('email')}</span>
-              <a href="mailto:contact@elaouad.com" className="hover:text-eai-brass transition-colors">
-                contact@elaouad.com
+              <a href="mailto:contact@eai-construction.com" className="hover:text-eai-brass transition-colors">
+                contact@eai-construction.com
               </a>
             </div>
             <div className="flex flex-col gap-3">
               <span className="text-[10px] text-eai-brass mb-1">{t('phone')}</span>
-              <a href="tel:+212666880038" className="hover:text-eai-brass transition-colors">
-                +212 666 880 038
+              <a href="tel:+212520198738" className="hover:text-eai-brass transition-colors">
+                +212 520 19 87 38
               </a>
             </div>
             <div className="flex flex-col gap-3">

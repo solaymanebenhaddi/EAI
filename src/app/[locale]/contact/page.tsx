@@ -31,9 +31,9 @@ export default async function ContactPage(props: { params: Promise<{ locale: str
             <div>
               <p className="font-body text-label text-mortar uppercase tracking-widest mb-4">Adresse</p>
               <p className="font-body text-[18px] text-ink leading-relaxed">
-                <span className="block">Florida Center Park, 10</span>
-                <span className="block">2 Bd Zoulikha Nasri</span>
-                <span className="block">Casablanca 20520, Maroc</span>
+                <span className="block">10 Florida Center Park 2</span>
+                <span className="block">Boulevard Zoulikha Nasri, Sidi Maarouf</span>
+                <span className="block">Casablanca, Maroc</span>
               </p>
             </div>
             
@@ -62,8 +62,8 @@ export default async function ContactPage(props: { params: Promise<{ locale: str
             
             <div>
               <p className="font-body text-label text-mortar uppercase tracking-widest mb-4">WhatsApp</p>
-              <a href="https://wa.me/212666880038" className="font-body text-[18px] text-ink hover:text-brass transition-colors">
-                +212 666 880 038
+              <a href="https://wa.me/212666798536" className="font-body text-[18px] text-ink hover:text-brass transition-colors">
+                +212 666 79 85 36
               </a>
             </div>
           </div>

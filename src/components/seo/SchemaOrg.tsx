@@ -19,9 +19,9 @@ export function SchemaOrg({ locale }: { locale: Locale }) {
         inLanguage: locale,
         address: {
           '@type': 'PostalAddress',
-          streetAddress: 'Florida Center Park, 10, 2 Bd Zoulikha Nasri',
+          streetAddress: '10 Florida Center Park 2, Boulevard Zoulikha Nasri, Sidi Maarouf',
           addressLocality: 'Casablanca',
-          postalCode: '20520',
+          postalCode: '20200',
           addressCountry: 'MA',
         },
         contactPoint: {

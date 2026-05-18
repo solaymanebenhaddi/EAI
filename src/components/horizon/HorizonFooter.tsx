@@ -73,16 +73,20 @@ export function HorizonFooter() {
     { name: t('navServices'), href: '/expertises' },
     { name: t('navProjects'), href: '/projets' },
     { name: t('navEvents'), href: '/events' },
+    { name: t('expFormations'), href: '/formations' },
     { name: t('navAbout'), href: '/a-propos' },
     { name: t('navContact'), href: '/contact' },
   ];
 
   const expertiseLinks = [
     { name: t('expArchitecture'), href: '/expertises#01' },
-    { name: t('expBIM'), href: '/expertises#02' },
-    { name: t('expEngineering'), href: '/expertises#03' },
-    { name: t('expInterior'), href: '/expertises#04' },
-    { name: t('expUrbanism'), href: '/expertises#05' },
+    { name: t('expEngineering'), href: '/expertises#02' },
+    { name: t('expBIM'), href: '/expertises#03' },
+    { name: t('expCoordination'), href: '/expertises#04' },
+    { name: t('expInterior'), href: '/expertises#05' },
+    { name: t('expUrbanism'), href: '/expertises#06' },
+    { name: t('expTopography'), href: '/expertises#07' },
+    { name: t('expFormations'), href: '/expertises#08' },
   ];
 
   const { scrollYProgress } = useScroll({
@@ -133,7 +137,7 @@ export function HorizonFooter() {
               {t('ctaConsultation')}
             </Link>
             <a
-              href="https://wa.me/212666880038"
+              href="https://wa.me/212666798536"
               onClick={() => trackEvent('whatsapp_click', { location: 'footer' })}
               className="border border-eai-line px-8 py-4 text-label uppercase tracking-widest text-eai-charcoal transition-all duration-300 hover:border-eai-brass hover:text-eai-brass bg-eai-paper/40 md:px-10 md:py-5"
             >
@@ -204,13 +208,13 @@ export function HorizonFooter() {
             <ul className="flex flex-col gap-3">
               <li className="font-body text-sm text-eai-warm-grey">{t('office')}</li>
               <li>
-                <a href="mailto:contact@elaouad.com" className="font-body text-sm text-eai-warm-grey transition-colors hover:text-eai-charcoal">
-                  contact@elaouad.com
+                <a href="mailto:contact@eai-construction.com" className="font-body text-sm text-eai-warm-grey transition-colors hover:text-eai-charcoal">
+                  contact@eai-construction.com
                 </a>
               </li>
               <li>
-                <a href="tel:+212666880038" className="font-body text-sm text-eai-warm-grey transition-colors hover:text-eai-charcoal">
-                  +212 666 880 038
+                <a href="tel:+212520198738" className="font-body text-sm text-eai-warm-grey transition-colors hover:text-eai-charcoal">
+                  +212 520 19 87 38
                 </a>
               </li>
             </ul>

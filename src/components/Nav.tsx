@@ -30,6 +30,7 @@ export function Nav() {
     { name: t('services'), href: '/expertises' },
     { name: t('projects'), href: '/projets' },
     { name: t('events'), href: '/events' },
+    { name: t('courses'), href: '/formations' },
     { name: t('about'), href: '/a-propos' },
     { name: t('contact'), href: '/contact' },
   ];
@@ -62,7 +63,7 @@ export function Nav() {
             </span>
           </div>
         </Link>
-
+ 
         {/* DESKTOP LINKS */}
         <div className="hidden lg:flex justify-center items-center gap-8">
           {navLinks.map((link) => {
@@ -85,7 +86,7 @@ export function Nav() {
             );
           })}
         </div>
-
+ 
         {/* CTA & HAMBURGER */}
         <div className="flex justify-end items-center gap-4 md:gap-6">
           {/* Language Switcher */}
@@ -103,14 +104,14 @@ export function Nav() {
               </Link>
             ))}
           </div>
-
+ 
           <Link
             href="/contact"
             className="hidden lg:block border border-eai-brass/60 text-eai-brass px-5 py-2 text-label uppercase tracking-[0.1em] hover:bg-eai-brass hover:text-eai-paper transition-all duration-280"
           >
             {t('startProject')}
           </Link>
-
+ 
           <button
             type="button"
             aria-label={isMobileMenuOpen ? t('closeMenu') : t('openMenu')}
@@ -123,7 +124,7 @@ export function Nav() {
           </button>
         </div>
       </div>
-
+ 
       {/* MOBILE MENU */}
       <AnimatePresence>
         {isMobileMenuOpen && (
@@ -167,10 +168,10 @@ export function Nav() {
           </motion.div>
         )}
       </AnimatePresence>
-
+ 
       <div className="absolute top-full left-0 right-0 z-50 grid grid-cols-2 border-b border-eai-line lg:hidden bg-eai-paper/95 backdrop-blur-md shadow-md">
         <a
-          href="https://wa.me/212666880038"
+          href="https://wa.me/212666798536"
           onClick={() => trackEvent('whatsapp_click', { location: 'mobile_sticky_nav' })}
           className="flex h-14 items-center justify-center gap-2 border-r border-eai-line font-body text-label uppercase tracking-[0.12em] text-eai-warm-grey transition-colors hover:text-eai-brass"
         >

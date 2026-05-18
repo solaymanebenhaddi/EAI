@@ -9,7 +9,7 @@ export const siteUrl = 'https://elaouad-architecture.com';
 
 const locales: Locale[] = ['fr', 'en', 'ar'];
 
-type PageKey = 'home' | 'projects' | 'expertises' | 'about' | 'events' | 'contact';
+type PageKey = 'home' | 'projects' | 'expertises' | 'about' | 'events' | 'contact' | 'formations';
 
 const pageSeo: Record<PageKey, Record<Locale, { title: string; description: string; path: string }>> = {
   home: {
@@ -95,6 +95,23 @@ const pageSeo: Record<PageKey, Record<Locale, { title: string; description: stri
       title: 'فعاليات ELAOUAD FIDI 2026',
       description: 'فعاليات ELAOUAD تقدم FIDI 2026، منتدى البناء بالمغرب، التصميم الداخلي والمواد والتواصل الدولي.',
       path: '/events',
+    },
+  },
+  formations: {
+    fr: {
+      title: 'Formations Architecture BIM & Logicielles | ELAOUAD Courses',
+      description: 'Formations professionnelles et pratiques au Maroc: BIM, Revit, AutoCAD, 3ds Max, conduite de chantier, design intérieur et gestion de projet.',
+      path: '/formations',
+    },
+    en: {
+      title: 'Architecture BIM & Software Training | ELAOUAD Courses',
+      description: 'Professional and practical training in Morocco: BIM, Revit, AutoCAD, 3ds Max, site supervision, interior design, and project management.',
+      path: '/formations',
+    },
+    ar: {
+      title: 'دورات العمارة وBIM والبرمجيات | ELAOUAD Courses',
+      description: 'تكوين مهني وعملي بالمغرب: نمذجة BIM، ريفيت، أوتوكاد، إدارة المشاريع والتصميم الداخلي.',
+      path: '/formations',
     },
   },
   contact: {

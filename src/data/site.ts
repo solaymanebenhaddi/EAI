@@ -93,235 +93,249 @@ const text = (fr: string, en: string, ar: string): LocalizedText => ({ fr, en, a
 const pick = (value: LocalizedText, locale: Locale) => value[locale] ?? value.fr;
 
 export const projectStats = [
-  { value: '100+', label: text('Projets', 'Projects', 'مشاريع') },
-  { value: '10K+', label: text('Visiteurs FIC', 'FIC visitors', 'زوار FIC') },
-  { value: '4', label: text('Continents', 'Continents', 'قارات') },
+  { value: '50+', label: text('Projets', 'Projects', 'مشاريع') },
+  { value: '10K+', label: text('Visiteurs FIDI', 'FIDI Visitors', 'زوار FIDI') },
+  { value: '1', label: text('Équipe intégrée', 'Integrated Team', 'فريق متكامل') },
 ];
 
 export const manifestoStats = [
-  { value: 500, suffix: '+', label: text('Projets livrés', 'Delivered projects', 'مشاريع منجزة') },
-  { value: 15, suffix: '+', label: text('Années d’expertise', 'Years of expertise', 'سنوات خبرة') },
-  { value: 12, suffix: '', label: text('Pays d’intervention', 'Countries of operation', 'بلدا للتدخل') },
-  { value: 60, suffix: '+', label: text('Collaborateurs', 'Collaborators', 'متعاونا') },
+  { value: 8, suffix: '+', label: text('Années d’expertise', 'Years of expertise', 'سنوات خبرة') },
+  { value: 50, suffix: '+', label: text('Projets & Études', 'Projects & Studies', 'مشاريع ودراسات') },
+  { value: 1, suffix: '', label: text('Équipe intégrée', 'Integrated team', 'فريق متكامل') },
+  { value: 100, suffix: '%', label: text('Engagement de livraison', 'Delivery commitment', 'التزام التسليم') },
 ];
 
 const localizedServices: LocalizedService[] = [
   {
     id: '01',
     title: text('Architecture', 'Architecture', 'الهندسة المعمارية'),
-    value: text('Concevoir avec la lumière, bâtir avec la matière.', 'Design with light, build with matter.', 'نصمم بالضوء ونبني بالمادة.'),
+    value: text('Concevoir des lieux avec sens, précision et caractère.', 'Designing spaces with meaning, precision, and character.', 'تصميم المساحات بمعنى ودقة وشخصية.'),
     description: text(
-      "Conception architecturale complète pour projets résidentiels, tertiaires et publics, avec une attention précise au contexte, à la lumière et aux usages.",
-      'Complete architectural design for residential, commercial, and public projects, with precise attention to context, light, and use.',
-      'تصميم معماري متكامل للمشاريع السكنية والتجارية والعامة، مع عناية دقيقة بالسياق والضوء والاستخدام.'
+      "Nous développons des projets architecturaux qui répondent aux usages, au contexte et à l’identité du client. Chaque conception est pensée pour équilibrer esthétique, fonctionnalité, réglementation, faisabilité et durabilité.",
+      'We develop architectural projects that respond to the uses, context, and identity of the client. Each design is conceived to balance aesthetics, functionality, regulation, feasibility, and sustainability.',
+      'نحن نطور مشاريع معمارية تستجيب للاستخدامات والسياق وهوية العميل. تم تصميم كل تصميم لتحقيق التوازن بين الجمال والوظيفة والتنظيم والجدوى والاستدامة.'
     ),
     bullets: {
-      fr: ['Conception architecturale', 'Permis et études réglementaires', 'Suivi architectural'],
-      en: ['Architectural design', 'Permits and regulatory studies', 'Architectural supervision'],
-      ar: ['التصميم المعماري', 'الرخص والدراسات التنظيمية', 'التتبع المعماري'],
+      fr: ['Conception architecturale', 'Plans et dossiers de permis', 'Optimisation des espaces', 'Coordination avec les études techniques', 'Accompagnement jusqu’à la réalisation'],
+      en: ['Architectural design', 'Permit plans and dossiers', 'Space optimization', 'Coordination with technical studies', 'Support until realization'],
+      ar: ['التصميم المعmاري', 'خطط وملفات الترخيص', 'تحسين المساحة', 'التنسيق مع الدراسات الفنية', 'الدعم حتى الإنجاز'],
     },
     image: '/images/service1.webp',
   },
   {
     id: '02',
-    title: text('BIM Consulting', 'BIM Consulting', 'استشارات BIM'),
-    value: text('L’ingénierie prédictive au service de la précision.', 'Predictive engineering in service of precision.', 'هندسة تنبؤية في خدمة الدقة.'),
+    title: text('Ingénierie & études techniques', 'Engineering & technical studies', 'الهندسة والدраسات الفنية'),
+    value: text('Transformer la vision architecturale en solution maîtrisée.', 'Transforming the architectural vision into a controlled solution.', 'تحويل الرؤية المعمارية إلى حل هندسي متكامل.'),
     description: text(
-      "Modélisation intelligente, coordination spatiale et gestion des données pour anticiper les conflits avant le chantier.",
-      'Intelligent modeling, spatial coordination, and data management to anticipate conflicts before construction.',
-      'نمذجة ذكية وتنسيق مكاني وإدارة بيانات لتوقع التعارضات قبل الورش.'
+      "Nos études techniques permettent d’analyser, structurer et fiabiliser les projets avant et pendant leur réalisation. L’objectif est de réduire les imprévus, clarifier les décisions et garantir une exécution cohérente.",
+      'Our technical studies allow us to analyze, structure, and secure projects before and during their realization. The goal is to reduce unforeseen issues, clarify decisions, and guarantee coherent execution.',
+      'تسمح لنا دراساتنا الفنية بتحليل المشاريع وهيكلتها وتأمينها قبل وأثناء إنجازها. الهدف هو تقليل المشكلات غير المتوقعة وتوضيح القرارات وضمان التنفيذ المتماسك.'
     ),
     bullets: {
-      fr: ['Maquette numérique BIM', 'Coordination MEP et structure', 'Gestion des données bâtiment'],
-      en: ['BIM digital model', 'MEP and structural coordination', 'Building data management'],
-      ar: ['نموذج رقمي BIM', 'تنسيق الأنظمة والهيكل', 'إدارة بيانات المبنى'],
-    },
-    image: '/images/service2.webp',
-  },
-  {
-    id: '03',
-    title: text('Ingénierie & Project Management', 'Engineering & Project Management', 'الهندسة وإدارة المشاريع'),
-    value: text('De l’esquisse à la remise des clés, une maîtrise totale.', 'From sketch to handover, complete control.', 'من الرسم الأول إلى التسليم، تحكم كامل.'),
-    description: text(
-      "Pilotage technique, économie de la construction, coordination OPC et suivi d’exécution pour sécuriser délais, budget et qualité.",
-      'Technical leadership, cost control, scheduling coordination, and execution monitoring to protect time, budget, and quality.',
-      'قيادة تقنية ومراقبة للتكلفة والتنسيق والمتابعة لضمان الوقت والميزانية والجودة.'
-    ),
-    bullets: {
-      fr: ['Études techniques', 'Pilotage et coordination OPC', 'Économie de la construction'],
-      en: ['Technical studies', 'Planning and coordination', 'Construction economics'],
-      ar: ['دراسات تقنية', 'التخطيط والتنسيق', 'اقتصاد البناء'],
+      fr: ['Études techniques et économiques', 'Calculs et analyse structurelle', 'Études de faisabilité', 'Estimation des coûts', 'Préparation des dossiers techniques'],
+      en: ['Technical and economic studies', 'Calculations and structural analysis', 'Feasibility studies', 'Cost estimation', 'Preparation of technical dossiers'],
+      ar: ['الدراسات الفنية والاقتصادية', 'الحسابات والتحليل الهيكلي', 'دراسات الجدوى', 'تقدير التكاليف', 'إعداد الملفات الفنية'],
     },
     image: '/images/service3.webp',
   },
   {
-    id: '04',
-    title: text('Design Intérieur', 'Interior Design', 'التصميم الداخلي'),
-    value: text('L’expérience de l’espace poussée au détail.', 'Spatial experience refined to the detail.', 'تجربة المكان مصقولة حتى أدق التفاصيل.'),
+    id: '03',
+    title: text('BIM Consulting', 'BIM Consulting', 'استشارات BIM'),
+    value: text('La précision numérique au service du projet réel.', 'Digital precision at the service of the real project.', 'الدقة الرقمية في خدمة المشروع الحقيقي.'),
     description: text(
-      "Matériaux, lumière, mobilier et atmosphère sont pensés comme une continuité naturelle de l’architecture.",
-      'Materials, light, furniture, and atmosphere are designed as a natural continuation of the architecture.',
-      'المواد والضوء والأثاث والأجواء امتداد طبيعي للعمارة.'
+      "Le BIM permet de mieux concevoir, coordonner et anticiper. Nous accompagnons les projets dans la modélisation, la coordination et l’exploitation des données afin de réduire les conflits techniques et améliorer la lecture globale du projet.",
+      'BIM enables better design, coordination, and anticipation. We support projects in modeling, coordination, and data exploitation in order to reduce technical conflicts and improve the overall reading of the project.',
+      'تتيح نمذجة معلومات البناء تصميمًا وتنسيقًا وتوقعًا أفضل. نحن ندعم المشاريع في النمذجة والتنسيق واستغلال البيانات من أجل تقليل التعارضات الفنية وتحسين القراءة العامة للمشروع.'
     ),
     bullets: {
-      fr: ['Concept design', 'Sélection matériaux', 'Mobilier sur mesure'],
-      en: ['Concept design', 'Material selection', 'Bespoke furniture'],
-      ar: ['تصميم المفهوم', 'اختيار المواد', 'أثاث حسب الطلب'],
+      fr: ['Modélisation 3D', 'Coordination interdisciplinaire', 'Détection des conflits', 'Optimisation des échanges techniques', 'Support à la gestion du projet'],
+      en: ['3D modeling', 'Interdisciplinary coordination', 'Conflict detection', 'Optimization of technical exchanges', 'Support for project management'],
+      ar: ['النمذجة ثلاثية الأبعاد', 'التنسيق بين التخصصات', 'كشف التعارضات', 'تحسين التبادلات الفنية', 'الدعم لإدارة المشاريع'],
+    },
+    image: '/images/service2.webp',
+  },
+  {
+    id: '04',
+    title: text('Maîtrise d’œuvre & coordination', 'Works coordination & project management', 'إدارة المشاريع وتنسيق الأشغال'),
+    value: text('Piloter le chantier avec méthode, clarté et exigence.', 'Steering the construction site with method, clarity, and standards.', 'قيادة ورش البناء بمنهجية ووضوح ومعايير عالية.'),
+    description: text(
+      "Nous assurons le suivi, la coordination et le contrôle des différentes phases du chantier. Notre rôle est de maintenir l’alignement entre conception, qualité d’exécution, délais, budget et attentes du maître d’ouvrage.",
+      'We ensure the monitoring, coordination, and control of the different phases of the construction site. Our role is to maintain alignment between design, execution quality, deadlines, budget, and the client\'s expectations.',
+      'نحن نضمن المراقبة والتنسيق والتحكم في المراحل المختلفة لورش البناء. دورنا هو الحفاظ على التوافق entre التصميم وجودة التنفيذ والمواعيد النهائية والميزانية وتوقعات العميل.'
+    ),
+    bullets: {
+      fr: ['Suivi de chantier', 'Coordination des entreprises', 'Contrôle qualité', 'Gestion des délais', 'Reporting technique'],
+      en: ['Site monitoring', 'Company coordination', 'Quality control', 'Deadline management', 'Technical reporting'],
+      ar: ['مراقبة الموقع', 'تنسيق الشركات', 'مراقبة الجودة', 'إدارة المواعيد النهائية', 'التقارير الفنية'],
+    },
+    image: '/images/service3.webp',
+  },
+  {
+    id: '05',
+    title: text('Design intérieur', 'Interior Design', 'التصميم الداخلي'),
+    value: text('Créer des expériences spatiales cohérentes, élégantes et fonctionnelles.', 'Creating coherent, elegant, and functional spatial experiences.', 'خلق تجارب مكانية متماسكة وأنيقة وعملية.'),
+    description: text(
+      "Nous concevons des intérieurs où chaque détail participe à l’expérience globale : circulation, lumière, matières, mobilier, ergonomie et atmosphère. L’objectif est de créer des espaces à la fois beaux, confortables et parfaitement adaptés aux usages.",
+      'We design interiors where every detail contributes to the overall experience: circulation, light, materials, furniture, ergonomics, and atmosphere. The goal is to create spaces that are beautiful, comfortable, and perfectly adapted to use.',
+      'نحن نصمم تصميمات داخلية حيث يساهم كل تفصيل في التجربة العامة: الحركة، الضوء، المواد، الأثاث، بيئة العمل، والأجواء. الهدف هو خلق مساحات جميلة ومريحة ومتكيفة تمامًا مع الاستخدام.'
+    ),
+    bullets: {
+      fr: ['Concept intérieur', 'Plans d’aménagement', 'Choix des matériaux', 'Moodboards et ambiance', 'Accompagnement réalisation'],
+      en: ['Interior concept', 'Layout plans', 'Material selection', 'Moodboards and atmosphere', 'Support during realization'],
+      ar: ['مفهوم التصميم الداخلي', 'خطط التخطيط', 'اختيار المواد', 'لوحات المزاج والأجواء', 'الدعم أثناء الإنجاز'],
     },
     image: '/images/service1.webp',
   },
   {
-    id: '05',
-    title: text('Urbanisme', 'Urban Planning', 'التعمير'),
-    value: text('Penser la ville de demain à l’échelle du territoire.', 'Designing tomorrow’s city at territorial scale.', 'تصميم مدينة الغد على مستوى المجال.'),
+    id: '06',
+    title: text('Urbanisme & aménagement', 'Urbanism & masterplanning', 'التعمير والتخطيط'),
+    value: text('Penser l’espace à l’échelle du territoire.', 'Thinking about space at the territorial scale.', 'التفكير في المساحة على مستوى المجال الترابي.'),
     description: text(
-      "Plans d’aménagement, études d’impact et stratégies urbaines pour des quartiers durables, lisibles et vivants.",
-      'Masterplans, impact studies, and urban strategies for sustainable, legible, and lively districts.',
-      'تصاميم تهيئة ودراسات أثر واستراتيجيات حضرية لأحياء مستدامة وواضحة وحية.'
+      "Nous accompagnons les projets d’aménagement urbain, d’espaces publics et privés, de lotissements et de planification territoriale avec une approche durable, fonctionnelle et adaptée au contexte local.",
+      'We support urban development projects, public and private spaces, subdivisions, and territorial planning with a sustainable, functional approach adapted to the local context.',
+      'نحن ندعم مشاريع التنمية الحضرية، والمساحات العامة والخاصة، والتجزئة، والتخطيط الترابي بنهج مستدام وعملي يتكيف مع السياق المحلي.'
     ),
     bullets: {
-      fr: ['Plans d’aménagement', 'Design urbain', 'Études d’impact'],
-      en: ['Masterplanning', 'Urban design', 'Impact studies'],
-      ar: ['مخططات التهيئة', 'التصميم الحضري', 'دراسات الأثر'],
+      fr: ['Plans d’aménagement', 'Plans de lotissement', 'Espaces publics et privés', 'Analyse urbaine', 'Solutions durables'],
+      en: ['Development plans', 'Subdivision plans', 'Public and private spaces', 'Urban analysis', 'Sustainable solutions'],
+      ar: ['مخططات التهيئة', 'مخططات التجزئة', 'المساحات العامة والخاصة', 'التحليل الحضري', 'الحلول المستدامة'],
     },
     image: '/images/service2.webp',
+  },
+  {
+    id: '07',
+    title: text('Topographie', 'Topography', 'المسح الطبوغرافي'),
+    value: text('Comprendre le terrain avant de transformer le projet.', 'Understanding the terrain before transforming the project.', 'فهم الأرض قبل تحويل المشروع.'),
+    description: text(
+      "Les relevés et données topographiques constituent une base essentielle pour sécuriser la conception et la réalisation. Nous intégrons cette lecture du terrain dans une démarche globale de précision et de maîtrise technique.",
+      'Topographical surveys and data constitute an essential base for securing design and realization. We integrate this reading of the terrain into a global approach of precision and technical control.',
+      'تشكل المسوحات والبيانات الطبوغرافية قاعدة أساسية لتأمين التصميم والإنجاز. نحن ندمج هذه القراءة للأرض في نهج عالمي من الدقة والتحكم الفني.'
+    ),
+    bullets: {
+      fr: ['Relevés du terrain', 'Analyse des contraintes', 'Support aux études', 'Base technique pour la conception', 'Fiabilisation des décisions'],
+      en: ['Terrain surveys', 'Constraint analysis', 'Support for studies', 'Technical base for design', 'Reliability of decisions'],
+      ar: ['مسوحات الأراضي', 'تحليل القيود', 'دعم الدراسات', 'القاعدة الفنية للتصميم', 'موثوقية القرارات'],
+    },
+    image: '/images/service3.webp',
+  },
+  {
+    id: '08',
+    title: text('Formations professionnelles', 'Professional training', 'التكوين المهني'),
+    value: text('Transmettre les compétences qui construisent les métiers de demain.', 'Transmitting the skills that build tomorrow\'s professions.', 'نقل المهارات التي تبني مهن الغد.'),
+    description: text(
+      "À travers ELAOUAD Courses, nous développons des formations spécialisées en architecture, construction, BIM, gestion de projet, logiciels 3D, design intérieur et conduite de chantier. Notre objectif est de former des profils opérationnels, compétents et alignés avec les besoins réels du marché.",
+      'Through ELAOUAD Courses, we develop specialized training in architecture, construction, BIM, project management, 3D software, interior design, and site supervision. Our goal is to train operational, competent profiles aligned with real market needs.',
+      'من خلال دورات ELAOUAD، نطور تدريبًا متخصصًا في الهندسة المعمارية، والبناء، ونمذجة معلومات البناء، وإدارة المشاريع، والبرمجيات ثلاثية الأبعاد، والتصميم الداخلي، والإشراف على الموقع. هدفنا هو تدريب الكفاءات التشغيلية والمؤهلة المتوافقة مع احتياجات السوق الحقيقية.'
+    ),
+    bullets: {
+      fr: ['BIM, Revit, AutoCAD, SketchUp, 3ds Max', 'Gestion de projets de construction', 'Conduite de chantier', 'Décoration et design intérieur', 'Formations pratiques et professionnalisantes'],
+      en: ['BIM, Revit, AutoCAD, SketchUp, 3ds Max', 'Construction project management', 'Site supervision', 'Decoration and interior design', 'Practical and professionalizing training'],
+      ar: ['BIM، Revit، AutoCAD، SketchUp، 3ds Max', 'إدارة مشاريع البناء', 'الإشراف على الموقع', 'الديكور والتصميم الداخلي', 'التدريب العملي والمهني'],
+    },
+    image: '/images/service1.webp',
   },
 ];
 
 const localizedProjects: LocalizedProject[] = [
   {
-    slug: 'tour-casa-finance-city',
-    title: text('Tour Casa Finance City', 'Casa Finance City Tower', 'برج كازا فاينانس سيتي'),
-    category: text('Architecture tertiaire', 'Commercial architecture', 'عمارة مكتبية'),
+    slug: 'villa-privee-casablanca',
+    title: text('Villa privée', 'Private Villa', 'فيلا خاصة'),
+    category: text('Architecture résidentielle', 'Residential architecture', 'عمارة سكنية'),
     location: text('Casablanca, Maroc', 'Casablanca, Morocco', 'الدار البيضاء، المغرب'),
     year: '2025',
     image: '/images/project1.webp',
-    client: text('Groupe privé', 'Private group', 'مجموعة خاصة'),
-    surface: '18 000 m²',
-    status: text('En développement', 'In development', 'قيد التطوير'),
+    client: text('Client privé', 'Private client', 'عميل خاص'),
+    surface: '950 m²',
+    status: text('En cours', 'In progress', 'جاري الإنجاز'),
     description: text(
-      "Une tour tertiaire pensée comme un signal urbain sobre, associant façade minérale, contrôle solaire et plateaux flexibles.",
-      'A commercial tower designed as a restrained urban landmark, combining mineral facade work, solar control, and flexible floorplates.',
-      'برج مكتبي كعلامة حضرية هادئة يجمع بين واجهة معدنية وتحكم شمسي ومساحات مرنة.'
+      "Une villa contemporaine pensée pour conjuguer qualité spatiale, précision technique et expérience d’usage en milieu urbain.",
+      'A contemporary villa designed to combine spatial quality, technical precision, and experience of use in an urban environment.',
+      'فيلا معاصرة مصممة للجمع بين جودة المساحة والدقة الفنية وتجربة الاستخدام في بيئة حضرية.'
     ),
     gallery: ['/images/project1.webp', '/images/project2.webp', '/images/project3.webp'],
   },
   {
-    slug: 'complexe-residentiel-anfa',
-    title: text('Complexe Résidentiel Anfa', 'Anfa Residential Complex', 'مجمع أنفا السكني'),
+    slug: 'projet-residentiel-marrakech',
+    title: text('Projet résidentiel', 'Residential Project', 'مشروع سكني'),
     category: text('Résidentiel premium', 'Premium residential', 'سكن راق'),
-    location: text('Casablanca, Maroc', 'Casablanca, Morocco', 'الدار البيضاء، المغرب'),
+    location: text('Marrakech, Maroc', 'Marrakech, Morocco', 'مراكش، المغرب'),
     year: '2024',
     image: '/images/project2.webp',
     client: text('Promoteur immobilier', 'Real estate developer', 'مطور عقاري'),
     surface: '12 000 m²',
     status: text('Livré', 'Delivered', 'منجز'),
     description: text(
-      "Un ensemble résidentiel qui privilégie les seuils, les patios et la qualité de la lumière dans les espaces communs.",
-      'A residential ensemble focused on thresholds, patios, and the quality of light in shared spaces.',
-      'مجمع سكني يركز على العتبات والفناءات وجودة الضوء في المساحات المشتركة.'
+      "Un ensemble résidentiel haut de gamme privilégiant les seuils, les patios traditionnels et l'apport de lumière naturelle.",
+      'A high-end residential complex focusing on thresholds, traditional patios, and the intake of natural light.',
+      'مجمع سكني راق يركز على العتبات والفناءات التقليدية وتدفق الضوء الطبيعي.'
     ),
     gallery: ['/images/project2.webp', '/images/project3.webp', '/images/project4.webp'],
   },
   {
-    slug: 'siege-corporate-banque',
-    title: text('Siège Corporate Banque', 'Bank Corporate Headquarters', 'مقر مصرفي'),
-    category: text('Design intérieur', 'Interior design', 'تصميم داخلي'),
+    slug: 'espace-professionnel-rabat',
+    title: text('Espace professionnel', 'Professional Space', 'مساحة مهنية'),
+    category: text('Design intérieur / Tertiaire', 'Interior design / Commercial', 'تصميم داخلي / تجاري'),
     location: text('Rabat, Maroc', 'Rabat, Morocco', 'الرباط، المغرب'),
     year: '2024',
     image: '/images/project3.webp',
-    client: text('Institution financière', 'Financial institution', 'مؤسسة مالية'),
+    client: text('Institution privée', 'Private institution', 'مؤسسة خاصة'),
     surface: '5 800 m²',
     status: text('Livré', 'Delivered', 'منجز'),
     description: text(
-      "Une transformation intérieure orientée vers la clarté, la confidentialité et l’expérience client premium.",
-      'An interior transformation focused on clarity, confidentiality, and a premium client experience.',
-      'تحول داخلي يركز على الوضوح والخصوصية وتجربة عميل راقية.'
+      "Une transformation intérieure de bureaux orientée vers la clarté, la confidentialité acoustique et l'ergonomie fonctionnelle.",
+      'An interior office transformation oriented towards clarity, acoustic confidentiality, and functional ergonomics.',
+      'تحول مكتبي داخلي موجه نحو الوضوح والسرية الصوتية وبيئة العمل الوظيفية.'
     ),
     gallery: ['/images/project3.webp', '/images/service1.webp', '/images/service2.webp'],
   },
   {
-    slug: 'masterplan-eco-cite',
-    title: text('Masterplan Éco-Cité', 'Eco-City Masterplan', 'مخطط المدينة البيئية'),
-    category: text('Urbanisme', 'Urban planning', 'تعمير'),
-    location: text('Marrakech, Maroc', 'Marrakech, Morocco', 'مراكش، المغرب'),
+    slug: 'amenagement-urbain-tanger',
+    title: text('Aménagement urbain', 'Urban Development', 'تنمية حضرية'),
+    category: text('Urbanisme & Aménagement', 'Urbanism & Masterplanning', 'التعمير والتخطيط'),
+    location: text('Tanger, Maroc', 'Tangier, Morocco', 'طنجة، المغرب'),
     year: '2023',
     image: '/images/project4.webp',
-    client: text('Collectivité territoriale', 'Local authority', 'جماعة ترابية'),
+    client: text('Aménageur', 'Developer', 'مطور'),
     surface: '42 ha',
     status: text('Étude validée', 'Study approved', 'دراسة مصادق عليها'),
     description: text(
-      "Une stratégie urbaine fondée sur la mobilité douce, les îlots de fraîcheur et la mixité fonctionnelle.",
-      'An urban strategy based on soft mobility, cool islands, and functional diversity.',
-      'استراتيجية حضرية تقوم على التنقل الناعم وجزر البرودة وتنوع الوظائف.'
+      "Une étude et planification de lotissement durable intégrant mobilités douces et gestion écologique des espaces publics.",
+      'A study and planning of a sustainable subdivision integrating soft mobility and ecological management of public spaces.',
+      'دراسة وتخطيط لتجزئة مستدامة تدمج التنقل الناعم والإدارة البيئية للمساحات العامة.'
     ),
     gallery: ['/images/project4.webp', '/images/project1.webp', '/images/service3.webp'],
   },
   {
-    slug: 'villa-luma',
-    title: text('Villa Luma', 'Villa Luma', 'فيلا لوما'),
-    category: text('Architecture résidentielle', 'Residential architecture', 'عمارة سكنية'),
-    location: text('Tanger, Maroc', 'Tangier, Morocco', 'طنجة، المغرب'),
-    year: '2023',
-    image: '/images/hero.webp',
-    client: text('Client privé', 'Private client', 'عميل خاص'),
-    surface: '950 m²',
-    status: text('Livré', 'Delivered', 'منجز'),
-    description: text(
-      "Une villa familiale où pierre, ombre et cadrages paysagers organisent un rapport calme à l’horizon.",
-      'A family villa where stone, shade, and framed landscapes create a calm relationship with the horizon.',
-      'فيلا عائلية تنظم فيها الحجر والظل والمشاهد الطبيعية علاقة هادئة مع الأفق.'
-    ),
-    gallery: ['/images/hero.webp', '/images/founder.webp', '/images/project2.webp'],
-  },
-  {
-    slug: 'campus-universitaire-tech',
-    title: text('Campus Universitaire Tech', 'Tech University Campus', 'الحرم الجامعي التقني'),
-    category: text('Équipement public', 'Public facility', 'تجهيز عمومي'),
-    location: text('Benguerir, Maroc', 'Benguerir, Morocco', 'بنجرير، المغرب'),
-    year: '2022',
-    image: '/images/service1.webp',
-    client: text('Institution académique', 'Academic institution', 'مؤسسة أكاديمية'),
-    surface: '24 000 m²',
-    status: text('Livré', 'Delivered', 'منجز'),
-    description: text(
-      "Un campus orienté vers l’apprentissage collaboratif, les circulations lisibles et les espaces extérieurs habités.",
-      'A campus designed for collaborative learning, clear circulation, and active outdoor spaces.',
-      'حرم جامعي موجه للتعلم التعاوني والتنقل الواضح والمساحات الخارجية النشطة.'
-    ),
-    gallery: ['/images/service1.webp', '/images/service2.webp', '/images/project4.webp'],
-  },
-  {
-    slug: 'hotel-atlas-boutique',
-    title: text('Hôtel Atlas Boutique', 'Atlas Boutique Hotel', 'فندق أطلس البوتيكي'),
-    category: text('Hospitality', 'Hospitality', 'ضيافة'),
+    slug: 'hotel-boutique-marrakech',
+    title: text('Hôtel Boutique', 'Boutique Hotel', 'فندق بوتيك'),
+    category: text('Hospitality / Design intérieur', 'Hospitality / Interior design', 'ضيافة / تصميم داخلي'),
     location: text('Marrakech, Maroc', 'Marrakech, Morocco', 'مراكش، المغرب'),
     year: '2025',
     image: '/images/service2.webp',
-    client: text('Groupe hôtelier', 'Hotel group', 'مجموعة فندقية'),
+    client: text('Groupe privé', 'Private group', 'مجموعة خاصة'),
     surface: '7 400 m²',
-    status: text('Concours', 'Competition', 'مسابقة'),
+    status: text('Études en cours', 'Studies in progress', 'الدراسات جارية'),
     description: text(
-      "Un hôtel boutique qui transpose les codes du riad en expérience contemporaine, intime et lumineuse.",
-      'A boutique hotel translating riad principles into a contemporary, intimate, light-filled experience.',
-      'فندق بوتيكي يترجم مبادئ الرياض إلى تجربة معاصرة وحميمة ومضيئة.'
+      "Un concept d'hébergement intime transposant l'essence des architectures locales dans une écriture contemporaine et épurée.",
+      'An intimate lodging concept translating the essence of local architecture into a contemporary and refined writing.',
+      'مفهوم إقامة حميم يترجم جوهر العمارة المحلية إلى كتابة معاصرة وراقية.'
     ),
     gallery: ['/images/service2.webp', '/images/event.webp', '/images/project1.webp'],
   },
   {
-    slug: 'centre-culturel-atlantique',
-    title: text('Centre Culturel Atlantique', 'Atlantic Cultural Center', 'المركز الثقافي الأطلسي'),
-    category: text('Culture', 'Culture', 'ثقافة'),
+    slug: 'centre-culturel-essaouira',
+    title: text('Centre Culturel', 'Cultural Center', 'مركز ثقافي'),
+    category: text('Équipement public', 'Public facility', 'تجهيز عمومي'),
     location: text('Essaouira, Maroc', 'Essaouira, Morocco', 'الصويرة، المغرب'),
     year: '2024',
     image: '/images/service3.webp',
-    client: text('Fondation culturelle', 'Cultural foundation', 'مؤسسة ثقافية'),
+    client: text('Fondation', 'Foundation', 'مؤسسة'),
     surface: '4 200 m²',
-    status: text('Études en cours', 'Studies in progress', 'الدراسات جارية'),
+    status: text('Études en cours', 'Studies in progress', 'الدраسات جارية'),
     description: text(
-      "Un équipement culturel pensé comme une séquence de patios, galeries et ateliers ouverts sur la ville.",
-      'A cultural facility conceived as a sequence of patios, galleries, and workshops open to the city.',
-      'تجهيز ثقافي مصمم كسلسلة من الفناءات والمعارض والورش المفتوحة على المدينة.'
+      "Un projet culturel conçu comme un parcours ouvert sur la ville, articulé autour de patios d'exposition et d'ateliers créatifs.",
+      'A cultural project conceived as a path open to the city, articulated around exhibition patios and creative workshops.',
+      'مشروع ثقافي مصمم كمسار مفتوح على المدينة، متمحور حول فناءات العرض والورش الإبداعية.'
     ),
     gallery: ['/images/service3.webp', '/images/project3.webp', '/images/hero.webp'],
   },
@@ -372,33 +386,43 @@ export const eventStats = [
 const localizedTestimonials: LocalizedTestimonial[] = [
   {
     text: text(
-      "Le BIM d’ELAOUAD nous a permis de détecter 23 conflits techniques avant le chantier. Le planning a été tenu sans imprévu majeur.",
-      'ELAOUAD’s BIM process helped us detect 23 technical conflicts before construction. The schedule held without major surprises.',
-      'مكننا مسار BIM لدى ELAOUAD من كشف 23 تعارضا تقنيا قبل الورش، وتم احترام الجدول دون مفاجآت كبرى.'
+      "Chaque mission commence par un cadrage précis : besoin, budget, contraintes, objectifs, livrables et calendrier.",
+      'Every mission starts with a precise framework: need, budget, constraints, objectives, deliverables, and schedule.',
+      'تبدأ كل مهمة بإطار عمل دقيق: الاحتياجات، الميزانية، القيود، الأهداف، المخرجات والجدول الزمني.'
     ),
-    name: 'Directeur Technique',
-    title: text('Groupe immobilier, Casablanca', 'Real estate group, Casablanca', 'مجموعة عقارية، الدار البيضاء'),
-    proof: text('23 conflits détectés avant chantier', '23 conflicts detected before construction', '23 تعارضا قبل الورش'),
+    name: 'Clarté dès le départ',
+    title: text('Engagement 01', 'Commitment 01', 'الالتزام 01'),
+    proof: text('Cadrage & Calendrier', 'Framework & Schedule', 'التأطير والجدول الزمني'),
   },
   {
     text: text(
-      "Nous avions besoin d’une équipe capable de gérer architecture, ingénierie et exécution. ELAOUAD a donné une trajectoire claire au projet.",
-      'We needed a team able to handle architecture, engineering, and execution. ELAOUAD gave the project a clear path.',
-      'كنا نحتاج إلى فريق يدير العمارة والهندسة والتنفيذ. منحت ELAOUAD المشروع مسارا واضحا.'
+      "Nous facilitons le dialogue entre les acteurs du projet pour éviter les malentendus et améliorer la fluidité d’exécution.",
+      'We facilitate dialogue between project stakeholders to avoid misunderstandings and improve execution fluidity.',
+      'نحن نسهل الحوار بين الفاعلين في المشروع لتجنب سوء الفهم وتحسين مرونة التنفيذ.'
     ),
-    name: 'CEO',
-    title: text('Fonds d’investissement', 'Investment fund', 'صندوق استثمار'),
-    proof: text('Architecture + ingénierie intégrées', 'Integrated architecture + engineering', 'عمارة وهندسة مدمجتان'),
+    name: 'Coordination maîtrisée',
+    title: text('Engagement 02', 'Commitment 02', 'الالتزام 02'),
+    proof: text('Dialogue & Fluidité', 'Dialogue & Fluidity', 'الحوار والمرونة'),
   },
   {
     text: text(
-      "Le FIDI est devenu un rendez-vous stratégique. L’édition précédente nous a ouvert des discussions commerciales sur trois marchés.",
-      'FIDI became a strategic gathering. The previous edition opened business conversations across three markets.',
-      'أصبح FIDI موعدا استراتيجيا. فتحت النسخة السابقة نقاشات تجارية في ثلاثة أسواق.'
+      "Nos plans, études, modèles et recommandations sont pensés pour être compris, transmis et utilisés efficacement.",
+      'Our plans, studies, models, and recommendations are designed to be understood, transmitted, and used effectively.',
+      'تم تصميم خططنا ودراساتنا ونماذجنا وتوصياتنا لتكون مفهومة ومنقولة ومستخدمة بشكل فعال.'
     ),
-    name: 'Directrice Commerciale',
-    title: text('Fabricant matériaux', 'Materials manufacturer', 'مصنعة مواد بناء'),
-    proof: text('3 marchés activés après l’événement', '3 markets activated after the event', '3 أسواق بعد الحدث'),
+    name: 'Livrables exploitables',
+    title: text('Engagement 03', 'Commitment 03', 'الالتزام 03'),
+    proof: text('Précision & Clarté', 'Precision & Clarity', 'الدقة والوضوح'),
+  },
+  {
+    text: text(
+      "Nous cherchons des solutions qui restent cohérentes dans le temps, techniquement, esthétiquement et économiquement.",
+      'We look for solutions that remain coherent over time, technically, aesthetically, and economically.',
+      'نحن نبحث عن حلول تظل متماسكة بمرور الوقت، تقنيًا وجمالياً واقتصاديًا.'
+    ),
+    name: 'Exigence durable',
+    title: text('Engagement 04', 'Commitment 04', 'الالتزام 04'),
+    proof: text('Esthétique & Technique', 'Aesthetics & Technique', 'الجماليات والتقنيات'),
   },
 ];
 

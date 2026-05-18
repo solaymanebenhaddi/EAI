@@ -3,8 +3,9 @@
     "home": "Accueil",
     "services": "Expertises",
     "projects": "Projets",
-    "events": "Events",
-    "about": "À Propos",
+    "events": "Événements",
+    "courses": "Formations",
+    "about": "À propos",
     "contact": "Contact",
     "startProject": "Demander une consultation",
     "whatsapp": "WhatsApp",
@@ -12,57 +13,61 @@
     "closeMenu": "Fermer le menu"
   },
   "Hero": {
-    "location": "CASABLANCA · AFRIQUE · INTERNATIONAL",
-    "titleLine1": "L’Architecture",
+    "location": "CASABLANCA · MAROC · ARCHITECTURE · INGÉNIERIE",
+    "titleLine1": "L’architecture",
     "titleLine2": "comme acte",
     "titleLine3": "de vision.",
-    "description": "ELAOUAD conçoit, ingénierise et réalise des espaces d’exception — du concept BIM à la livraison, sur 4 continents.",
-    "primaryCta": "Explorer nos projets",
+    "description": "ELAOUAD Architecture & Ingénierie conçoit, structure et accompagne des projets où la beauté architecturale rencontre la précision technique. De l’idée initiale à la réalisation, chaque espace est pensé avec rigueur, matière, lumière et responsabilité.",
+    "primaryCta": "Découvrir nos projets",
     "secondaryCta": "Demander une consultation",
-    "projectsBadge": "100+ projets livrés",
+    "projectsBadge": "Projets Signature",
     "technicalPrecision": "Précision technique",
     "projectsStat": "Projets",
-    "visitorsStat": "Visiteurs FIC",
-    "continentsStat": "Continents",
+    "visitorsStat": "Visiteurs",
+    "continentsStat": "Pays",
     "scroll": "Défiler"
   },
   "Blueprint": {
-    "label": "De la Vision à la Structure",
-    "title": "Chaque ligne devient matière. Chaque intention devient espace.",
-    "description": "Avant la première pierre, il y a la précision du trait. Notre processus transforme l’intention architecturale en réalité construite, étape par étape.",
+    "label": "NOTRE DÉMARCHE",
+    "title": "Chaque ligne devient matière. Chaque décision devient espace.",
+    "description": "Avant le chantier, il y a la précision. Avant la forme, il y a l’analyse. Notre démarche accompagne chaque projet depuis la compréhension du besoin jusqu’à la coordination technique et la livraison finale.",
     "planNote": "Plan de masse - échelle 1:100",
-    "backgroundWord": "STRUCTURE",
-    "steps": ["Vision", "Structure", "Matière", "Lumière"]
+    "backgroundWord": "DÉMARCHE",
+    "steps": [
+      "Comprendre",
+      "Concevoir",
+      "Structurer",
+      "Coordonner",
+      "Livrer"
+    ]
   },
   "Manifesto": {
-    "label": "Notre Philosophie",
+    "label": "NOTRE PHILOSOPHIE",
     "subtitle": "L’architecture comme acte artistique et responsabilité technique.",
-    "backgroundWord": "MATIÈRE",
+    "backgroundWord": "PHILOSOPHIE",
     "lines": [
-      "Nous ne construisons pas des bâtiments.",
-      "Nous gravons des intentions dans la pierre."
+      "Nous ne dessinons pas seulement des bâtiments.",
+      "Nous donnons une forme durable aux idées."
     ],
-    "stats": {
-      "projects": "Projets livrés",
-      "experience": "Années d’expertise",
-      "countries": "Pays d’intervention",
-      "team": "Collaborateurs"
-    }
+    "description": "Pour ELAOUAD Architecture & Ingénierie, chaque projet commence par une intention claire : comprendre le lieu, le programme, les usages et l’impact futur de l’espace. Notre mission est de traduire cette intention en une architecture précise, maîtrisée et sensible, capable de traverser le temps.\n\nNous croyons qu’un projet réussi ne se limite jamais à son image. Il doit être juste dans sa conception, cohérent dans sa structure, intelligent dans ses choix techniques et humain dans son expérience quotidienne."
   },
   "Services": {
-    "label": "Nos Expertises",
-    "title": "Cinq disciplines, une signature.",
-    "subtitle": "De la conception à la livraison, chaque expertise est pensée comme une continuité de notre exigence architecturale.",
+    "label": "QUI SOMMES-NOUS",
+    "title": "Une vision intégrée de l’architecture, de l’ingénierie et de la réalisation.",
+    "subtitle": "ELAOUAD Architecture & Ingénierie accompagne les maîtres d’ouvrage, promoteurs, institutions, entreprises et particuliers dans la conception, l’étude, la coordination et la valorisation de leurs projets. Notre approche réunit plusieurs expertises complémentaires : architecture, ingénierie, études techniques, BIM consulting, urbanisme, aménagement, design intérieur, coordination des travaux, assistance à la maîtrise d’ouvrage et formation professionnelle.",
     "architecture": "Architecture",
+    "engineering": "Ingénierie & études techniques",
     "bim": "BIM Consulting",
-    "interior": "Design Intérieur",
-    "engineering": "Ingénierie & Project Management",
-    "urbanism": "Urbanisme",
+    "coordination": "Maîtrise d’œuvre & coordination des travaux",
+    "interior": "Design intérieur",
+    "urbanism": "Urbanisme & aménagement",
+    "topography": "Topographie",
+    "formations": "Formations professionnelles",
     "explore": "Explorer",
     "discipline": "Discipline"
   },
   "Projets": {
-    "label": "Portfolio",
+    "label": "PORTFOLIO",
     "title": "Projets Signature",
     "viewAll": "Voir tous les projets",
     "viewProject": "Voir le projet",
@@ -70,45 +75,79 @@
     "all": "Tous"
   },
   "Apropos": {
-    "label": "Derrière la Transformation",
-    "founderLines": ["Soukaina", "Elaouad"],
-    "role": "Fondatrice & Architecte Ingénieure",
-    "quote": "L’architecture est à la fois un acte artistique et une responsabilité technique. Chaque projet que nous livrons doit être beau, solide, durable et utile.",
-    "description": "Soukaina Elaouad dirige EAI avec une exigence claire : unir vision architecturale, rigueur d’ingénierie et culture de la livraison pour transformer les ambitions en lieux durables.",
-    "cred1": "Architecte ingénieure et fondatrice d’EAI",
-    "cred2": "Pilotage de projets premium au Maroc et à l’international",
-    "cred3": "Approche intégrée architecture, BIM et exécution"
+    "label": "DERRIÈRE LA TRANSFORMATION",
+    "founderLines": [
+      "Soukaina",
+      "Elaouad"
+    ],
+    "role": "Fondatrice & Directrice",
+    "subtitle": "Ingénieure civile · Manager de projets de construction · Doctorante en architecture",
+    "quote": "L’architecture est un art qui embrasse la science. Elle doit être sensible dans sa vision, rigoureuse dans sa méthode et responsable dans son impact.",
+    "description": "Soukaina Elaouad dirige ELAOUAD Architecture & Ingénierie avec une conviction forte : un projet architectural ne peut réussir que lorsqu’il unit imagination, précision technique, gestion rigoureuse et compréhension profonde du contexte.\n\nSon parcours en ingénierie civile, management de projets de construction et recherche en architecture lui permet d’aborder chaque mission avec une vision transversale. Pour elle, bâtir ne signifie pas seulement produire une forme, mais concevoir un cadre de vie, anticiper les usages, respecter le territoire et intégrer durablement les contraintes économiques, sociales, culturelles et environnementales.",
+    "cred1": "Vision architecturale.",
+    "cred2": "Rigueur d’ingénierie.",
+    "cred3": "Culture de la livraison."
   },
   "Events": {
     "label": "ELAOUAD EVENTS",
-    "headlineLines": ["FIDI 2026", "Forum International de la Décoration Intérieure"],
+    "headlineLines": [
+      "FIDI 2026",
+      "Forum International de la Décoration Intérieure"
+    ],
     "event": "Forum International de la Décoration Intérieure",
-    "date": "3 - 5 Décembre 2026",
+    "date": "3 — 5 Décembre 2026",
     "location": "Casablanca, Maroc",
-    "cta": "En savoir plus",
+    "cta": "Découvrir l’événement",
     "exhibitorCta": "Devenir exposant",
     "partnerCta": "Demander le dossier partenariat",
     "viewAll": "Explorer l’agenda",
     "whyTitle": "Pourquoi participer",
     "whyItems": [
-      "Rencontrer les prescripteurs, fabricants et décideurs du design intérieur.",
-      "Présenter des matériaux, solutions et savoir-faire devant un public qualifié.",
-      "Activer des opportunités commerciales à l’échelle Maroc, Afrique et international."
+      "Rencontrer des prescripteurs et décideurs qualifiés.",
+      "Présenter vos produits, services et innovations à un public professionnel.",
+      "Développer votre réseau au Maroc, en Afrique et à l’international.",
+      "Associer votre marque à un événement spécialisé dans le design et l’aménagement."
     ],
-    "timeline": ["Ouverture", "Conférences", "Exposition", "Rencontres B2B"]
+    "timeline": [
+      "Ouverture",
+      "Conférences",
+      "Exposition",
+      "Rencontres B2B"
+    ]
+  },
+  "Formations": {
+    "label": "ELAOUAD COURSES",
+    "title": "Former les professionnels capables de concevoir, gérer et construire demain.",
+    "description": "ELAOUAD Courses propose des formations pratiques dans les domaines de l’architecture, de la construction, du BIM, des logiciels 3D, de la gestion de projet, de la conduite de chantier et du design intérieur. Les programmes sont pensés pour rapprocher la théorie du terrain et aider les apprenants à développer des compétences directement exploitables.",
+    "pillarTitle": "Nos Piliers de Formation",
+    "pillar1Title": "Architecture & Gestion",
+    "pillar1Desc": "BIM, TILOS, gestion de projets de construction, conduite de chantier, calcul de structures, VRD, urbanisme, droit foncier.",
+    "pillar2Title": "Logiciels & conception 3D",
+    "pillar2Desc": "AutoCAD, Revit, SketchUp Pro, 3ds Max, Archicad, Tekla, Covadis, Mensura, MS Project.",
+    "pillar3Title": "Décoration & design intérieur",
+    "pillar3Desc": "Décoration intérieure en 3D, optimisation de l’espace, bien-être, initiation à la décoration.",
+    "ctaPrimary": "Découvrir les formations",
+    "ctaSecondary": "S’inscrire à une session",
+    "ctaRegisterTitle": "Rejoindre une session",
+    "ctaRegisterDesc": "Sélectionnez votre thématique et planifiez votre parcours professionnel avec nos experts.",
+    "softwareLabel": "Logiciels enseignés",
+    "practicalApproach": "Approche Pratique & Métier"
   },
   "Testimonials": {
-    "label": "L’Excellence Prouvée",
-    "title": "Ce que disent nos clients.",
-    "previous": "Témoignage précédent",
-    "next": "Témoignage suivant",
-    "goTo": "Aller au témoignage {number}"
+    "label": "PREUVES & ENGAGEMENTS",
+    "title": "La confiance se construit par la méthode.",
+    "previous": "Engagement précédent",
+    "next": "Engagement suivant",
+    "goTo": "Aller à l'engagement {number}"
   },
   "CallToAction": {
-    "label": "Initier une Collaboration",
-    "headlineLines": ["Votre projet mérite", "l’excellence."],
-    "primaryCta": "Contactez-nous",
-    "secondaryCta": "Voir notre démarche",
+    "label": "INITIER UNE COLLABORATION",
+    "headlineLines": [
+      "Votre projet mérite une vision claire",
+      "et une exécution maîtrisée."
+    ],
+    "primaryCta": "Envoyer ma demande",
+    "secondaryCta": "Découvrir notre démarche",
     "email": "Email",
     "phone": "Téléphone",
     "office": "Bureau",
@@ -126,13 +165,16 @@
   },
   "Footer": {
     "tagline": "Précision. Ambition. Vision.",
-    "copyright": "© 2026 ELAOUAD Architecture & Engineering. Tous droits réservés.",
+    "copyright": "© 2026 ELAOUAD Architecture & Ingénierie. Tous droits réservés.",
     "navigation": "Navigation",
     "expertise": "Expertises",
-    "events": "Events",
+    "events": "Événements",
     "contact": "Contact",
     "languages": "Langues",
-    "ctaLines": ["Prêt à transformer", "votre projet ?"],
+    "ctaLines": [
+      "Prêt à transformer",
+      "votre projet ?"
+    ],
     "ctaPrimary": "Contactez-nous",
     "ctaConsultation": "Demander une consultation",
     "ctaWhatsapp": "WhatsApp",
@@ -142,26 +184,33 @@
     "navHome": "Accueil",
     "navServices": "Expertises",
     "navProjects": "Projets",
-    "navEvents": "Events",
-    "navAbout": "À Propos",
+    "navEvents": "Événements",
+    "navAbout": "À propos",
     "navContact": "Contact",
     "expArchitecture": "Architecture",
     "expBIM": "BIM Consulting",
-    "expEngineering": "Ingénierie & PM",
+    "expEngineering": "Ingénierie & Études",
     "expInterior": "Design Intérieur",
     "expUrbanism": "Urbanisme",
-    "eventItems": ["FIDI 2026", "EAI Masterclass"],
+    "expCoordination": "Maîtrise d'œuvre",
+    "expTopography": "Topographie",
+    "expFormations": "Formations",
+    "eventItems": [
+      "FIDI 2026",
+      "EAI Masterclass"
+    ],
     "marquee": [
       "ARCHITECTURE",
+      "INGÉNIERIE",
       "BIM CONSULTING",
+      "MAÎTRISE D'ŒUVRE",
       "DESIGN INTÉRIEUR",
       "URBANISME",
-      "EVENTS",
+      "TOPOGRAPHIE",
+      "FORMATIONS",
       "CASABLANCA",
-      "AFRIQUE",
-      "INTERNATIONAL",
+      "MAROC",
       "PRÉCISION",
-      "AMBITION",
       "VISION"
     ]
   }
