@@ -168,7 +168,7 @@ export function Nav() {
         )}
       </AnimatePresence>
 
-      <div className="fixed bottom-0 left-0 right-0 z-50 grid grid-cols-2 border-t border-eai-line lg:hidden bg-eai-paper/95 backdrop-blur-md">
+      <div className="absolute top-full left-0 right-0 z-50 grid grid-cols-2 border-b border-eai-line lg:hidden bg-eai-paper/95 backdrop-blur-md shadow-md">
         <a
           href="https://wa.me/212666880038"
           onClick={() => trackEvent('whatsapp_click', { location: 'mobile_sticky_nav' })}
