@@ -39,3 +39,12 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# AI and Project Artifacts
+/.agent/
+/agents/
+/.next_dev/
+/design-system/
+/docs/
+implementation_plan*.md
+implimentation_plan*.md

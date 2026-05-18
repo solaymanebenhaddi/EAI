@@ -1,29 +1,40 @@
 import { setRequestLocale } from 'next-intl/server';
-import { Hero } from '@/components/sections/Hero';
-import { Manifesto } from '@/components/sections/Manifesto';
-import { Services } from '@/components/sections/Services';
-import { Projets } from '@/components/sections/Projets';
-import { Apropos } from '@/components/sections/Apropos';
-import { Events } from '@/components/sections/Events';
-import { Testimonials } from '@/components/sections/Testimonials';
-import { CallToAction } from '@/components/sections/CallToAction';
+import type { Metadata } from 'next';
+import { HorizonArchitectureExperience } from '@/components/horizon/HorizonArchitectureExperience';
+import { HorizonHero } from '@/components/horizon/HorizonHero';
+import { HorizonBlueprint } from '@/components/horizon/HorizonBlueprint';
+import { HorizonManifesto } from '@/components/horizon/HorizonManifesto';
+import { HorizonServices } from '@/components/horizon/HorizonServices';
+import { HorizonProjects } from '@/components/horizon/HorizonProjects';
+import { HorizonFounder } from '@/components/horizon/HorizonFounder';
+import { HorizonEvents } from '@/components/horizon/HorizonEvents';
+import { HorizonTestimonials } from '@/components/horizon/HorizonTestimonials';
+import { HorizonFinalCTA } from '@/components/horizon/HorizonFinalCTA';
+import { HorizonFooter } from '@/components/horizon/HorizonFooter';
+import type { Locale } from '@/data/site';
+import { createPageMetadata } from '@/data/seo';
 
-import { PerspectiveWrapper } from '@/components/ui/PerspectiveWrapper';
+export async function generateMetadata(props: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await props.params;
+  return createPageMetadata(locale, 'home');
+}
 
 export default async function HomePage(props: { params: Promise<{ locale: string }> }) {
   const { locale } = await props.params;
   setRequestLocale(locale);
 
   return (
-    <main className="bg-void">
-      <PerspectiveWrapper><Hero /></PerspectiveWrapper>
-      <PerspectiveWrapper><Manifesto /></PerspectiveWrapper>
-      <PerspectiveWrapper><Services /></PerspectiveWrapper>
-      <PerspectiveWrapper><Projets /></PerspectiveWrapper>
-      <PerspectiveWrapper><Apropos /></PerspectiveWrapper>
-      <PerspectiveWrapper><Events /></PerspectiveWrapper>
-      <PerspectiveWrapper><Testimonials /></PerspectiveWrapper>
-      <PerspectiveWrapper><CallToAction /></PerspectiveWrapper>
-    </main>
+    <HorizonArchitectureExperience>
+      <HorizonHero />
+      <HorizonBlueprint />
+      <HorizonManifesto locale={locale as Locale} />
+      <HorizonServices locale={locale as Locale} />
+      <HorizonProjects locale={locale as Locale} />
+      <HorizonFounder />
+      <HorizonEvents locale={locale as Locale} />
+      <HorizonTestimonials locale={locale as Locale} />
+      <HorizonFinalCTA />
+      <HorizonFooter />
+    </HorizonArchitectureExperience>
   );
 }

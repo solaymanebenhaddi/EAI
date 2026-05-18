@@ -1,41 +1,80 @@
 @import "tailwindcss";
 
 @theme {
-  --color-void: #FFFFFF;
-  --color-stone: #F5F5F5;
-  --color-travertine: #FFFFFF;
-  --color-ash: #E0E0E0;
-  --color-dust: #999999;
-  --color-brass: #2D4F3C;
-  --color-brass-dim: #1E3629;
-  --color-brass-glow: #3D6B52;
+  /* Light Premium Horizon Palette */
+  --color-eai-paper: #F8F5EE;
+  --color-eai-parchment: #F0EBE0;
+  --color-eai-stone-light: #E7DFD1;
+  --color-eai-travertine-light: #D8CDBA;
+  --color-eai-sand: #CDBB9E;
+  --color-eai-warm-grey: #595346;      /* Deep raw umber stone grey for rich contrast */
+  --color-eai-taupe: #3D382E;          /* Basalt stone grey */
+  --color-eai-charcoal: #191816;       /* Obsidian charcoal */
+  --color-eai-ink: #0E0D0B;            /* Deep mineral ink */
+  --color-eai-brass: #9E7D2A;          /* Deep rich burnished amber brass */
+  --color-eai-brass-soft: #B8963C;
+  --color-eai-brass-pale: #D6B86A;
+  --color-eai-sage: #7A9186;
+  --color-eai-line: rgba(25, 24, 22, 0.10);
+  --color-eai-glass: rgba(255, 255, 255, 0.58);
+
+  /* Legacy aliases */
+  --color-void: #080806;
+  --color-stone: #111110;
+  --color-travertine: #1A1916;
+  --color-ash: #2C2B27;
+  --color-dust: #4A4840;
+  --color-brass: #C4A052;
+  --color-brass-dim: #8A6E38;
+  --color-brass-glow: #E8C070;
   --color-sage: #7A9186;
-  --color-parchment: #1A1A1A;
-  --color-linen: #333333;
-  --color-mortar: #666666;
+  --color-parchment: #F0EBE0;
+  --color-linen: #C8C0B0;
+  --color-mortar: #7A7468;
+  --color-lumen: #F8F5EE;
+  --color-mist: #F8F8F7;
+  --color-canvas: #F4F2EE;
+  --color-cloud: #E5E4E2;
+  --color-cloud-dark: #D1D0CE;
+  --color-ink: var(--color-eai-charcoal);
   
-  --color-gold-line: rgba(45, 79, 60, 0.1);
-  --color-gold-card: rgba(45, 79, 60, 0.04);
+  --color-gold-line: rgba(196, 160, 82, 0.2);
+  --color-gold-card: rgba(196, 160, 82, 0.08);
 
   --font-display: var(--font-display);
   --font-body: var(--font-body);
   --font-accent: var(--font-accent);
+  --font-arabic: var(--font-arabic);
 
   --text-display-xl: clamp(64px, 8vw, 120px);
   --text-display-xl--line-height: 0.92;
   --text-display-xl--letter-spacing: -0.03em;
+  --text-display-xl--font-weight: 300;
   
   --text-display-lg: clamp(48px, 6vw, 80px);
   --text-display-lg--line-height: 0.94;
   --text-display-lg--letter-spacing: -0.025em;
+  --text-display-lg--font-weight: 300;
 
   --text-display-md: clamp(32px, 4vw, 56px);
   --text-display-md--line-height: 1.0;
   --text-display-md--letter-spacing: -0.02em;
+  --text-display-md--font-weight: 300;
 
   --text-label: 11px;
   --text-label--line-height: 1;
   --text-label--letter-spacing: 0.12em;
+  --text-label--text-transform: uppercase;
+
+  --ease-arch: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-stone: cubic-bezier(0.7, 0, 0.84, 0);
+  --ease-reveal: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --duration-instant: 120ms;
+  --duration-fast: 280ms;
+  --duration-normal: 500ms;
+  --duration-slow: 900ms;
+  --duration-cinematic: 1400ms;
+  --spacing-section-y: 8rem;
 
   --animate-reveal-up: revealUp 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
   --animate-reveal-clip: revealClip 1.0s cubic-bezier(0.16, 1, 0.3, 1) forwards;
@@ -73,8 +112,8 @@
   }
 
   body {
-    background-color: var(--color-void);
-    color: var(--color-parchment);
+    background-color: var(--color-eai-paper);
+    color: var(--color-eai-charcoal);
     font-family: var(--font-body), sans-serif;
     overflow-x: hidden;
     min-height: 100vh;
@@ -85,19 +124,19 @@
     width: 6px;
   }
   ::-webkit-scrollbar-track {
-    background: var(--color-void);
+    background: var(--color-eai-paper);
   }
   ::-webkit-scrollbar-thumb {
-    background: var(--color-dust);
+    background: var(--color-eai-stone-light);
     border-radius: 4px;
   }
   ::-webkit-scrollbar-thumb:hover {
-    background: var(--color-mortar);
+    background: var(--color-eai-warm-grey);
   }
 
   ::selection {
-    background-color: var(--color-brass);
-    color: #FFFFFF;
+    background-color: var(--color-eai-brass);
+    color: var(--color-eai-paper);
   }
 }
 
@@ -111,4 +150,8 @@
 .font-accent {
   font-family: var(--font-accent), serif;
   font-style: italic;
+}
+
+.font-arabic {
+  font-family: var(--font-arabic), sans-serif;
 }

@@ -1,76 +1,168 @@
 {
   "Navigation": {
-    "home": "Maison",
+    "home": "Accueil",
     "services": "Expertises",
     "projects": "Projets",
+    "events": "Events",
     "about": "À Propos",
     "contact": "Contact",
-    "startProject": "Démarrer un projet"
+    "startProject": "Demander une consultation",
+    "whatsapp": "WhatsApp",
+    "openMenu": "Ouvrir le menu",
+    "closeMenu": "Fermer le menu"
   },
   "Hero": {
-    "label": "[ Architecture & Ingénierie — Casablanca ]",
-    "titleLine1": "L'Architecture",
+    "location": "CASABLANCA · AFRIQUE · INTERNATIONAL",
+    "titleLine1": "L’Architecture",
     "titleLine2": "comme acte",
     "titleLine3": "de vision.",
-    "description": "Fondée par Soukaina Elaouad, EAI conçoit des architectures qui défient l'ordinaire — de la vision initiale à la livraison finale, avec la même exigence absolue.",
-    "primaryCta": "Découvrir nos projets",
-    "secondaryCta": "Notre démarche →",
-    "scroll": "Défiler",
-    "stats": "500+ projets livrés"
+    "description": "ELAOUAD conçoit, ingénierise et réalise des espaces d’exception — du concept BIM à la livraison, sur 4 continents.",
+    "primaryCta": "Explorer nos projets",
+    "secondaryCta": "Demander une consultation",
+    "projectsBadge": "100+ projets livrés",
+    "technicalPrecision": "Précision technique",
+    "projectsStat": "Projets",
+    "visitorsStat": "Visiteurs FIC",
+    "continentsStat": "Continents",
+    "scroll": "Défiler"
+  },
+  "Blueprint": {
+    "label": "De la Vision à la Structure",
+    "title": "Chaque ligne devient matière. Chaque intention devient espace.",
+    "description": "Avant la première pierre, il y a la précision du trait. Notre processus transforme l’intention architecturale en réalité construite, étape par étape.",
+    "planNote": "Plan de masse - échelle 1:100",
+    "backgroundWord": "STRUCTURE",
+    "steps": ["Vision", "Structure", "Matière", "Lumière"]
   },
   "Manifesto": {
-    "label": "[ Notre Philosophie ]",
-    "line1": "Nous ne construisons pas des bâtiments.",
-    "line2": "Nous gravons des intentions dans la pierre.",
+    "label": "Notre Philosophie",
+    "subtitle": "L’architecture comme acte artistique et responsabilité technique.",
+    "backgroundWord": "MATIÈRE",
+    "lines": [
+      "Nous ne construisons pas des bâtiments.",
+      "Nous gravons des intentions dans la pierre."
+    ],
     "stats": {
       "projects": "Projets livrés",
-      "experience": "Années d'expertise",
-      "countries": "Pays d'intervention",
+      "experience": "Années d’expertise",
+      "countries": "Pays d’intervention",
       "team": "Collaborateurs"
     }
   },
   "Services": {
-    "label": "[ Nos Expertises ]",
-    "title": "Trois disciplines, une signature.",
+    "label": "Nos Expertises",
+    "title": "Cinq disciplines, une signature.",
+    "subtitle": "De la conception à la livraison, chaque expertise est pensée comme une continuité de notre exigence architecturale.",
     "architecture": "Architecture",
     "bim": "BIM Consulting",
     "interior": "Design Intérieur",
-    "explore": "Explorer →"
+    "engineering": "Ingénierie & Project Management",
+    "urbanism": "Urbanisme",
+    "explore": "Explorer",
+    "discipline": "Discipline"
   },
   "Projets": {
-    "label": "[ Portfolio ]",
+    "label": "Portfolio",
     "title": "Projets Signature",
-    "viewAll": "Voir tous les projets →"
+    "viewAll": "Voir tous les projets",
+    "viewProject": "Voir le projet",
+    "filtersLabel": "Filtrer les projets",
+    "all": "Tous"
   },
   "Apropos": {
-    "label": "[ Derrière la Transformation ]",
-    "founder": "Soukaina Elaouad",
-    "role": "Architecte fondatrice, DG",
-    "quote": "L'architecture est à la fois un acte artistique et une responsabilité technique. Chaque projet que nous livrons doit être beau, solide, durable et utile.",
-    "cred1": "Architecte DPLG — École Nationale Supérieure d'Architecture",
-    "cred2": "Fondatrice d'EAI depuis 2009",
-    "cred3": "Membre de l'Ordre National des Architectes du Maroc"
+    "label": "Derrière la Transformation",
+    "founderLines": ["Soukaina", "Elaouad"],
+    "role": "Fondatrice & Architecte Ingénieure",
+    "quote": "L’architecture est à la fois un acte artistique et une responsabilité technique. Chaque projet que nous livrons doit être beau, solide, durable et utile.",
+    "description": "Soukaina Elaouad dirige EAI avec une exigence claire : unir vision architecturale, rigueur d’ingénierie et culture de la livraison pour transformer les ambitions en lieux durables.",
+    "cred1": "Architecte ingénieure et fondatrice d’EAI",
+    "cred2": "Pilotage de projets premium au Maroc et à l’international",
+    "cred3": "Approche intégrée architecture, BIM et exécution"
   },
   "Events": {
-    "label": "[ Événements ]",
-    "event": "FORUM INTERNATIONAL DE LA DÉCORATION INTÉRIEURE",
-    "date": "3 — 5 Décembre 2026",
+    "label": "ELAOUAD EVENTS",
+    "headlineLines": ["FIDI 2026", "Forum International de la Décoration Intérieure"],
+    "event": "Forum International de la Décoration Intérieure",
+    "date": "3 - 5 Décembre 2026",
     "location": "Casablanca, Maroc",
-    "cta": "En savoir plus →"
+    "cta": "En savoir plus",
+    "exhibitorCta": "Devenir exposant",
+    "partnerCta": "Demander le dossier partenariat",
+    "viewAll": "Explorer l’agenda",
+    "whyTitle": "Pourquoi participer",
+    "whyItems": [
+      "Rencontrer les prescripteurs, fabricants et décideurs du design intérieur.",
+      "Présenter des matériaux, solutions et savoir-faire devant un public qualifié.",
+      "Activer des opportunités commerciales à l’échelle Maroc, Afrique et international."
+    ],
+    "timeline": ["Ouverture", "Conférences", "Exposition", "Rencontres B2B"]
   },
   "Testimonials": {
-    "label": "[ L'Excellence Prouvée ]",
-    "title": "Ce que disent nos clients."
+    "label": "L’Excellence Prouvée",
+    "title": "Ce que disent nos clients.",
+    "previous": "Témoignage précédent",
+    "next": "Témoignage suivant",
+    "goTo": "Aller au témoignage {number}"
   },
   "CallToAction": {
-    "label": "[ Initier une Collaboration ]",
-    "line1": "Votre projet mérite",
-    "line2": "l'excellence.",
+    "label": "Initier une Collaboration",
+    "headlineLines": ["Votre projet mérite", "l’excellence."],
     "primaryCta": "Contactez-nous",
-    "secondaryCta": "Voir notre démarche"
+    "secondaryCta": "Voir notre démarche",
+    "email": "Email",
+    "phone": "Téléphone",
+    "office": "Bureau",
+    "officeValue": "Casablanca, Maroc"
+  },
+  "Cinematic": {
+    "label": "Processus",
+    "title": "De la vision à la matière",
+    "step1Title": "Tracer",
+    "step1Desc": "Lire le site, clarifier les usages et poser les premières lignes.",
+    "step2Title": "Coordonner",
+    "step2Desc": "Aligner architecture, BIM, structure et ingénierie avant le chantier.",
+    "step3Title": "Livrer",
+    "step3Desc": "Transformer l’intention en espace durable, précis et habité."
   },
   "Footer": {
     "tagline": "Précision. Ambition. Vision.",
-    "copyright": "© 2025 ELAOUAD Architecture et Ingénierie. Tous droits réservés."
+    "copyright": "© 2026 ELAOUAD Architecture & Engineering. Tous droits réservés.",
+    "navigation": "Navigation",
+    "expertise": "Expertises",
+    "events": "Events",
+    "contact": "Contact",
+    "languages": "Langues",
+    "ctaLines": ["Prêt à transformer", "votre projet ?"],
+    "ctaPrimary": "Contactez-nous",
+    "ctaConsultation": "Demander une consultation",
+    "ctaWhatsapp": "WhatsApp",
+    "ctaProjects": "Voir nos projets",
+    "backToTop": "Retour en haut",
+    "office": "Casablanca, Maroc",
+    "navHome": "Accueil",
+    "navServices": "Expertises",
+    "navProjects": "Projets",
+    "navEvents": "Events",
+    "navAbout": "À Propos",
+    "navContact": "Contact",
+    "expArchitecture": "Architecture",
+    "expBIM": "BIM Consulting",
+    "expEngineering": "Ingénierie & PM",
+    "expInterior": "Design Intérieur",
+    "expUrbanism": "Urbanisme",
+    "eventItems": ["FIDI 2026", "EAI Masterclass"],
+    "marquee": [
+      "ARCHITECTURE",
+      "BIM CONSULTING",
+      "DESIGN INTÉRIEUR",
+      "URBANISME",
+      "EVENTS",
+      "CASABLANCA",
+      "AFRIQUE",
+      "INTERNATIONAL",
+      "PRÉCISION",
+      "AMBITION",
+      "VISION"
+    ]
   }
 }

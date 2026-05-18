@@ -3,74 +3,166 @@
     "home": "Home",
     "services": "Expertise",
     "projects": "Projects",
+    "events": "Events",
     "about": "About",
     "contact": "Contact",
-    "startProject": "Start a Project"
+    "startProject": "Request a consultation",
+    "whatsapp": "WhatsApp",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu"
   },
   "Hero": {
-    "label": "[ Architecture & Engineering — Casablanca ]",
+    "location": "CASABLANCA · AFRICA · INTERNATIONAL",
     "titleLine1": "Architecture",
     "titleLine2": "as an act",
     "titleLine3": "of vision.",
-    "description": "Founded by Soukaina Elaouad, EAI designs architectures that defy the ordinary — from the initial vision to final delivery, with the same absolute rigor.",
-    "primaryCta": "Discover our projects",
-    "secondaryCta": "Our approach →",
-    "scroll": "Scroll",
-    "stats": "500+ delivered projects"
+    "description": "ELAOUAD designs, engineers and delivers exceptional spaces - from BIM concept to completion, across 4 continents.",
+    "primaryCta": "Explore our projects",
+    "secondaryCta": "Request a consultation",
+    "projectsBadge": "100+ delivered projects",
+    "technicalPrecision": "Technical precision",
+    "projectsStat": "Projects",
+    "visitorsStat": "FIC visitors",
+    "continentsStat": "Continents",
+    "scroll": "Scroll"
+  },
+  "Blueprint": {
+    "label": "From Vision to Structure",
+    "title": "Every line becomes matter. Every intention becomes space.",
+    "description": "Before the first stone, there is the precision of the drawing. Our process transforms architectural intent into built reality, step by step.",
+    "planNote": "Site plan - scale 1:100",
+    "backgroundWord": "STRUCTURE",
+    "steps": ["Vision", "Structure", "Matter", "Light"]
   },
   "Manifesto": {
-    "label": "[ Our Philosophy ]",
-    "line1": "We don't just build buildings.",
-    "line2": "We carve intentions into stone.",
+    "label": "Our Philosophy",
+    "subtitle": "Architecture as artistic act and technical responsibility.",
+    "backgroundWord": "MATTER",
+    "lines": [
+      "We do not build buildings.",
+      "We carve intentions into stone."
+    ],
     "stats": {
       "projects": "Delivered projects",
       "experience": "Years of expertise",
-      "countries": "Countries",
+      "countries": "Countries of operation",
       "team": "Collaborators"
     }
   },
   "Services": {
-    "label": "[ Our Expertise ]",
-    "title": "Three disciplines, one signature.",
+    "label": "Our Expertise",
+    "title": "Five disciplines, one signature.",
+    "subtitle": "From concept to delivery, every discipline is designed as a continuation of our architectural standard.",
     "architecture": "Architecture",
     "bim": "BIM Consulting",
     "interior": "Interior Design",
-    "explore": "Explore →"
+    "engineering": "Engineering & Project Management",
+    "urbanism": "Urban Planning",
+    "explore": "Explore",
+    "discipline": "Discipline"
   },
   "Projets": {
-    "label": "[ Portfolio ]",
+    "label": "Portfolio",
     "title": "Signature Projects",
-    "viewAll": "View all projects →"
+    "viewAll": "View all projects",
+    "viewProject": "View project",
+    "filtersLabel": "Filter projects",
+    "all": "All"
   },
   "Apropos": {
-    "label": "[ Behind the Transformation ]",
-    "founder": "Soukaina Elaouad",
-    "role": "Founding Architect, CEO",
-    "quote": "Architecture is both an artistic act and a technical responsibility. Every project we deliver must be beautiful, solid, durable, and useful.",
-    "cred1": "Architect DPLG — National School of Architecture",
-    "cred2": "Founder of EAI since 2009",
-    "cred3": "Member of the National Order of Architects of Morocco"
+    "label": "Behind the Transformation",
+    "founderLines": ["Soukaina", "Elaouad"],
+    "role": "Founder & Architect Engineer",
+    "quote": "Architecture is both an artistic act and a technical responsibility. Every project we deliver must be beautiful, solid, sustainable and useful.",
+    "description": "Soukaina Elaouad leads EAI with a clear standard: unite architectural vision, engineering rigor and delivery culture to transform ambitions into durable places.",
+    "cred1": "Architect engineer and founder of EAI",
+    "cred2": "Premium project leadership in Morocco and internationally",
+    "cred3": "Integrated approach to architecture, BIM and execution"
   },
   "Events": {
-    "label": "[ Events ]",
-    "event": "INTERNATIONAL INTERIOR DECORATION FORUM",
-    "date": "December 3 — 5, 2026",
+    "label": "ELAOUAD EVENTS",
+    "headlineLines": ["FIDI 2026", "International Interior Decoration Forum"],
+    "event": "International Interior Decoration Forum",
+    "date": "December 3 - 5, 2026",
     "location": "Casablanca, Morocco",
-    "cta": "Learn more →"
+    "cta": "Learn more",
+    "exhibitorCta": "Become an exhibitor",
+    "partnerCta": "Request the partnership dossier",
+    "viewAll": "Explore the agenda",
+    "whyTitle": "Why participate",
+    "whyItems": [
+      "Meet interior design specifiers, manufacturers and decision makers.",
+      "Present materials, solutions and expertise to a qualified audience.",
+      "Activate commercial opportunities across Morocco, Africa and international markets."
+    ],
+    "timeline": ["Opening", "Conferences", "Exhibition", "B2B meetings"]
   },
   "Testimonials": {
-    "label": "[ Proven Excellence ]",
-    "title": "What our clients say."
+    "label": "Proven Excellence",
+    "title": "What our clients say.",
+    "previous": "Previous testimonial",
+    "next": "Next testimonial",
+    "goTo": "Go to testimonial {number}"
   },
   "CallToAction": {
-    "label": "[ Initiate a Collaboration ]",
-    "line1": "Your project deserves",
-    "line2": "excellence.",
+    "label": "Start a Collaboration",
+    "headlineLines": ["Your project deserves", "excellence."],
     "primaryCta": "Contact us",
-    "secondaryCta": "View our approach"
+    "secondaryCta": "See our approach",
+    "email": "Email",
+    "phone": "Phone",
+    "office": "Office",
+    "officeValue": "Casablanca, Morocco"
+  },
+  "Cinematic": {
+    "label": "Process",
+    "title": "From vision to matter",
+    "step1Title": "Draw",
+    "step1Desc": "Read the site, clarify uses and place the first lines.",
+    "step2Title": "Coordinate",
+    "step2Desc": "Align architecture, BIM, structure and engineering before construction.",
+    "step3Title": "Deliver",
+    "step3Desc": "Transform intent into a durable, precise and inhabited place."
   },
   "Footer": {
     "tagline": "Precision. Ambition. Vision.",
-    "copyright": "© 2025 ELAOUAD Architecture & Engineering. All rights reserved."
+    "copyright": "© 2026 ELAOUAD Architecture & Engineering. All rights reserved.",
+    "navigation": "Navigation",
+    "expertise": "Expertise",
+    "events": "Events",
+    "contact": "Contact",
+    "languages": "Languages",
+    "ctaLines": ["Ready to transform", "your project?"],
+    "ctaPrimary": "Contact us",
+    "ctaConsultation": "Request a consultation",
+    "ctaWhatsapp": "WhatsApp",
+    "ctaProjects": "View our projects",
+    "backToTop": "Back to top",
+    "office": "Casablanca, Morocco",
+    "navHome": "Home",
+    "navServices": "Expertise",
+    "navProjects": "Projects",
+    "navEvents": "Events",
+    "navAbout": "About",
+    "navContact": "Contact",
+    "expArchitecture": "Architecture",
+    "expBIM": "BIM Consulting",
+    "expEngineering": "Engineering & PM",
+    "expInterior": "Interior Design",
+    "expUrbanism": "Urban Planning",
+    "eventItems": ["FIDI 2026", "EAI Masterclass"],
+    "marquee": [
+      "ARCHITECTURE",
+      "BIM CONSULTING",
+      "INTERIOR DESIGN",
+      "URBAN PLANNING",
+      "EVENTS",
+      "CASABLANCA",
+      "AFRICA",
+      "INTERNATIONAL",
+      "PRECISION",
+      "AMBITION",
+      "VISION"
+    ]
   }
 }

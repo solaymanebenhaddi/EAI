@@ -1,0 +1,184 @@
+{
+  "Hero": {
+    "location": "CASABLANQUE · AFRIQUE · INTERNATIONAL",
+    "titleLine1": "L’Architecture",
+    "titleLine2": "comme acte",
+    "titleLine3": "de vision.",
+    "description": "ELAOUAD conçoit, ingénierise et réalise des espaces d’exception — du concept BIM à la livraison, sur 4 continents.",
+    "primaryCta": "Explorer nos projets",
+    "secondaryCta": "Demander une consultation",
+    "projectsStat": "Projets",
+    "visitorsStat": "Visiteurs FIC",
+    "continentsStat": "Continents",
+    "scroll": "Faites défiler pour explorer"
+  },
+  "Blueprint": {
+    "label": "De la Vision à la Structure",
+    "title": "Chaque ligne devient matière.",
+    "description": "Chaque intention devient espace.",
+    "backgroundWord": "STRUCTURE",
+    "planNote": "Plan conceptuel préliminaire",
+    "steps": [
+      "Analyse du contexte et du programme",
+      "Esquisse et recherche volumétrique",
+      "Développement du projet",
+      "Permis et études réglementaires",
+      "Dossier d'exécution",
+      "Suivi de chantier"
+    ]
+  },
+  "Manifesto": {
+    "label": "Notre philosophie",
+    "backgroundWord": "MATIÈRE",
+    "lines": [
+      "Nous ne construisons pas des bâtiments.",
+      "Nous gravons des intentions dans la pierre."
+    ],
+    "subtitle": "Chaque projet incarne notre engagement envers l'excellence technique et la beauté durable."
+  },
+  "Services": {
+    "label": "Nos expertises",
+    "title": "Des solutions complètes pour chaque phase de votre projet",
+    "subtitle": "Du concept initial à la réalisation finale, nous maîtrisons toutes les disciplines de l'architecture contemporaine.",
+    "explore": "Voir les détails",
+    "01": {
+      "title": "Architecture",
+      "value": "Concevoir avec la lumière, bâtir avec la matière.",
+      "description": "Conception architecturale complète pour projets résidentiels, tertiaires et publics, avec une attention précise au contexte, à la lumière et aux usages.",
+      "bullets": [
+        "Conception architecturale",
+        "Permis et études réglementaires",
+        "Suivi architectural"
+      ]
+    },
+    "02": {
+      "title": "BIM Consulting",
+      "value": "L’ingénierie prédictive au service de la précision.",
+      "description": "Modélisation intelligente, coordination spatiale et gestion des données pour anticiper les conflits avant le chantier.",
+      "bullets": [
+        "Maquette numérique BIM",
+        "Coordination MEP et structure",
+        "Gestion des données bâtiment"
+      ]
+    },
+    "03": {
+      "title": "Ingénierie & Project Management",
+      "value": "De l’esquisse à la remise des clés, une maîtrise totale.",
+      "description": "Pilotage technique, économie de la construction, coordination OPC et suivi d’exécution pour sécuriser délais, budget et qualité.",
+      "bullets": [
+        "Études techniques",
+        "Pilotage et coordination OPC",
+        "Économie de la construction"
+      ]
+    },
+    "04": {
+      "title": "Design Intérieur",
+      "value": "L’expérience de l’espace poussée au détail.",
+      "description": "Matériaux, lumière, mobilier et atmosphère sont pensés comme une continuité naturelle de l’architecture.",
+      "bullets": [
+        "Concept design",
+        "Sélection matériaux",
+        "Mobilier sur mesure"
+      ]
+    },
+    "05": {
+      "title": "Urbanisme",
+      "value": "Penser la ville de demain à l’échelle du territoire.",
+      "description": "Plans d’aménagement, études d’impact et stratégies urbaines pour des quartiers durables, lisibles et vivants.",
+      "bullets": [
+        "Plans d’aménagement",
+        "Design urbain",
+        "Études d’impact"
+      ]
+    }
+  },
+  "Projets": {
+    "label": "Notre portfolio",
+    "title": "Projets sélectionnés",
+    "description": "Un aperçu de notre travail à travers différents typologies et contextes.",
+    "viewAll": "Voir tous les projets",
+    "viewProject": "Voir le projet",
+    "filtersLabel": "Filtrer par catégorie",
+    "all": "Tous"
+  },
+  "Apropos": {
+    "label": "À propos",
+    "founderLines": [
+      "Soukaina Elaouad",
+      "Fondatrice & Architecte Ingénieure"
+    ],
+    "role": "Fondatrice & Architecte Ingénieure",
+    "quote": "L’architecture est à la fois un acte artistique et une responsabilité technique. Chaque projet que nous livrons doit être beau, solide, durable et utile.",
+    "description": "Avec plus de 15 ans d'expérience dans des projets prestigieux à travers l'Afrique et l'Europe, Soukaina Elaouad dirige ELAOUAD avec une vision qui allie précision technique et sensibilité artistique.",
+    "cred1": "Diplômée de l'École Nationale d'Architecture",
+    "cred2": "Experte en BIM et conception durable",
+    "cred3": "Membre de l'Ordre des Architectes du Maroc"
+  },
+  "Events": {
+    "label": "Événements",
+    "headlineLines": [
+      "ELAOUAD",
+      "EVENTS"
+    ],
+    "event": "Forum International de la Décoration Intérieure",
+    "date": "3 - 5 Décembre 2026",
+    "location": "Casablanca, Maroc",
+    "whyTitle": "Pourquoi participer ?",
+    "cta": "En savoir plus",
+    "exhibitorCta": "Devenir exposant",
+    "partnerCta": "Demander le dossier partenariat",
+    "viewAll": "Voir tous les événements",
+    "timeline": [
+      "Jour 1: Tendances et innovations",
+      "Jour 2: Ateliers techniques",
+      "Jour 3: Networking business"
+    ],
+    "whyItems": [
+      "Accès aux dernières tendances internationales",
+      "Networking avec des professionnels du secteur",
+      "Ateliers pratiques et conférences spécialisées",
+      "Opportunités commerciales exclusives"
+    ]
+  },
+  "Testimonials": {
+    "label": "Témoignages",
+    "previous": "Précédent",
+    "next": "Suivant",
+    "goTo": "Aller au témoignage {number}"
+  },
+  "CallToAction": {
+    "label": "Initier une Collaboration",
+    "headlineLines": [
+      "Votre projet mérite",
+      "l’excellence."
+    ],
+    "primaryCta": "Contactez-nous",
+    "secondaryCta": "Voir notre démarche",
+    "email": "Email",
+    "phone": "Téléphone",
+    "office": "Bureau",
+    "officeValue": "Casablanca, Maroc"
+  },
+  "Footer": {
+    "navigation": "Navigation",
+    "expertises": "Expertises",
+    "events": "Événements",
+    "contact": "Contact",
+    "languages": "Langues",
+    "backToTop": "Retour en haut",
+    "copyright": "© 2026 ELAOUAD. Tous droits réservés.",
+    "marquee": [
+      "ARCHITECTURE",
+      "BIM CONSULTING",
+      "DESIGN INTÉRIEUR",
+      "URBANISME",
+      "EVENTS",
+      "CASABLANCA",
+      "AFRIQUE",
+      "INTERNATIONAL",
+      "PRÉCISION",
+      "AMBITION",
+      "VISION"
+    ]
+  }
+}
