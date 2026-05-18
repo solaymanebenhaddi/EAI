@@ -6,7 +6,7 @@ const withNextIntl = createNextIntlPlugin(
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  distDir: '.next_dev',
+  distDir: process.env.NODE_ENV === 'development' ? '.next_dev' : '.next',
   /* config options here */
 };
 
