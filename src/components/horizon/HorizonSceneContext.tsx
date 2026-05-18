@@ -93,7 +93,16 @@ export function HorizonSceneProvider({ children }: { children: React.ReactNode }
 export function useHorizonScene() {
   const context = useContext(HorizonSceneContext);
   if (!context) {
-    throw new Error('useHorizonScene must be used within a HorizonSceneProvider');
+    // Fallback for subpages that use these components without the global 3D engine provider
+    return {
+      activeScene: 'hero',
+      setActiveScene: () => {},
+      registerScene: () => {},
+      scrollProgress: 0,
+      setScrollProgress: () => {},
+      activeService: null,
+      setActiveService: () => {},
+    } as HorizonSceneContextType;
   }
   return context;
 }
