@@ -1,103 +1,173 @@
 import { setRequestLocale } from 'next-intl/server';
 import type { Metadata } from 'next';
-import { ProjectCard } from '@/components/ui/ProjectCard';
-import { SectionLabel } from '@/components/ui/SectionLabel';
-import { getProjects, type Locale } from '@/data/site';
-import { createPageMetadata } from '@/data/seo';
+import Script from 'next/script';
+import { ProjetsHero } from '@/components/projets/ProjetsHero';
+import { PortfolioPhilosophy } from '@/components/projets/PortfolioPhilosophy';
+import { ProjectsSection } from '@/components/projets/ProjectsSection';
+import { FeaturedProject } from '@/components/projets/FeaturedProject';
+import { CaseStudyPreview } from '@/components/projets/CaseStudyPreview';
+import { GalleryStrip } from '@/components/projets/GalleryStrip';
+import { ProjectTypes } from '@/components/projets/ProjectTypes';
+import { ProjectsCTA } from '@/components/projets/ProjectsCTA';
+import { Footer } from '@/components/Footer';
 
-export async function generateMetadata(props: { params: Promise<{ locale: string }> }): Promise<Metadata> {
-  const { locale } = await props.params;
-  return createPageMetadata(locale, 'projects');
+type FilterKey = 'all' | 'residential' | 'interior' | 'commercial' | 'urban' | 'hospitality' | 'public' | 'bim';
+
+interface ProjectData {
+  slug: string;
+  title: string;
+  category: string;
+  location: string;
+  year: string;
+  status: string;
+  concept: string;
+  tags: string[];
+  image: string;
+  alt: string;
+  filterKey: FilterKey;
+  featured?: boolean;
 }
 
-export default async function ProjetsPage(props: { params: Promise<{ locale: string }> }) {
-  const { locale } = await props.params;
-  setRequestLocale(locale);
-  const projects = getProjects(locale as Locale);
+const projects: ProjectData[] = [
+  {
+    slug: 'villa-privee-casablanca',
+    title: 'Villa privée — Casablanca',
+    category: 'Architecture résidentielle',
+    location: 'Casablanca, Maroc',
+    year: '2025',
+    status: 'Étude conceptuelle / mission architecturale',
+    concept: 'Cette villa privée est pensée comme une composition entre intimité, lumière naturelle et continuité des espaces. L\'architecture organise une relation fluide entre intérieur et extérieur, tout en préservant la confidentialité des espaces de vie.',
+    tags: ['Architecture', 'Résidentiel', 'Lumière', 'Matière'],
+    image: '/images/projects/villa-privee-casablanca.webp',
+    alt: 'Villa privée contemporaine à Casablanca avec volumes sobres, lumière naturelle et relation intérieur extérieur.',
+    filterKey: 'residential',
+    featured: true,
+  },
+  {
+    slug: 'projet-residentiel-marrakech',
+    title: 'Projet résidentiel — Marrakech',
+    category: 'Résidentiel premium',
+    location: 'Marrakech, Maroc',
+    year: '2024',
+    status: 'Concept architectural',
+    concept: 'Une résidence pensée autour du confort, de l\'élégance et de la relation au climat. Le projet met en valeur les volumes, l\'ombre, la lumière et les transitions entre espaces intérieurs et extérieurs.',
+    tags: ['Architecture', 'Résidentiel', 'Lumière', 'Matière'],
+    image: '/images/projects/residentiel-marrakech.webp',
+    alt: 'Projet résidentiel premium à Marrakech avec architecture contemporaine et espaces lumineux.',
+    filterKey: 'residential',
+  },
+  {
+    slug: 'espace-professionnel-rabat',
+    title: 'Espace professionnel — Rabat',
+    category: 'Design intérieur / Tertiaire',
+    location: 'Rabat, Maroc',
+    year: '2024',
+    status: 'Aménagement intérieur',
+    concept: 'Un environnement de travail conçu pour renforcer l\'image de marque, fluidifier les circulations et offrir une expérience professionnelle plus claire, plus confortable et plus cohérente.',
+    tags: ['Design intérieur', 'Tertiaire', 'Ergonomie', 'Image de marque'],
+    image: '/images/projects/espace-professionnel-rabat.webp',
+    alt: 'Espace professionnel à Rabat avec design intérieur contemporain et ambiance premium.',
+    filterKey: 'interior',
+  },
+  {
+    slug: 'amenagement-urbain-tanger',
+    title: 'Aménagement urbain — Tanger',
+    category: 'Urbanisme & aménagement',
+    location: 'Tanger, Maroc',
+    year: '2023',
+    status: 'Étude d\'aménagement',
+    concept: 'Une réflexion territoriale orientée vers la qualité des espaces publics, la mobilité, la lisibilité des parcours et l\'intégration du projet dans son environnement urbain.',
+    tags: ['Urbanisme', 'Aménagement', 'Mobilité', 'Espace public'],
+    image: '/images/projects/amenagement-urbain-tanger.webp',
+    alt: 'Étude d\'aménagement urbain à Tanger avec organisation des espaces publics et mobilité.',
+    filterKey: 'urban',
+  },
+  {
+    slug: 'hotel-boutique-marrakech',
+    title: 'Hôtel Boutique — Marrakech',
+    category: 'Hospitality / Design intérieur',
+    location: 'Marrakech, Maroc',
+    year: '2025',
+    status: 'Concept hospitality',
+    concept: 'Un lieu d\'accueil pensé comme une expérience sensorielle : matière, lumière, parcours, intimité et identité locale se combinent pour créer une atmosphère mémorable.',
+    tags: ['Hospitality', 'Design intérieur', 'Expérience', 'Matériaux'],
+    image: '/images/projects/hotel-boutique-marrakech.webp',
+    alt: 'Hôtel boutique à Marrakech avec design intérieur premium et atmosphère chaleureuse.',
+    filterKey: 'hospitality',
+  },
+  {
+    slug: 'centre-culturel-essaouira',
+    title: 'Centre Culturel — Essaouira',
+    category: 'Équipement public',
+    location: 'Essaouira, Maroc',
+    year: '2024',
+    status: 'Étude architecturale',
+    concept: 'Un équipement conçu comme un lieu de rencontre, d\'apprentissage et d\'expression culturelle, avec une attention portée à l\'accessibilité, aux usages collectifs et à l\'identité du territoire.',
+    tags: ['Équipement public', 'Culture', 'Architecture', 'Usage collectif'],
+    image: '/images/projects/centre-culturel-essaouira.webp',
+    alt: 'Centre culturel à Essaouira avec architecture publique et espaces collectifs.',
+    filterKey: 'public',
+  },
+  {
+    slug: 'coordination-bim-projet-mixte',
+    title: 'Coordination BIM — Projet mixte',
+    category: 'BIM & études techniques',
+    location: 'Maroc',
+    year: '2025',
+    status: 'Mission de coordination',
+    concept: 'Une mission de coordination numérique destinée à améliorer la lecture du projet, anticiper les incohérences techniques et faciliter les échanges entre les différents intervenants.',
+    tags: ['BIM', 'Coordination', 'Études techniques', 'Synthèse'],
+    image: '/images/projects/bim-coordination.webp',
+    alt: 'Maquette BIM et coordination technique pour projet architectural mixte.',
+    filterKey: 'bim',
+  },
+];
 
-  const filters = [
-    { key: 'all', label: { fr: 'Tous', en: 'All', ar: 'الكل' } },
-    { key: 'Architecture', label: { fr: 'Architecture', en: 'Architecture', ar: 'هندسة معمارية' } },
-    { key: 'Design Intérieur', label: { fr: 'Design Intérieur', en: 'Interior Design', ar: 'تصميم داخلي' } },
-    { key: 'Urbanisme', label: { fr: 'Urbanisme', en: 'Urban Planning', ar: 'تعمير' } },
-    { key: 'BIM Consulting', label: { fr: 'BIM', en: 'BIM', ar: 'BIM' } },
-  ];
-
-  const getLabel = (key: string) => {
-    const filter = filters.find(f => f.key === key);
-    if (!filter) return key;
-    const localeMap: Record<string, string> = { fr: 'fr', en: 'en', ar: 'ar' };
-    const mapKey = localeMap[locale] || 'fr';
-    return (filter.label as Record<string, string>)[mapKey] || key;
+function generateStructuredData() {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    name: 'Projets EAI | Portfolio Architecture, Design Intérieur & Urbanisme au Maroc',
+    description: 'Découvrez les projets d\'ELAOUAD Architecture & Ingénierie : architecture résidentielle, design intérieur, urbanisme, hospitality, BIM et études techniques au Maroc.',
+    url: 'https://eai-construction.com/projets',
+    mainEntity: {
+      '@type': 'ItemList',
+      itemListElement: projects.map((project, index) => ({
+        '@type': 'CreativeWork',
+        position: index + 1,
+        name: project.title,
+        description: project.concept,
+        url: `https://eai-construction.com/projets/${project.slug}`,
+        image: `https://eai-construction.com${project.image}`,
+      })),
+    },
   };
+}
 
+export async function generateMetadata(): Promise<Metadata> {
+  return {
+    title: 'Projets EAI | Portfolio Architecture, Design Intérieur & Urbanisme au Maroc',
+    description: 'Découvrez les projets d\'ELAOUAD Architecture & Ingénierie : architecture résidentielle, design intérieur, urbanisme, hospitality, BIM et études techniques au Maroc.',
+  };
+}
+
+export default function ProjetsPage() {
   return (
-    <main className="bg-lumen min-h-screen pt-40 pb-32">
-      <div className="container mx-auto px-6 mb-20">
-        <SectionLabel className="mb-8">Portfolio</SectionLabel>
-        <h1 className="font-display text-display-xl text-ink italic mb-12 max-w-[800px] leading-tight">
-          <span className="block">L&apos;expression de</span>
-          <span className="block text-brass">notre vision.</span>
-        </h1>
-        
-        {/* FILTERS */}
-        <div className="flex flex-wrap gap-6 border-b border-cloud pb-6">
-          {filters.map((filter, i) => (
-            <button 
-              key={filter.key}
-              data-filter={filter.key}
-              className="filter-btn font-body text-label uppercase tracking-widest transition-colors data-[active=true]:text-brass data-[active=false]:text-mortar hover:text-ink"
-              data-active={i === 0 ? 'true' : 'false'}
-            >
-              {getLabel(filter.key)}
-            </button>
-          ))}
-        </div>
-      </div>
-
-      <div className="container mx-auto px-6">
-        <div className="project-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
-          {projects.map((project, i) => (
-            <div key={project.slug} className="project-item mt-8" data-category={project.category}>
-              <ProjectCard
-                slug={project.slug}
-                title={project.title}
-                category={project.category}
-                location={project.location}
-                year={project.year}
-                imageSrc={project.image}
-              />
-            </div>
-          ))}
-        </div>
-      </div>
-
-      <script dangerouslySetInnerHTML={{
-        __html: `
-          document.addEventListener('DOMContentLoaded', function() {
-            var buttons = document.querySelectorAll('.filter-btn');
-            var items = document.querySelectorAll('.project-item');
-            
-            buttons.forEach(function(btn) {
-              btn.addEventListener('click', function() {
-                var filter = btn.getAttribute('data-filter');
-                
-                buttons.forEach(function(b) { b.setAttribute('data-active', 'false'); });
-                btn.setAttribute('data-active', 'true');
-                
-                items.forEach(function(item) {
-                  if (filter === 'all') {
-                    item.style.display = 'block';
-                  } else {
-                    var category = item.getAttribute('data-category');
-                    item.style.display = category === filter ? 'block' : 'none';
-                  }
-                });
-              });
-            });
-          });
-        `
-      }} />
+    <main className="bg-eai-paper min-h-screen">
+      <Script
+        id="projets-structured-data"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(generateStructuredData()) }}
+      />
+      <ProjetsHero />
+      <PortfolioPhilosophy />
+      <FeaturedProject />
+      <ProjectsSection projects={projects} />
+      <CaseStudyPreview />
+      <GalleryStrip />
+      <ProjectTypes />
+      <ProjectsCTA />
+      <Footer />
     </main>
   );
 }

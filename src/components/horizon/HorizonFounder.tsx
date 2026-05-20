@@ -38,7 +38,7 @@ export function HorizonFounder() {
   }, [registerScene]);
 
   return (
-    <section ref={sectionRef} className="relative py-32 lg:py-48 overflow-hidden bg-transparent">
+    <section ref={sectionRef} id="apropos" className="relative py-32 lg:py-48 overflow-hidden bg-transparent">
       <HorizonFrame showGrid={false} showLight>
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-24 items-center">

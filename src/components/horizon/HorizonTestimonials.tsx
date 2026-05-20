@@ -42,7 +42,7 @@ export function HorizonTestimonials({ locale }: { locale: Locale }) {
   const prev = () => setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
 
   return (
-    <section ref={sectionRef} className="relative py-32 lg:py-48 overflow-hidden bg-transparent">
+    <section ref={sectionRef} id="testimonials" className="relative py-32 lg:py-48 overflow-hidden bg-transparent">
       {/* Background giant number */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <motion.span

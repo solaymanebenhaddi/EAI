@@ -10,7 +10,7 @@ import { HorizonFounder } from '@/components/horizon/HorizonFounder';
 import { HorizonEvents } from '@/components/horizon/HorizonEvents';
 import { HorizonTestimonials } from '@/components/horizon/HorizonTestimonials';
 import { HorizonFinalCTA } from '@/components/horizon/HorizonFinalCTA';
-import { HorizonFooter } from '@/components/horizon/HorizonFooter';
+import { Footer } from '@/components/Footer';
 import type { Locale } from '@/data/site';
 import { createPageMetadata } from '@/data/seo';
 
@@ -24,17 +24,19 @@ export default async function HomePage(props: { params: Promise<{ locale: string
   setRequestLocale(locale);
 
   return (
-    <HorizonArchitectureExperience>
-      <HorizonHero />
-      <HorizonBlueprint />
-      <HorizonManifesto locale={locale as Locale} />
-      <HorizonServices locale={locale as Locale} />
-      <HorizonProjects locale={locale as Locale} />
-      <HorizonFounder />
-      <HorizonEvents locale={locale as Locale} />
-      <HorizonTestimonials locale={locale as Locale} />
-      <HorizonFinalCTA />
-      <HorizonFooter />
-    </HorizonArchitectureExperience>
+    <>
+      <HorizonArchitectureExperience>
+        <HorizonHero />
+        <HorizonBlueprint />
+        <HorizonManifesto locale={locale as Locale} />
+        <HorizonServices locale={locale as Locale} />
+        <HorizonProjects locale={locale as Locale} />
+        <HorizonFounder />
+        <HorizonEvents locale={locale as Locale} />
+        <HorizonTestimonials locale={locale as Locale} />
+        <HorizonFinalCTA />
+      </HorizonArchitectureExperience>
+      <Footer />
+    </>
   );
 }

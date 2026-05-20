@@ -16,6 +16,7 @@ export function Nav() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const locales: Locale[] = ['fr', 'en', 'ar'];
+  const isDarkTheme = pathname.startsWith('/events');
 
   useEffect(() => {
     const handleScroll = () => {
@@ -36,14 +37,15 @@ export function Nav() {
   ];
 
   return (
-    <nav
+    <>
+      <nav
       className={`fixed top-0 w-full z-50 transition-all duration-600 ${
         isScrolled 
-          ? 'bg-eai-paper/90 backdrop-blur-md border-b border-eai-line py-4'
-          : 'bg-eai-paper/72 backdrop-blur-sm border-b border-eai-line/60 py-6'
+          ? (isDarkTheme ? 'bg-void/90 backdrop-blur-md border-b border-stone py-4' : 'bg-eai-paper/90 backdrop-blur-md border-b border-eai-line py-4')
+          : (isDarkTheme ? 'bg-void/72 backdrop-blur-sm border-b border-stone/60 py-6' : 'bg-eai-paper/72 backdrop-blur-sm border-b border-eai-line/60 py-6')
       }`}
     >
-      <div className="container mx-auto px-6 grid grid-cols-2 lg:grid-cols-3 items-center">
+      <div className="relative z-50 container mx-auto px-6 grid grid-cols-2 lg:grid-cols-3 items-center">
         {/* LOGO */}
         <Link href="/" className="flex items-center gap-3 group">
           <Image 
@@ -55,10 +57,10 @@ export function Nav() {
             priority
           />
           <div className="flex flex-col">
-            <span className="font-display text-[18px] tracking-[0.08em] leading-tight text-eai-charcoal">
+            <span className={`font-display text-[18px] tracking-[0.08em] leading-tight ${isDarkTheme ? 'text-parchment' : 'text-eai-charcoal'}`}>
               ELAOUAD
             </span>
-            <span className="font-body text-[8px] tracking-[0.15em] uppercase text-eai-warm-grey group-hover:text-eai-brass transition-colors">
+            <span className={`font-body text-[8px] tracking-[0.15em] uppercase ${isDarkTheme ? 'text-stone-300' : 'text-eai-warm-grey'} group-hover:text-eai-brass transition-colors`}>
               Architecture & Ingénierie
             </span>
           </div>
@@ -73,7 +75,11 @@ export function Nav() {
                 key={link.name}
                 href={link.href}
                 className={`font-body text-label uppercase tracking-[0.12em] relative group transition-colors duration-280 ${
-                  isActive ? 'text-eai-brass' : 'text-eai-warm-grey hover:text-eai-charcoal'
+                  isActive 
+                    ? 'text-eai-brass' 
+                    : isDarkTheme 
+                      ? 'text-stone-400 hover:text-parchment' 
+                      : 'text-eai-warm-grey hover:text-eai-charcoal'
                 }`}
               >
                 {link.name}
@@ -90,14 +96,18 @@ export function Nav() {
         {/* CTA & HAMBURGER */}
         <div className="flex justify-end items-center gap-4 md:gap-6">
           {/* Language Switcher */}
-          <div className="flex items-center gap-2 pr-4 lg:pr-6 mr-2 border-r border-eai-line">
+          <div className={`flex items-center gap-2 pr-4 lg:pr-6 mr-2 border-r ${isDarkTheme ? 'border-stone' : 'border-eai-line'}`}>
             {locales.map((l) => (
               <Link
                 key={l}
                 href={pathname}
                 locale={l}
                 className={`text-[10px] font-body uppercase tracking-widest transition-colors ${
-                  locale === l ? 'text-eai-brass font-bold' : 'text-eai-warm-grey hover:text-eai-brass'
+                  locale === l 
+                    ? 'text-eai-brass font-bold' 
+                    : isDarkTheme 
+                      ? 'text-stone-400 hover:text-eai-brass' 
+                      : 'text-eai-warm-grey hover:text-eai-brass'
                 }`}
               >
                 {l}
@@ -117,13 +127,14 @@ export function Nav() {
             aria-label={isMobileMenuOpen ? t('closeMenu') : t('openMenu')}
             aria-expanded={isMobileMenuOpen}
             aria-controls="mobile-navigation"
-            className="lg:hidden text-eai-charcoal"
+            className={`lg:hidden ${isDarkTheme ? 'text-parchment' : 'text-eai-charcoal'}`}
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
       </div>
+      </nav>
  
       {/* MOBILE MENU */}
       <AnimatePresence>
@@ -134,7 +145,7 @@ export function Nav() {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: '100%' }}
             transition={{ type: 'tween', duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-            className="fixed inset-0 z-40 flex flex-col items-center justify-center gap-8 lg:hidden bg-eai-paper"
+            className={`fixed inset-0 z-40 flex flex-col items-center justify-start pt-28 pb-12 gap-6 overflow-y-auto lg:hidden ${isDarkTheme ? 'bg-void' : 'bg-eai-paper'}`}
           >
             {navLinks.map((link, i) => (
               <motion.div
@@ -145,7 +156,9 @@ export function Nav() {
               >
                 <Link
                   href={link.href}
-                  className="font-display text-display-md italic text-eai-charcoal hover:text-eai-brass transition-colors"
+                  className={`font-display text-display-md italic transition-colors ${
+                    isDarkTheme ? 'text-parchment hover:text-eai-brass' : 'text-eai-charcoal hover:text-eai-brass'
+                  }`}
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {link.name}
@@ -169,7 +182,8 @@ export function Nav() {
         )}
       </AnimatePresence>
  
-      <div className="absolute top-full left-0 right-0 z-50 grid grid-cols-2 border-b border-eai-line lg:hidden bg-eai-paper/95 backdrop-blur-md shadow-md">
+      {!isMobileMenuOpen && (
+        <div className="fixed bottom-0 left-0 right-0 z-50 grid grid-cols-2 border-t border-eai-line lg:hidden bg-eai-paper/95 backdrop-blur-md shadow-[0_-4px_10px_rgba(0,0,0,0.05)]">
         <a
           href="https://wa.me/212666798536"
           onClick={() => trackEvent('whatsapp_click', { location: 'mobile_sticky_nav' })}
@@ -186,7 +200,8 @@ export function Nav() {
           <CalendarCheck size={16} aria-hidden="true" />
           <span>{t('startProject')}</span>
         </Link>
-      </div>
-    </nav>
+        </div>
+      )}
+    </>
   );
 }

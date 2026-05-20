@@ -39,7 +39,7 @@ export function HorizonFinalCTA() {
   }, [registerScene]);
 
   return (
-    <section ref={sectionRef} className="relative py-32 lg:py-48 overflow-hidden bg-transparent">
+    <section ref={sectionRef} id="call-to-action" className="relative py-32 lg:py-48 overflow-hidden bg-transparent">
       {/* Architectural converging lines */}
       <div className="absolute inset-0 pointer-events-none opacity-20">
         <div className="absolute left-1/4 top-0 w-px h-full bg-eai-brass/10" />

@@ -1,0 +1,11 @@
+export { FormationsHero } from './FormationsHero';
+export { FormationsMission } from './FormationsMission';
+export { TrainingCategories } from './TrainingCategories';
+export { FeaturedPrograms } from './FeaturedPrograms';
+export { LearningMethod } from './LearningMethod';
+export { TestimonialCarousel } from './TestimonialCarousel';
+export { PlatformGateway } from './PlatformGateway';
+export { InstructorProfiles } from './InstructorProfiles';
+export { CertificationSection } from './CertificationSection';
+export { FAQSection } from './FAQSection';
+export { FormationsCTA } from './FormationsCTA';

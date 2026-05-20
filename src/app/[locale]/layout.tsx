@@ -10,6 +10,7 @@ import { routing } from '@/i18n/routing';
 import { SchemaOrg } from '@/components/seo/SchemaOrg';
 import type { Locale } from '@/data/site';
 import { ScrollDepthTracker } from '@/components/analytics/ScrollDepthTracker';
+import { SmoothScrollProvider } from '@/components/cinematic/LenisWrapper';
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -70,17 +71,21 @@ export default async function LocaleLayout(
     : `${display.variable} ${body.variable} ${accent.variable} font-body`;
 
   return (
-    <html lang={locale} dir={dir} className="scroll-smooth">
+    <html lang={locale} dir={dir}>
       <head>
         <SchemaOrg locale={locale as Locale} />
         {/* GA4 measurement hook */}
+        <script
+          async
+          src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || 'G-XXXXXXXXXX'}`}
+        />
         <script
           dangerouslySetInnerHTML={{
             __html: `
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
-              gtag('config', 'G-XXXXXXXXXX', {
+              gtag('config', '${process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || 'G-XXXXXXXXXX'}', {
                 page_path: window.location.pathname,
               });
             `,
@@ -91,11 +96,13 @@ export default async function LocaleLayout(
         className={`${fontClasses} bg-eai-paper text-eai-charcoal min-h-screen antialiased`}
       >
         <NextIntlClientProvider messages={messages}>
-          <ScrollDepthTracker />
-          <Cursor />
-          <div className="fixed inset-0 pointer-events-none z-10 bg-[url('/noise.png')] opacity-[0.02]" />
-          <Nav />
-          {props.children}
+          <SmoothScrollProvider>
+            <ScrollDepthTracker />
+            <Cursor />
+            <div className="fixed inset-0 pointer-events-none z-10 bg-[url('/noise.png')] opacity-[0.02]" />
+            {props.children}
+            <Nav />
+          </SmoothScrollProvider>
         </NextIntlClientProvider>
       </body>
     </html>

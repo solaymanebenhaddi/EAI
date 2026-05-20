@@ -339,6 +339,40 @@ const localizedProjects: LocalizedProject[] = [
     ),
     gallery: ['/images/service3.webp', '/images/project3.webp', '/images/hero.webp'],
   },
+  {
+    slug: 'residence-luxe-agadir',
+    title: text('Résidence de luxe', 'Luxury Residence', 'إقامة فاخرة'),
+    category: text('Architecture résidentielle', 'Residential architecture', 'عمارة سكنية'),
+    location: text('Agadir, Maroc', 'Agadir, Morocco', 'أكادير، المغرب'),
+    year: '2025',
+    image: '/images/hero.webp',
+    client: text('Investisseur privé', 'Private investor', 'مستثمر خاص'),
+    surface: '3 200 m²',
+    status: text('En cours', 'In progress', 'جاري الإنجاز'),
+    description: text(
+      "Une résidence balnéaire haut de gamme intégrant piscines à débordement, jardins paysagers et finitions d'exception.",
+      'A high-end seaside residence integrating infinity pools, landscaped gardens, and exceptional finishes.',
+      'إقامة ساحلية راقية تدمج مسابح لا متناهية وحدائق منسقة وتشطيبات استثنائية.'
+    ),
+    gallery: ['/images/hero.webp', '/images/project1.webp', '/images/project2.webp'],
+  },
+  {
+    slug: 'complexe-sportif-fes',
+    title: text('Complexe sportif', 'Sports Complex', 'مجمع رياضي'),
+    category: text('Équipement public', 'Public facility', 'تجهيز عمومي'),
+    location: text('Fès, Maroc', 'Fez, Morocco', 'فاس، المغرب'),
+    year: '2023',
+    image: '/images/founder.webp',
+    client: text('Collectivité territoriale', 'Local authority', 'جماعة ترابية'),
+    surface: '18 500 m²',
+    status: text('Livré', 'Delivered', 'منجز'),
+    description: text(
+      "Un complexe sportif multifonctionnel conçu pour accueillir compétitions, formations et événements communautaires.",
+      'A multifunctional sports complex designed to host competitions, training, and community events.',
+      'مجمع رياضي متعدد الوظائف مصمم لاستضافة المنافسات والتدريبات والفعاليات المجتمعية.'
+    ),
+    gallery: ['/images/founder.webp', '/images/project4.webp', '/images/service1.webp'],
+  },
 ];
 
 const localizedEvents: LocalizedEvent[] = [

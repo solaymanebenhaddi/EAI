@@ -181,7 +181,7 @@ export function HorizonServices({ locale }: { locale: Locale }) {
   }, [activeIndex, isActive, setActiveService, services]);
 
   return (
-    <section ref={sectionRef} className="relative py-32 lg:py-48 bg-transparent">
+    <section ref={sectionRef} id="services" className="relative py-32 lg:py-48 bg-transparent">
       <HorizonFrame showGrid={false} showLight>
         <div className="container mx-auto px-6">
            {/* Section Header */}

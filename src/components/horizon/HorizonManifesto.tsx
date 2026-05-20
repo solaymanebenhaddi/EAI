@@ -47,7 +47,7 @@ export function HorizonManifesto({ locale }: { locale: Locale }) {
   const backgroundWordX = useTransform(scrollYProgress, [0, 1], [-120, 120]);
 
   return (
-    <section ref={sectionRef} className="relative py-32 lg:py-48 overflow-hidden bg-transparent">
+    <section ref={sectionRef} id="manifesto" className="relative py-32 lg:py-48 overflow-hidden bg-transparent">
       <motion.div className="absolute inset-0 bg-eai-stone-light/10 backdrop-blur-[2px]" style={{ opacity: bgOpacity }} />
       
       {/* Giant Background Word with smooth scroll-linked drift */}

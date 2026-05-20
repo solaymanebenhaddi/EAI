@@ -38,6 +38,7 @@ export function HorizonFooter() {
   const footerRef = useRef<HTMLElement>(null);
   const [showBackToTop, setShowBackToTop] = useState(false);
   const { registerScene } = useHorizonScene();
+  const isDarkTheme = pathname.startsWith('/events');
 
   // Scene Registration Observer
   useEffect(() => {
@@ -98,7 +99,7 @@ export function HorizonFooter() {
   const ghostOpacity = useTransform(scrollYProgress, [0, 1], [0, 0.05]);
 
   return (
-    <footer ref={footerRef} className="relative overflow-hidden border-t border-eai-line bg-eai-paper/80 backdrop-blur-3xl">
+    <footer ref={footerRef} id="footer" className={`relative overflow-hidden border-t ${isDarkTheme ? 'border-stone bg-void/80' : 'border-eai-line bg-eai-paper/80'} backdrop-blur-3xl`}>
       {/* Enhanced ELAOUAD Ghost Word with Fluid Blending */}
       <div className="pointer-events-none absolute inset-0 flex items-center justify-center overflow-hidden mix-blend-color-burn">
         <motion.span 
@@ -113,7 +114,7 @@ export function HorizonFooter() {
 
       <div className="container relative z-10 mx-auto px-6">
         <div className="py-20 text-center lg:py-32">
-          <h2 className="mb-8 font-display text-display-md leading-[0.9] text-eai-ink">
+          <h2 className={`mb-8 font-display text-display-md leading-[0.9] ${isDarkTheme ? 'text-parchment' : 'text-eai-ink'}`}>
             {ctaLines.map((line, index) => (
               <span key={line} className={`block ${index === 1 ? 'text-eai-brass' : ''}`}>
                 {line}
@@ -132,21 +133,21 @@ export function HorizonFooter() {
             <Link
               href="/contact"
               onClick={() => trackEvent('cta_click', { location: 'footer', label: 'consultation' })}
-              className="border border-eai-line px-8 py-4 text-label uppercase tracking-widest text-eai-charcoal transition-all duration-300 hover:border-eai-brass hover:text-eai-brass bg-eai-paper/40 md:px-10 md:py-5"
+              className={`border ${isDarkTheme ? 'border-stone text-parchment bg-void/40' : 'border-eai-line text-eai-charcoal bg-eai-paper/40'} px-8 py-4 text-label uppercase tracking-widest transition-all duration-300 hover:border-eai-brass hover:text-eai-brass md:px-10 md:py-5`}
             >
               {t('ctaConsultation')}
             </Link>
             <a
               href="https://wa.me/212666798536"
               onClick={() => trackEvent('whatsapp_click', { location: 'footer' })}
-              className="border border-eai-line px-8 py-4 text-label uppercase tracking-widest text-eai-charcoal transition-all duration-300 hover:border-eai-brass hover:text-eai-brass bg-eai-paper/40 md:px-10 md:py-5"
+              className={`border ${isDarkTheme ? 'border-stone text-parchment bg-void/40' : 'border-eai-line text-eai-charcoal bg-eai-paper/40'} px-8 py-4 text-label uppercase tracking-widest transition-all duration-300 hover:border-eai-brass hover:text-eai-brass md:px-10 md:py-5`}
             >
               {t('ctaWhatsapp')}
             </a>
             <Link
               href="/projets"
               onClick={() => trackEvent('cta_click', { location: 'footer', label: 'projects' })}
-              className="border border-eai-line px-8 py-4 text-label uppercase tracking-widest text-eai-charcoal transition-all duration-300 hover:border-eai-brass hover:text-eai-brass bg-eai-paper/40 md:px-10 md:py-5"
+              className={`border ${isDarkTheme ? 'border-stone text-parchment bg-void/40' : 'border-eai-line text-eai-charcoal bg-eai-paper/40'} px-8 py-4 text-label uppercase tracking-widest transition-all duration-300 hover:border-eai-brass hover:text-eai-brass md:px-10 md:py-5`}
             >
               {t('ctaProjects')}
             </Link>
@@ -163,7 +164,7 @@ export function HorizonFooter() {
             <ul className="flex flex-col gap-3">
               {navLinks.map((link) => (
                 <li key={link.name}>
-                  <Link href={link.href} className="font-body text-sm text-eai-warm-grey transition-colors hover:text-eai-charcoal">
+                  <Link href={link.href} className={`font-body text-sm ${isDarkTheme ? 'text-eai-warm-grey hover:text-parchment' : 'text-eai-warm-grey hover:text-eai-charcoal'} transition-colors`}>
                     {link.name}
                   </Link>
                 </li>
@@ -178,7 +179,7 @@ export function HorizonFooter() {
             <ul className="flex flex-col gap-3">
               {expertiseLinks.map((link) => (
                 <li key={link.name}>
-                  <Link href={link.href} className="font-body text-sm text-eai-warm-grey transition-colors hover:text-eai-charcoal">
+                  <Link href={link.href} className={`font-body text-sm ${isDarkTheme ? 'text-eai-warm-grey hover:text-parchment' : 'text-eai-warm-grey hover:text-eai-charcoal'} transition-colors`}>
                     {link.name}
                   </Link>
                 </li>
@@ -193,7 +194,7 @@ export function HorizonFooter() {
             <ul className="flex flex-col gap-3">
               {eventItems.map((item) => (
                 <li key={item}>
-                  <Link href="/events" className="font-body text-sm text-eai-warm-grey transition-colors hover:text-eai-charcoal">
+                  <Link href="/events" className={`font-body text-sm ${isDarkTheme ? 'text-eai-warm-grey hover:text-parchment' : 'text-eai-warm-grey hover:text-eai-charcoal'} transition-colors`}>
                     {item}
                   </Link>
                 </li>
@@ -208,12 +209,12 @@ export function HorizonFooter() {
             <ul className="flex flex-col gap-3">
               <li className="font-body text-sm text-eai-warm-grey">{t('office')}</li>
               <li>
-                <a href="mailto:contact@eai-construction.com" className="font-body text-sm text-eai-warm-grey transition-colors hover:text-eai-charcoal">
+                <a href="mailto:contact@eai-construction.com" className={`font-body text-sm ${isDarkTheme ? 'text-eai-warm-grey hover:text-parchment' : 'text-eai-warm-grey hover:text-eai-charcoal'} transition-colors`}>
                   contact@eai-construction.com
                 </a>
               </li>
               <li>
-                <a href="tel:+212520198738" className="font-body text-sm text-eai-warm-grey transition-colors hover:text-eai-charcoal">
+                <a href="tel:+212520198738" className={`font-body text-sm ${isDarkTheme ? 'text-eai-warm-grey hover:text-parchment' : 'text-eai-warm-grey hover:text-eai-charcoal'} transition-colors`}>
                   +212 520 19 87 38
                 </a>
               </li>
@@ -231,7 +232,9 @@ export function HorizonFooter() {
                   href={pathname}
                   locale={targetLocale}
                   className={`font-body text-sm uppercase tracking-widest transition-colors ${
-                    locale === targetLocale ? 'text-eai-brass' : 'text-eai-warm-grey hover:text-eai-charcoal'
+                    locale === targetLocale 
+                      ? 'text-eai-brass' 
+                      : isDarkTheme ? 'text-eai-warm-grey hover:text-parchment' : 'text-eai-warm-grey hover:text-eai-charcoal'
                   }`}
                 >
                   {targetLocale}
@@ -241,7 +244,7 @@ export function HorizonFooter() {
           </div>
         </div>
 
-        <div className="flex flex-col items-center justify-between gap-4 border-t border-eai-line py-8 md:flex-row">
+        <div className={`flex flex-col items-center justify-between gap-4 border-t ${isDarkTheme ? 'border-stone' : 'border-eai-line'} py-8 md:flex-row`}>
           <p className="font-body text-xs text-eai-warm-grey/60">
             {t('copyright')}
           </p>
@@ -258,7 +261,7 @@ export function HorizonFooter() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 20 }}
             onClick={scrollToTop}
-            className="fixed bottom-24 left-8 z-50 flex h-12 w-12 items-center justify-center border border-eai-line bg-eai-paper text-eai-warm-grey transition-all hover:border-eai-brass hover:text-eai-brass"
+            className={`fixed bottom-24 left-8 z-50 flex h-12 w-12 items-center justify-center border ${isDarkTheme ? 'border-stone bg-void text-eai-warm-grey hover:border-eai-brass hover:text-eai-brass' : 'border-eai-line bg-eai-paper text-eai-warm-grey hover:border-eai-brass hover:text-eai-brass'} transition-all`}
             aria-label={t('backToTop')}
           >
             <ArrowUp size={18} />

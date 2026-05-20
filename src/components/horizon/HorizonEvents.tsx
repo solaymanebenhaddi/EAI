@@ -45,7 +45,7 @@ export function HorizonEvents({ locale }: { locale: Locale }) {
   }, [registerScene]);
 
   return (
-    <section ref={sectionRef} className="relative overflow-hidden bg-transparent py-32 lg:py-48">
+    <section ref={sectionRef} id="events" className="relative overflow-hidden bg-transparent py-32 lg:py-48">
       <HorizonFrame showGrid showLight>
         <div className="container mx-auto px-6">
           <div className="mb-16 grid grid-cols-1 gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-end">

@@ -65,18 +65,18 @@ const pageSeo: Record<PageKey, Record<Locale, { title: string; description: stri
   },
   about: {
     fr: {
-      title: 'À Propos de Soukaina Elaouad',
-      description: 'Découvrez la vision de Soukaina Elaouad, fondatrice d’ELAOUAD Architecture & Ingénierie à Casablanca.',
+      title: 'À propos EAI | ELAOUAD Architecture & Ingénierie à Casablanca',
+      description: 'Découvrez ELAOUAD Architecture & Ingénierie, un écosystème marocain dédié à l\'architecture, l\'ingénierie, le BIM, la maîtrise d\'œuvre, la formation et les événements professionnels.',
       path: '/a-propos',
     },
     en: {
-      title: 'About Soukaina Elaouad',
-      description: 'Discover the vision of Soukaina Elaouad, founder of ELAOUAD Architecture & Engineering in Casablanca.',
+      title: 'About EAI | ELAOUAD Architecture & Engineering in Casablanca',
+      description: 'Discover ELAOUAD Architecture & Engineering, a Moroccan ecosystem dedicated to architecture, engineering, BIM, project management, training and professional events.',
       path: '/a-propos',
     },
     ar: {
-      title: 'عن سكينة العواد',
-      description: 'تعرف على رؤية سكينة العواد، مؤسسة ELAOUAD للهندسة المعمارية والهندسة في الدار البيضاء.',
+      title: 'حول EAI | ELAOUAD للهندسة المعمارية والهندسة في الدار البيضاء',
+      description: 'اكتشف ELAOUAD للهندسة المعمارية والهندسة، منظومة مغربية مخصصة للعمارة والهندسة وBIM وإدارة المشاريع والتكوين والفعاليات المهنية.',
       path: '/a-propos',
     },
   },
@@ -116,18 +116,18 @@ const pageSeo: Record<PageKey, Record<Locale, { title: string; description: stri
   },
   contact: {
     fr: {
-      title: 'Contact ELAOUAD Casablanca',
-      description: 'Contactez ELAOUAD Architecture & Ingénierie pour une consultation architecture, BIM, design intérieur ou projet événementiel.',
+      title: 'Contact EAI | ELAOUAD Architecture & Ingénierie Casablanca',
+      description: 'Contactez ELAOUAD Architecture & Ingénierie à Casablanca pour vos projets d\'architecture, ingénierie, BIM, design intérieur, maîtrise d\'œuvre, formations ou événements professionnels.',
       path: '/contact',
     },
     en: {
-      title: 'Contact ELAOUAD Casablanca',
-      description: 'Contact ELAOUAD Architecture & Engineering for architecture, BIM, interior design, or event project consultation.',
+      title: 'Contact EAI | ELAOUAD Architecture & Engineering Casablanca',
+      description: 'Contact ELAOUAD Architecture & Engineering in Casablanca for architecture, engineering, BIM, interior design, project management, training or professional events.',
       path: '/contact',
     },
     ar: {
-      title: 'اتصل ب ELAOUAD الدار البيضاء',
-      description: 'تواصل مع ELAOUAD لاستشارة في العمارة أو BIM أو التصميم الداخلي أو المشاريع الحدثية.',
+      title: 'اتصل بـ EAI | ELAOUAD للهندسة المعمارية والهندسة الدار البيضاء',
+      description: 'اتصل بـ ELAOUAD للهندسة المعمارية والهندسة في الدار البيضاء لمشاريع العمارة والهندسة وBIM والتصميم الداخلي وإدارة المشاريع والتكوين أو الفعاليات المهنية.',
       path: '/contact',
     },
   },

@@ -73,7 +73,7 @@ export function HorizonHero() {
   const heroOpacity = useTransform(scrollYProgress, [0, 0.6], [1, 0]);
 
   return (
-    <section ref={heroRef} className="relative min-h-screen overflow-hidden bg-transparent">
+    <section ref={heroRef} id="hero" className="relative min-h-screen overflow-hidden bg-transparent">
       {/* Light layout grid */}
       <HorizonGrid />
       

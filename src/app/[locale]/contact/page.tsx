@@ -1,13 +1,118 @@
 import { setRequestLocale } from 'next-intl/server';
 import type { Metadata } from 'next';
-import { SectionLabel } from '@/components/ui/SectionLabel';
-import { ContactForm } from '@/components/contact/ContactForm';
+import {
+  ContactHero,
+  ContactOptions,
+  ContactForm,
+  PrepareRequest,
+  RequestRouting,
+  OfficeDetails,
+  AfterSubmission,
+  ContactFAQ,
+  ContactFinalCTA,
+} from '@/components/contact';
+import { Footer } from '@/components/Footer';
 import type { Locale } from '@/data/site';
-import { createPageMetadata } from '@/data/seo';
+import { siteUrl } from '@/data/seo';
 
 export async function generateMetadata(props: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await props.params;
-  return createPageMetadata(locale, 'contact');
+  const isFr = locale === 'fr';
+  const isEn = locale === 'en';
+
+  return {
+    metadataBase: new URL(siteUrl),
+    title: isFr
+      ? 'Contact EAI | ELAOUAD Architecture & Ingénierie Casablanca'
+      : isEn
+        ? 'Contact EAI | ELAOUAD Architecture & Engineering Casablanca'
+        : 'اتصل بـ EAI | ELAOUAD للهندسة المعمارية والهندسة الدار البيضاء',
+    description: isFr
+      ? 'Contactez ELAOUAD Architecture & Ingénierie à Casablanca pour vos projets d\'architecture, ingénierie, BIM, design intérieur, maîtrise d\'œuvre, formations ou événements professionnels.'
+      : isEn
+        ? 'Contact ELAOUAD Architecture & Engineering in Casablanca for architecture, engineering, BIM, interior design, project management, training or professional events.'
+        : 'اتصل بـ ELAOUAD للهندسة المعمارية والهندسة في الدار البيضاء لمشاريع العمارة والهندسة وBIM والتصميم الداخلي وإدارة المشاريع والتكوين أو الفعاليات المهنية.',
+    alternates: {
+      canonical: `${siteUrl}/fr/contact`,
+      languages: {
+        fr: `${siteUrl}/fr/contact`,
+        en: `${siteUrl}/en/contact`,
+        ar: `${siteUrl}/ar/contact`,
+        'x-default': `${siteUrl}/fr/contact`,
+      },
+    },
+    openGraph: {
+      title: isFr
+        ? 'Contact EAI | ELAOUAD Architecture & Ingénierie'
+        : isEn
+          ? 'Contact EAI | ELAOUAD Architecture & Engineering'
+          : 'اتصل بـ EAI | ELAOUAD للهندسة المعمارية والهندسة',
+      description: isFr
+        ? 'Contactez ELAOUAD Architecture & Ingénierie à Casablanca pour vos projets d\'architecture, ingénierie, BIM, design intérieur, maîtrise d\'œuvre, formations ou événements professionnels.'
+        : isEn
+          ? 'Contact ELAOUAD Architecture & Engineering in Casablanca for architecture, engineering, BIM, interior design, project management, training or professional events.'
+          : 'اتصل بـ ELAOUAD للهندسة المعمارية والهندسة في الدار البيضاء لمشاريع العمارة والهندسة وBIM والتصميم الداخلي.',
+      url: `${siteUrl}/${locale}/contact`,
+      siteName: 'ELAOUAD Architecture & Ingénierie',
+      locale,
+      type: 'website',
+      images: [
+        {
+          url: '/images/contact/hero-contact.webp',
+          width: 1200,
+          height: 630,
+          alt: isFr
+            ? 'Contact ELAOUAD Architecture & Ingénierie à Casablanca'
+            : isEn
+              ? 'Contact ELAOUAD Architecture & Engineering in Casablanca'
+              : 'اتصل بـ ELAOUAD للهندسة المعمارية والهندسة في الدار البيضاء',
+        },
+      ],
+    },
+  };
+}
+
+function ContactJsonLd() {
+  const schema = {
+    '@context': 'https://schema.org',
+    '@type': 'ContactPage',
+    'mainEntity': {
+      '@type': ['ProfessionalService', 'ArchitecturalFirm'],
+      'name': 'ELAOUAD Architecture & Ingénierie',
+      'url': siteUrl,
+      'logo': `${siteUrl}/images/LOGO.png`,
+      'image': `${siteUrl}/images/contact/hero-contact.webp`,
+      'telephone': '+212-520-19-87-38',
+      'email': 'contact@eai-construction.com',
+      'address': {
+        '@type': 'PostalAddress',
+        'streetAddress': '10 Florida Center Park 2, Boulevard Zoulikha Nasri, Sidi Maârouf',
+        'addressLocality': 'Casablanca',
+        'postalCode': '20200',
+        'addressCountry': 'MA',
+      },
+      'openingHoursSpecification': {
+        '@type': 'OpeningHoursSpecification',
+        'dayOfWeek': ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+        'opens': '09:00',
+        'closes': '17:00',
+      },
+      'contactPoint': {
+        '@type': 'ContactPoint',
+        'telephone': '+212-520-19-87-38',
+        'contactType': 'customer service',
+        'email': 'contact@eai-construction.com',
+        'availableLanguage': ['French', 'English', 'Arabic'],
+      },
+    },
+  };
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+    />
+  );
 }
 
 export default async function ContactPage(props: { params: Promise<{ locale: string }> }) {
@@ -15,65 +120,20 @@ export default async function ContactPage(props: { params: Promise<{ locale: str
   setRequestLocale(locale);
 
   return (
-    <main className="bg-lumen min-h-screen pt-40 pb-32">
-      <div className="container mx-auto px-6 mb-20">
-        <SectionLabel className="mb-8">Contact</SectionLabel>
-        <h1 className="font-display text-display-xl text-ink italic mb-12 max-w-[900px] leading-tight">
-          Entrons en <span className="text-brass">contact.</span>
-        </h1>
-        <p className="font-body text-[18px] text-mortar max-w-[600px] mb-20">
-          Chaque projet d'exception commence par une conversation. Remplissez le formulaire ci-dessous ou contactez-nous directement via nos coordonnées.
-        </p>
-
-        <div className="grid grid-cols-1 md:grid-cols-[1fr_1fr] gap-20">
-          {/* CONTACT INFO */}
-          <div className="flex flex-col gap-12">
-            <div>
-              <p className="font-body text-label text-mortar uppercase tracking-widest mb-4">Adresse</p>
-              <p className="font-body text-[18px] text-ink leading-relaxed">
-                <span className="block">10 Florida Center Park 2</span>
-                <span className="block">Boulevard Zoulikha Nasri, Sidi Maarouf</span>
-                <span className="block">Casablanca, Maroc</span>
-              </p>
-            </div>
-            
-            <div className="w-full h-[1px] bg-cloud" />
-            
-            <div>
-              <p className="font-body text-label text-mortar uppercase tracking-widest mb-4">Téléphone</p>
-              <a href="tel:+212520198738" className="font-body text-[18px] text-ink hover:text-brass transition-colors block">
-                +212 520 19 87 38
-              </a>
-              <a href="tel:+212666798536" className="font-body text-[18px] text-ink hover:text-brass transition-colors">
-                +212 666 798 536
-              </a>
-            </div>
-
-            <div className="w-full h-[1px] bg-cloud" />
-            
-            <div>
-              <p className="font-body text-label text-mortar uppercase tracking-widest mb-4">Email</p>
-              <a href="mailto:contact@eai-construction.com" className="font-body text-[18px] text-ink hover:text-brass transition-colors">
-                contact@eai-construction.com
-              </a>
-            </div>
-
-            <div className="w-full h-[1px] bg-cloud" />
-            
-            <div>
-              <p className="font-body text-label text-mortar uppercase tracking-widest mb-4">WhatsApp</p>
-              <a href="https://wa.me/212666798536" className="font-body text-[18px] text-ink hover:text-brass transition-colors">
-                +212 666 79 85 36
-              </a>
-            </div>
-          </div>
-
-          {/* CONTACT FORM */}
-          <div className="bg-mist p-10 md:p-14">
-            <ContactForm locale={locale as Locale} />
-          </div>
-        </div>
-      </div>
-    </main>
+    <>
+      <ContactJsonLd />
+      <main className="min-h-screen">
+        <ContactHero />
+        <ContactOptions />
+        <ContactForm />
+        <PrepareRequest />
+        <RequestRouting />
+        <OfficeDetails />
+        <AfterSubmission />
+        <ContactFAQ />
+        <ContactFinalCTA />
+      </main>
+      <Footer />
+    </>
   );
 }
