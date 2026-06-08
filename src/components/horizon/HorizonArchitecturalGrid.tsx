@@ -72,7 +72,7 @@ export function HorizonArchitecturalGrid({
       y1="0"
       x2={i * (100 / density)}
       y2="100%"
-      stroke="#B8963C"
+      stroke="#9BAE40"
       strokeWidth="0.5"
       strokeDasharray="2,4"
       opacity={opacity}
@@ -89,7 +89,7 @@ export function HorizonArchitecturalGrid({
       y1={i * (100 / density)}
       x2="100%"
       y2={i * (100 / density)}
-      stroke="#B8963C"
+      stroke="#9BAE40"
       strokeWidth="0.5"
       strokeDasharray="2,4"
       opacity={opacity}

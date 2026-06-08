@@ -82,20 +82,20 @@ export function CinematicBlueprint() {
               <svg viewBox="0 0 400 300" className="w-full h-full opacity-30">
                 {/* Grid */}
                 {Array.from({ length: 20 }).map((_, i) => (
-                  <line key={`vg-${i}`} x1={i * 20} y1="0" x2={i * 20} y2="300" stroke="#C4A052" strokeWidth="0.3" />
+                  <line key={`vg-${i}`} x1={i * 20} y1="0" x2={i * 20} y2="300" stroke="#9BAE40" strokeWidth="0.3" />
                 ))}
                 {Array.from({ length: 15 }).map((_, i) => (
-                  <line key={`hg-${i}`} x1="0" y1={i * 20} x2="400" y2={i * 20} stroke="#C4A052" strokeWidth="0.3" />
+                  <line key={`hg-${i}`} x1="0" y1={i * 20} x2="400" y2={i * 20} stroke="#9BAE40" strokeWidth="0.3" />
                 ))}
                 {/* Building outline */}
-                <rect x="100" y="80" width="200" height="140" fill="none" stroke="#C4A052" strokeWidth="1.5" />
-                <line x1="100" y1="150" x2="300" y2="150" stroke="#C4A052" strokeWidth="0.8" />
-                <line x1="200" y1="80" x2="200" y2="220" stroke="#C4A052" strokeWidth="0.8" />
+                <rect x="100" y="80" width="200" height="140" fill="none" stroke="#9BAE40" strokeWidth="1.5" />
+                <line x1="100" y1="150" x2="300" y2="150" stroke="#9BAE40" strokeWidth="0.8" />
+                <line x1="200" y1="80" x2="200" y2="220" stroke="#9BAE40" strokeWidth="0.8" />
                 {/* Dimension lines */}
-                <line x1="100" y1="240" x2="300" y2="240" stroke="#C4A052" strokeWidth="0.5" />
-                <line x1="100" y1="235" x2="100" y2="245" stroke="#C4A052" strokeWidth="0.5" />
-                <line x1="300" y1="235" x2="300" y2="245" stroke="#C4A052" strokeWidth="0.5" />
-                <text x="200" y="255" textAnchor="middle" fill="#C4A052" fontSize="10" fontFamily="monospace">24.00m</text>
+                <line x1="100" y1="240" x2="300" y2="240" stroke="#9BAE40" strokeWidth="0.5" />
+                <line x1="100" y1="235" x2="100" y2="245" stroke="#9BAE40" strokeWidth="0.5" />
+                <line x1="300" y1="235" x2="300" y2="245" stroke="#9BAE40" strokeWidth="0.5" />
+                <text x="200" y="255" textAnchor="middle" fill="#9BAE40" fontSize="10" fontFamily="monospace">24.00m</text>
               </svg>
               
               {/* Overlay gradient */}

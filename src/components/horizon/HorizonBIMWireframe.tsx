@@ -83,7 +83,7 @@ export function HorizonBIMWireframe({
           width="300" 
           height="200" 
           fill="none" 
-          stroke="#B8963C" 
+          stroke="#9BAE40" 
           strokeWidth="0.5"
           strokeDasharray="4,4"
         >
@@ -95,7 +95,7 @@ export function HorizonBIMWireframe({
         </rect>
         
         {/* Structural grid */}
-        <g stroke="#B8963C" strokeWidth="0.3" opacity={0.6}>
+        <g stroke="#9BAE40" strokeWidth="0.3" opacity={0.6}>
           {/* Vertical structural lines */}
           <line x1="100" y1="50" x2="100" y2="250" />
           <line x1="150" y1="50" x2="150" y2="250" />
@@ -109,7 +109,7 @@ export function HorizonBIMWireframe({
         </g>
         
         {/* Floor plates */}
-        <g stroke="#B8963C" strokeWidth="0.2" opacity={0.4}>
+        <g stroke="#9BAE40" strokeWidth="0.2" opacity={0.4}>
           <rect x="60" y="80" width="280" height="10" fill="none" />
           <rect x="60" y="130" width="280" height="10" fill="none" />
           <rect x="60" y="180" width="280" height="10" fill="none" />
@@ -122,7 +122,7 @@ export function HorizonBIMWireframe({
           width="40" 
           height="180" 
           fill="none" 
-          stroke="#B8963C" 
+          stroke="#9BAE40" 
           strokeWidth="0.4"
           strokeDasharray="2,4"
         />

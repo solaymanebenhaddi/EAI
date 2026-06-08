@@ -96,7 +96,7 @@ export function HorizonBuildingMass({
           width="150" 
           height="100" 
           fill="none" 
-          stroke="#B8963C" 
+          stroke="#9BAE40" 
           strokeWidth="1"
           opacity={0.8}
         >
@@ -114,7 +114,7 @@ export function HorizonBuildingMass({
           width="130" 
           height="20" 
           fill="none" 
-          stroke="#B8963C" 
+          stroke="#9BAE40" 
           strokeWidth="0.5"
         />
         
@@ -124,7 +124,7 @@ export function HorizonBuildingMass({
           width="130" 
           height="20" 
           fill="none" 
-          stroke="#B8963C" 
+          stroke="#9BAE40" 
           strokeWidth="0.5"
         />
         
@@ -134,25 +134,25 @@ export function HorizonBuildingMass({
           width="130" 
           height="20" 
           fill="none" 
-          stroke="#B8963C" 
+          stroke="#9BAE40" 
           strokeWidth="0.5"
         />
         
         {/* Windows */}
-        <rect x="45" y="45" width="15" height="10" fill="#B8963C" opacity={0.3} />
-        <rect x="70" y="45" width="15" height="10" fill="#B8963C" opacity={0.3} />
-        <rect x="95" y="45" width="15" height="10" fill="#B8963C" opacity={0.3} />
-        <rect x="120" y="45" width="15" height="10" fill="#B8963C" opacity={0.3} />
+        <rect x="45" y="45" width="15" height="10" fill="#9BAE40" opacity={0.3} />
+        <rect x="70" y="45" width="15" height="10" fill="#9BAE40" opacity={0.3} />
+        <rect x="95" y="45" width="15" height="10" fill="#9BAE40" opacity={0.3} />
+        <rect x="120" y="45" width="15" height="10" fill="#9BAE40" opacity={0.3} />
         
-        <rect x="45" y="75" width="15" height="10" fill="#B8963C" opacity={0.3} />
-        <rect x="70" y="75" width="15" height="10" fill="#B8963C" opacity={0.3} />
-        <rect x="95" y="75" width="15" height="10" fill="#B8963C" opacity={0.3} />
-        <rect x="120" y="75" width="15" height="10" fill="#B8963C" opacity={0.3} />
+        <rect x="45" y="75" width="15" height="10" fill="#9BAE40" opacity={0.3} />
+        <rect x="70" y="75" width="15" height="10" fill="#9BAE40" opacity={0.3} />
+        <rect x="95" y="75" width="15" height="10" fill="#9BAE40" opacity={0.3} />
+        <rect x="120" y="75" width="15" height="10" fill="#9BAE40" opacity={0.3} />
         
-        <rect x="45" y="105" width="15" height="10" fill="#B8963C" opacity={0.3} />
-        <rect x="70" y="105" width="15" height="10" fill="#B8963C" opacity={0.3} />
-        <rect x="95" y="105" width="15" height="10" fill="#B8963C" opacity={0.3} />
-        <rect x="120" y="105" width="15" height="10" fill="#B8963C" opacity={0.3} />
+        <rect x="45" y="105" width="15" height="10" fill="#9BAE40" opacity={0.3} />
+        <rect x="70" y="105" width="15" height="10" fill="#9BAE40" opacity={0.3} />
+        <rect x="95" y="105" width="15" height="10" fill="#9BAE40" opacity={0.3} />
+        <rect x="120" y="105" width="15" height="10" fill="#9BAE40" opacity={0.3} />
       </svg>
     </motion.div>
   );

@@ -85,7 +85,7 @@ function AboutJsonLd({ locale }: { locale: Locale }) {
       '@type': ['Organization', 'ArchitecturalFirm'],
       'name': 'ELAOUAD Architecture & Ingénierie',
       'url': siteUrl,
-      'logo': `${siteUrl}/images/LOGO.png`,
+      'logo': `${siteUrl}/images/LOGO-4k.png`,
       'image': `${siteUrl}/images/about/hero-eai-studio.webp`,
       'description': isFr
         ? 'Cabinet d\'architecture et d\'ingénierie premium basé à Casablanca, Maroc, combinant architecture, ingénierie, BIM, maîtrise d\'œuvre, formation et événements professionnels.'

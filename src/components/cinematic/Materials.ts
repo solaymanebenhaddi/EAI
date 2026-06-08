@@ -18,17 +18,17 @@ export const architecturalMaterials = {
   }),
   
   brass: new THREE.MeshStandardMaterial({
-    color: new THREE.Color('#C4A052'),
+    color: new THREE.Color('#9BAE40'),
     roughness: 0.35,
     metalness: 0.85,
     envMapIntensity: 1.0,
   }),
   
   brassGlow: new THREE.MeshStandardMaterial({
-    color: new THREE.Color('#E8C070'),
+    color: new THREE.Color('#DDE7A4'),
     roughness: 0.25,
     metalness: 0.9,
-    emissive: new THREE.Color('#C4A052'),
+    emissive: new THREE.Color('#9BAE40'),
     emissiveIntensity: 0.4,
     envMapIntensity: 1.2,
   }),
@@ -58,21 +58,21 @@ export const architecturalMaterials = {
   }),
   
   sage: new THREE.MeshStandardMaterial({
-    color: new THREE.Color('#7A9186'),
+    color: new THREE.Color('#ADB3B5'),
     roughness: 0.6,
     metalness: 0.1,
     envMapIntensity: 0.4,
   }),
   
   blueprint: new THREE.MeshBasicMaterial({
-    color: new THREE.Color('#C4A052'),
+    color: new THREE.Color('#9BAE40'),
     transparent: true,
     opacity: 0.15,
     side: THREE.DoubleSide,
   }),
   
   grid: new THREE.LineBasicMaterial({
-    color: new THREE.Color('#C4A052'),
+    color: new THREE.Color('#9BAE40'),
     transparent: true,
     opacity: 0.08,
   }),

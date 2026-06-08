@@ -44,14 +44,20 @@ export function Nav() {
 
   return (
     <>
+      <a
+        href="#main-content"
+        className="sr-only fixed left-4 top-4 z-[60] border border-eai-brass bg-eai-paper px-4 py-3 text-label uppercase tracking-[0.12em] text-eai-ink shadow-lg focus:not-sr-only focus:outline-none focus:ring-2 focus:ring-eai-brass"
+      >
+        {t('skipToContent')}
+      </a>
       <nav className={`fixed top-0 z-50 w-full transition-all duration-600 ${navSurface}`}>
         <div className="relative z-50 mx-auto flex w-full max-w-[1720px] items-center justify-between gap-5 px-5 sm:px-6 lg:px-8">
           <Link href="/" className="group flex min-w-0 shrink-0 items-center gap-3 xl:w-[220px]">
             <Image
-              src="/images/LOGO.png"
+              src="/images/LOGO-4k.png"
               alt="ELAOUAD Architecture & Ingénierie"
-              width={50}
-              height={50}
+              width={250}
+              height={100}
               className="h-10 w-auto shrink-0 object-contain"
               priority
             />

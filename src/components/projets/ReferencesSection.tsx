@@ -155,7 +155,7 @@ export function ReferencesSection({ content }: ReferencesSectionProps) {
 
   return (
     <section className="relative isolate overflow-hidden bg-eai-paper pb-24 pt-32 text-eai-charcoal sm:pt-36 lg:pb-32 lg:pt-40">
-      <div className="absolute inset-0 -z-20 bg-[radial-gradient(circle_at_12%_8%,rgba(214,184,106,0.24),transparent_34%),radial-gradient(circle_at_86%_18%,rgba(122,145,134,0.20),transparent_30%),linear-gradient(135deg,#F8F5EE_0%,#F0EBE0_44%,#E7DFD1_100%)]" />
+      <div className="absolute inset-0 -z-20 bg-[radial-gradient(circle_at_12%_8%,rgba(155,174,64,0.24),transparent_34%),radial-gradient(circle_at_86%_18%,rgba(173,179,181,0.20),transparent_30%),linear-gradient(135deg,#F8F5EE_0%,#F0EBE0_44%,#E7DFD1_100%)]" />
       <div className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(25,24,22,0.07)_1px,transparent_1px),linear-gradient(0deg,rgba(25,24,22,0.06)_1px,transparent_1px)] bg-[size:72px_72px] opacity-60" />
       <div className="absolute left-0 right-0 top-[28rem] -z-10 h-px bg-eai-brass/30" />
 

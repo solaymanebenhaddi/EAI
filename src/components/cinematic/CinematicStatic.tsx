@@ -15,12 +15,12 @@ export function CinematicStatic() {
         >
           <path
             d="M 50,350 L 350,350 L 350,200 L 250,200 L 250,50 L 50,50 Z M 150,50 L 150,350 M 250,200 L 50,200"
-            stroke="#C4A052"
+            stroke="#9BAE40"
             strokeWidth="2"
             fill="none"
           />
-          <path d="M 0,100 L 400,100 M 0,200 L 400,200 M 0,300 L 400,300" stroke="#C4A052" strokeWidth="0.5" strokeDasharray="4 4" opacity="0.3" />
-          <path d="M 100,0 L 100,400 M 200,0 L 200,400 M 300,0 L 300,400" stroke="#C4A052" strokeWidth="0.5" strokeDasharray="4 4" opacity="0.3" />
+          <path d="M 0,100 L 400,100 M 0,200 L 400,200 M 0,300 L 400,300" stroke="#9BAE40" strokeWidth="0.5" strokeDasharray="4 4" opacity="0.3" />
+          <path d="M 100,0 L 100,400 M 200,0 L 200,400 M 300,0 L 300,400" stroke="#9BAE40" strokeWidth="0.5" strokeDasharray="4 4" opacity="0.3" />
         </svg>
       </div>
 

@@ -26,7 +26,7 @@ function BlueprintSVG() {
               <motion.line
                 key={`vg-${i}`}
                 x1={i * 20} y1="0" x2={i * 20} y2="450"
-                stroke="#B8963C" strokeWidth="0.5"
+                stroke="#9BAE40" strokeWidth="0.5"
                 initial={{ pathLength: 0 }}
                 animate={isInView ? { pathLength: 1 } : {}}
                 transition={{ duration: 2, delay: i * 0.05 }}
@@ -36,7 +36,7 @@ function BlueprintSVG() {
               <motion.line
                 key={`hg-${i}`}
                 x1="0" y1={i * 20} x2="600" y2={i * 20}
-                stroke="#B8963C" strokeWidth="0.5"
+                stroke="#9BAE40" strokeWidth="0.5"
                 initial={{ pathLength: 0 }}
                 animate={isInView ? { pathLength: 1 } : {}}
                 transition={{ duration: 2, delay: i * 0.05 }}
@@ -45,7 +45,7 @@ function BlueprintSVG() {
           </g>
 
           {/* Complex Architectural Plan */}
-          <g stroke="#B8963C" fill="none">
+          <g stroke="#9BAE40" fill="none">
             {/* Outer Walls */}
             <motion.path
               d="M100 100 L400 100 L400 300 L300 300 L300 350 L100 350 Z"
@@ -74,11 +74,11 @@ function BlueprintSVG() {
           </g>
 
           {/* Dimension Lines & Markers */}
-          <g fill="#B8963C" fontSize="12" fontFamily="monospace">
+          <g fill="#9BAE40" fontSize="12" fontFamily="monospace">
             {/* Width Dimension */}
             <motion.line
               x1="100" y1="80" x2="400" y2="80"
-              stroke="#B8963C" strokeWidth="0.8"
+              stroke="#9BAE40" strokeWidth="0.8"
               initial={{ pathLength: 0 }}
               animate={isInView ? { pathLength: 1 } : {}}
               transition={{ duration: 1, delay: 1.8 }}
@@ -93,7 +93,7 @@ function BlueprintSVG() {
             {/* Length Dimension */}
             <motion.line
               x1="80" y1="100" x2="80" y2="350"
-              stroke="#B8963C" strokeWidth="0.8"
+              stroke="#9BAE40" strokeWidth="0.8"
               initial={{ pathLength: 0 }}
               animate={isInView ? { pathLength: 1 } : {}}
               transition={{ duration: 1, delay: 2 }}
@@ -107,9 +107,9 @@ function BlueprintSVG() {
 
             {/* Target Crosshairs */}
             <motion.g initial={{ scale: 0, opacity: 0 }} animate={isInView ? { scale: 1, opacity: 1 } : {}} transition={{ delay: 2.6 }}>
-              <circle cx="250" cy="200" r="4" fill="none" stroke="#B8963C" strokeWidth="1" />
-              <line x1="242" y1="200" x2="258" y2="200" stroke="#B8963C" strokeWidth="1" />
-              <line x1="250" y1="192" x2="250" y2="208" stroke="#B8963C" strokeWidth="1" />
+              <circle cx="250" cy="200" r="4" fill="none" stroke="#9BAE40" strokeWidth="1" />
+              <line x1="242" y1="200" x2="258" y2="200" stroke="#9BAE40" strokeWidth="1" />
+              <line x1="250" y1="192" x2="250" y2="208" stroke="#9BAE40" strokeWidth="1" />
             </motion.g>
           </g>
         </svg>

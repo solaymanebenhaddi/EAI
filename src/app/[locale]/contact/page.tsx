@@ -80,7 +80,7 @@ function ContactJsonLd() {
       '@type': ['ProfessionalService', 'ArchitecturalFirm'],
       'name': 'ELAOUAD Architecture & Ingénierie',
       'url': siteUrl,
-      'logo': `${siteUrl}/images/LOGO.png`,
+      'logo': `${siteUrl}/images/LOGO-4k.png`,
       'image': `${siteUrl}/images/contact/hero-contact.webp`,
       'telephone': '+212-520-19-87-38',
       'email': 'contact@eai-construction.com',

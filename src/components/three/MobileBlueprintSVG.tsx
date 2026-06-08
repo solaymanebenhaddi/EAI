@@ -13,7 +13,7 @@ function AnimatedPath({ d, progress, delay = 0, duration = 0.3, ...props }: any)
   return (
     <motion.path
       d={d}
-      stroke="#C4A052"
+      stroke="#9BAE40"
       fill="none"
       strokeLinecap="round"
       strokeLinejoin="round"
@@ -73,7 +73,7 @@ function FoundationOutline({ progress }: { progress: any }) {
         y="280"
         width="320"
         height="80"
-        fill="#C4A052"
+        fill="#9BAE40"
         style={{
           opacity: useTransform(progress, [0.15, 0.25, 0.35], [0, 0.05, 0.08])
         }}
@@ -92,7 +92,7 @@ function FoundationOutline({ progress }: { progress: any }) {
         y="388"
         textAnchor="middle"
         fontSize="10"
-        fill="#C4A052"
+        fill="#9BAE40"
         fontFamily="monospace"
         style={{
           opacity: useTransform(progress, [0.25, 0.3], [0, 0.6])
@@ -143,7 +143,7 @@ function BuildingStructure({ progress }: { progress: any }) {
         y="120"
         width="80"
         height="40"
-        fill="#7A9186"
+        fill="#ADB3B5"
         style={{
           opacity: useTransform(progress, [0.5, 0.6], [0, 0.1])
         }}
@@ -170,7 +170,7 @@ function BIMOverlay({ progress }: { progress: any }) {
           progress={progress}
           delay={0.52 + i * 0.03}
           strokeWidth={0.5}
-          stroke="#7A9186"
+          stroke="#ADB3B5"
           strokeDasharray="2 3"
           style={{ opacity: 0.4 }}
         />
@@ -183,7 +183,7 @@ function BIMOverlay({ progress }: { progress: any }) {
           progress={progress}
           delay={0.52 + i * 0.03}
           strokeWidth={0.5}
-          stroke="#7A9186"
+          stroke="#ADB3B5"
           strokeDasharray="2 3"
           style={{ opacity: 0.4 }}
         />
@@ -197,7 +197,7 @@ function BIMOverlay({ progress }: { progress: any }) {
             cx={cx}
             cy={cy}
             r="3"
-            fill="#7A9186"
+            fill="#ADB3B5"
             style={{
               opacity: useTransform(progress, [0.55 + i * 0.04, 0.6 + i * 0.04], [0, 0.8])
             }}
@@ -206,7 +206,7 @@ function BIMOverlay({ progress }: { progress: any }) {
             cx={cx}
             cy={cy}
             r="6"
-            stroke="#7A9186"
+            stroke="#ADB3B5"
             strokeWidth="0.5"
             fill="none"
             style={{
@@ -252,7 +252,7 @@ function BrassAccents({ progress }: { progress: any }) {
         y="378"
         textAnchor="middle"
         fontSize="8"
-        fill="#C4A052"
+        fill="#9BAE40"
         fontFamily="monospace"
         style={{
           opacity: useTransform(progress, [0.82, 0.86], [0, 0.7])
@@ -265,7 +265,7 @@ function BrassAccents({ progress }: { progress: any }) {
         y="386"
         textAnchor="middle"
         fontSize="6"
-        fill="#C4A052"
+        fill="#9BAE40"
         fontFamily="monospace"
         style={{
           opacity: useTransform(progress, [0.84, 0.88], [0, 0.5])

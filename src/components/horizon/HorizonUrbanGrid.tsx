@@ -83,7 +83,7 @@ export function HorizonUrbanGrid({
           width="400" 
           height="300" 
           fill="none" 
-          stroke="#B8963C" 
+          stroke="#9BAE40" 
           strokeWidth="0.8"
           strokeDasharray="6,6"
         >
@@ -95,7 +95,7 @@ export function HorizonUrbanGrid({
         </rect>
         
         {/* Building footprints */}
-        <g fill="none" stroke="#B8963C" strokeWidth="0.6" opacity={0.7}>
+        <g fill="none" stroke="#9BAE40" strokeWidth="0.6" opacity={0.7}>
           {/* Main building */}
           <rect x="100" y="100" width="80" height="120" />
           <rect x="220" y="80" width="100" height="160" />
@@ -108,7 +108,7 @@ export function HorizonUrbanGrid({
         </g>
         
         {/* Roads and paths */}
-        <g stroke="#B8963C" strokeWidth="0.4" opacity={0.5}>
+        <g stroke="#9BAE40" strokeWidth="0.4" opacity={0.5}>
           {/* Main access road */}
           <path d="M50,200 L150,200 L150,100 L250,100 L250,200 L350,200" />
           
@@ -118,7 +118,7 @@ export function HorizonUrbanGrid({
         </g>
         
         {/* Landscape elements */}
-        <g fill="none" stroke="#B8963C" strokeWidth="0.3" opacity={0.4}>
+        <g fill="none" stroke="#9BAE40" strokeWidth="0.3" opacity={0.4}>
           {/* Trees */}
           <circle cx="80" cy="280" r="12" />
           <circle cx="120" cy="280" r="10" />
@@ -136,17 +136,17 @@ export function HorizonUrbanGrid({
         
         {/* North arrow */}
         <g transform="translate(450,50)">
-          <line x1="0" y1="-20" x2="0" y2="0" stroke="#B8963C" strokeWidth="0.6" />
-          <polygon points="0,-20 -5,0 5,0" fill="#B8963C" />
-          <text x="0" y="10" textAnchor="middle" fontSize="8" fontFamily="monospace" fill="#B8963C">N</text>
+          <line x1="0" y1="-20" x2="0" y2="0" stroke="#9BAE40" strokeWidth="0.6" />
+          <polygon points="0,-20 -5,0 5,0" fill="#9BAE40" />
+          <text x="0" y="10" textAnchor="middle" fontSize="8" fontFamily="monospace" fill="#9BAE40">N</text>
         </g>
         
         {/* Scale bar */}
         <g transform="translate(450,350)">
-          <line x1="0" y1="0" x2="50" y2="0" stroke="#B8963C" strokeWidth="0.6" />
-          <line x1="0" y1="-5" x2="0" y2="5" stroke="#B8963C" strokeWidth="0.6" />
-          <line x1="50" y1="-5" x2="50" y2="5" stroke="#B8963C" strokeWidth="0.6" />
-          <text x="25" y="-10" textAnchor="middle" fontSize="8" fontFamily="monospace" fill="#B8963C">10m</text>
+          <line x1="0" y1="0" x2="50" y2="0" stroke="#9BAE40" strokeWidth="0.6" />
+          <line x1="0" y1="-5" x2="0" y2="5" stroke="#9BAE40" strokeWidth="0.6" />
+          <line x1="50" y1="-5" x2="50" y2="5" stroke="#9BAE40" strokeWidth="0.6" />
+          <text x="25" y="-10" textAnchor="middle" fontSize="8" fontFamily="monospace" fill="#9BAE40">10m</text>
         </g>
       </svg>
     </motion.div>

@@ -140,7 +140,7 @@ export function HorizonBlueprintLines({
             y1={line.y1}
             x2={line.x2}
             y2={line.y2}
-            stroke="#B8963C"
+            stroke="#9BAE40"
             strokeWidth={style === 'construction' ? 0.3 : style === 'structural' ? 0.5 : 0.2}
             strokeDasharray={style === 'construction' ? "2,2" : style === 'structural' ? "4,2" : "1,3"}
             opacity={opacity}

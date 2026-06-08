@@ -389,7 +389,7 @@ const localizedEvents: LocalizedEvent[] = [
       'ELAOUAD Events brings together architects, industry leaders, decision makers, and exhibitors around interior design, materials, and premium construction.',
       'تجمع فعاليات ELAOUAD المعماريين والفاعلين الصناعيين وصناع القرار والعارضين حول التصميم الداخلي والمواد والبناء الراقي.'
     ),
-    image: '/images/event.webp',
+    image: '/images/forum.jpeg',
     cta: text('Découvrir FIDI', 'Discover FIDI', 'اكتشف FIDI'),
   },
   {

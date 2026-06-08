@@ -167,7 +167,7 @@ export function HorizonSceneEngine() {
               cy="50%"
               r="28%"
               fill="none"
-              stroke="#B8963C"
+              stroke="#9BAE40"
               strokeWidth="0.8"
               strokeDasharray="4 8"
               animate={{ rotate: 360 }}
@@ -178,24 +178,24 @@ export function HorizonSceneEngine() {
               cy="50%"
               r="38%"
               fill="none"
-              stroke="#B8963C"
+              stroke="#9BAE40"
               strokeWidth="0.5"
               strokeDasharray="20 40"
               animate={{ rotate: -360 }}
               transition={{ duration: 180, repeat: Infinity, ease: 'linear' }}
             />
             {/* Axis Crosshairs */}
-            <line x1="50%" y1="0" x2="50%" y2="100%" stroke="#B8963C" strokeWidth="0.5" />
-            <line x1="0" y1="50%" x2="100%" y2="50%" stroke="#B8963C" strokeWidth="0.5" />
+            <line x1="50%" y1="0" x2="50%" y2="100%" stroke="#9BAE40" strokeWidth="0.5" />
+            <line x1="0" y1="50%" x2="100%" y2="50%" stroke="#9BAE40" strokeWidth="0.5" />
             
             {/* Holographic Text Annotation */}
-            <text x="52%" y="49%" fill="#B8963C" fontSize="10" fontFamily="monospace" letterSpacing="2">
+            <text x="52%" y="49%" fill="#9BAE40" fontSize="10" fontFamily="monospace" letterSpacing="2">
               EAI ENGINE v1.2_
             </text>
-            <text x="52%" y="52%" fill="#B8963C" fontSize="8" fontFamily="monospace" letterSpacing="1">
+            <text x="52%" y="52%" fill="#9BAE40" fontSize="8" fontFamily="monospace" letterSpacing="1">
               SYS_ACTIVE: {activeScene.toUpperCase()}
             </text>
-            <text x="52%" y="54%" fill="#B8963C" fontSize="8" fontFamily="monospace" letterSpacing="1">
+            <text x="52%" y="54%" fill="#9BAE40" fontSize="8" fontFamily="monospace" letterSpacing="1">
               CAM_POS: SWEEPING_AXIS
             </text>
           </svg>
@@ -274,7 +274,7 @@ export function HorizonSceneEngine() {
 
         {/* Sweeping Technical Laser Line - travels slowly down the screen to distract the eye during dissolves */}
         <motion.div
-          className="absolute left-0 right-0 z-50 h-[2px] bg-gradient-to-r from-transparent via-eai-brass/35 to-transparent shadow-[0_0_12px_rgba(184,150,60,0.5)]"
+          className="absolute left-0 right-0 z-50 h-[2px] bg-gradient-to-r from-transparent via-eai-brass/35 to-transparent shadow-[0_0_12px_rgba(155,174,64,0.5)]"
           animate={{ top: ['0%', '100%', '0%'] }}
           transition={{ duration: 15, repeat: Infinity, ease: 'easeInOut' }}
         />

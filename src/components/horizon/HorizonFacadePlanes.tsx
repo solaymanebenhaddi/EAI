@@ -83,7 +83,7 @@ export function HorizonFacadePlanes({
           width="200" 
           height="100" 
           fill="none" 
-          stroke="#B8963C" 
+          stroke="#9BAE40" 
           strokeWidth="0.8"
           opacity={0.6}
         >
@@ -100,7 +100,7 @@ export function HorizonFacadePlanes({
           y1="50" 
           x2="150" 
           y2="150" 
-          stroke="#B8963C" 
+          stroke="#9BAE40" 
           strokeWidth="0.5"
           strokeDasharray="4,2"
         />
@@ -111,13 +111,13 @@ export function HorizonFacadePlanes({
           y1="100" 
           x2="250" 
           y2="100" 
-          stroke="#B8963C" 
+          stroke="#9BAE40" 
           strokeWidth="0.5"
           strokeDasharray="4,2"
         />
         
         {/* Window grid */}
-        <g stroke="#B8963C" strokeWidth="0.3" opacity={0.4}>
+        <g stroke="#9BAE40" strokeWidth="0.3" opacity={0.4}>
           {/* Vertical window dividers */}
           <line x1="80" y1="60" x2="80" y2="140" />
           <line x1="120" y1="60" x2="120" y2="140" />

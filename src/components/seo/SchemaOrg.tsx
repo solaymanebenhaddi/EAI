@@ -13,7 +13,7 @@ export function SchemaOrg({ locale }: { locale: Locale }) {
         '@id': `${siteUrl}/#organization`,
         name: 'ELAOUAD Architecture et Ingénierie',
         url: siteUrl,
-        logo: `${siteUrl}/images/LOGO.png`,
+        logo: `${siteUrl}/images/LOGO-4k.png`,
         image: `${siteUrl}/images/hero.webp`,
         description: "Cabinet d'architecture et d'ingénierie premium basé à Casablanca, Maroc.",
         inLanguage: locale,

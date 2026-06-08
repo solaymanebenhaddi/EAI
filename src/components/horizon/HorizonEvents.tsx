@@ -81,7 +81,7 @@ export function HorizonEvents({ locale }: { locale: Locale }) {
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
             className="relative overflow-hidden border border-eai-line bg-eai-parchment/60 backdrop-blur-md shadow-[0_34px_90px_rgba(25,24,22,0.10)]"
           >
-            <div className="absolute inset-0 bg-[linear-gradient(120deg,rgba(184,150,60,0.12),transparent_38%),radial-gradient(circle_at_85%_15%,rgba(122,145,134,0.20),transparent_30%)]" />
+            <div className="absolute inset-0 bg-[linear-gradient(120deg,rgba(155,174,64,0.12),transparent_38%),radial-gradient(circle_at_85%_15%,rgba(173,179,181,0.20),transparent_30%)]" />
             <div className="relative grid grid-cols-1 lg:grid-cols-[0.95fr_1.05fr]">
               <div className="relative min-h-[420px] overflow-hidden lg:min-h-[640px]">
                 <Image

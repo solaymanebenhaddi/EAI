@@ -7,15 +7,17 @@
   --color-eai-stone-light: #E7DFD1;
   --color-eai-travertine-light: #D8CDBA;
   --color-eai-sand: #CDBB9E;
-  --color-eai-warm-grey: #595346;      /* Deep raw umber stone grey for rich contrast */
-  --color-eai-taupe: #3D382E;          /* Basalt stone grey */
+  --color-eai-logo-olive: #9BAE40;
+  --color-eai-logo-silver: #ADB3B5;
+  --color-eai-warm-grey: #5C625D;      /* Architectural silver-grey from the logo */
+  --color-eai-taupe: #343A35;          /* Deep olive stone for grounded copy */
   --color-eai-charcoal: #191816;       /* Obsidian charcoal */
   --color-eai-ink: #0E0D0B;            /* Deep mineral ink */
-  --color-eai-brass: #9E7D2A;          /* Deep rich burnished amber brass */
-  --color-eai-brass-soft: #B8963C;
-  --color-eai-brass-pale: #D6B86A;
-  --color-eai-sage: #7A9186;
-  --color-eai-line: rgba(25, 24, 22, 0.10);
+  --color-eai-brass: #738229;          /* Accessible olive accent derived from #9BAE40 */
+  --color-eai-brass-soft: #9BAE40;
+  --color-eai-brass-pale: #DDE7A4;
+  --color-eai-sage: #ADB3B5;
+  --color-eai-line: rgba(61, 68, 60, 0.14);
   --color-eai-glass: rgba(255, 255, 255, 0.58);
 
   /* Legacy aliases */
@@ -24,10 +26,10 @@
   --color-travertine: #1A1916;
   --color-ash: #2C2B27;
   --color-dust: #4A4840;
-  --color-brass: #C4A052;
-  --color-brass-dim: #8A6E38;
-  --color-brass-glow: #E8C070;
-  --color-sage: #7A9186;
+  --color-brass: #9BAE40;
+  --color-brass-dim: #738229;
+  --color-brass-glow: #DDE7A4;
+  --color-sage: #ADB3B5;
   --color-parchment: #F0EBE0;
   --color-linen: #C8C0B0;
   --color-mortar: #7A7468;
@@ -38,8 +40,8 @@
   --color-cloud-dark: #D1D0CE;
   --color-ink: var(--color-eai-charcoal);
   
-  --color-gold-line: rgba(196, 160, 82, 0.2);
-  --color-gold-card: rgba(196, 160, 82, 0.08);
+  --color-gold-line: rgba(155, 174, 64, 0.22);
+  --color-gold-card: rgba(155, 174, 64, 0.08);
 
   --font-display: var(--font-display);
   --font-body: var(--font-body);
@@ -101,6 +103,16 @@
 }
 
 @layer base {
+  :root {
+    --color-eai-logo-olive: #9BAE40;
+    --color-eai-logo-silver: #ADB3B5;
+    --color-eai-brass: #738229;
+    --color-eai-brass-soft: #9BAE40;
+    --color-eai-brass-pale: #DDE7A4;
+    --color-eai-sage: #ADB3B5;
+    --color-eai-line: rgba(61, 68, 60, 0.14);
+  }
+
   * {
     box-sizing: border-box;
     padding: 0;

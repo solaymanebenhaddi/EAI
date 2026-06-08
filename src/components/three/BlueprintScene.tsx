@@ -141,7 +141,7 @@ function BIMOverlay({ visible }: { visible: boolean }) {
               itemSize={3}
             />
           </bufferGeometry>
-          <lineBasicMaterial color="#7A9186" opacity={0.6} transparent />
+          <lineBasicMaterial color="#ADB3B5" opacity={0.6} transparent />
         </line>
       ))}
       {Array.from({ length: 5 }).map((_, i) => (
@@ -157,7 +157,7 @@ function BIMOverlay({ visible }: { visible: boolean }) {
               itemSize={3}
             />
           </bufferGeometry>
-          <lineBasicMaterial color="#7A9186" opacity={0.6} transparent />
+          <lineBasicMaterial color="#ADB3B5" opacity={0.6} transparent />
         </line>
       ))}
     </group>
@@ -185,7 +185,7 @@ function BlueprintGrid({ progress }: { progress: number }) {
               itemSize={3}
             />
           </bufferGeometry>
-          <lineBasicMaterial color="#C4A052" opacity={0.08} transparent />
+          <lineBasicMaterial color="#9BAE40" opacity={0.08} transparent />
         </line>
       );
       lines.push(
@@ -198,7 +198,7 @@ function BlueprintGrid({ progress }: { progress: number }) {
               itemSize={3}
             />
           </bufferGeometry>
-          <lineBasicMaterial color="#C4A052" opacity={0.08} transparent />
+          <lineBasicMaterial color="#9BAE40" opacity={0.08} transparent />
         </line>
       );
     }
@@ -238,7 +238,7 @@ function FloorPlan({ progress }: { progress: number }) {
               itemSize={3}
             />
           </bufferGeometry>
-          <lineBasicMaterial color="#C4A052" opacity={0.3} transparent />
+          <lineBasicMaterial color="#9BAE40" opacity={0.3} transparent />
         </line>
       ))}
     </group>
@@ -273,7 +273,7 @@ function GalleryPanels({ progress }: { progress: number }) {
           <meshStandardMaterial 
             color="#1A1916" 
             roughness={0.8} 
-            emissive="#C4A052"
+            emissive="#9BAE40"
             emissiveIntensity={0.05 * (i % 2 === 0 ? 1 : 0.5)}
           />
         </mesh>
@@ -324,7 +324,7 @@ function LandscapeDetails({ progress }: { progress: number }) {
           {/* Canopy */}
           <mesh position={[0, 2, 0]} castShadow>
             <sphereGeometry args={[0.8, 8, 8]} />
-            <meshStandardMaterial color="#7A9186" roughness={0.8} />
+            <meshStandardMaterial color="#ADB3B5" roughness={0.8} />
           </mesh>
         </group>
       ))}
@@ -425,7 +425,7 @@ export function BlueprintScene({ scrollProgress = 0, useExternalCamera = false }
       <directionalLight 
         position={[10, 25, 8]} 
         intensity={0.9} 
-        color="#E8C070"
+        color="#DDE7A4"
         castShadow
         shadow-mapSize={[2048, 2048]}
         shadow-camera-far={60}
@@ -434,8 +434,8 @@ export function BlueprintScene({ scrollProgress = 0, useExternalCamera = false }
         shadow-camera-top={15}
         shadow-camera-bottom={-15}
       />
-      <pointLight position={[-8, 8, 5]} intensity={0.4} color="#C4A052" />
-      <pointLight position={[8, 4, -5]} intensity={0.3} color="#7A9186" />
+      <pointLight position={[-8, 8, 5]} intensity={0.4} color="#9BAE40" />
+      <pointLight position={[8, 4, -5]} intensity={0.3} color="#ADB3B5" />
       
       {/* Camera rig (only when not using Theatre.js external camera) */}
       {!useExternalCamera && (

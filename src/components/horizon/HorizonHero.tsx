@@ -81,7 +81,7 @@ export function HorizonHero() {
     <section ref={heroRef} id="hero" className="relative min-h-[100svh] overflow-hidden bg-transparent">
       <HorizonGrid />
 
-      <div className="absolute inset-0 z-0 bg-[radial-gradient(circle_at_72%_18%,rgba(214,184,106,0.12),transparent_34%),linear-gradient(90deg,rgba(248,245,238,0.72)_0%,rgba(248,245,238,0.44)_38%,rgba(248,245,238,0.14)_68%,rgba(248,245,238,0.00)_100%)] pointer-events-none" />
+      <div className="absolute inset-0 z-0 bg-[radial-gradient(circle_at_72%_18%,rgba(155,174,64,0.12),transparent_34%),linear-gradient(90deg,rgba(248,245,238,0.72)_0%,rgba(248,245,238,0.44)_38%,rgba(248,245,238,0.14)_68%,rgba(248,245,238,0.00)_100%)] pointer-events-none" />
       <div className="absolute inset-x-0 top-0 z-0 h-28 bg-gradient-to-b from-eai-paper/72 via-eai-paper/34 to-transparent pointer-events-none" />
       <div className="absolute inset-x-0 bottom-0 z-0 h-40 bg-gradient-to-t from-eai-paper/78 via-eai-paper/28 to-transparent pointer-events-none" />
 

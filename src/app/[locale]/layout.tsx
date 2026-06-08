@@ -100,6 +100,7 @@ export default async function LocaleLayout(
             <ScrollDepthTracker />
             <Cursor />
             <div className="fixed inset-0 pointer-events-none z-10 bg-[url('/noise.png')] opacity-[0.02]" />
+            <div id="main-content" tabIndex={-1} className="scroll-mt-28 outline-none" />
             {props.children}
             <Nav />
           </SmoothScrollProvider>

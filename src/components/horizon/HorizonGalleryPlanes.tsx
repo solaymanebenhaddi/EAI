@@ -83,7 +83,7 @@ export function HorizonGalleryPlanes({
           width="300" 
           height="200" 
           fill="none" 
-          stroke="#B8963C" 
+          stroke="#9BAE40" 
           strokeWidth="0.8"
           opacity={0.6}
         >
@@ -95,7 +95,7 @@ export function HorizonGalleryPlanes({
         </rect>
         
         {/* Exhibition lights */}
-        <g fill="#B8963C" opacity={0.3}>
+        <g fill="#9BAE40" opacity={0.3}>
           <circle cx="50" cy="40" r="3" />
           <circle cx="100" cy="40" r="3" />
           <circle cx="150" cy="40" r="3" />
@@ -105,7 +105,7 @@ export function HorizonGalleryPlanes({
         </g>
         
         {/* Picture frames */}
-        <g stroke="#B8963C" strokeWidth="0.6" opacity={0.7}>
+        <g stroke="#9BAE40" strokeWidth="0.6" opacity={0.7}>
           {/* Large featured piece */}
           <rect x="50" y="50" width="100" height="120" />
           
@@ -117,7 +117,7 @@ export function HorizonGalleryPlanes({
         </g>
         
         {/* Picture content placeholders */}
-        <g fill="#B8963C" opacity={0.2}>
+        <g fill="#9BAE40" opacity={0.2}>
           <rect x="55" y="55" width="90" height="110" />
           <rect x="185" y="55" width="50" height="70" />
           <rect x="265" y="55" width="50" height="70" />
@@ -126,7 +126,7 @@ export function HorizonGalleryPlanes({
         </g>
         
         {/* Labels/titles under pictures */}
-        <g fontSize="8" fontFamily="monospace" fill="#B8963C" opacity={0.6}>
+        <g fontSize="8" fontFamily="monospace" fill="#9BAE40" opacity={0.6}>
           <text x="100" y="180" textAnchor="middle">PROJECT ONE</text>
           <text x="210" y="180" textAnchor="middle">PROJECT TWO</text>
           <text x="290" y="180" textAnchor="middle">PROJECT THREE</text>

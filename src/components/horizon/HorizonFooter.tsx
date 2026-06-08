@@ -110,7 +110,7 @@ export function HorizonFooter() {
         </motion.span>
       </div>
 
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_18%_20%,rgba(214,184,106,0.18),transparent_32%),radial-gradient(circle_at_78%_75%,rgba(122,145,134,0.14),transparent_34%)] mix-blend-multiply" />
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_18%_20%,rgba(155,174,64,0.18),transparent_32%),radial-gradient(circle_at_78%_75%,rgba(173,179,181,0.14),transparent_34%)] mix-blend-multiply" />
 
       <div className="container relative z-10 mx-auto px-6">
         <div className="py-20 text-center lg:py-32">
