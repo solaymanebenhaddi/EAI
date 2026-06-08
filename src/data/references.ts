@@ -137,7 +137,8 @@ const projects: ReferenceProject[] = [
     category: 'agroIndustrial',
     categoryLabel: 'Agro-industriel',
     type: 'Infrastructure agricole technique',
-    alt: 'Image à ajouter pour le projet de serre agricole à Ben Guérir.',
+    image: '/images/references/serre-agricole-ben-guerir.png',
+    alt: 'Projet de serre agricole à Ben Guérir avec grandes serres, zones techniques, voiries internes et bâtiment administratif.',
     description:
       'Projet d’infrastructure agricole technique intégrant hygiène, sécurité, stockage, gestion environnementale des déchets et optimisation des flux opérationnels.',
     facts: [
@@ -152,8 +153,6 @@ const projects: ReferenceProject[] = [
       'Aménagement fonctionnel pour optimiser le flux des opérations',
       'Respect des réglementations locales et internationales',
     ],
-    missingImageNote:
-      'Image dédiée manquante dans le dossier projects pour Projet de serre agricole — Ben Guérir.',
   },
   {
     slug: 'abattoir-alf-sahel',

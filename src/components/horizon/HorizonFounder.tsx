@@ -51,7 +51,7 @@ export function HorizonFounder() {
                 className="relative h-[55vh] lg:h-[85vh] w-full bg-eai-paper border-[12px] border-white shadow-2xl overflow-hidden z-10"
               >
                 <ParallaxImage
-                  src="/images/founder.webp"
+                  src="/images/about/SOUKAINA.png"
                   alt="Soukaina Elaouad"
                   className="h-full object-cover object-center grayscale contrast-[1.1] hover:grayscale-0 transition-all duration-[1.5s] ease-out"
                   containerClassName="h-full"

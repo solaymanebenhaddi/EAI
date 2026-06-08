@@ -93,12 +93,6 @@ export function Cursor() {
         x: { type: 'tween', duration: 0 }, // handle by lerp
         y: { type: 'tween', duration: 0 },
       }}
-    >
-      {isHoveringImage && (
-        <span className="text-label text-brass uppercase font-body tracking-widest scale-[0.66]">
-          Voir
-        </span>
-      )}
-    </motion.div>
+    />
   );
 }

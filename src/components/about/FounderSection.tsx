@@ -38,7 +38,7 @@ export function FounderSection() {
               <div className="absolute -bottom-3 -right-3 w-12 h-12 border-b-2 border-r-2 border-eai-brass/60" />
               <div className="relative aspect-[3/4] overflow-hidden">
                 <Image
-                  src="/images/about/soukaina-elaouad-portrait.webp"
+                  src="/images/about/SOUKAINA.png"
                   alt="Portrait professionnel de Soukaina Elaouad, fondatrice d'ELAOUAD Architecture & Ingénierie"
                   fill
                   className="object-cover"
