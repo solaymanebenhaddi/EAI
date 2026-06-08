@@ -22,7 +22,14 @@
     "heroSecondary": "At ELAOUAD Architecture & Engineering, each expertise is conceived as part of a complete system: design with meaning, study with rigor, coordinate with method and deliver with standards.",
     "heroCtaPrimary": "Discuss your project",
     "heroCtaSecondary": "View our projects",
-    "heroMicroList": ["Architecture", "Technical studies", "BIM", "Project management", "Interior design", "Urban planning"],
+    "heroMicroList": [
+      "Architecture",
+      "Technical studies",
+      "BIM",
+      "Project management",
+      "Interior design",
+      "Urban planning"
+    ],
     "approachLabel": "INTEGRATED APPROACH",
     "approachTitle": "Separate expertises are not enough. A project demands a coordinated vision.",
     "approachBody1": "In many projects, architecture, engineering, studies, contractors and coordination advance separately. This fragmentation creates delays, inconsistencies, late arbitrations, budget overruns and a loss of quality in execution.",
@@ -79,50 +86,120 @@
     "detail01Title": "Designing spaces with meaning, precision, and character.",
     "detail01Body": "Architecture is the visible starting point of the project, but it is never limited to a form. It organizes uses, circulation, proportions, light, the relationship to the site, the expression of materials and the perception of the place.\n\nEAI designs projects that meet a dual requirement: create a strong architectural identity and guarantee coherence with technical, regulatory, economic and construction realities.\n\nOur approach begins with listening to the program and analyzing the context. It continues with scenario research, volume definition, spatial organization, ambiance choices and the progressive development of a clear, argued and achievable project.",
     "detail01Value": "For the client, this approach delivers a project that is not just aesthetically pleasing, but truly responds to uses, budget, site and overall ambition.",
-    "detail01Deliverables": ["Program and site analysis", "Sketches and architectural orientations", "Layout plans", "Floor plans, elevations and sections", "Renderings as needed", "Design dossier", "Coordination with technical studies", "Administrative support per mission"],
+    "detail01Deliverables": [
+      "Program and site analysis",
+      "Sketches and architectural orientations",
+      "Layout plans",
+      "Floor plans, elevations and sections",
+      "Renderings as needed",
+      "Design dossier",
+      "Coordination with technical studies",
+      "Administrative support per mission"
+    ],
     "detail01ImageAlt": "Contemporary architectural design with plans, volumes and natural light.",
     "detail02Label": "02 · ENGINEERING & TECHNICAL STUDIES",
     "detail02Title": "Transforming an architectural vision into a controlled solution.",
     "detail02Body": "An ambitious project requires a solid technical foundation. Studies allow us to verify, secure, dimension and organize the choices that will make the project achievable.\n\nEAI supports clients and project teams in understanding technical constraints, feasibility analysis, estimation, document coordination and preparation of essential decisions.\n\nThe goal is not just to produce technical documents. It is to reduce uncertainty, anticipate risks, clarify options and enable the client to move forward with a more reliable vision of their project.",
     "detail02Value": "This expertise helps avoid unpleasant surprises, late inconsistencies, cost overruns, delays and improvised trade-offs during execution.",
-    "detail02Deliverables": ["Technical project analysis", "Feasibility studies", "Calculation notes per scope", "Preliminary budget estimates", "Technical dossiers", "Coordination with architects, engineering firms and contractors", "Consultation support", "Technical variant analysis"],
+    "detail02Deliverables": [
+      "Technical project analysis",
+      "Feasibility studies",
+      "Calculation notes per scope",
+      "Preliminary budget estimates",
+      "Technical dossiers",
+      "Coordination with architects, engineering firms and contractors",
+      "Consultation support",
+      "Technical variant analysis"
+    ],
     "detail02ImageAlt": "Technical studies and construction engineering for architectural project.",
     "detail03Label": "03 · BIM CONSULTING",
     "detail03Title": "Digital precision at the service of the real project.",
     "detail03Body": "BIM is not just a 3D model. It is a working method that allows organizing information, coordinating stakeholders, detecting conflicts, comparing variants and better anticipating decisions before they become costly on site.\n\nEAI supports projects in using BIM as a tool for precision, coordination and management. The model becomes a dialogue medium between architecture, engineering, contractors, client and future operation.\n\nThis approach improves project readability, reduces areas of uncertainty and facilitates information management throughout the building lifecycle.",
     "detail03Value": "BIM enables the client to better understand their project, visualize choices, anticipate inconsistencies and make faster, better-informed decisions.",
     "detail03Statement": "BIM = information + coordination + anticipation",
-    "detail03Deliverables": ["BIM strategy consulting", "Digital model structuring", "Cross-discipline coordination", "Conflict detection", "Technical synthesis", "Presentation models", "Coordination exports and documents", "Project data management support"],
+    "detail03Deliverables": [
+      "BIM strategy consulting",
+      "Digital model structuring",
+      "Cross-discipline coordination",
+      "Conflict detection",
+      "Technical synthesis",
+      "Presentation models",
+      "Coordination exports and documents",
+      "Project data management support"
+    ],
     "detail03ImageAlt": "BIM digital model used for architectural and technical coordination.",
     "detail04Label": "04 · PROJECT MANAGEMENT & COORDINATION",
     "detail04Title": "Steering the construction site with method, clarity, and standards.",
     "detail04Body": "The transition from drawing to construction is one of the most sensitive phases of a project. It is at this moment that decisions become concrete, interfaces multiply and final quality depends on daily coordination.\n\nEAI supports this phase with a rigorous method: progress monitoring, meetings, stakeholder coordination, document control, remark management, blockage anticipation and support until handover.\n\nOur goal is to preserve the original intent while ensuring coherent, realistic and controlled execution.",
     "detail04Value": "The client benefits from structured monitoring that reduces confusion, improves communication between stakeholders and strengthens delivery quality.",
-    "detail04Deliverables": ["Construction monitoring organization", "Contractor coordination", "Meetings and minutes", "Compliance control per mission", "Remark and reserve tracking", "Arbitration assistance", "Handover support", "Interface between design, studies and execution"],
+    "detail04Deliverables": [
+      "Construction monitoring organization",
+      "Contractor coordination",
+      "Meetings and minutes",
+      "Compliance control per mission",
+      "Remark and reserve tracking",
+      "Arbitration assistance",
+      "Handover support",
+      "Interface between design, studies and execution"
+    ],
     "detail04ImageAlt": "Construction site coordination and project management for construction project.",
     "detail05Label": "05 · INTERIOR DESIGN",
     "detail05Title": "Creating coherent, elegant, and functional interior spaces.",
     "detail05Body": "The interior is where architecture becomes daily experience. Every choice influences how one circulates, works, welcomes, rests or interacts with the space.\n\nEAI designs interiors where volumes, materials, light, colors, furniture and details respond to each other with coherence. The goal is to create beautiful, practical, comfortable spaces aligned with the client's identity.\n\nWhether it is a villa, apartment, office, shop, hotel or training space, we seek the balance between aesthetics, use, durability and perceived value.",
     "detail05Value": "The client obtains a readable, harmonious and enhancing interior, designed to be lived in and not just admired.",
-    "detail05Deliverables": ["Usage and ambiance analysis", "Concept design", "Interior layout plans", "Material and color moodboards", "Furniture and lighting selection per mission", "Renderings", "Decorative and technical details", "Coordination with works and suppliers"],
+    "detail05Deliverables": [
+      "Usage and ambiance analysis",
+      "Concept design",
+      "Interior layout plans",
+      "Material and color moodboards",
+      "Furniture and lighting selection per mission",
+      "Renderings",
+      "Decorative and technical details",
+      "Coordination with works and suppliers"
+    ],
     "detail05ImageAlt": "Premium interior design with materials, light and contemporary furniture.",
     "detail06Label": "06 · URBAN PLANNING & DEVELOPMENT",
     "detail06Title": "Thinking about space at the territorial scale.",
     "detail06Body": "Urban planning demands a broader reading than that of the building. It is about understanding flows, collective uses, public spaces, mobility, infrastructure, density, landscape and the relationship between places.\n\nEAI supports development and planning projects with an approach that connects spatial vision, technical feasibility, environmental integration and quality of life.\n\nEach intervention aims to structure coherent, readable spaces adapted to their context, whether it is a neighborhood, a private site, a public space, a mixed program or a land enhancement project.",
     "detail06Value": "This expertise helps the client transform a land or site into an organized, readable, valuable project that is better integrated into its environment.",
-    "detail06Deliverables": ["Urban and territorial analysis", "Site diagnosis", "Development schemes", "Spatial organization plans", "Usage and circulation studies", "Landscaping principles and public spaces", "Enhancement scenarios", "Coordination with regulatory constraints"],
+    "detail06Deliverables": [
+      "Urban and territorial analysis",
+      "Site diagnosis",
+      "Development schemes",
+      "Spatial organization plans",
+      "Usage and circulation studies",
+      "Landscaping principles and public spaces",
+      "Enhancement scenarios",
+      "Coordination with regulatory constraints"
+    ],
     "detail06ImageAlt": "Urban study and development plan for territorial development.",
     "detail07Label": "07 · TOPOGRAPHY",
     "detail07Title": "Understanding the terrain before transforming the project.",
     "detail07Body": "A project always begins with a physical reality: the terrain. Its levels, boundaries, access, slopes, constraints, neighbors and characteristics directly influence design and execution.\n\nTopography establishes a reliable base for designing, laying out, verifying and coordinating. It reduces approximations and gives teams a precise understanding of the site.\n\nEAI integrates this reading of the terrain into the overall project logic to improve study quality and decision security.",
     "detail07Value": "The client has a clear base to avoid layout errors, misinterpretations of the site and costly adaptations during construction.",
-    "detail07Deliverables": ["Topographic surveys per mission", "Reading of terrain levels and constraints", "Location and layout plans", "Data useful for design", "Support for technical studies", "Coordination with development and execution"],
+    "detail07Deliverables": [
+      "Topographic surveys per mission",
+      "Reading of terrain levels and constraints",
+      "Location and layout plans",
+      "Data useful for design",
+      "Support for technical studies",
+      "Coordination with development and execution"
+    ],
     "detail07ImageAlt": "Topographic survey and technical terrain reading for construction project.",
     "detail08Label": "08 · CLIENT ASSISTANCE & STRATEGIC CONSULTING",
     "detail08Title": "Helping the client decide with clarity.",
     "detail08Body": "A construction project involves complex decisions: program, budget, deadlines, regulations, technical choices, stakeholder selection, expected quality, risks and priorities.\n\nEAI supports clients in this strategic phase to clarify objectives, structure the approach, compare options and secure important decisions.\n\nOur role is to bring a professional reading of the project, anticipate sensitive points and create a more reliable decision framework before and during realization.",
     "detail08Value": "The client gains visibility, method and control. They move forward with a better understanding of challenges, risks and priorities.",
-    "detail08Deliverables": ["Program clarification", "Needs analysis", "Decision support", "Feasibility analysis", "Consultation preparation", "Stakeholder selection support", "Strategic project monitoring", "Reporting and recommendations"],
+    "detail08Deliverables": [
+      "Program clarification",
+      "Needs analysis",
+      "Decision support",
+      "Feasibility analysis",
+      "Consultation preparation",
+      "Stakeholder selection support",
+      "Strategic project monitoring",
+      "Reporting and recommendations"
+    ],
     "detail08ImageAlt": "Client assistance and strategic consulting for architectural project.",
     "clientValueLabel": "Client value",
     "deliverablesLabel": "Deliverables",
@@ -198,12 +275,36 @@
     "methodTitle": "A method designed to reduce uncertainty.",
     "methodBody": "Each expertise is driven by a common method: listen, analyze, design, verify, coordinate and support. This continuity avoids breaks between the different phases of the project.",
     "methodSteps": [
-      { "number": "01", "title": "Diagnosis", "description": "Understand the context, site, objectives, constraints and risks." },
-      { "number": "02", "title": "Orientation", "description": "Define hypotheses, scenarios, priorities and structuring choices." },
-      { "number": "03", "title": "Production", "description": "Develop plans, studies, models, documents and necessary supports." },
-      { "number": "04", "title": "Coordination", "description": "Align stakeholders, verify interfaces and clarify decisions." },
-      { "number": "05", "title": "Monitoring", "description": "Support progress, control deviations and maintain coherence." },
-      { "number": "06", "title": "Delivery", "description": "Assist the client with handover, reserves and final quality." }
+      {
+        "number": "01",
+        "title": "Diagnosis",
+        "description": "Understand the context, site, objectives, constraints and risks."
+      },
+      {
+        "number": "02",
+        "title": "Orientation",
+        "description": "Define hypotheses, scenarios, priorities and structuring choices."
+      },
+      {
+        "number": "03",
+        "title": "Production",
+        "description": "Develop plans, studies, models, documents and necessary supports."
+      },
+      {
+        "number": "04",
+        "title": "Coordination",
+        "description": "Align stakeholders, verify interfaces and clarify decisions."
+      },
+      {
+        "number": "05",
+        "title": "Monitoring",
+        "description": "Support progress, control deviations and maintain coherence."
+      },
+      {
+        "number": "06",
+        "title": "Delivery",
+        "description": "Assist the client with handover, reserves and final quality."
+      }
     ],
     "methodClosing": "The method protects the vision.",
     "formationsLabel": "TRANSMISSION",
@@ -234,7 +335,10 @@
     "projectsStat": "Projects",
     "visitorsStat": "Visitors",
     "continentsStat": "Countries",
-    "scroll": "Scroll"
+    "scroll": "Scroll",
+    "studioLabel": "Architecture & engineering studio",
+    "axisLabel": "Matter \u00b7 Light \u00b7 Structure",
+    "videoLabel": "The video background stays alive: a moving architectural scene behind a clear premium interface."
   },
   "Blueprint": {
     "label": "OUR PROCESS",
@@ -293,7 +397,7 @@
     "philosophyBody1": "An architecture project must be looked at in its entirety. There is the image we see, but also the decisions we don't see: site reading, structure, circulation, light, budget, coordination, technical details, administrative constraints, uses and execution quality.",
     "philosophyBody2": "At EAI, every project is evaluated as a complete system. Form must serve function. Detail must support the whole. Technique must preserve the vision. Space must respond to those who will live in it, cross it, manage or operate it.",
     "philosophyQuote": "The beauty of a project begins in the vision, but is confirmed in the precision of every decision.",
-    "filtersLabel": "PROJECT DOMAINS",
+    "filtersLabel": "Filter projects",
     "filtersTitle": "Explore by typology.",
     "filtersIntro": "Our projects cover several scales: from the private villa to the professional space, from the interior concept to the development plan, from the isolated building to the urban vision.",
     "filterAll": "All",
@@ -311,7 +415,14 @@
     "featuredYear": "2025",
     "featuredStatus": "Conceptual study / architectural mission",
     "featuredConcept": "This private villa is conceived as a composition between intimacy, natural light and continuity of spaces. The architecture organizes a fluid relationship between interior and exterior, while preserving the confidentiality of living spaces.\n\nThe project explores a sober contemporary writing: readable volumes, mineral materials, controlled openings, generous reception spaces and protected private zones. The goal is to create an elegant, functional and sustainable residence, adapted to the client's lifestyle and the Casablanca urban context.",
-    "featuredIdeas": ["Controlled natural light", "Interior / exterior relationship", "Sober contemporary volumes", "Fluid reception spaces", "Intimacy of private zones", "Coherence between architecture and use"],
+    "featuredIdeas": [
+      "Controlled natural light",
+      "Interior / exterior relationship",
+      "Sober contemporary volumes",
+      "Fluid reception spaces",
+      "Intimacy of private zones",
+      "Coherence between architecture and use"
+    ],
     "featuredCta": "View project details",
     "featuredImageAlt": "Contemporary private villa in Casablanca with sober volumes, natural light and interior-exterior relationship.",
     "gridLabel": "PROJECT SELECTION",
@@ -322,17 +433,48 @@
     "caseStudyBody": "A professional portfolio must help the visitor understand the logic behind each achievement. That is why detailed project pages should present the context, objectives, constraints, architectural choices, technical interventions, materials, expected results and project lessons.",
     "caseStudyCta": "Explore a project in detail",
     "caseStudySteps": [
-      { "number": "01", "title": "Context", "description": "Site, client, use, territory, initial constraints." },
-      { "number": "02", "title": "Ambition", "description": "Architectural, functional, economic and symbolic objectives." },
-      { "number": "03", "title": "Architectural response", "description": "Volume organization, light, circulation, materials and expression." },
-      { "number": "04", "title": "Technical approach", "description": "Structure, coordination, BIM, feasibility, details and constraints." },
-      { "number": "05", "title": "Usage experience", "description": "How the project will be lived, used, traversed or operated." },
-      { "number": "06", "title": "Value created", "description": "Spatial quality, readability, sustainability, image, comfort and enhancement potential." }
+      {
+        "number": "01",
+        "title": "Context",
+        "description": "Site, client, use, territory, initial constraints."
+      },
+      {
+        "number": "02",
+        "title": "Ambition",
+        "description": "Architectural, functional, economic and symbolic objectives."
+      },
+      {
+        "number": "03",
+        "title": "Architectural response",
+        "description": "Volume organization, light, circulation, materials and expression."
+      },
+      {
+        "number": "04",
+        "title": "Technical approach",
+        "description": "Structure, coordination, BIM, feasibility, details and constraints."
+      },
+      {
+        "number": "05",
+        "title": "Usage experience",
+        "description": "How the project will be lived, used, traversed or operated."
+      },
+      {
+        "number": "06",
+        "title": "Value created",
+        "description": "Spatial quality, readability, sustainability, image, comfort and enhancement potential."
+      }
     ],
     "galleryLabel": "MATERIALS · LIGHT · DETAILS",
     "galleryTitle": "Architecture is also read in the details.",
     "galleryBody": "Materials, lines, shadows, proportions and transitions give the project its character. Beyond the large form, EAI pays particular attention to the details that build the final experience.",
-    "galleryItems": ["Contemporary facade", "Material detail", "Architectural plan", "Interior ambiance", "Natural light", "Controlled construction"],
+    "galleryItems": [
+      "Contemporary facade",
+      "Material detail",
+      "Architectural plan",
+      "Interior ambiance",
+      "Natural light",
+      "Controlled construction"
+    ],
     "typesLabel": "TYPOLOGIES",
     "typesTitle": "Projects at multiple scales.",
     "types": [
@@ -370,8 +512,6 @@
     "label": "PORTFOLIO",
     "title": "Signature Projects",
     "viewAll": "View all projects",
-    "viewProject": "View project",
-    "filtersLabel": "Filter projects",
     "all": "All"
   },
   "Apropos": {
@@ -385,7 +525,14 @@
     "heroSecondary": "At the crossroads of architecture, engineering, BIM, project management, training and professional events, EAI carries a global vision: to create useful, elegant, technically sound spaces capable of generating value over time.",
     "heroCtaPrimary": "Discover our expertise",
     "heroCtaSecondary": "Contact us",
-    "heroMicroList": ["Architecture", "Engineering", "BIM", "Project management", "Training", "Events"],
+    "heroMicroList": [
+      "Architecture",
+      "Engineering",
+      "BIM",
+      "Project management",
+      "Training",
+      "Events"
+    ],
     "storyLabel": "OUR STORY",
     "storyTitle": "A company born from a conviction: architecture must connect beauty, technique and use.",
     "storyBody1": "ELAOUAD Architecture & Engineering was built around a strong idea: a successful project depends not only on an attractive drawing or a purely technical solution. It depends on the ability to connect the client's vision, site constraints, regulatory requirements, economic feasibility, stakeholder coordination and execution quality.",
@@ -399,16 +546,42 @@
     "founderBio2": "Through EAI, she develops a way of thinking about the project as a complete whole: an idea to clarify, a space to structure, an experience to create, a technique to master and a delivery to secure.",
     "founderBio3": "Her vision also expresses itself in knowledge transmission and the creation of professional bridges. With EAI Courses and ELAOUAD Events, she contributes to training, connecting and valuing actors in architecture, design, engineering and construction.",
     "founderQuote": "Architecture is an art that embraces science. It must be sensitive in its vision, rigorous in its method, and responsible in its impact.",
-    "founderValues": ["Architectural vision", "Engineering rigor", "Delivery culture", "Knowledge transmission", "Territorial responsibility"],
+    "founderValues": [
+      "Architectural vision",
+      "Engineering rigor",
+      "Delivery culture",
+      "Knowledge transmission",
+      "Territorial responsibility"
+    ],
     "diffLabel": "OUR DIFFERENCE",
     "diffTitle": "EAI is not just a design agency. It is a project structure.",
     "diffIntro": "An architecture project demands more than an idea. It demands a method, trade-offs, reliable documents, clear coordination, technical reading and the ability to support the client in important decisions.",
     "diffBlocks": [
-      { "number": "01", "title": "A global reading of the project", "description": "We look at the project as a complete system: site, program, budget, uses, technical constraints, deadlines, stakeholders, image, operation and future value." },
-      { "number": "02", "title": "An alliance between architecture and engineering", "description": "Creative vision is always confronted with technical reality. This alliance allows designing more coherent, more reliable and easier to structure projects." },
-      { "number": "03", "title": "A coordination culture", "description": "We place essential importance on information flow between project actors: client, architects, engineers, contractors, suppliers and partners." },
-      { "number": "04", "title": "Attention to user experience", "description": "A space must be beautiful, but also clear, comfortable, functional and adapted to those who will inhabit, use, manage or visit it." },
-      { "number": "05", "title": "An expanded professional ecosystem", "description": "With its training and events, EAI does not limit itself to producing projects. The company also participates in skill development and professional networking in the sector." }
+      {
+        "number": "01",
+        "title": "A global reading of the project",
+        "description": "We look at the project as a complete system: site, program, budget, uses, technical constraints, deadlines, stakeholders, image, operation and future value."
+      },
+      {
+        "number": "02",
+        "title": "An alliance between architecture and engineering",
+        "description": "Creative vision is always confronted with technical reality. This alliance allows designing more coherent, more reliable and easier to structure projects."
+      },
+      {
+        "number": "03",
+        "title": "A coordination culture",
+        "description": "We place essential importance on information flow between project actors: client, architects, engineers, contractors, suppliers and partners."
+      },
+      {
+        "number": "04",
+        "title": "Attention to user experience",
+        "description": "A space must be beautiful, but also clear, comfortable, functional and adapted to those who will inhabit, use, manage or visit it."
+      },
+      {
+        "number": "05",
+        "title": "An expanded professional ecosystem",
+        "description": "With its training and events, EAI does not limit itself to producing projects. The company also participates in skill development and professional networking in the sector."
+      }
     ],
     "mvvLabel": "MISSION · VISION · VALUES",
     "mvvTitle": "A clear guiding line for every decision.",
@@ -420,7 +593,16 @@
     "visionBody": "We believe that architecture shapes much more than buildings. It influences uses, behaviors, the image of places, quality of life, organizational performance and how a territory develops.",
     "valuesLabel": "VALUES",
     "valuesTitle": "The principles that guide our work.",
-    "valuesList": ["Excellence", "Clarity", "Precision", "Responsibility", "Transmission", "Elegance", "Innovation", "Sustainability"],
+    "valuesList": [
+      "Excellence",
+      "Clarity",
+      "Precision",
+      "Responsibility",
+      "Transmission",
+      "Elegance",
+      "Innovation",
+      "Sustainability"
+    ],
     "ecosystemLabel": "EAI ECOSYSTEM",
     "ecosystemTitle": "Design, train, connect.",
     "ecosystemIntro": "EAI is organized around several complementary poles. This structure allows acting at different levels of the sector: producing projects, transmitting skills and creating professional encounters.",
@@ -458,37 +640,113 @@
     "cultureBody1": "Behind every project, there are exchanges, trade-offs, documents, meetings, studies, corrections, decisions and shared responsibilities. EAI values a work culture based on collaboration, method and clarity.",
     "cultureBody2": "Our approach encourages dialogue between disciplines: architecture, engineering, interior design, BIM, urban planning, coordination, training and construction. This collective intelligence allows better anticipating constraints, better understanding challenges and better securing decisions.",
     "cultureBlocks": [
-      { "number": "01", "title": "Listening", "description": "Understand the real need before proposing a formal response." },
-      { "number": "02", "title": "Method", "description": "Organize phases, documents, decisions and responsibilities." },
-      { "number": "03", "title": "Coordination", "description": "Connect stakeholders to reduce inconsistencies and streamline progress." },
-      { "number": "04", "title": "Continuous improvement", "description": "Learn from every project, every training and every professional encounter." }
+      {
+        "number": "01",
+        "title": "Listening",
+        "description": "Understand the real need before proposing a formal response."
+      },
+      {
+        "number": "02",
+        "title": "Method",
+        "description": "Organize phases, documents, decisions and responsibilities."
+      },
+      {
+        "number": "03",
+        "title": "Coordination",
+        "description": "Connect stakeholders to reduce inconsistencies and streamline progress."
+      },
+      {
+        "number": "04",
+        "title": "Continuous improvement",
+        "description": "Learn from every project, every training and every professional encounter."
+      }
     ],
     "principlesLabel": "DESIGN PRINCIPLES",
     "principlesTitle": "Material, light, use, precision.",
     "designPrinciples": [
-      { "number": "01", "title": "Material", "description": "Materials give the project its character, durability and presence. They must be chosen for their aesthetics, resistance, coherence and relationship to context." },
-      { "number": "02", "title": "Light", "description": "Light reveals volumes, creates ambiances, improves comfort and transforms the perception of space. It is at the heart of architectural quality." },
-      { "number": "03", "title": "Use", "description": "A space must respond to real practices. Circulation, ergonomics, comfort, flexibility, reception and readability are essential to project success." },
-      { "number": "04", "title": "Precision", "description": "Precision protects the vision. Plans, studies, details, coordination, monitoring and communication must reduce uncertainty and strengthen final quality." }
+      {
+        "number": "01",
+        "title": "Material",
+        "description": "Materials give the project its character, durability and presence. They must be chosen for their aesthetics, resistance, coherence and relationship to context."
+      },
+      {
+        "number": "02",
+        "title": "Light",
+        "description": "Light reveals volumes, creates ambiances, improves comfort and transforms the perception of space. It is at the heart of architectural quality."
+      },
+      {
+        "number": "03",
+        "title": "Use",
+        "description": "A space must respond to real practices. Circulation, ergonomics, comfort, flexibility, reception and readability are essential to project success."
+      },
+      {
+        "number": "04",
+        "title": "Precision",
+        "description": "Precision protects the vision. Plans, studies, details, coordination, monitoring and communication must reduce uncertainty and strengthen final quality."
+      }
     ],
     "trustLabel": "CREDIBILITY",
     "trustTitle": "Why trust us?",
     "trustPoints": [
-      { "number": "01", "title": "A comprehensive approach", "description": "EAI intervenes on several key project stages: design, studies, coordination, monitoring, training and transmission." },
-      { "number": "02", "title": "Understanding client challenges", "description": "We know that a project involves time, budget, risks, decisions and responsibility. Our role is to bring clarity and method." },
-      { "number": "03", "title": "A technical culture", "description": "The aesthetic dimension is always supported by a technical, economic, regulatory and operational reading." },
-      { "number": "04", "title": "A delivery-oriented vision", "description": "Quality is not limited to concept. It must be found in documents, coordination and execution." },
-      { "number": "05", "title": "A presence in the professional ecosystem", "description": "Through its training and events, EAI contributes to skill development, exchanges and sector visibility." },
-      { "number": "06", "title": "A sustainable ambition", "description": "We seek to design spaces capable of lasting, evolving and remaining useful over time." }
+      {
+        "number": "01",
+        "title": "A comprehensive approach",
+        "description": "EAI intervenes on several key project stages: design, studies, coordination, monitoring, training and transmission."
+      },
+      {
+        "number": "02",
+        "title": "Understanding client challenges",
+        "description": "We know that a project involves time, budget, risks, decisions and responsibility. Our role is to bring clarity and method."
+      },
+      {
+        "number": "03",
+        "title": "A technical culture",
+        "description": "The aesthetic dimension is always supported by a technical, economic, regulatory and operational reading."
+      },
+      {
+        "number": "04",
+        "title": "A delivery-oriented vision",
+        "description": "Quality is not limited to concept. It must be found in documents, coordination and execution."
+      },
+      {
+        "number": "05",
+        "title": "A presence in the professional ecosystem",
+        "description": "Through its training and events, EAI contributes to skill development, exchanges and sector visibility."
+      },
+      {
+        "number": "06",
+        "title": "A sustainable ambition",
+        "description": "We seek to design spaces capable of lasting, evolving and remaining useful over time."
+      }
     ],
     "timelineLabel": "EVOLUTION",
     "timelineTitle": "A trajectory focused on building an ecosystem.",
     "timelineSteps": [
-      { "number": "01", "title": "Foundation of the vision", "description": "Birth of an approach that connects architecture, engineering, project methodology and professional responsibility." },
-      { "number": "02", "title": "Expertise development", "description": "Structuring interventions around design, studies, BIM, project management, urban planning and interior design." },
-      { "number": "03", "title": "Transmission", "description": "Creation of a training dynamic with EAI Courses to support students, professionals and sector actors." },
-      { "number": "04", "title": "Professional reach", "description": "Development of events, forums, conferences and B2B meetings through ELAOUAD Events." },
-      { "number": "05", "title": "Future vision", "description": "Strengthening an integrated model capable of designing, training, connecting and supporting projects at a larger scale." }
+      {
+        "number": "01",
+        "title": "Foundation of the vision",
+        "description": "Birth of an approach that connects architecture, engineering, project methodology and professional responsibility."
+      },
+      {
+        "number": "02",
+        "title": "Expertise development",
+        "description": "Structuring interventions around design, studies, BIM, project management, urban planning and interior design."
+      },
+      {
+        "number": "03",
+        "title": "Transmission",
+        "description": "Creation of a training dynamic with EAI Courses to support students, professionals and sector actors."
+      },
+      {
+        "number": "04",
+        "title": "Professional reach",
+        "description": "Development of events, forums, conferences and B2B meetings through ELAOUAD Events."
+      },
+      {
+        "number": "05",
+        "title": "Future vision",
+        "description": "Strengthening an integrated model capable of designing, training, connecting and supporting projects at a larger scale."
+      }
     ],
     "ctaLabel": "MEET EAI",
     "ctaTitle1": "Looking for more than a provider?",
@@ -497,7 +755,10 @@
     "ctaPrimary": "Start a collaboration",
     "ctaSecondary": "View our projects",
     "label": "BEHIND THE TRANSFORMATION",
-    "founderLines": ["Soukaina", "Elaouad"],
+    "founderLines": [
+      "Soukaina",
+      "Elaouad"
+    ],
     "role": "Founder & Director",
     "subtitle": "Civil Engineer · Construction Project Manager · Doctoral Researcher in Architecture",
     "quote": "Architecture is an art that embraces science. It must be sensitive in its vision, rigorous in its method, and responsible in its impact.",
@@ -513,7 +774,14 @@
     "heroSecondary": "Architecture, engineering, BIM, interior design, project management, training or professional events: choose the right topic, share your need and our team will guide you to the most suitable response.",
     "heroCtaPrimary": "Send a request",
     "heroCtaSecondary": "View our expertise",
-    "heroMicroList": ["Architectural project", "Technical studies", "Interior design", "Training", "Event", "Partnership"],
+    "heroMicroList": [
+      "Architectural project",
+      "Technical studies",
+      "Interior design",
+      "Training",
+      "Event",
+      "Partnership"
+    ],
     "scrollCue": "Discover",
     "optionsLabel": "CONTACT US",
     "optionsTitle": "Choose the channel best suited to your request.",
@@ -560,30 +828,132 @@
     "formEmailError": "Invalid email address.",
     "formConsentRequired": "You must agree to be contacted.",
     "formSelectDefault": "Select",
-    "formProfiles": ["Individual", "Real estate developer", "Company", "Institution", "Architect / Designer", "Engineer / Consulting firm", "Student / Training participant", "Exhibitor / Event partner", "Other"],
-    "formRequestTypes": ["Architectural project", "Interior architecture", "Engineering / technical studies", "BIM Consulting", "Project management / construction supervision", "Urban planning / development", "EAI Courses training", "ELAOUAD Events event / partnership", "Collaboration request", "Other"],
-    "formProjectStages": ["Initial idea", "Land available", "Existing plans", "Project under study", "Project under construction", "Project to resume / optimize", "Specific professional request"],
-    "formBudgets": ["To define", "Less than 100,000 MAD", "100,000 — 500,000 MAD", "500,000 — 1,000,000 MAD", "1,000,000 — 3,000,000 MAD", "More than 3,000,000 MAD", "Not applicable"],
-    "formTimelines": ["Urgent", "Within the month", "1 to 3 months", "3 to 6 months", "More than 6 months", "To define"],
+    "formProfiles": [
+      "Individual",
+      "Real estate developer",
+      "Company",
+      "Institution",
+      "Architect / Designer",
+      "Engineer / Consulting firm",
+      "Student / Training participant",
+      "Exhibitor / Event partner",
+      "Other"
+    ],
+    "formRequestTypes": [
+      "Architectural project",
+      "Interior architecture",
+      "Engineering / technical studies",
+      "BIM Consulting",
+      "Project management / construction supervision",
+      "Urban planning / development",
+      "EAI Courses training",
+      "ELAOUAD Events event / partnership",
+      "Collaboration request",
+      "Other"
+    ],
+    "formProjectStages": [
+      "Initial idea",
+      "Land available",
+      "Existing plans",
+      "Project under study",
+      "Project under construction",
+      "Project to resume / optimize",
+      "Specific professional request"
+    ],
+    "formBudgets": [
+      "To define",
+      "Less than 100,000 MAD",
+      "100,000 — 500,000 MAD",
+      "500,000 — 1,000,000 MAD",
+      "1,000,000 — 3,000,000 MAD",
+      "More than 3,000,000 MAD",
+      "Not applicable"
+    ],
+    "formTimelines": [
+      "Urgent",
+      "Within the month",
+      "1 to 3 months",
+      "3 to 6 months",
+      "More than 6 months",
+      "To define"
+    ],
     "prepareLabel": "PREPARE YOUR REQUEST",
     "prepareTitle": "Information that helps us better understand your project.",
     "prepareIntro": "You don't need a complete file to contact us. However, certain elements can speed up the analysis and make the first exchange more effective.",
     "prepareItems": [
-      { "number": "01", "title": "Location", "description": "Address, city, neighborhood, land, existing building or intervention area." },
-      { "number": "02", "title": "Project type", "description": "Villa, apartment, office, retail, hotel, public space, training, event, technical study or other." },
-      { "number": "03", "title": "Main objective", "description": "Build, renovate, fit out, study, coordinate, train, exhibit, participate or develop a collaboration." },
-      { "number": "04", "title": "Available documents", "description": "Plans, photos, surveys, ownership certificate, program, specifications, inspiration images or existing studies." },
-      { "number": "05", "title": "Indicative budget", "description": "An approximate envelope helps prioritize and avoid unrealistic proposals." },
-      { "number": "06", "title": "Desired timeline", "description": "Start date, urgency, provisional schedule, administrative deadline or delivery objective." }
+      {
+        "number": "01",
+        "title": "Location",
+        "description": "Address, city, neighborhood, land, existing building or intervention area."
+      },
+      {
+        "number": "02",
+        "title": "Project type",
+        "description": "Villa, apartment, office, retail, hotel, public space, training, event, technical study or other."
+      },
+      {
+        "number": "03",
+        "title": "Main objective",
+        "description": "Build, renovate, fit out, study, coordinate, train, exhibit, participate or develop a collaboration."
+      },
+      {
+        "number": "04",
+        "title": "Available documents",
+        "description": "Plans, photos, surveys, ownership certificate, program, specifications, inspiration images or existing studies."
+      },
+      {
+        "number": "05",
+        "title": "Indicative budget",
+        "description": "An approximate envelope helps prioritize and avoid unrealistic proposals."
+      },
+      {
+        "number": "06",
+        "title": "Desired timeline",
+        "description": "Start date, urgency, provisional schedule, administrative deadline or delivery objective."
+      }
     ],
     "routingLabel": "GUIDANCE",
     "routingTitle": "Who is your request for?",
     "routingPanels": [
-      { "number": "01", "title": "You have an architectural project", "description": "We can support you in design, study, plans, procedures, coordination and general project direction.", "cta": "Select \"Architectural project\" in the form.", "action": "scroll_to_form" },
-      { "number": "02", "title": "You want to transform an interior", "description": "We can help you rethink volumes, circulation, materials, light, furniture, atmospheres and user experience.", "cta": "Select \"Interior architecture\".", "action": "scroll_to_form" },
-      { "number": "03", "title": "You are looking for training", "description": "For BIM, Revit, AutoCAD, SketchUp, interior design, project management or construction supervision training, you can access the EAI Courses platform or request guidance.", "cta": "Access EAI Courses", "link": "https://courses.eai-construction.com", "external": true, "action": "eai_courses" },
-      { "number": "04", "title": "You want to participate in an event", "description": "For forums, conferences, exhibitions, workshops, booths, sponsorship or partnerships, you can access the ELAOUAD Events platform or contact us directly.", "cta": "Access ELAOUAD Events", "link": "https://events.eai-construction.com", "external": true, "action": "eai_events" },
-      { "number": "05", "title": "You are a company, brand or partner", "description": "For professional collaboration, B2B request, partnership proposal or intervention, share your objective and contact details.", "cta": "Fill out the form", "action": "scroll_to_form" }
+      {
+        "number": "01",
+        "title": "You have an architectural project",
+        "description": "We can support you in design, study, plans, procedures, coordination and general project direction.",
+        "cta": "Select \"Architectural project\" in the form.",
+        "action": "scroll_to_form"
+      },
+      {
+        "number": "02",
+        "title": "You want to transform an interior",
+        "description": "We can help you rethink volumes, circulation, materials, light, furniture, atmospheres and user experience.",
+        "cta": "Select \"Interior architecture\".",
+        "action": "scroll_to_form"
+      },
+      {
+        "number": "03",
+        "title": "You are looking for training",
+        "description": "For BIM, Revit, AutoCAD, SketchUp, interior design, project management or construction supervision training, you can access the EAI Courses platform or request guidance.",
+        "cta": "Access EAI Courses",
+        "link": "https://courses.eai-construction.com",
+        "external": true,
+        "action": "eai_courses"
+      },
+      {
+        "number": "04",
+        "title": "You want to participate in an event",
+        "description": "For forums, conferences, exhibitions, workshops, booths, sponsorship or partnerships, you can access the ELAOUAD Events platform or contact us directly.",
+        "cta": "Access ELAOUAD Events",
+        "link": "https://events.eai-construction.com",
+        "external": true,
+        "action": "eai_events"
+      },
+      {
+        "number": "05",
+        "title": "You are a company, brand or partner",
+        "description": "For professional collaboration, B2B request, partnership proposal or intervention, share your objective and contact details.",
+        "cta": "Fill out the form",
+        "action": "scroll_to_form"
+      }
     ],
     "officeLabel": "CONTACT DETAILS",
     "officeTitle": "Find EAI in Casablanca.",
@@ -599,20 +969,54 @@
     "afterLabel": "AFTER SUBMISSION",
     "afterTitle": "A structured contact process, no improvisation.",
     "afterSteps": [
-      { "number": "01", "title": "Reception", "description": "Your request is received with the information submitted via the form." },
-      { "number": "02", "title": "Qualification", "description": "The team identifies the type of need, urgency level, missing information and the right contact person." },
-      { "number": "03", "title": "First exchange", "description": "We contact you to clarify the context, objectives, constraints, available documents and possible next steps." },
-      { "number": "04", "title": "Guidance", "description": "Depending on the request, we may propose a consultation, a mission, a referral to EAI Courses, ELAOUAD Events or a request for additional documents." }
+      {
+        "number": "01",
+        "title": "Reception",
+        "description": "Your request is received with the information submitted via the form."
+      },
+      {
+        "number": "02",
+        "title": "Qualification",
+        "description": "The team identifies the type of need, urgency level, missing information and the right contact person."
+      },
+      {
+        "number": "03",
+        "title": "First exchange",
+        "description": "We contact you to clarify the context, objectives, constraints, available documents and possible next steps."
+      },
+      {
+        "number": "04",
+        "title": "Guidance",
+        "description": "Depending on the request, we may propose a consultation, a mission, a referral to EAI Courses, ELAOUAD Events or a request for additional documents."
+      }
     ],
     "faqLabel": "FREQUENTLY ASKED QUESTIONS",
     "faqTitle": "Before writing to us.",
     "faqItems": [
-      { "question": "Can I contact EAI even if my project is still at the idea stage?", "answer": "Yes. An initial idea can already be discussed. The purpose of the first exchange is precisely to clarify the context, possibilities, constraints and next steps." },
-      { "question": "What documents should I send?", "answer": "You can send available documents: plans, photos, location, program, inspiration images, existing file or specifications. If you have no documents, simply describe your need." },
-      { "question": "Does EAI only operate in Casablanca?", "answer": "EAI is based in Casablanca, but requests may concern other cities depending on the nature of the project, the mission and intervention conditions." },
-      { "question": "Can I request training through this page?", "answer": "Yes. You can select \"EAI Courses training\" in the form or directly access the EAI Courses platform to browse available programs." },
-      { "question": "Can I request a partnership or booth for an event?", "answer": "Yes. Requests related to events, exhibitions, conferences, sponsorship or partnerships can be sent via the form or viewed on the ELAOUAD Events platform." },
-      { "question": "Does the form replace a consultation?", "answer": "No. The form allows you to submit initial information. A consultation or mission may then be proposed based on the nature of the request." }
+      {
+        "question": "Can I contact EAI even if my project is still at the idea stage?",
+        "answer": "Yes. An initial idea can already be discussed. The purpose of the first exchange is precisely to clarify the context, possibilities, constraints and next steps."
+      },
+      {
+        "question": "What documents should I send?",
+        "answer": "You can send available documents: plans, photos, location, program, inspiration images, existing file or specifications. If you have no documents, simply describe your need."
+      },
+      {
+        "question": "Does EAI only operate in Casablanca?",
+        "answer": "EAI is based in Casablanca, but requests may concern other cities depending on the nature of the project, the mission and intervention conditions."
+      },
+      {
+        "question": "Can I request training through this page?",
+        "answer": "Yes. You can select \"EAI Courses training\" in the form or directly access the EAI Courses platform to browse available programs."
+      },
+      {
+        "question": "Can I request a partnership or booth for an event?",
+        "answer": "Yes. Requests related to events, exhibitions, conferences, sponsorship or partnerships can be sent via the form or viewed on the ELAOUAD Events platform."
+      },
+      {
+        "question": "Does the form replace a consultation?",
+        "answer": "No. The form allows you to submit initial information. A consultation or mission may then be proposed based on the nature of the request."
+      }
     ],
     "finalLabel": "INITIATE A COLLABORATION",
     "finalTitle": "Your project deserves a clear first decision.",
@@ -631,7 +1035,14 @@
     "heroSecondary": "Each event is designed as a platform for visibility, knowledge sharing and networking between professionals, institutions, brands, manufacturers, architects, engineers, developers, students and decision makers.",
     "heroCtaPrimary": "Access the Events platform",
     "heroCtaSecondary": "Become an exhibitor / partner",
-    "heroMicroList": ["Forums", "Conferences", "Exhibitions", "Workshops", "B2B Networking", "Innovation"],
+    "heroMicroList": [
+      "Forums",
+      "Conferences",
+      "Exhibitions",
+      "Workshops",
+      "B2B Networking",
+      "Innovation"
+    ],
     "missionLabel": "OUR EVENT MISSION",
     "missionTitle": "A platform where professionals meet, learn and build the future of the sector.",
     "missionBody1": "ELAOUAD Events creates spaces for dialogue and visibility for the professions of architecture, engineering, interior design and construction. The goal is not just to organize events, but to build platforms where ideas circulate, expertise is shared and professional opportunities are created.",
@@ -647,7 +1058,15 @@
         "date": "January 08 — 10, 2026",
         "location": "Casablanca International Fair",
         "description": "The International Construction Forum 2026 is designed as a strategic meeting for building, architecture, engineering, real estate development, materials, infrastructure and construction technology actors.",
-        "topics": ["AI & construction", "Smart design", "Data-driven project management", "Sustainable infrastructure", "Technical innovation", "B2B meetings", "Professional exhibition"],
+        "topics": [
+          "AI & construction",
+          "Smart design",
+          "Data-driven project management",
+          "Sustainable infrastructure",
+          "Technical innovation",
+          "B2B meetings",
+          "Professional exhibition"
+        ],
         "audience": "Architects, engineers, developers, institutions, manufacturers, suppliers, investors, public and private decision makers.",
         "image": "/images/events/fic2026.webp",
         "alt": "International Construction Forum 2026 in Casablanca",
@@ -660,7 +1079,18 @@
         "date": "December 03 — 05, 2026",
         "location": "Casablanca, Morocco",
         "description": "The International Interior Decoration Forum 2026 highlights the professions, brands, materials, solutions and innovations related to interior design, layout, decoration, furniture, coatings, lighting, home automation and professional spaces.",
-        "topics": ["Interior decoration", "Space design", "Materials & coatings", "Furniture & layout", "Lighting", "Home automation", "Craftsmanship", "Workshops", "Professional exhibition", "B2B networking"],
+        "topics": [
+          "Interior decoration",
+          "Space design",
+          "Materials & coatings",
+          "Furniture & layout",
+          "Lighting",
+          "Home automation",
+          "Craftsmanship",
+          "Workshops",
+          "Professional exhibition",
+          "B2B networking"
+        ],
         "audience": "Interior architects, designers, decorators, brands, suppliers, manufacturers, artisans, students, specifiers, developers and passionate individuals.",
         "image": "/images/events/fidi26.webp",
         "alt": "International Interior Decoration Forum 2026 in Casablanca",
@@ -671,12 +1101,36 @@
     "formatsLabel": "OUR FORMATS",
     "formatsTitle": "Formats designed to inform, exhibit, train and connect.",
     "formats": [
-      { "number": "01", "title": "Professional forums", "description": "Events structured around a sector or major theme, bringing together exhibitors, visitors, experts, institutions and decision makers." },
-      { "number": "02", "title": "Specialized conferences", "description": "Meetings dedicated to technical, environmental and strategic issues: BIM, sustainable construction, decarbonization, net zero buildings, innovation and digitalization." },
-      { "number": "03", "title": "Exhibitions & booths", "description": "Visibility spaces for brands, manufacturers, suppliers, engineering firms, artisans and companies who want to present their solutions to a qualified audience." },
-      { "number": "04", "title": "Practical workshops", "description": "Workshops led by professionals to transmit concrete methods: coatings, home automation, lighting, layout, interior design, materials, construction and design." },
-      { "number": "05", "title": "B2B networking", "description": "Meeting moments designed to create partnerships, generate leads, strengthen visibility and connect the right market actors." },
-      { "number": "06", "title": "Training & knowledge sharing", "description": "Events that extend EAI's educational mission by allowing professionals and students to learn from sector experts." }
+      {
+        "number": "01",
+        "title": "Professional forums",
+        "description": "Events structured around a sector or major theme, bringing together exhibitors, visitors, experts, institutions and decision makers."
+      },
+      {
+        "number": "02",
+        "title": "Specialized conferences",
+        "description": "Meetings dedicated to technical, environmental and strategic issues: BIM, sustainable construction, decarbonization, net zero buildings, innovation and digitalization."
+      },
+      {
+        "number": "03",
+        "title": "Exhibitions & booths",
+        "description": "Visibility spaces for brands, manufacturers, suppliers, engineering firms, artisans and companies who want to present their solutions to a qualified audience."
+      },
+      {
+        "number": "04",
+        "title": "Practical workshops",
+        "description": "Workshops led by professionals to transmit concrete methods: coatings, home automation, lighting, layout, interior design, materials, construction and design."
+      },
+      {
+        "number": "05",
+        "title": "B2B networking",
+        "description": "Meeting moments designed to create partnerships, generate leads, strengthen visibility and connect the right market actors."
+      },
+      {
+        "number": "06",
+        "title": "Training & knowledge sharing",
+        "description": "Events that extend EAI's educational mission by allowing professionals and students to learn from sector experts."
+      }
     ],
     "ecosystemLabel": "EVENTS ECOSYSTEM",
     "ecosystemTitle": "A program between design, construction, sustainability and innovation.",
@@ -696,7 +1150,11 @@
         "location": "Casablanca International Fair",
         "status": "upcoming",
         "description": "A meeting dedicated to solutions, technologies and strategies transforming construction: artificial intelligence, sustainable infrastructure, project management, materials, safety, control, innovation and BTP sector development.",
-        "filterKeys": ["upcoming", "construction", "conferences"],
+        "filterKeys": [
+          "upcoming",
+          "construction",
+          "conferences"
+        ],
         "image": "/images/events/fic2026.webp",
         "alt": "International Construction Forum 2026",
         "externalUrl": "https://events.eai-construction.com/forum-international-de-la-construction-2026/"
@@ -709,7 +1167,11 @@
         "location": "Casablanca, Morocco",
         "status": "upcoming",
         "description": "An event dedicated to interior decoration, materials, coatings, layout, furniture, lighting, home automation and layout solutions.",
-        "filterKeys": ["upcoming", "design", "conferences"],
+        "filterKeys": [
+          "upcoming",
+          "design",
+          "conferences"
+        ],
         "image": "/images/events/fidi26.webp",
         "alt": "International Interior Decoration Forum 2026",
         "externalUrl": "https://events.eai-construction.com/fidi26/"
@@ -722,7 +1184,10 @@
         "location": "Casablanca International Fair",
         "status": "past",
         "description": "An edition dedicated to interior design trends, technologies and techniques, with conferences, practical workshops, exhibition, networking and thematic spaces around layout solutions.",
-        "filterKeys": ["design", "conferences"],
+        "filterKeys": [
+          "design",
+          "conferences"
+        ],
         "image": "/images/events/fidi2025.webp",
         "alt": "International Interior Decoration Forum 2025",
         "externalUrl": "https://events.eai-construction.com"
@@ -735,7 +1200,9 @@
         "location": "BH Appart Hotel, Safir Hall",
         "status": "past",
         "description": "A national event dedicated to interior decoration, bringing together enthusiasts, professionals, brands and sector talents around exhibitions, workshops and visibility opportunities.",
-        "filterKeys": ["design"],
+        "filterKeys": [
+          "design"
+        ],
         "image": "/images/events/fndi2023.webp",
         "alt": "National Interior Decoration Forum 2023",
         "externalUrl": "https://events.eai-construction.com"
@@ -748,7 +1215,10 @@
         "location": "Mövenpick Casablanca",
         "status": "past",
         "description": "A conference dedicated to reducing carbon footprint in construction, bringing together experts, project managers, sustainability actors, building professionals and decision makers.",
-        "filterKeys": ["sustainability", "conferences"],
+        "filterKeys": [
+          "sustainability",
+          "conferences"
+        ],
         "image": "/images/events/acdc.webp",
         "alt": "Advanced Construction Decarbonisation Conference 2024",
         "externalUrl": "https://events.eai-construction.com"
@@ -761,7 +1231,10 @@
         "location": "Hilton Garden Inn Hotel, Casablanca",
         "status": "past",
         "description": "A conference around sustainable construction, circular economy, ecological materials, energy efficiency, recycling and waste management in the building lifecycle.",
-        "filterKeys": ["sustainability", "conferences"],
+        "filterKeys": [
+          "sustainability",
+          "conferences"
+        ],
         "image": "/images/events/sustainable-construction.webp",
         "alt": "International Conference of Sustainable Construction 2024",
         "externalUrl": "https://events.eai-construction.com"
@@ -774,7 +1247,10 @@
         "location": "Casablanca, Morocco",
         "status": "past",
         "description": "An event dedicated to net zero energy commercial buildings, energy efficiency, integrated renewables and the transition to carbon neutrality.",
-        "filterKeys": ["sustainability", "conferences"],
+        "filterKeys": [
+          "sustainability",
+          "conferences"
+        ],
         "image": "/images/events/net-zero-buildings.webp",
         "alt": "International Conference of Net Zero Energy Commercial Buildings 2024",
         "externalUrl": "https://events.eai-construction.com"
@@ -787,7 +1263,10 @@
         "location": "Hilton Garden Inn Casablanca",
         "status": "past",
         "description": "An international conference in Morocco on BIM, bringing together experts to share ideas, present technological advances and develop networking opportunities around building information modeling.",
-        "filterKeys": ["bim", "conferences"],
+        "filterKeys": [
+          "bim",
+          "conferences"
+        ],
         "image": "/images/events/bim-conference.webp",
         "alt": "International BIM Conference 2023",
         "externalUrl": "https://events.eai-construction.com"
@@ -829,27 +1308,79 @@
     "fidiLabel": "FIDI EXPERIENCE",
     "fidiTitle": "An immersion into the world of interior design.",
     "fidiBody": "The International Interior Decoration Forum is designed as a complete experience around layout and space creation. It brings together complementary universes: wall coatings, floor coverings, home automation, craftsmanship, carpentry, kitchens, furniture, lighting, professional spaces and upholstery.",
-    "fidiThematicAreas": ["Wall coatings", "Floor coverings", "Home automation", "Craftsmanship", "Carpentry", "Kitchen layout", "Furniture", "Lighting", "Professional spaces", "Upholstery"],
-    "fidiExperiencePillars": ["Inspiring conferences", "Practical workshops", "Curated exhibitions", "Professional networking"],
+    "fidiThematicAreas": [
+      "Wall coatings",
+      "Floor coverings",
+      "Home automation",
+      "Craftsmanship",
+      "Carpentry",
+      "Kitchen layout",
+      "Furniture",
+      "Lighting",
+      "Professional spaces",
+      "Upholstery"
+    ],
+    "fidiExperiencePillars": [
+      "Inspiring conferences",
+      "Practical workshops",
+      "Curated exhibitions",
+      "Professional networking"
+    ],
     "fidiCta": "Explore FIDI",
     "sustainabilityLabel": "SUSTAINABLE & DIGITAL CONSTRUCTION",
     "sustainabilityTitle": "Conferences to think about tomorrow's technical challenges.",
     "sustainabilityBody": "EAI events also address topics that are deeply transforming the sector: decarbonization, sustainable construction, net zero energy buildings, BIM, digitalization, responsible materials, energy efficiency and project data management.",
     "sustainabilityTopics": [
-      { "number": "01", "title": "Construction decarbonization", "description": "Carbon footprint reduction, materials, waste, environmental strategy and reporting." },
-      { "number": "02", "title": "Sustainable construction", "description": "Building lifecycle, circular economy, reuse, recycling, resources, energy and environmental impact." },
-      { "number": "03", "title": "Net Zero Energy Buildings", "description": "High-performance buildings, energy needs reduction, renewable integration and carbon neutrality." },
-      { "number": "04", "title": "BIM & digital construction", "description": "Digital modeling, coordination, conflict detection, project data, collaboration and construction optimization." }
+      {
+        "number": "01",
+        "title": "Construction decarbonization",
+        "description": "Carbon footprint reduction, materials, waste, environmental strategy and reporting."
+      },
+      {
+        "number": "02",
+        "title": "Sustainable construction",
+        "description": "Building lifecycle, circular economy, reuse, recycling, resources, energy and environmental impact."
+      },
+      {
+        "number": "03",
+        "title": "Net Zero Energy Buildings",
+        "description": "High-performance buildings, energy needs reduction, renewable integration and carbon neutrality."
+      },
+      {
+        "number": "04",
+        "title": "BIM & digital construction",
+        "description": "Digital modeling, coordination, conflict detection, project data, collaboration and construction optimization."
+      }
     ],
     "sustainabilityCta": "View specialized conferences",
     "journeyLabel": "PARTICIPANT JOURNEY",
     "journeyTitle": "From discovery to professional networking.",
     "journeySteps": [
-      { "number": "01", "title": "Discover", "description": "Identify the event suited to your sector, profile and objectives." },
-      { "number": "02", "title": "Register", "description": "Book your place, booth or participation according to the event format." },
-      { "number": "03", "title": "Prepare", "description": "Define your objectives: visibility, networking, training, market intelligence, lead generation or partnership." },
-      { "number": "04", "title": "Participate", "description": "Attend conferences, visit booths, participate in workshops and create qualified connections." },
-      { "number": "05", "title": "Extend", "description": "Transform meetings into collaborations, commercial opportunities, learning or partnerships." }
+      {
+        "number": "01",
+        "title": "Discover",
+        "description": "Identify the event suited to your sector, profile and objectives."
+      },
+      {
+        "number": "02",
+        "title": "Register",
+        "description": "Book your place, booth or participation according to the event format."
+      },
+      {
+        "number": "03",
+        "title": "Prepare",
+        "description": "Define your objectives: visibility, networking, training, market intelligence, lead generation or partnership."
+      },
+      {
+        "number": "04",
+        "title": "Participate",
+        "description": "Attend conferences, visit booths, participate in workshops and create qualified connections."
+      },
+      {
+        "number": "05",
+        "title": "Extend",
+        "description": "Transform meetings into collaborations, commercial opportunities, learning or partnerships."
+      }
     ],
     "platformLabel": "DEDICATED PLATFORM",
     "platformTitle": "All details, programs and registrations are available on EAI Events.",
@@ -891,7 +1422,14 @@
     "heroSecondary": "Training programs designed by industry professionals to bridge theory and practice and develop directly applicable construction skills.",
     "heroCtaPrimary": "Access EAI Courses",
     "heroCtaSecondary": "Request guidance",
-    "heroMicroList": ["Architecture", "BIM", "3D Software", "Project management", "Site supervision", "Interior design"],
+    "heroMicroList": [
+      "Architecture",
+      "BIM",
+      "3D Software",
+      "Project management",
+      "Site supervision",
+      "Interior design"
+    ],
     "missionLabel": "OUR EDUCATIONAL MISSION",
     "missionTitle": "Transmit field expertise to those who build the future.",
     "missionBody1": "ELAOUAD Courses creates a bridge between the professional world and training. Each program is designed from the real experience of our teams on architecture, engineering, BIM and construction coordination projects.",
@@ -906,7 +1444,16 @@
         "number": "01",
         "title": "Architecture & Project Management",
         "description": "From architectural design to site management: BIM, TILOS, construction supervision, structural calculations, utilities, urban planning and land law.",
-        "courses": ["BIM Management", "TILOS Planning", "Site supervision", "Structural calculations", "Utilities", "Urban planning", "Land law", "Project management"],
+        "courses": [
+          "BIM Management",
+          "TILOS Planning",
+          "Site supervision",
+          "Structural calculations",
+          "Utilities",
+          "Urban planning",
+          "Land law",
+          "Project management"
+        ],
         "image": "/images/formations/category-architecture.webp",
         "externalUrl": "https://courses.eai-construction.com"
       },
@@ -914,7 +1461,17 @@
         "number": "02",
         "title": "Software & 3D Design",
         "description": "Master professional design tools: AutoCAD, Revit, SketchUp Pro, 3ds Max, Archicad, Tekla, Covadis, Mensura and MS Project.",
-        "courses": ["AutoCAD", "Revit", "SketchUp Pro", "3ds Max", "Archicad", "Tekla", "Covadis", "Mensura", "MS Project"],
+        "courses": [
+          "AutoCAD",
+          "Revit",
+          "SketchUp Pro",
+          "3ds Max",
+          "Archicad",
+          "Tekla",
+          "Covadis",
+          "Mensura",
+          "MS Project"
+        ],
         "image": "/images/formations/category-software.webp",
         "externalUrl": "https://courses.eai-construction.com"
       },
@@ -922,7 +1479,14 @@
         "number": "03",
         "title": "Decoration & Interior Design",
         "description": "3D interior decoration, space optimization, well-being, materials, ambiances and introduction to decoration for professionals and individuals.",
-        "courses": ["3D Decoration", "Space optimization", "Well-being & design", "Decoration basics", "Materials & finishes", "Furniture & layout"],
+        "courses": [
+          "3D Decoration",
+          "Space optimization",
+          "Well-being & design",
+          "Decoration basics",
+          "Materials & finishes",
+          "Furniture & layout"
+        ],
         "image": "/images/formations/category-interior.webp",
         "externalUrl": "https://courses.eai-construction.com"
       },
@@ -930,7 +1494,14 @@
         "number": "04",
         "title": "Construction & Engineering",
         "description": "Construction techniques, materials, standards, safety, quality control, estimation and technical coordination for construction professionals.",
-        "courses": ["Construction techniques", "Materials", "Standards & regulations", "Site safety", "Quality control", "Budget estimation"],
+        "courses": [
+          "Construction techniques",
+          "Materials",
+          "Standards & regulations",
+          "Site safety",
+          "Quality control",
+          "Budget estimation"
+        ],
         "image": "/images/formations/category-construction.webp",
         "externalUrl": "https://courses.eai-construction.com"
       }
@@ -943,7 +1514,12 @@
         "title": "BIM Management — From model to coordination",
         "category": "Architecture & BIM",
         "description": "Master BIM modeling, cross-discipline coordination, conflict detection and project data management for more efficient construction.",
-        "outcomes": ["Digital model", "Coordination", "Conflict detection", "Data management"],
+        "outcomes": [
+          "Digital model",
+          "Coordination",
+          "Conflict detection",
+          "Data management"
+        ],
         "image": "/images/formations/program-bim.webp",
         "alt": "BIM Management training with digital model",
         "externalUrl": "https://courses.eai-construction.com"
@@ -953,7 +1529,12 @@
         "title": "Revit Architecture — Complete project design",
         "category": "3D Software",
         "description": "Learn to design a complete architectural project with Revit: plans, elevations, sections, schedules, renderings and technical documentation.",
-        "outcomes": ["Plans", "Elevations", "Schedules", "Renderings"],
+        "outcomes": [
+          "Plans",
+          "Elevations",
+          "Schedules",
+          "Renderings"
+        ],
         "image": "/images/formations/program-revit.webp",
         "alt": "Revit Architecture training for project design",
         "externalUrl": "https://courses.eai-construction.com"
@@ -963,7 +1544,12 @@
         "title": "Site Supervision — Steering execution",
         "category": "Construction",
         "description": "Develop essential skills to manage a construction site: planning, contractor coordination, quality monitoring, safety and handover.",
-        "outcomes": ["Planning", "Coordination", "Quality monitoring", "Safety"],
+        "outcomes": [
+          "Planning",
+          "Coordination",
+          "Quality monitoring",
+          "Safety"
+        ],
         "image": "/images/formations/program-chantier.webp",
         "alt": "Site supervision and execution management training",
         "externalUrl": "https://courses.eai-construction.com"
@@ -973,7 +1559,12 @@
         "title": "3D Interior Design — Designing spaces",
         "category": "Interior Design",
         "description": "Create photorealistic 3D interiors: layout, materials, lighting, furniture and client presentation for residential and commercial projects.",
-        "outcomes": ["3D Layout", "Materials", "Lighting", "Presentation"],
+        "outcomes": [
+          "3D Layout",
+          "Materials",
+          "Lighting",
+          "Presentation"
+        ],
         "image": "/images/formations/program-decoration.webp",
         "alt": "3D interior decoration training",
         "externalUrl": "https://courses.eai-construction.com"
@@ -983,7 +1574,12 @@
         "title": "TILOS — Linear project planning",
         "category": "Project Management",
         "description": "Master TILOS for linear project planning: roads, utilities, infrastructure, pipelines and public works with time-distance visualization.",
-        "outcomes": ["Time-distance diagram", "Utilities", "Infrastructure", "Optimization"],
+        "outcomes": [
+          "Time-distance diagram",
+          "Utilities",
+          "Infrastructure",
+          "Optimization"
+        ],
         "image": "/images/formations/program-tilos.webp",
         "alt": "TILOS training for linear project planning",
         "externalUrl": "https://courses.eai-construction.com"
@@ -993,7 +1589,12 @@
         "title": "AutoCAD — Technical drawing fundamentals",
         "category": "3D Software",
         "description": "Learn the basics of technical drawing with AutoCAD: essential commands, layers, annotations, printing and professional plan production.",
-        "outcomes": ["2D Drawing", "Layers", "Annotations", "Printing"],
+        "outcomes": [
+          "2D Drawing",
+          "Layers",
+          "Annotations",
+          "Printing"
+        ],
         "image": "/images/formations/program-autocad.webp",
         "alt": "AutoCAD training for technical drawing",
         "externalUrl": "https://courses.eai-construction.com"
@@ -1003,11 +1604,31 @@
     "methodTitle": "Learn by doing, with real cases and expert guidance.",
     "methodBody": "Each EAI training is built around a clear progression: from fundamentals to advanced practice, with concrete projects, guided exercises and personalized support.",
     "methodSteps": [
-      { "number": "01", "title": "Assessment & orientation", "description": "Level evaluation, objective identification and recommendation of the most suitable path for the learner's profile and ambition." },
-      { "number": "02", "title": "Theoretical fundamentals", "description": "Acquisition of essential basics: concepts, terminology, standards, tools and methodologies specific to each training domain." },
-      { "number": "03", "title": "Guided practice", "description": "Progressive exercises on concrete cases: models, plans, 3D models, schedules and real project studies drawn from EAI experience." },
-      { "number": "04", "title": "Integration project", "description": "Completion of a comprehensive project that mobilizes all acquired skills, with personalized feedback and detailed correction." },
-      { "number": "05", "title": "Certification & follow-up", "description": "Final assessment, EAI certificate delivery and post-training support to facilitate skill application in a professional context." }
+      {
+        "number": "01",
+        "title": "Assessment & orientation",
+        "description": "Level evaluation, objective identification and recommendation of the most suitable path for the learner's profile and ambition."
+      },
+      {
+        "number": "02",
+        "title": "Theoretical fundamentals",
+        "description": "Acquisition of essential basics: concepts, terminology, standards, tools and methodologies specific to each training domain."
+      },
+      {
+        "number": "03",
+        "title": "Guided practice",
+        "description": "Progressive exercises on concrete cases: models, plans, 3D models, schedules and real project studies drawn from EAI experience."
+      },
+      {
+        "number": "04",
+        "title": "Integration project",
+        "description": "Completion of a comprehensive project that mobilizes all acquired skills, with personalized feedback and detailed correction."
+      },
+      {
+        "number": "05",
+        "title": "Certification & follow-up",
+        "description": "Final assessment, EAI certificate delivery and post-training support to facilitate skill application in a professional context."
+      }
     ],
     "testimonialsLabel": "TESTIMONIALS",
     "testimonialsTitle": "What our learners say.",
@@ -1115,8 +1736,8 @@
     "ctaLabel": "START YOUR JOURNEY",
     "ctaTitle": "Ready to invest in your skills?",
     "ctaBody": "Each EAI training is designed to give you the tools, methods and confidence needed to thrive in the construction sector. Explore the catalog, choose your path and start building your professional future.",
-    "ctaPrimary": "Access EAI Courses",
-    "ctaSecondary": "Request guidance",
+    "ctaPrimary": "Discover the training",
+    "ctaSecondary": "Register for a session",
     "label": "ELAOUAD COURSES",
     "title": "Train the professionals capable of designing, managing, and building tomorrow.",
     "description": "ELAOUAD Courses offers practical training in the areas of architecture, construction, BIM, 3D software, project management, site supervision, and interior design. The programs are designed to bring theory closer to the field and help learners develop directly exploitable skills.",
@@ -1127,8 +1748,6 @@
     "pillar2Desc": "AutoCAD, Revit, SketchUp Pro, 3ds Max, Archicad, Tekla, Covadis, Mensura, MS Project.",
     "pillar3Title": "Decoration & Interior Design",
     "pillar3Desc": "3D interior decoration, space optimization, well-being, introduction to decoration.",
-    "ctaPrimary": "Discover the training",
-    "ctaSecondary": "Register for a session",
     "ctaRegisterTitle": "Join a session",
     "ctaRegisterDesc": "Select your theme and plan your professional path with our experts.",
     "softwareLabel": "Taught software",

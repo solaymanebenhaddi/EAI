@@ -124,7 +124,13 @@ export function HorizonSceneEngine() {
           key={currentAsset.src}
           className="absolute inset-0 w-full h-full z-20"
           initial={{ opacity: 0, scale: 0.95, y: '4%', rotateX: -2, filter: 'blur(8px)' }}
-          animate={{ opacity: 0.35, scale: 1, y: '0%', rotateX: 0, filter: 'blur(0px)' }}
+          animate={{
+            opacity: currentAsset.id === 'hero' ? 0.62 : 0.35,
+            scale: 1,
+            y: '0%',
+            rotateX: 0,
+            filter: 'blur(0px)',
+          }}
           transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
         >
           {currentAsset.type === 'video' ? (
@@ -134,7 +140,11 @@ export function HorizonSceneEngine() {
               muted
               loop
               playsInline
-              className="w-full h-full object-cover filter grayscale mix-blend-multiply contrast-[0.92] brightness-[1.02]"
+              className={`w-full h-full object-cover filter ${
+                currentAsset.id === 'hero'
+                  ? 'saturate-[1.12] contrast-[1.04] brightness-[1.04]'
+                  : 'grayscale mix-blend-multiply contrast-[0.92] brightness-[1.02]'
+              }`}
             />
           ) : (
             <Image
@@ -249,8 +259,18 @@ export function HorizonSceneEngine() {
         </div>
 
         {/* Global Warm Travertine Gradient Overlay to ground the assets into a single structure sheet */}
-        <div className="absolute inset-0 z-40 pointer-events-none mix-blend-multiply opacity-[0.25] bg-gradient-to-tr from-eai-parchment via-transparent to-eai-stone-light" />
-        <div className="absolute inset-0 z-40 pointer-events-none bg-gradient-to-t from-eai-paper via-transparent to-eai-paper/40" />
+        <div
+          className={`absolute inset-0 z-40 pointer-events-none mix-blend-multiply bg-gradient-to-tr from-eai-parchment via-transparent to-eai-stone-light ${
+            activeScene === 'hero' ? 'opacity-[0.10]' : 'opacity-[0.25]'
+          }`}
+        />
+        <div
+          className={`absolute inset-0 z-40 pointer-events-none ${
+            activeScene === 'hero'
+              ? 'bg-gradient-to-t from-eai-paper/62 via-transparent to-eai-paper/18'
+              : 'bg-gradient-to-t from-eai-paper via-transparent to-eai-paper/40'
+          }`}
+        />
 
         {/* Sweeping Technical Laser Line - travels slowly down the screen to distract the eye during dissolves */}
         <motion.div
