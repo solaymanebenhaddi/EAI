@@ -152,6 +152,13 @@ export function ContactForm() {
       </p>
     ) : null;
 
+  const isHiddenSubject = [
+    requestTypes[6],
+    requestTypes[7],
+    requestTypes[8],
+    requestTypes[9],
+  ].includes(values.requestType);
+
   return (
     <section ref={sectionRef} id="contact-form" className="relative py-24 lg:py-32 bg-eai-parchment/30 overflow-hidden">
       {/* Grid overlay */}
@@ -293,55 +300,59 @@ export function ContactForm() {
           </div>
 
           {/* Row 4: Project Stage + Budget */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
-            <div>
-              <label className={labelClass}>{labels.projectStage}</label>
-              <select
-                className={selectClass}
-                value={values.projectStage}
-                onChange={(e) => updateValue('projectStage', e.target.value)}
-              >
-                <option value="">{labels.selectDefault}</option>
-                {projectStages.map((item) => (
-                  <option key={item} value={item}>
-                    {item}
-                  </option>
-                ))}
-              </select>
+          {!isHiddenSubject && (
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+              <div>
+                <label className={labelClass}>{labels.projectStage}</label>
+                <select
+                  className={selectClass}
+                  value={values.projectStage}
+                  onChange={(e) => updateValue('projectStage', e.target.value)}
+                >
+                  <option value="">{labels.selectDefault}</option>
+                  {projectStages.map((item) => (
+                    <option key={item} value={item}>
+                      {item}
+                    </option>
+                  ))}
+                </select>
+              </div>
+              <div>
+                <label className={labelClass}>{labels.estimatedBudget}</label>
+                <select
+                  className={selectClass}
+                  value={values.estimatedBudget}
+                  onChange={(e) => updateValue('estimatedBudget', e.target.value)}
+                >
+                  <option value="">{labels.selectDefault}</option>
+                  {budgets.map((item) => (
+                    <option key={item} value={item}>
+                      {item}
+                    </option>
+                  ))}
+                </select>
+              </div>
             </div>
-            <div>
-              <label className={labelClass}>{labels.estimatedBudget}</label>
-              <select
-                className={selectClass}
-                value={values.estimatedBudget}
-                onChange={(e) => updateValue('estimatedBudget', e.target.value)}
-              >
-                <option value="">{labels.selectDefault}</option>
-                {budgets.map((item) => (
-                  <option key={item} value={item}>
-                    {item}
-                  </option>
-                ))}
-              </select>
-            </div>
-          </div>
+          )}
 
           {/* Row 5: Timeline */}
-          <div className="mb-8">
-            <label className={labelClass}>{labels.desiredTimeline}</label>
-            <select
-              className={selectClass}
-              value={values.desiredTimeline}
-              onChange={(e) => updateValue('desiredTimeline', e.target.value)}
-            >
-              <option value="">{labels.selectDefault}</option>
-              {timelines.map((item) => (
-                <option key={item} value={item}>
-                  {item}
-                </option>
-              ))}
-            </select>
-          </div>
+          {!isHiddenSubject && (
+            <div className="mb-8">
+              <label className={labelClass}>{labels.desiredTimeline}</label>
+              <select
+                className={selectClass}
+                value={values.desiredTimeline}
+                onChange={(e) => updateValue('desiredTimeline', e.target.value)}
+              >
+                <option value="">{labels.selectDefault}</option>
+                {timelines.map((item) => (
+                  <option key={item} value={item}>
+                    {item}
+                  </option>
+                ))}
+              </select>
+            </div>
+          )}
 
           {/* Message */}
           <div className="mb-8">

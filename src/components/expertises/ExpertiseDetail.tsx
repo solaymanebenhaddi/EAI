@@ -1,6 +1,7 @@
 'use client';
 
-import { useRef, useEffect } from 'react';
+import { useRef } from 'react';
+import Image from 'next/image';
 import { motion, useInView } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 import { Check } from 'lucide-react';
@@ -174,10 +175,12 @@ export function ExpertiseDetail({
                     : 'bg-gradient-to-t from-eai-paper/40 via-transparent to-transparent'
                 }`}
               />
-              <img
+              <Image
                 src={imagePath}
                 alt={imageAlt}
-                className="w-full h-full object-cover"
+                fill
+                sizes="(min-width: 1024px) 42vw, 100vw"
+                className="object-cover"
                 loading="lazy"
               />
             </div>

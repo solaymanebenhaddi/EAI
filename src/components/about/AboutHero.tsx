@@ -28,8 +28,8 @@ export function AboutHero() {
       {/* Background image */}
       <div className="absolute inset-0">
         <Image
-          src="/images/about/hero-eai-studio.webp"
-          alt="Studio d'architecture ELAOUAD avec plans et maquettes"
+          src="/images/about/elaouad-architectural-hero.png"
+          alt="Création architecturale moderne ELAOUAD avec éclairage cinématique"
           fill
           className="object-cover"
           priority

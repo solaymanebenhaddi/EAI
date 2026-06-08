@@ -122,20 +122,20 @@ export function HorizonEvents({ locale }: { locale: Locale }) {
                 </div>
 
                 <div className="mt-12 flex flex-wrap gap-4">
-                  <Link
-                    href="/events/fidi-2026"
+                  <a
+                    href="https://events.eai-construction.com/"
                     onClick={() => trackEvent('event_cta_click', { slug: 'fidi-2026', label: 'learn_more' })}
                     className="bg-eai-brass px-7 py-4 font-body text-label uppercase tracking-[0.14em] text-eai-paper transition-colors hover:bg-eai-brass-soft"
                   >
                     {t('cta')}
-                  </Link>
-                  <Link
-                    href="/contact"
+                  </a>
+                  <a
+                    href="https://forms.gle/F7uGRcJet55ZapLF6"
                     onClick={() => trackEvent('event_cta_click', { slug: 'fidi-2026', label: 'exhibitor' })}
                     className="border border-eai-line px-7 py-4 font-body text-label uppercase tracking-[0.14em] text-eai-charcoal transition-colors hover:border-eai-brass hover:text-eai-brass bg-eai-paper/40"
                   >
                     {t('exhibitorCta')}
-                  </Link>
+                  </a>
                   <Link
                     href="/contact"
                     onClick={() => trackEvent('event_cta_click', { slug: 'fidi-2026', label: 'partner' })}

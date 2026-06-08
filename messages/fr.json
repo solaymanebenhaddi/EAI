@@ -23,6 +23,7 @@
     "heroSecondary": "Chez ELAOUAD Architecture & Ingénierie, chaque expertise est pensée comme une partie d'un système complet : concevoir avec sens, étudier avec rigueur, coordonner avec méthode et livrer avec exigence.",
     "heroCtaPrimary": "Parler de votre projet",
     "heroCtaSecondary": "Voir nos projets",
+    "heroImageAlt": "Façade architecturale contemporaine avec lignes techniques et repères d'ingénierie.",
     "heroMicroList": [
       "Architecture",
       "Études techniques",
@@ -311,6 +312,7 @@
     "formationsLabel": "TRANSMISSION",
     "formationsTitle": "Des expertises également transmises par la formation.",
     "formationsBody": "En parallèle de ses missions professionnelles, EAI développe des formations pratiques pour accompagner la montée en compétence des étudiants, techniciens, architectes, ingénieurs et professionnels du secteur.\n\nCes formations couvrent notamment les logiciels de conception, le BIM, la gestion de projet, la conduite de chantier, la décoration intérieure, l'architecture et les outils techniques liés à la construction.",
+    "formationsImageAlt": "Studio de formation en architecture avec écrans, plans et coordination BIM.",
     "formationsCta": "Découvrir nos formations",
     "finalLabel": "INITIER UNE MISSION",
     "finalTitle1": "Votre projet a besoin d'une vision claire,",

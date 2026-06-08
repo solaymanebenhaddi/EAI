@@ -1,6 +1,7 @@
 'use client';
 
-import { useRef, useEffect } from 'react';
+import { useRef } from 'react';
+import Image from 'next/image';
 import { motion, useInView } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/routing';
@@ -17,14 +18,14 @@ export function ExpertiseOverview() {
   }>;
 
   const images = [
-    '/images/expertises/architecture-conception.webp',
-    '/images/expertises/engineering-structure.webp',
-    '/images/expertises/bim-model.webp',
-    '/images/expertises/construction-coordination.webp',
-    '/images/expertises/interior-design.webp',
-    '/images/expertises/urban-planning.webp',
-    '/images/expertises/topography-site.webp',
-    '/images/expertises/amo-strategy.webp',
+    '/images/expertises/expertise-overview-architecture.webp',
+    '/images/expertises/expertise-overview-engineering.webp',
+    '/images/expertises/expertise-overview-bim.webp',
+    '/images/expertises/expertise-overview-coordination.webp',
+    '/images/expertises/expertise-overview-interior.webp',
+    '/images/expertises/expertise-overview-urbanism.webp',
+    '/images/expertises/expertise-overview-topography.webp',
+    '/images/expertises/expertise-overview-amo.webp',
   ];
 
   return (
@@ -66,10 +67,12 @@ export function ExpertiseOverview() {
               {/* Image thumbnail */}
               <div className="relative h-40 overflow-hidden">
                 <div className="absolute inset-0 bg-eai-ink/30 group-hover:bg-eai-ink/20 transition-colors duration-500 z-10" />
-                <img
+                <Image
                   src={images[index]}
                   alt={card.title}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                  fill
+                  sizes="(min-width: 1024px) 25vw, (min-width: 768px) 50vw, 100vw"
+                  className="object-cover group-hover:scale-105 transition-transform duration-700"
                 />
               </div>
 

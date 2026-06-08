@@ -23,6 +23,7 @@
     "heroSecondary": "At ELAOUAD Architecture & Engineering, each expertise is conceived as part of a complete system: design with meaning, study with rigor, coordinate with method and deliver with standards.",
     "heroCtaPrimary": "Discuss your project",
     "heroCtaSecondary": "View our projects",
+    "heroImageAlt": "Contemporary architectural facade with technical lines and engineering markers.",
     "heroMicroList": [
       "Architecture",
       "Technical studies",
@@ -311,6 +312,7 @@
     "formationsLabel": "TRANSMISSION",
     "formationsTitle": "Expertise also transmitted through training.",
     "formationsBody": "Alongside its professional missions, EAI develops practical training to support the skill development of students, technicians, architects, engineers and sector professionals.\n\nThese training programs cover design software, BIM, project management, site supervision, interior decoration, architecture and technical tools related to construction.",
+    "formationsImageAlt": "Architecture training studio with screens, plans and BIM coordination.",
     "formationsCta": "Discover our training",
     "finalLabel": "INITIATE A MISSION",
     "finalTitle1": "Your project needs a clear vision,",

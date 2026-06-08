@@ -1,6 +1,7 @@
 'use client';
 
-import { useRef, useEffect } from 'react';
+import { useRef } from 'react';
+import Image from 'next/image';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/routing';
@@ -150,11 +151,13 @@ export function ExpertiseHero() {
           >
             <div className="relative h-[50vh] lg:h-[70vh] w-full bg-eai-stone-light/30 overflow-hidden">
               <div className="absolute inset-0 bg-gradient-to-t from-eai-paper/60 via-transparent to-transparent z-10" />
-              <img
-                src="/images/expertises/hero-technical-architecture.webp"
-                alt="Architecture technique et conception architecturale"
-                className="w-full h-full object-cover"
-                loading="eager"
+              <Image
+                src="/images/expertises/expertise-hero-architecture-engineering.webp"
+                alt={t('heroImageAlt')}
+                fill
+                priority
+                sizes="(min-width: 1024px) 42vw, 100vw"
+                className="object-cover"
               />
             </div>
             {/* Backing frame */}

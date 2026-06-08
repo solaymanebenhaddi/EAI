@@ -1,6 +1,7 @@
 'use client';
 
-import { useRef, useEffect } from 'react';
+import { useRef } from 'react';
+import Image from 'next/image';
 import { motion, useInView } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/routing';
@@ -27,11 +28,12 @@ export function FormationsBridge() {
           >
             <div className="relative h-64 lg:h-80 overflow-hidden">
               <div className="absolute inset-0 bg-eai-ink/40 z-10" />
-              <img
-                src="/images/expertises/material-detail.webp"
-                alt="Formation professionnelle en architecture et construction"
-                className="w-full h-full object-cover"
-                loading="lazy"
+              <Image
+                src="/images/expertises/expertise-formations-training-studio.webp"
+                alt={t('formationsImageAlt')}
+                fill
+                sizes="(min-width: 1024px) 33vw, 100vw"
+                className="object-cover"
               />
             </div>
           </motion.div>

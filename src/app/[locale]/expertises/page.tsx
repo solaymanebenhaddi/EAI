@@ -105,7 +105,7 @@ export default async function ExpertisesPage(props: { params: Promise<{ locale: 
         valueKey="detail01Value"
         deliverablesKey="detail01Deliverables"
         imageAltKey="detail01ImageAlt"
-        imagePath="/images/expertises/architecture-conception.webp"
+        imagePath="/images/expertises/expertise-architecture-residential.webp"
       />
 
       <ExpertiseDetail
@@ -116,7 +116,7 @@ export default async function ExpertisesPage(props: { params: Promise<{ locale: 
         valueKey="detail02Value"
         deliverablesKey="detail02Deliverables"
         imageAltKey="detail02ImageAlt"
-        imagePath="/images/expertises/engineering-structure.webp"
+        imagePath="/images/expertises/expertise-engineering-structure-grid.webp"
         reversed
       />
 
@@ -128,7 +128,7 @@ export default async function ExpertisesPage(props: { params: Promise<{ locale: 
         valueKey="detail03Value"
         deliverablesKey="detail03Deliverables"
         imageAltKey="detail03ImageAlt"
-        imagePath="/images/expertises/bim-model.webp"
+        imagePath="/images/expertises/expertise-bim-coordination-room.webp"
         dark
       />
 
@@ -140,7 +140,7 @@ export default async function ExpertisesPage(props: { params: Promise<{ locale: 
         valueKey="detail04Value"
         deliverablesKey="detail04Deliverables"
         imageAltKey="detail04ImageAlt"
-        imagePath="/images/expertises/construction-coordination.webp"
+        imagePath="/images/expertises/expertise-project-management-review.webp"
         reversed
       />
 
@@ -152,7 +152,7 @@ export default async function ExpertisesPage(props: { params: Promise<{ locale: 
         valueKey="detail05Value"
         deliverablesKey="detail05Deliverables"
         imageAltKey="detail05ImageAlt"
-        imagePath="/images/expertises/interior-design.webp"
+        imagePath="/images/expertises/expertise-interior-material-palette.webp"
       />
 
       <ExpertiseDetail
@@ -163,7 +163,7 @@ export default async function ExpertisesPage(props: { params: Promise<{ locale: 
         valueKey="detail06Value"
         deliverablesKey="detail06Deliverables"
         imageAltKey="detail06ImageAlt"
-        imagePath="/images/expertises/urban-planning.webp"
+        imagePath="/images/expertises/expertise-urban-masterplan.webp"
         reversed
       />
 
@@ -175,7 +175,7 @@ export default async function ExpertisesPage(props: { params: Promise<{ locale: 
         valueKey="detail07Value"
         deliverablesKey="detail07Deliverables"
         imageAltKey="detail07ImageAlt"
-        imagePath="/images/expertises/topography-site.webp"
+        imagePath="/images/expertises/expertise-topography-survey.webp"
       />
 
       <ExpertiseDetail
@@ -186,7 +186,7 @@ export default async function ExpertisesPage(props: { params: Promise<{ locale: 
         valueKey="detail08Value"
         deliverablesKey="detail08Deliverables"
         imageAltKey="detail08ImageAlt"
-        imagePath="/images/expertises/amo-strategy.webp"
+        imagePath="/images/expertises/expertise-amo-strategy-studio.webp"
         reversed
       />
 

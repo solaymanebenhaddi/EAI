@@ -248,9 +248,15 @@ export function HorizonFooter() {
           <p className="font-body text-xs text-eai-warm-grey/60">
             {t('copyright')}
           </p>
-          <p className="font-body text-xs uppercase tracking-widest text-eai-warm-grey/40">
-            {t('tagline')}
-          </p>
+          <div className="flex flex-col items-center gap-4 md:flex-row">
+            <Link href="/conditions-generales" className={`font-body text-xs ${isDarkTheme ? 'text-eai-warm-grey hover:text-parchment' : 'text-eai-warm-grey hover:text-eai-charcoal'} transition-colors`}>
+              Conditions Générales d'Inscription
+            </Link>
+            <span className="hidden md:block font-body text-xs text-eai-warm-grey/40">|</span>
+            <p className="font-body text-xs uppercase tracking-widest text-eai-warm-grey/40">
+              {t('tagline')}
+            </p>
+          </div>
         </div>
       </div>
 

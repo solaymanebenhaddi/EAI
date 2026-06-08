@@ -38,13 +38,13 @@ export function CompanyStory() {
                 </span>
               </div>
               {/* Studio image */}
-              <div className="hidden lg:block relative h-48 w-48 overflow-hidden mt-8">
+              <div className="hidden lg:block relative w-full aspect-[4/5] overflow-hidden mt-12 shadow-2xl border border-eai-line">
                 <Image
-                  src="/images/about/studio-plans.webp"
-                  alt="Plans architecturaux et documents de conception sur table de studio"
+                  src="/images/about/elaouad-story.png"
+                  alt="Plans architecturaux et outils sur une table de studio"
                   fill
                   className="object-cover"
-                  sizes="192px"
+                  sizes="(max-width: 1024px) 100vw, 33vw"
                 />
               </div>
             </motion.div>

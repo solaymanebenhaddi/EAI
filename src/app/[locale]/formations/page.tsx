@@ -9,7 +9,6 @@ import {
   LearningMethod,
   TestimonialCarousel,
   PlatformGateway,
-  InstructorProfiles,
   CertificationSection,
   FAQSection,
   FormationsCTA,
@@ -115,7 +114,6 @@ export default async function FormationsPage(props: { params: Promise<{ locale: 
         <LearningMethod />
         <TestimonialCarousel />
         <PlatformGateway />
-        <InstructorProfiles />
         <CertificationSection />
         <FAQSection />
         <FormationsCTA />

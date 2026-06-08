@@ -1,6 +1,7 @@
 'use client';
 
-import { useRef, useEffect } from 'react';
+import { useRef } from 'react';
+import Image from 'next/image';
 import { motion, useInView } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 
@@ -16,11 +17,11 @@ export function ProjectTypes() {
   }>;
 
   const bgImages = [
-    '/images/expertises/architecture-conception.webp',
-    '/images/expertises/bim-model.webp',
-    '/images/expertises/interior-design.webp',
-    '/images/expertises/urban-planning.webp',
-    '/images/expertises/engineering-structure.webp',
+    '/images/expertises/expertise-type-residential.webp',
+    '/images/expertises/expertise-type-tertiary.webp',
+    '/images/expertises/expertise-type-hospitality.webp',
+    '/images/expertises/expertise-type-urbanism.webp',
+    '/images/expertises/expertise-type-equipment.webp',
   ];
 
   return (
@@ -59,10 +60,12 @@ export function ProjectTypes() {
             >
               {/* Background image */}
               <div className="absolute inset-0">
-                <img
+                <Image
                   src={bgImages[index % bgImages.length]}
                   alt={type.title}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                  fill
+                  sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
+                  className="object-cover group-hover:scale-105 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-eai-ink/70 group-hover:bg-eai-ink/60 transition-colors duration-500" />
               </div>
