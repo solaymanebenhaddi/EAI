@@ -1,11 +1,11 @@
 'use client';
 
-import { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { useTranslations, useLocale } from 'next-intl';
-import { Link, usePathname } from '@/i18n/routing';
-import { Menu, X, MessageCircle, CalendarCheck } from 'lucide-react';
+import { useEffect, useState } from 'react';
+import { AnimatePresence, motion } from 'framer-motion';
+import { useLocale, useTranslations } from 'next-intl';
+import { CalendarCheck, Menu, MessageCircle, X } from 'lucide-react';
 import Image from 'next/image';
+import { Link, usePathname } from '@/i18n/routing';
 import { trackEvent } from '@/lib/analytics';
 import type { Locale } from '@/data/site';
 
@@ -19,9 +19,7 @@ export function Nav() {
   const isDarkTheme = pathname.startsWith('/events');
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 80);
-    };
+    const handleScroll = () => setIsScrolled(window.scrollY > 80);
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -36,107 +34,106 @@ export function Nav() {
     { name: t('contact'), href: '/contact' },
   ];
 
+  const navSurface = isScrolled
+    ? isDarkTheme
+      ? 'border-b border-stone bg-void/90 py-4 backdrop-blur-md'
+      : 'border-b border-eai-line bg-eai-paper/90 py-4 backdrop-blur-md'
+    : isDarkTheme
+      ? 'border-b border-stone/60 bg-void/72 py-5 backdrop-blur-sm'
+      : 'border-b border-eai-line/60 bg-eai-paper/82 py-5 backdrop-blur-sm';
+
   return (
     <>
-      <nav
-      className={`fixed top-0 w-full z-50 transition-all duration-600 ${
-        isScrolled 
-          ? (isDarkTheme ? 'bg-void/90 backdrop-blur-md border-b border-stone py-4' : 'bg-eai-paper/90 backdrop-blur-md border-b border-eai-line py-4')
-          : (isDarkTheme ? 'bg-void/72 backdrop-blur-sm border-b border-stone/60 py-6' : 'bg-eai-paper/72 backdrop-blur-sm border-b border-eai-line/60 py-6')
-      }`}
-    >
-      <div className="relative z-50 container mx-auto px-6 grid grid-cols-2 lg:grid-cols-3 items-center">
-        {/* LOGO */}
-        <Link href="/" className="flex items-center gap-3 group">
-          <Image 
-            src="/images/LOGO.png" 
-            alt="ELAOUAD Architecture & Ingénierie" 
-            width={50} 
-            height={50}
-            className="h-10 w-auto object-contain"
-            priority
-          />
-          <div className="flex flex-col">
-            <span className={`font-display text-[18px] tracking-[0.08em] leading-tight ${isDarkTheme ? 'text-parchment' : 'text-eai-charcoal'}`}>
-              ELAOUAD
-            </span>
-            <span className={`font-body text-[8px] tracking-[0.15em] uppercase ${isDarkTheme ? 'text-stone-300' : 'text-eai-warm-grey'} group-hover:text-eai-brass transition-colors`}>
-              Architecture & Ingénierie
-            </span>
-          </div>
-        </Link>
- 
-        {/* DESKTOP LINKS */}
-        <div className="hidden lg:flex justify-center items-center gap-8">
-          {navLinks.map((link) => {
-            const isActive = pathname === link.href;
-            return (
-              <Link
-                key={link.name}
-                href={link.href}
-                className={`font-body text-label uppercase tracking-[0.12em] relative group transition-colors duration-280 ${
-                  isActive 
-                    ? 'text-eai-brass' 
-                    : isDarkTheme 
-                      ? 'text-stone-400 hover:text-parchment' 
-                      : 'text-eai-warm-grey hover:text-eai-charcoal'
-                }`}
-              >
-                {link.name}
-                <span 
-                  className={`absolute -bottom-1 left-0 h-[1px] bg-eai-brass transition-all duration-280 ease-out ${
-                    isActive ? 'w-full' : 'w-0 group-hover:w-full'
-                  }`} 
-                />
-              </Link>
-            );
-          })}
-        </div>
- 
-        {/* CTA & HAMBURGER */}
-        <div className="flex justify-end items-center gap-4 md:gap-6">
-          {/* Language Switcher */}
-          <div className={`flex items-center gap-2 pr-4 lg:pr-6 mr-2 border-r ${isDarkTheme ? 'border-stone' : 'border-eai-line'}`}>
-            {locales.map((l) => (
-              <Link
-                key={l}
-                href={pathname}
-                locale={l}
-                className={`text-[10px] font-body uppercase tracking-widest transition-colors ${
-                  locale === l 
-                    ? 'text-eai-brass font-bold' 
-                    : isDarkTheme 
-                      ? 'text-stone-400 hover:text-eai-brass' 
-                      : 'text-eai-warm-grey hover:text-eai-brass'
-                }`}
-              >
-                {l}
-              </Link>
-            ))}
-          </div>
- 
-          <Link
-            href="/contact"
-            className="hidden lg:block border border-eai-brass/60 text-eai-brass px-5 py-2 text-label uppercase tracking-[0.1em] hover:bg-eai-brass hover:text-eai-paper transition-all duration-280"
-          >
-            {t('startProject')}
+      <nav className={`fixed top-0 z-50 w-full transition-all duration-600 ${navSurface}`}>
+        <div className="relative z-50 mx-auto flex w-full max-w-[1720px] items-center justify-between gap-5 px-5 sm:px-6 lg:px-8">
+          <Link href="/" className="group flex min-w-0 shrink-0 items-center gap-3 xl:w-[220px]">
+            <Image
+              src="/images/LOGO.png"
+              alt="ELAOUAD Architecture & Ingénierie"
+              width={50}
+              height={50}
+              className="h-10 w-auto shrink-0 object-contain"
+              priority
+            />
+            <div className="flex min-w-0 flex-col">
+              <span className={`font-display text-[18px] leading-tight tracking-[0.08em] ${isDarkTheme ? 'text-parchment' : 'text-eai-charcoal'}`}>
+                ELAOUAD
+              </span>
+              <span className={`hidden font-body text-[8px] uppercase tracking-[0.15em] transition-colors group-hover:text-eai-brass sm:block ${isDarkTheme ? 'text-stone-300' : 'text-eai-warm-grey'}`}>
+                Architecture & Ingénierie
+              </span>
+            </div>
           </Link>
- 
-          <button
-            type="button"
-            aria-label={isMobileMenuOpen ? t('closeMenu') : t('openMenu')}
-            aria-expanded={isMobileMenuOpen}
-            aria-controls="mobile-navigation"
-            className={`lg:hidden ${isDarkTheme ? 'text-parchment' : 'text-eai-charcoal'}`}
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          >
-            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
+
+          <div className="hidden min-w-0 flex-1 items-center justify-center gap-5 xl:flex 2xl:gap-8">
+            {navLinks.map((link) => {
+              const isActive = pathname === link.href;
+              return (
+                <Link
+                  key={link.name}
+                  href={link.href}
+                  className={`group relative whitespace-nowrap font-body text-[10px] uppercase tracking-[0.12em] transition-colors duration-280 2xl:text-label ${
+                    isActive
+                      ? 'text-eai-brass'
+                      : isDarkTheme
+                        ? 'text-stone-400 hover:text-parchment'
+                        : 'text-eai-warm-grey hover:text-eai-charcoal'
+                  }`}
+                >
+                  {link.name}
+                  <span
+                    className={`absolute -bottom-1 left-0 h-px bg-eai-brass transition-all duration-280 ease-out ${
+                      isActive ? 'w-full' : 'w-0 group-hover:w-full'
+                    }`}
+                  />
+                </Link>
+              );
+            })}
+          </div>
+
+          <div className="flex shrink-0 items-center justify-end gap-3 sm:gap-5 xl:w-[260px] 2xl:w-[360px]">
+            <div className={`flex items-center gap-2 border-r pr-3 sm:pr-4 xl:pr-5 ${isDarkTheme ? 'border-stone' : 'border-eai-line'}`}>
+              {locales.map((targetLocale) => (
+                <Link
+                  key={targetLocale}
+                  href={pathname}
+                  locale={targetLocale}
+                  className={`font-body text-[10px] uppercase tracking-widest transition-colors ${
+                    locale === targetLocale
+                      ? 'font-bold text-eai-brass'
+                      : isDarkTheme
+                        ? 'text-stone-400 hover:text-eai-brass'
+                        : 'text-eai-warm-grey hover:text-eai-brass'
+                  }`}
+                >
+                  {targetLocale}
+                </Link>
+              ))}
+            </div>
+
+            <Link
+              href="/contact"
+              className="hidden whitespace-nowrap border border-eai-brass/60 px-5 py-2 text-label uppercase tracking-[0.1em] text-eai-brass transition-all duration-280 hover:bg-eai-brass hover:text-eai-paper 2xl:block"
+            >
+              {t('startProject')}
+            </Link>
+
+            <button
+              type="button"
+              aria-label={isMobileMenuOpen ? t('closeMenu') : t('openMenu')}
+              aria-expanded={isMobileMenuOpen}
+              aria-controls="mobile-navigation"
+              className={`flex h-10 w-10 items-center justify-center border transition-colors xl:hidden ${
+                isDarkTheme ? 'border-stone text-parchment' : 'border-eai-line text-eai-charcoal'
+              }`}
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            >
+              {isMobileMenuOpen ? <X size={22} /> : <Menu size={22} />}
+            </button>
+          </div>
         </div>
-      </div>
       </nav>
- 
-      {/* MOBILE MENU */}
+
       <AnimatePresence>
         {isMobileMenuOpen && (
           <motion.div
@@ -145,7 +142,7 @@ export function Nav() {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: '100%' }}
             transition={{ type: 'tween', duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-            className={`fixed inset-0 z-40 flex flex-col items-center justify-start pt-28 pb-12 gap-6 overflow-y-auto lg:hidden ${isDarkTheme ? 'bg-void' : 'bg-eai-paper'}`}
+            className={`fixed inset-0 z-40 flex flex-col items-center justify-start gap-6 overflow-y-auto pb-12 pt-28 xl:hidden ${isDarkTheme ? 'bg-void' : 'bg-eai-paper'}`}
           >
             {navLinks.map((link, i) => (
               <motion.div
@@ -172,7 +169,7 @@ export function Nav() {
             >
               <Link
                 href="/contact"
-                className="mt-4 border border-eai-brass text-eai-brass px-8 py-3 text-label uppercase tracking-[0.15em] hover:bg-eai-brass hover:text-eai-paper transition-all"
+                className="mt-4 border border-eai-brass px-8 py-3 text-label uppercase tracking-[0.15em] text-eai-brass transition-all hover:bg-eai-brass hover:text-eai-paper"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 {t('startProject')}
@@ -181,25 +178,25 @@ export function Nav() {
           </motion.div>
         )}
       </AnimatePresence>
- 
+
       {!isMobileMenuOpen && (
-        <div className="fixed bottom-0 left-0 right-0 z-50 grid grid-cols-2 border-t border-eai-line lg:hidden bg-eai-paper/95 backdrop-blur-md shadow-[0_-4px_10px_rgba(0,0,0,0.05)]">
-        <a
-          href="https://wa.me/212666798536"
-          onClick={() => trackEvent('whatsapp_click', { location: 'mobile_sticky_nav' })}
-          className="flex h-14 items-center justify-center gap-2 border-r border-eai-line font-body text-label uppercase tracking-[0.12em] text-eai-warm-grey transition-colors hover:text-eai-brass"
-        >
-          <MessageCircle size={16} aria-hidden="true" />
-          <span>{t('whatsapp')}</span>
-        </a>
-        <Link
-          href="/contact"
-          onClick={() => trackEvent('cta_click', { location: 'mobile_sticky_nav', label: 'consultation' })}
-          className="flex h-14 items-center justify-center gap-2 bg-eai-brass font-body text-label uppercase tracking-[0.12em] text-eai-paper transition-colors hover:bg-eai-brass-soft"
-        >
-          <CalendarCheck size={16} aria-hidden="true" />
-          <span>{t('startProject')}</span>
-        </Link>
+        <div className="fixed bottom-0 left-0 right-0 z-50 grid grid-cols-2 border-t border-eai-line bg-eai-paper/95 shadow-[0_-4px_10px_rgba(0,0,0,0.05)] backdrop-blur-md lg:hidden">
+          <a
+            href="https://wa.me/212666798536"
+            onClick={() => trackEvent('whatsapp_click', { location: 'mobile_sticky_nav' })}
+            className="flex h-14 items-center justify-center gap-2 border-r border-eai-line font-body text-label uppercase tracking-[0.12em] text-eai-warm-grey transition-colors hover:text-eai-brass"
+          >
+            <MessageCircle size={16} aria-hidden="true" />
+            <span>{t('whatsapp')}</span>
+          </a>
+          <Link
+            href="/contact"
+            onClick={() => trackEvent('cta_click', { location: 'mobile_sticky_nav', label: 'consultation' })}
+            className="flex h-14 items-center justify-center gap-2 bg-eai-brass font-body text-label uppercase tracking-[0.12em] text-eai-paper transition-colors hover:bg-eai-brass-soft"
+          >
+            <CalendarCheck size={16} aria-hidden="true" />
+            <span>{t('startProject')}</span>
+          </Link>
         </div>
       )}
     </>

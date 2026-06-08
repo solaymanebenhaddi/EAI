@@ -9,7 +9,6 @@ import { HorizonProjects } from '@/components/horizon/HorizonProjects';
 import { HorizonFounder } from '@/components/horizon/HorizonFounder';
 import { HorizonEvents } from '@/components/horizon/HorizonEvents';
 import { HorizonTestimonials } from '@/components/horizon/HorizonTestimonials';
-import { HorizonFinalCTA } from '@/components/horizon/HorizonFinalCTA';
 import { Footer } from '@/components/Footer';
 import type { Locale } from '@/data/site';
 import { createPageMetadata } from '@/data/seo';
@@ -34,7 +33,6 @@ export default async function HomePage(props: { params: Promise<{ locale: string
         <HorizonFounder />
         <HorizonEvents locale={locale as Locale} />
         <HorizonTestimonials locale={locale as Locale} />
-        <HorizonFinalCTA />
       </HorizonArchitectureExperience>
       <Footer />
     </>
