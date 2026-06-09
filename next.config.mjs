@@ -8,6 +8,7 @@ const withNextIntl = createNextIntlPlugin(
 const nextConfig = {
   distDir: process.env.NODE_ENV === 'development' ? '.next_dev' : '.next',
   output: 'export',
+  trailingSlash: true,
   images: {
     unoptimized: true,
   },
