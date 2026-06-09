@@ -32,5 +32,5 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           # Upload everything inside the static out folder
           local-dir: out/
-          # Deploy to public_html or your desired folder
-          server-dir: /public_html/
+          # Deploy to the domain's document root
+          server-dir: /eai-construction.com/
