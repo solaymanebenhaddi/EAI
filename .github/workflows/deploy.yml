@@ -24,23 +24,13 @@ jobs:
       - name: Build Next.js
         run: npm run build
 
-      - name: Prepare Standalone Directory
-        run: |
-          # Copy static files to the standalone directory
-          cp -r public .next/standalone/
-          cp -r .next/static .next/standalone/.next/
-          
-          # Create a tmp directory and restart.txt to trigger cPanel Passenger to restart
-          mkdir -p .next/standalone/tmp
-          touch .next/standalone/tmp/restart.txt
-
       - name: Deploy via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          # Upload everything inside the standalone folder
-          local-dir: .next/standalone/
-          # Deploy to the eai-construction.com directory (adjust if your FTP user has a different root)
-          server-dir: /eai-construction.com/
+          # Upload everything inside the static out folder
+          local-dir: out/
+          # Deploy to public_html or your desired folder
+          server-dir: /public_html/
