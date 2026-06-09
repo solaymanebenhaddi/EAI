@@ -135,11 +135,23 @@ export function ContactForm() {
     });
 
     try {
-      await new Promise((resolve) => setTimeout(resolve, 800));
+      const response = await fetch('/contact.php', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(values),
+      });
+
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+
       setIsSubmitting(false);
       setSuccess(true);
       setValues(initialState);
-    } catch {
+    } catch (error) {
+      console.error('Error submitting form:', error);
       setIsSubmitting(false);
       setSubmitError(true);
     }
