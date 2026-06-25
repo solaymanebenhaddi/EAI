@@ -4,6 +4,10 @@ import React, { createContext, useContext, useState, useRef, useCallback } from 
 
 export type SceneState =
   | 'hero'
+  | 'plan'
+  | 'systeme'
+  | 'structure'
+  | 'espace'
   | 'blueprint'
   | 'manifesto'
   | 'services'
@@ -34,6 +38,10 @@ export function HorizonSceneProvider({ children }: { children: React.ReactNode }
   // Use a mutable ref for intersection ratios to completely prevent state re-renders during active scrolling!
   const sceneRatiosRef = useRef<Record<SceneState, number>>({
     hero: 0,
+    plan: 0,
+    systeme: 0,
+    structure: 0,
+    espace: 0,
     blueprint: 0,
     manifesto: 0,
     services: 0,

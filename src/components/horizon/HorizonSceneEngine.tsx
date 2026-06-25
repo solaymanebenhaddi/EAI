@@ -21,6 +21,10 @@ interface MediaAsset {
 
 const MEDIA_MAPPING: Record<SceneState, MediaAsset> = {
   hero: { type: 'video', src: '/images/Theme/video_2026-05-18_11-48-42.mp4', id: 'hero' },
+  plan: { type: 'video', src: '/images/Theme/video_2026-05-18_11-49-02.mp4', id: 'plan' },
+  systeme: { type: 'video', src: '/images/Theme/video_2026-05-18_11-49-06.mp4', id: 'systeme' },
+  structure: { type: 'image', src: '/images/cinematic/structure-build.png', id: 'structure' },
+  espace: { type: 'image', src: '/images/cinematic/hero-space.png', id: 'espace' },
   blueprint: { type: 'video', src: '/images/Theme/video_2026-05-18_11-49-02.mp4', id: 'blueprint' },
   manifesto: { type: 'image', src: '/images/Theme/6bbd7a2c3c2bcf7d5604ad65b0740cba.jpg', id: 'manifesto' },
   services: { type: 'video', src: '/images/Theme/video_2026-05-18_11-49-06.mp4', id: 'services' },
