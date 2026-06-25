@@ -221,8 +221,10 @@ export function CinematicPlan() {
     <section
       ref={sectionRef}
       id="plan"
-      className="relative py-32 lg:py-52 overflow-hidden bg-transparent"
+      className="relative py-32 lg:py-52 overflow-hidden"
     >
+      {/* Frosted parchment veil so content reads against the cinematic backdrop */}
+      <div className="absolute inset-0 bg-eai-paper/82 backdrop-blur-[2px]" aria-hidden="true" />
       <motion.div style={{ opacity, y }} className="mx-auto max-w-[1720px] px-6 sm:px-10 lg:px-14">
         {/* Section eyebrow */}
         <motion.div

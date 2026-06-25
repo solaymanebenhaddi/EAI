@@ -45,8 +45,9 @@ export function CinematicMethod() {
     <section
       ref={sectionRef}
       id="methode"
-      className="relative py-32 lg:py-48 overflow-hidden bg-transparent"
+      className="relative py-32 lg:py-48 overflow-hidden"
     >
+      <div className="absolute inset-0 bg-eai-parchment/82 backdrop-blur-[2px]" aria-hidden="true" />
       <div className="mx-auto max-w-[1720px] px-6 sm:px-10 lg:px-14">
         {/* Header */}
         <motion.div

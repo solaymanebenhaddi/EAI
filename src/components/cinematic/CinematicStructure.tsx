@@ -175,8 +175,9 @@ export function CinematicStructure() {
     <section
       ref={sectionRef}
       id="structure"
-      className="relative py-32 lg:py-52 overflow-hidden bg-transparent"
+      className="relative py-32 lg:py-52 overflow-hidden"
     >
+      <div className="absolute inset-0 bg-eai-paper/80 backdrop-blur-[2px]" aria-hidden="true" />
       <motion.div style={{ opacity, y }} className="mx-auto max-w-[1720px] px-6 sm:px-10 lg:px-14">
         {/* Section eyebrow */}
         <motion.div

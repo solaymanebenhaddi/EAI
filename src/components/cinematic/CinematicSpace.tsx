@@ -23,8 +23,9 @@ export function CinematicSpace() {
     <section
       ref={sectionRef}
       id="espace"
-      className="relative py-32 lg:py-52 overflow-hidden bg-transparent"
+      className="relative py-32 lg:py-52 overflow-hidden"
     >
+      <div className="absolute inset-0 bg-eai-parchment/78 backdrop-blur-[1px]" aria-hidden="true" />
       <motion.div style={{ opacity, y }} className="mx-auto max-w-[1720px] px-6 sm:px-10 lg:px-14">
         {/* Section eyebrow */}
         <motion.div

@@ -29,8 +29,9 @@ export function CinematicExpertiseGrid() {
     <section
       ref={sectionRef}
       id="expertises"
-      className="relative py-32 lg:py-48 bg-transparent"
+      className="relative py-32 lg:py-48"
     >
+      <div className="absolute inset-0 bg-eai-paper/88" aria-hidden="true" />
       <div className="mx-auto max-w-[1720px] px-6 sm:px-10 lg:px-14">
         {/* Section header */}
         <div className="mb-16 flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
