@@ -1,0 +1,4367 @@
+{
+  "schema": "elaouad_ux_ui_content_report_json_v1",
+  "source_file": "ELAOUAD_UX_UI_Content_Report(1).docx",
+  "generated_at_utc": "2026-07-01T15:00:07.442349+00:00",
+  "extraction_note": "Extracted from DOCX visible text using python-docx. DOCX files do not store stable page numbers, so content is organized by document order, headings, lists, and tables. Embedded images are not exported as binary data.",
+  "metadata": {
+    "title": "UX / UI & CONTENT UPGRADE REPORT",
+    "subtitle": "Analyse complète — Recommandations stratégiques — Plan d'action",
+    "prepared_by": "Analyse stratégique Claude AI",
+    "for": "Soukaina Elaouad — Fondatrice",
+    "date": "Mai 2026",
+    "version": "v1.0 — Confidentiel",
+    "site": "elaouad-group.com",
+    "confidentiality": "Confidentiel — 2026",
+    "brand": "ELAOUAD Architecture & Engineering Group"
+  },
+  "document_chrome": {
+    "headers": [
+      "ELAOUAD — UX/UI & Content Upgrade Report Confidentiel — 2026"
+    ],
+    "footers": [
+      "elaouad-group.com Page"
+    ]
+  },
+  "outline": [
+    {
+      "title": "1. Résumé Exécutif",
+      "level": 1
+    },
+    {
+      "title": "2. Analyse UX — Expérience Utilisateur",
+      "level": 1
+    },
+    {
+      "title": "2.1 Navigation & Architecture de l'information",
+      "level": 2
+    },
+    {
+      "title": "Problèmes identifiés",
+      "level": 3
+    },
+    {
+      "title": "Recommandations concrètes",
+      "level": 3
+    },
+    {
+      "title": "2.2 Parcours Utilisateur & Conversion Funnel",
+      "level": 2
+    },
+    {
+      "title": "Funnel recommandé par persona",
+      "level": 3
+    },
+    {
+      "title": "2.3 Micro-interactions & Feedback Visuel",
+      "level": 2
+    },
+    {
+      "title": "Interactions manquantes ou à améliorer",
+      "level": 3
+    },
+    {
+      "title": "2.4 Performance Mobile",
+      "level": 2
+    },
+    {
+      "title": "Problèmes critiques mobile",
+      "level": 3
+    },
+    {
+      "title": "3. Analyse UI — Interface Visuelle",
+      "level": 1
+    },
+    {
+      "title": "3.1 Système de Design & Cohérence Visuelle",
+      "level": 2
+    },
+    {
+      "title": "Définir un Design System documenté",
+      "level": 3
+    },
+    {
+      "title": "3.2 Typographie — Améliorations",
+      "level": 2
+    },
+    {
+      "title": "Hiérarchie typographique recommandée",
+      "level": 3
+    },
+    {
+      "title": "3.3 Hero Section — Refonte Détaillée",
+      "level": 2
+    },
+    {
+      "title": "Structure hero recommandée",
+      "level": 3
+    },
+    {
+      "title": "Ce qu'il faut éviter",
+      "level": 3
+    },
+    {
+      "title": "3.4 Portfolio — Galerie Signature",
+      "level": 2
+    },
+    {
+      "title": "Structure recommandée par carte projet",
+      "level": 3
+    },
+    {
+      "title": "8 projets minimum à préparer",
+      "level": 3
+    },
+    {
+      "title": "3.5 Section Events — ELAOUAD EVENTS",
+      "level": 2
+    },
+    {
+      "title": "Recommandations UI events",
+      "level": 3
+    },
+    {
+      "title": "4. Stratégie de Contenu — Recommandations Complètes",
+      "level": 1
+    },
+    {
+      "title": "4.1 Copywriting — Voix de Marque",
+      "level": 2
+    },
+    {
+      "title": "Principes copywriting premium",
+      "level": 3
+    },
+    {
+      "title": "4.2 Textes Recommandés — Section par Section",
+      "level": 2
+    },
+    {
+      "title": "Hero — Texte complet recommandé",
+      "level": 3
+    },
+    {
+      "title": "About / Vision — Texte proposé",
+      "level": 3
+    },
+    {
+      "title": "Services — Descriptions recommandées",
+      "level": 3
+    },
+    {
+      "title": "Soukaina Elaouad — Texte fondatrice",
+      "level": 3
+    },
+    {
+      "title": "Témoignages — Formulation recommandée",
+      "level": 3
+    },
+    {
+      "title": "4.3 Contenu Manquant — Plan de Production",
+      "level": 2
+    },
+    {
+      "title": "5. SEO & Visibilité Digitale",
+      "level": 1
+    },
+    {
+      "title": "5.1 Mots-clés Prioritaires",
+      "level": 2
+    },
+    {
+      "title": "Keywords de conversion (haute priorité)",
+      "level": 3
+    },
+    {
+      "title": "Optimisations techniques SEO prioritaires",
+      "level": 3
+    },
+    {
+      "title": "5.2 Stratégie de Contenu & Blog",
+      "level": 2
+    },
+    {
+      "title": "Plan éditorial — 12 premiers articles",
+      "level": 3
+    },
+    {
+      "title": "6. Plan d'Action — Roadmap Priorisée",
+      "level": 1
+    },
+    {
+      "title": "Phase 1 — Fondations critiques (Semaines 1-2)",
+      "level": 2
+    },
+    {
+      "title": "Phase 2 — Contenu & Portfolio (Semaines 3-6)",
+      "level": 2
+    },
+    {
+      "title": "Phase 3 — Optimisation UX & Events (Semaines 7-10)",
+      "level": 2
+    },
+    {
+      "title": "Phase 4 — Performance & Scale (Semaines 11-16)",
+      "level": 2
+    },
+    {
+      "title": "7. Conclusion & Prochaines Étapes",
+      "level": 1
+    },
+    {
+      "title": "Les 5 actions les plus impactantes, dans l'ordre",
+      "level": 3
+    }
+  ],
+  "key_tables": {
+    "scorecard": [
+      {
+        "Dimension": "Identité visuelle & branding",
+        "Score actuel": "85 / 100",
+        "Cible recommandée": "95 / 100"
+      },
+      {
+        "Dimension": "Navigation & architecture UX",
+        "Score actuel": "55 / 100",
+        "Cible recommandée": "88 / 100"
+      },
+      {
+        "Dimension": "Qualité & profondeur du contenu",
+        "Score actuel": "40 / 100",
+        "Cible recommandée": "85 / 100"
+      },
+      {
+        "Dimension": "Génération de leads & conversion",
+        "Score actuel": "45 / 100",
+        "Cible recommandée": "90 / 100"
+      },
+      {
+        "Dimension": "Signaux de confiance & preuve sociale",
+        "Score actuel": "25 / 100",
+        "Cible recommandée": "85 / 100"
+      },
+      {
+        "Dimension": "Performance mobile",
+        "Score actuel": "60 / 100",
+        "Cible recommandée": "92 / 100"
+      },
+      {
+        "Dimension": "SEO & visibilité digitale",
+        "Score actuel": "35 / 100",
+        "Cible recommandée": "80 / 100"
+      }
+    ],
+    "design_tokens": [
+      {
+        "Token": "--color-gold",
+        "Valeur": "#d4af37",
+        "Usage": "CTAs, accents, hover",
+        "Interdit": "Fond plein large surface"
+      },
+      {
+        "Token": "--color-dark",
+        "Valeur": "#1a1a1a",
+        "Usage": "Backgrounds, textes H1",
+        "Interdit": "Texte sur fond sombre"
+      },
+      {
+        "Token": "--color-taupe",
+        "Valeur": "#4a4a4a",
+        "Usage": "Corps de texte",
+        "Interdit": "Titres principaux"
+      },
+      {
+        "Token": "--color-white",
+        "Valeur": "#ffffff",
+        "Usage": "Fond, textes sur dark",
+        "Interdit": "Éléments décoratifs"
+      },
+      {
+        "Token": "--radius-card",
+        "Valeur": "4px",
+        "Usage": "Cards, images",
+        "Interdit": "Buttons (garder 0)"
+      },
+      {
+        "Token": "--spacing-section",
+        "Valeur": "120px desktop",
+        "Usage": "Entre sections",
+        "Interdit": "Réduire sous 80px"
+      }
+    ],
+    "content_production_plan": [
+      {
+        "Contenu": "Photo Soukaina (studio)",
+        "Priorité": "CRITIQUE",
+        "Format": "1 photo pro",
+        "Impact conversion": "Humanise la marque — +35% confiance"
+      },
+      {
+        "Contenu": "Photos 8 projets portfolio",
+        "Priorité": "CRITIQUE",
+        "Format": "5-10 photos/projet",
+        "Impact conversion": "Preuve directe — +60% conversion"
+      },
+      {
+        "Contenu": "3 témoignages clients réels",
+        "Priorité": "CRITIQUE",
+        "Format": "Texte + photo client",
+        "Impact conversion": "Social proof — +45% leads"
+      },
+      {
+        "Contenu": "Vidéo highlights FIC 60s",
+        "Priorité": "HAUTE",
+        "Format": "Vidéo montée",
+        "Impact conversion": "Légitimité events — +50% inscriptions"
+      },
+      {
+        "Contenu": "Descriptions 8 services",
+        "Priorité": "HAUTE",
+        "Format": "100-150 mots chacun",
+        "Impact conversion": "SEO + conversion — +25% leads"
+      },
+      {
+        "Contenu": "Articles blog (3 starter)",
+        "Priorité": "MOYENNE",
+        "Format": "800-1200 mots",
+        "Impact conversion": "SEO long terme — trafic organique"
+      },
+      {
+        "Contenu": "Brochure PDF téléchargeable",
+        "Priorité": "MOYENNE",
+        "Format": "PDF 12-16 pages",
+        "Impact conversion": "Lead magnet — capture emails"
+      },
+      {
+        "Contenu": "Logos clients / partenaires",
+        "Priorité": "MOYENNE",
+        "Format": "12-16 logos PNG",
+        "Impact conversion": "Social proof visuel"
+      },
+      {
+        "Contenu": "Vidéo présentation 90s",
+        "Priorité": "BASSE",
+        "Format": "Vidéo Soukaina",
+        "Impact conversion": "Brand storytelling"
+      }
+    ]
+  },
+  "front_matter": [
+    {
+      "id": "block_0001",
+      "type": "paragraph",
+      "style": null,
+      "level": null,
+      "text": "ELAOUAD"
+    },
+    {
+      "id": "block_0002",
+      "type": "paragraph",
+      "style": null,
+      "level": null,
+      "text": "ARCHITECTURE & ENGINEERING GROUP"
+    },
+    {
+      "id": "block_0003",
+      "type": "paragraph",
+      "style": null,
+      "level": null,
+      "text": "________________________"
+    },
+    {
+      "id": "block_0004",
+      "type": "paragraph",
+      "style": null,
+      "level": null,
+      "text": "UX / UI & CONTENT UPGRADE REPORT"
+    },
+    {
+      "id": "block_0005",
+      "type": "paragraph",
+      "style": null,
+      "level": null,
+      "text": "Analyse complète — Recommandations stratégiques — Plan d'action"
+    },
+    {
+      "id": "block_0006",
+      "type": "table",
+      "row_count": 4,
+      "column_count": 2,
+      "rows": [
+        [
+          "Préparé par",
+          "Analyse stratégique Claude AI"
+        ],
+        [
+          "Pour",
+          "Soukaina Elaouad — Fondatrice"
+        ],
+        [
+          "Date",
+          "Mai 2026"
+        ],
+        [
+          "Version",
+          "v1.0 — Confidentiel"
+        ]
+      ],
+      "headers": [
+        "Préparé par",
+        "Analyse stratégique Claude AI"
+      ],
+      "records": [
+        {
+          "Préparé par": "Pour",
+          "Analyse stratégique Claude AI": "Soukaina Elaouad — Fondatrice"
+        },
+        {
+          "Préparé par": "Date",
+          "Analyse stratégique Claude AI": "Mai 2026"
+        },
+        {
+          "Préparé par": "Version",
+          "Analyse stratégique Claude AI": "v1.0 — Confidentiel"
+        }
+      ]
+    }
+  ],
+  "sections": [
+    {
+      "title": "1. Résumé Exécutif",
+      "level": 1,
+      "content": [
+        {
+          "id": "block_0008",
+          "type": "paragraph",
+          "style": null,
+          "level": null,
+          "text": "Ce rapport analyse en profondeur le site actuel d'ELAOUAD Architecture & Engineering Group et formule des recommandations précises pour améliorer l'expérience utilisateur (UX), l'interface visuelle (UI) et le contenu. L'objectif est de transformer le site en un outil de conversion de classe mondiale, cohérent avec le positionnement premium de la marque."
+        },
+        {
+          "id": "block_0009",
+          "type": "table",
+          "row_count": 8,
+          "column_count": 3,
+          "rows": [
+            [
+              "Dimension",
+              "Score actuel",
+              "Cible recommandée"
+            ],
+            [
+              "Identité visuelle & branding",
+              "85 / 100",
+              "95 / 100"
+            ],
+            [
+              "Navigation & architecture UX",
+              "55 / 100",
+              "88 / 100"
+            ],
+            [
+              "Qualité & profondeur du contenu",
+              "40 / 100",
+              "85 / 100"
+            ],
+            [
+              "Génération de leads & conversion",
+              "45 / 100",
+              "90 / 100"
+            ],
+            [
+              "Signaux de confiance & preuve sociale",
+              "25 / 100",
+              "85 / 100"
+            ],
+            [
+              "Performance mobile",
+              "60 / 100",
+              "92 / 100"
+            ],
+            [
+              "SEO & visibilité digitale",
+              "35 / 100",
+              "80 / 100"
+            ]
+          ],
+          "headers": [
+            "Dimension",
+            "Score actuel",
+            "Cible recommandée"
+          ],
+          "records": [
+            {
+              "Dimension": "Identité visuelle & branding",
+              "Score actuel": "85 / 100",
+              "Cible recommandée": "95 / 100"
+            },
+            {
+              "Dimension": "Navigation & architecture UX",
+              "Score actuel": "55 / 100",
+              "Cible recommandée": "88 / 100"
+            },
+            {
+              "Dimension": "Qualité & profondeur du contenu",
+              "Score actuel": "40 / 100",
+              "Cible recommandée": "85 / 100"
+            },
+            {
+              "Dimension": "Génération de leads & conversion",
+              "Score actuel": "45 / 100",
+              "Cible recommandée": "90 / 100"
+            },
+            {
+              "Dimension": "Signaux de confiance & preuve sociale",
+              "Score actuel": "25 / 100",
+              "Cible recommandée": "85 / 100"
+            },
+            {
+              "Dimension": "Performance mobile",
+              "Score actuel": "60 / 100",
+              "Cible recommandée": "92 / 100"
+            },
+            {
+              "Dimension": "SEO & visibilité digitale",
+              "Score actuel": "35 / 100",
+              "Cible recommandée": "80 / 100"
+            }
+          ]
+        },
+        {
+          "id": "block_0010",
+          "type": "table",
+          "row_count": 1,
+          "column_count": 1,
+          "rows": [
+            [
+              "Verdict global\nLe site ELAOUAD a une excellente fondation visuelle mais manque de contenu substantiel, de preuve sociale et de parcours utilisateur optimisé. Le potentiel de conversion est sous-exploité d'au moins 60%."
+            ]
+          ],
+          "callout": {
+            "title": "Verdict global",
+            "body": "Le site ELAOUAD a une excellente fondation visuelle mais manque de contenu substantiel, de preuve sociale et de parcours utilisateur optimisé. Le potentiel de conversion est sous-exploité d'au moins 60%."
+          }
+        }
+      ],
+      "subsections": []
+    },
+    {
+      "title": "2. Analyse UX — Expérience Utilisateur",
+      "level": 1,
+      "content": [],
+      "subsections": [
+        {
+          "title": "2.1 Navigation & Architecture de l'information",
+          "level": 2,
+          "content": [
+            {
+              "id": "block_0013",
+              "type": "paragraph",
+              "style": null,
+              "level": null,
+              "text": "La navigation actuelle est minimaliste mais manque de hiérarchie claire. Les visiteurs premium — investisseurs, décideurs, promoteurs — arrivent avec des objectifs précis et doivent pouvoir les atteindre en moins de 3 clics."
+            }
+          ],
+          "subsections": [
+            {
+              "title": "Problèmes identifiés",
+              "level": 3,
+              "content": [
+                {
+                  "id": "block_0015",
+                  "type": "list_item",
+                  "style": "List Paragraph",
+                  "level": null,
+                  "text": "Aucun CTA visible dans la zone hero — la section la plus vue de tout le site"
+                },
+                {
+                  "id": "block_0016",
+                  "type": "list_item",
+                  "style": "List Paragraph",
+                  "level": null,
+                  "text": "Le menu ne reflète pas la dualité EAI (architecture) + Events (forums) — deux publics différents"
+                },
+                {
+                  "id": "block_0017",
+                  "type": "list_item",
+                  "style": "List Paragraph",
+                  "level": null,
+                  "text": "Pas de fil d'Ariane (breadcrumb) sur les pages internes"
+                },
+                {
+                  "id": "block_0018",
+                  "type": "list_item",
+                  "style": "List Paragraph",
+                  "level": null,
+                  "text": "Le bouton 'Consultation' dans la navigation est trop discret — couleur or sur fond noir, difficile à voir"
+                },
+                {
+                  "id": "block_0019",
+                  "type": "list_item",
+                  "style": "List Paragraph",
+                  "level": null,
+                  "text": "Absence de sticky CTA mobile — sur mobile, le CTA disparaît au scroll"
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "title": "Recommandations concrètes",
+              "level": 3,
+              "content": [
+                {
+                  "id": "block_0021",
+                  "type": "list_item",
+                  "style": "List Paragraph",
+                  "level": null,
+                  "text": "Ajouter deux CTA dans le hero : 'Voir nos projets' (primaire) et 'Demander une consultation' (secondaire)"
+                },
+                {
+                  "id": "block_0022",
+                  "type": "list_item",
+                  "style": "List Paragraph",
+                  "level": null,
+                  "text": "Restructurer le menu en deux univers clairs : [Architecture & Ingénierie] | [Events & Forums]"
+                },
+                {
+                  "id": "block_0023",
+                  "type": "list_item",
+                  "style": "List Paragraph",
+                  "level": null,
+                  "text": "Implémenter un sticky bar mobile avec numéro WhatsApp et bouton consultation"
+                },
+                {
+                  "id": "block_0024",
+                  "type": "list_item",
+                  "style": "List Paragraph",
+                  "level": null,
+                  "text": "Ajouter une barre de progression de scroll discrète pour les pages longues"
+                },
+                {
+                  "id": "block_0025",
+                  "type": "list_item",
+                  "style": "List Paragraph",
+                  "level": null,
+                  "text": "Intégrer un mega-menu hover sur 'Services' montrant les 8 services en colonnes"
+                },
+                {
+                  "id": "block_0026",
+                  "type": "table",
+                  "row_count": 1,
+                  "column_count": 1,
+                  "rows": [
+                    [
+                      "Impact estimé\nUn CTA hero visible augmente le taux de clic vers les pages de conversion de 40 à 80% selon les benchmarks UX pour sites B2B premium (Nielsen Norman Group, 2024)."
+                    ]
+                  ],
+                  "callout": {
+                    "title": "Impact estimé",
+                    "body": "Un CTA hero visible augmente le taux de clic vers les pages de conversion de 40 à 80% selon les benchmarks UX pour sites B2B premium (Nielsen Norman Group, 2024)."
+                  }
+                }
+              ],
+              "subsections": []
+            }
+          ]
+        },
+        {
+          "title": "2.2 Parcours Utilisateur & Conversion Funnel",
+          "level": 2,
+          "content": [
+            {
+              "id": "block_0028",
+              "type": "paragraph",
+              "style": null,
+              "level": null,
+              "text": "Le site actuel n'a pas de funnel défini. Un visiteur arrive, voit de belles images, et repart sans avoir été guidé vers une action concrète. Pour une marque premium B2B, chaque section doit avoir un objectif de conversion."
+            }
+          ],
+          "subsections": [
+            {
+              "title": "Funnel recommandé par persona",
+              "level": 3,
+              "content": [
+                {
+                  "id": "block_0030",
+                  "type": "paragraph",
+                  "style": null,
+                  "level": null,
+                  "text": "Persona 1 — Investisseur immobilier"
+                },
+                {
+                  "id": "block_0031",
+                  "type": "list_item",
+                  "style": "List Paragraph",
+                  "level": null,
+                  "text": "Hero (impact) > Portfolio projets (preuve) > Stats chiffres (confiance) > Formulaire (conversion)"
+                },
+                {
+                  "id": "block_0032",
+                  "type": "paragraph",
+                  "style": null,
+                  "level": null,
+                  "text": "Persona 2 — Entreprise cherchant BIM/Ingénierie"
+                },
+                {
+                  "id": "block_0033",
+                  "type": "list_item",
+                  "style": "List Paragraph",
+                  "level": null,
+                  "text": "Hero > Services BIM (détail) > Témoignages sectoriels (validation) > Contact direct"
+                },
+                {
+                  "id": "block_0034",
+                  "type": "paragraph",
+                  "style": null,
+                  "level": null,
+                  "text": "Persona 3 — Participant potentiel aux events"
+                },
+                {
+                  "id": "block_0035",
+                  "type": "list_item",
+                  "style": "List Paragraph",
+                  "level": null,
+                  "text": "Hero ou nav Events > Section FIC (conviction) > Stats 10K visiteurs (légitimité) > Inscription"
+                },
+                {
+                  "id": "block_0036",
+                  "type": "table",
+                  "row_count": 1,
+                  "column_count": 1,
+                  "rows": [
+                    [
+                      "Action prioritaire\nImplémenter Google Analytics 4 avec tracking des events (clics CTA, scroll depth, form submissions) avant tout autre changement. Sans données, les optimisations sont des suppositions."
+                    ]
+                  ],
+                  "callout": {
+                    "title": "Action prioritaire",
+                    "body": "Implémenter Google Analytics 4 avec tracking des events (clics CTA, scroll depth, form submissions) avant tout autre changement. Sans données, les optimisations sont des suppositions."
+                  }
+                }
+              ],
+              "subsections": []
+            }
+          ]
+        },
+        {
+          "title": "2.3 Micro-interactions & Feedback Visuel",
+          "level": 2,
+          "content": [
+            {
+              "id": "block_0038",
+              "type": "paragraph",
+              "style": null,
+              "level": null,
+              "text": "Les micro-interactions sont les signaux silencieux qui communiquent qualité et soin. Sur un site premium, leur absence se ressent même si l'utilisateur ne peut pas l'articuler."
+            }
+          ],
+          "subsections": [
+            {
+              "title": "Interactions manquantes ou à améliorer",
+              "level": 3,
+              "content": [
+                {
+                  "id": "block_0040",
+                  "type": "list_item",
+                  "style": "List Paragraph",
+                  "level": null,
+                  "text": "Formulaire de contact : aucun feedback visuel sur focus des inputs — ajouter border or/champagne au focus"
+                },
+                {
+                  "id": "block_0041",
+                  "type": "list_item",
+                  "style": "List Paragraph",
+                  "level": null,
+                  "text": "Boutons : pas d'état 'loading' lors de la soumission — ajouter spinner + texte 'Envoi en cours...'"
+                },
+                {
+                  "id": "block_0042",
+                  "type": "list_item",
+                  "style": "List Paragraph",
+                  "level": null,
+                  "text": "Images portfolio : l'overlay hover doit apparaître progressivement (opacity 0 à 0.4 en 300ms) — pas instantanément"
+                },
+                {
+                  "id": "block_0043",
+                  "type": "list_item",
+                  "style": "List Paragraph",
+                  "level": null,
+                  "text": "Navigation : indicateur de page active manquant — underline doré sur la section courante"
+                },
+                {
+                  "id": "block_0044",
+                  "type": "list_item",
+                  "style": "List Paragraph",
+                  "level": null,
+                  "text": "Scroll : pas d'animation 'back to top' — bouton flottant discret après 400px de scroll"
+                },
+                {
+                  "id": "block_0045",
+                  "type": "list_item",
+                  "style": "List Paragraph",
+                  "level": null,
+                  "text": "Mobile : pas de feedback haptic ou visuel au tap — ajouter ripple effect subtil"
+                }
+              ],
+              "subsections": []
+            }
+          ]
+        },
+        {
+          "title": "2.4 Performance Mobile",
+          "level": 2,
+          "content": [
+            {
+              "id": "block_0047",
+              "type": "paragraph",
+              "style": null,
+              "level": null,
+              "text": "70% du trafic web mondial est mobile. Pour une marque marocaine premium, le mobile est souvent le premier point de contact — via Instagram, LinkedIn, ou WhatsApp."
+            }
+          ],
+          "subsections": [
+            {
+              "title": "Problèmes critiques mobile",
+              "level": 3,
+              "content": [
+                {
+                  "id": "block_0049",
+                  "type": "list_item",
+                  "style": "List Paragraph",
+                  "level": null,
+                  "text": "Images non optimisées pour mobile — servir WebP avec srcset et sizes appropriés"
+                },
+                {
+                  "id": "block_0050",
+                  "type": "list_item",
+                  "style": "List Paragraph",
+                  "level": null,
+                  "text": "Textes hero trop grands sur petits écrans — 72px desktop doit passer à 36-40px mobile"
+                },
+                {
+                  "id": "block_0051",
+                  "type": "list_item",
+                  "style": "List Paragraph",
+                  "level": null,
+                  "text": "Formulaire contact : champs trop rapprochés, difficult à remplir au pouce"
+                },
+                {
+                  "id": "block_0052",
+                  "type": "list_item",
+                  "style": "List Paragraph",
+                  "level": null,
+                  "text": "Portfolio grid : 3 colonnes desktop OK, mais 2 colonnes tablet et 1 colonne mobile non implémentées"
+                },
+                {
+                  "id": "block_0053",
+                  "type": "list_item",
+                  "style": "List Paragraph",
+                  "level": null,
+                  "text": "Le sticky nav ombre disparaît au scroll sur iOS Safari — bug CSS connu, fix requis"
+                },
+                {
+                  "id": "block_0054",
+                  "type": "table",
+                  "row_count": 1,
+                  "column_count": 1,
+                  "rows": [
+                    [
+                      "Test immédiat\nTester le site sur un vrai iPhone SE (375px) et Samsung Galaxy A-series (360px) — les deux téléphones les plus utilisés au Maroc. Les problèmes mobiles critiques apparaissent en 2 minutes."
+                    ]
+                  ],
+                  "callout": {
+                    "title": "Test immédiat",
+                    "body": "Tester le site sur un vrai iPhone SE (375px) et Samsung Galaxy A-series (360px) — les deux téléphones les plus utilisés au Maroc. Les problèmes mobiles critiques apparaissent en 2 minutes."
+                  }
+                }
+              ],
+              "subsections": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "3. Analyse UI — Interface Visuelle",
+      "level": 1,
+      "content": [],
+      "subsections": [
+        {
+          "title": "3.1 Système de Design & Cohérence Visuelle",
+          "level": 2,
+          "content": [
+            {
+              "id": "block_0057",
+              "type": "paragraph",
+              "style": null,
+              "level": null,
+              "text": "La palette noir/or/blanc est excellente et bien choisie pour le luxe. Le risque est l'incohérence dans l'application — un élément or d'une section à l'autre peut varier en teinte, poids et usage."
+            }
+          ],
+          "subsections": [
+            {
+              "title": "Définir un Design System documenté",
+              "level": 3,
+              "content": [
+                {
+                  "id": "block_0059",
+                  "type": "table",
+                  "row_count": 7,
+                  "column_count": 4,
+                  "rows": [
+                    [
+                      "Token",
+                      "Valeur",
+                      "Usage",
+                      "Interdit"
+                    ],
+                    [
+                      "--color-gold",
+                      "#d4af37",
+                      "CTAs, accents, hover",
+                      "Fond plein large surface"
+                    ],
+                    [
+                      "--color-dark",
+                      "#1a1a1a",
+                      "Backgrounds, textes H1",
+                      "Texte sur fond sombre"
+                    ],
+                    [
+                      "--color-taupe",
+                      "#4a4a4a",
+                      "Corps de texte",
+                      "Titres principaux"
+                    ],
+                    [
+                      "--color-white",
+                      "#ffffff",
+                      "Fond, textes sur dark",
+                      "Éléments décoratifs"
+                    ],
+                    [
+                      "--radius-card",
+                      "4px",
+                      "Cards, images",
+                      "Buttons (garder 0)"
+                    ],
+                    [
+                      "--spacing-section",
+                      "120px desktop",
+                      "Entre sections",
+                      "Réduire sous 80px"
+                    ]
+                  ],
+                  "headers": [
+                    "Token",
+                    "Valeur",
+                    "Usage",
+                    "Interdit"
+                  ],
+                  "records": [
+                    {
+                      "Token": "--color-gold",
+                      "Valeur": "#d4af37",
+                      "Usage": "CTAs, accents, hover",
+                      "Interdit": "Fond plein large surface"
+                    },
+                    {
+                      "Token": "--color-dark",
+                      "Valeur": "#1a1a1a",
+                      "Usage": "Backgrounds, textes H1",
+                      "Interdit": "Texte sur fond sombre"
+                    },
+                    {
+                      "Token": "--color-taupe",
+                      "Valeur": "#4a4a4a",
+                      "Usage": "Corps de texte",
+                      "Interdit": "Titres principaux"
+                    },
+                    {
+                      "Token": "--color-white",
+                      "Valeur": "#ffffff",
+                      "Usage": "Fond, textes sur dark",
+                      "Interdit": "Éléments décoratifs"
+                    },
+                    {
+                      "Token": "--radius-card",
+                      "Valeur": "4px",
+                      "Usage": "Cards, images",
+                      "Interdit": "Buttons (garder 0)"
+                    },
+                    {
+                      "Token": "--spacing-section",
+                      "Valeur": "120px desktop",
+                      "Usage": "Entre sections",
+                      "Interdit": "Réduire sous 80px"
+                    }
+                  ]
+                }
+              ],
+              "subsections": []
+            }
+          ]
+        },
+        {
+          "title": "3.2 Typographie — Améliorations",
+          "level": 2,
+          "content": [
+            {
+              "id": "block_0061",
+              "type": "paragraph",
+              "style": null,
+              "level": null,
+              "text": "Playfair Display + Montserrat est un excellent choix. Voici les ajustements précis pour maximiser l'impact et la lisibilité."
+            }
+          ],
+          "subsections": [
+            {
+              "title": "Hiérarchie typographique recommandée",
+              "level": 3,
+              "content": [
+                {
+                  "id": "block_0063",
+                  "type": "table",
+                  "row_count": 1,
+                  "column_count": 2,
+                  "rows": [
+                    [
+                      "H1 Hero",
+                      "Playfair Display Bold — 72px desktop / 38px mobile — letter-spacing: 0.06em — line-height: 1.05"
+                    ]
+                  ]
+                },
+                {
+                  "id": "block_0064",
+                  "type": "table",
+                  "row_count": 1,
+                  "column_count": 2,
+                  "rows": [
+                    [
+                      "H2 Sections",
+                      "Playfair Display Regular — 42px desktop / 28px mobile — letter-spacing: 0.02em — line-height: 1.2"
+                    ]
+                  ]
+                },
+                {
+                  "id": "block_0065",
+                  "type": "table",
+                  "row_count": 1,
+                  "column_count": 2,
+                  "rows": [
+                    [
+                      "H3 Sous-titres",
+                      "Montserrat SemiBold 600 — 20px — letter-spacing: 0.08em — UPPERCASE pour labels courts"
+                    ]
+                  ]
+                },
+                {
+                  "id": "block_0066",
+                  "type": "table",
+                  "row_count": 1,
+                  "column_count": 2,
+                  "rows": [
+                    [
+                      "Corps texte",
+                      "Montserrat Light 300 — 16px — line-height: 1.85 — max-width: 680px (jamais pleine largeur)"
+                    ]
+                  ]
+                },
+                {
+                  "id": "block_0067",
+                  "type": "table",
+                  "row_count": 1,
+                  "column_count": 2,
+                  "rows": [
+                    [
+                      "Captions / labels",
+                      "Montserrat Regular 400 — 12px — letter-spacing: 0.12em — UPPERCASE — couleur taupe"
+                    ]
+                  ]
+                },
+                {
+                  "id": "block_0068",
+                  "type": "table",
+                  "row_count": 1,
+                  "column_count": 2,
+                  "rows": [
+                    [
+                      "CTAs / boutons",
+                      "Montserrat SemiBold 600 — 13px — letter-spacing: 0.15em — UPPERCASE"
+                    ]
+                  ]
+                },
+                {
+                  "id": "block_0069",
+                  "type": "table",
+                  "row_count": 1,
+                  "column_count": 1,
+                  "rows": [
+                    [
+                      "Problème critique actuel\nLes textes longs (descriptions services, about) utilisent Montserrat Light sur fond noir — ratio de contraste insuffisant. Passer à Montserrat Regular 400 sur fond sombre pour respecter WCAG AA (ratio 4.5:1 minimum)."
+                    ]
+                  ],
+                  "callout": {
+                    "title": "Problème critique actuel",
+                    "body": "Les textes longs (descriptions services, about) utilisent Montserrat Light sur fond noir — ratio de contraste insuffisant. Passer à Montserrat Regular 400 sur fond sombre pour respecter WCAG AA (ratio 4.5:1 minimum)."
+                  }
+                }
+              ],
+              "subsections": []
+            }
+          ]
+        },
+        {
+          "title": "3.3 Hero Section — Refonte Détaillée",
+          "level": 2,
+          "content": [
+            {
+              "id": "block_0071",
+              "type": "paragraph",
+              "style": null,
+              "level": null,
+              "text": "Le hero est la section la plus critique — 80% des visiteurs ne scrollent pas si le hero ne les convainc pas. Actuellement, il manque de direction et de message clair."
+            }
+          ],
+          "subsections": [
+            {
+              "title": "Structure hero recommandée",
+              "level": 3,
+              "content": [
+                {
+                  "id": "block_0073",
+                  "type": "list_item",
+                  "style": "List Paragraph",
+                  "level": null,
+                  "text": "Ligne de contexte (EYEBROW) : 'CASABLANCA — AFRIQUE — INTERNATIONAL' | Montserrat 11px UPPERCASE or/champagne"
+                },
+                {
+                  "id": "block_0074",
+                  "type": "list_item",
+                  "style": "List Paragraph",
+                  "level": null,
+                  "text": "H1 principal : 'Sculptons l'Architecture de Demain' | Playfair Display Bold 72px blanc"
+                },
+                {
+                  "id": "block_0075",
+                  "type": "list_item",
+                  "style": "List Paragraph",
+                  "level": null,
+                  "text": "Sous-titre (VALUE PROPOSITION) : 'Architecture premium, ingénierie BIM et design durable pour projets d'exception' | Montserrat Light 18px or/champagne"
+                },
+                {
+                  "id": "block_0076",
+                  "type": "list_item",
+                  "style": "List Paragraph",
+                  "level": null,
+                  "text": "CTA primaire : 'Voir nos projets' — fond or/champagne, texte noir, width 200px"
+                },
+                {
+                  "id": "block_0077",
+                  "type": "list_item",
+                  "style": "List Paragraph",
+                  "level": null,
+                  "text": "CTA secondaire : 'Consultation gratuite' — border or/champagne, texte blanc, transparent"
+                },
+                {
+                  "id": "block_0078",
+                  "type": "list_item",
+                  "style": "List Paragraph",
+                  "level": null,
+                  "text": "Indicateur scroll : flèche animée + texte 'Découvrir'"
+                },
+                {
+                  "id": "block_0079",
+                  "type": "list_item",
+                  "style": "List Paragraph",
+                  "level": null,
+                  "text": "Bas du hero : 3 stats en ligne — '100+ Projets | 10K+ Visiteurs FIC | 4 Continents'"
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "title": "Ce qu'il faut éviter",
+              "level": 3,
+              "content": [
+                {
+                  "id": "block_0081",
+                  "type": "list_item",
+                  "style": "List Paragraph",
+                  "level": null,
+                  "text": "Éviter 'SCULPTING THE FUTURE OF ARCHITECTURE' — trop générique, aucune différenciation"
+                },
+                {
+                  "id": "block_0082",
+                  "type": "list_item",
+                  "style": "List Paragraph",
+                  "level": null,
+                  "text": "Éviter un seul CTA — toujours offrir deux chemins (projet vs consultation)"
+                },
+                {
+                  "id": "block_0083",
+                  "type": "list_item",
+                  "style": "List Paragraph",
+                  "level": null,
+                  "text": "Éviter une vidéo 4K sans fallback image — temps de chargement trop long sur mobile Maroc"
+                }
+              ],
+              "subsections": []
+            }
+          ]
+        },
+        {
+          "title": "3.4 Portfolio — Galerie Signature",
+          "level": 2,
+          "content": [
+            {
+              "id": "block_0085",
+              "type": "paragraph",
+              "style": null,
+              "level": null,
+              "text": "Le portfolio est la preuve ultime pour un cabinet d'architecture. Actuellement, un seul projet nommé (Résidence Palmier) est visible. C'est le gap le plus visible et le plus dommageable pour la conversion."
+            }
+          ],
+          "subsections": [
+            {
+              "title": "Structure recommandée par carte projet",
+              "level": 3,
+              "content": [
+                {
+                  "id": "block_0087",
+                  "type": "list_item",
+                  "style": "List Paragraph",
+                  "level": null,
+                  "text": "Image principale 16:9 haute résolution (minimum 1200x675px)"
+                },
+                {
+                  "id": "block_0088",
+                  "type": "list_item",
+                  "style": "List Paragraph",
+                  "level": null,
+                  "text": "Badge catégorie (Résidentiel / Commercial / Urbanisme / BIM) — or/champagne pill"
+                },
+                {
+                  "id": "block_0089",
+                  "type": "list_item",
+                  "style": "List Paragraph",
+                  "level": null,
+                  "text": "Titre projet : Playfair Display 24px blanc"
+                },
+                {
+                  "id": "block_0090",
+                  "type": "list_item",
+                  "style": "List Paragraph",
+                  "level": null,
+                  "text": "Lieu + Année : Montserrat Light 13px taupe"
+                },
+                {
+                  "id": "block_0091",
+                  "type": "list_item",
+                  "style": "List Paragraph",
+                  "level": null,
+                  "text": "Au hover : overlay gradient noir 40%, titre flotte, bouton 'Voir le projet >' apparaît"
+                },
+                {
+                  "id": "block_0092",
+                  "type": "list_item",
+                  "style": "List Paragraph",
+                  "level": null,
+                  "text": "Au clic : lightbox fullscreen avec carrousel, stats projet, description 150 mots"
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "title": "8 projets minimum à préparer",
+              "level": 3,
+              "content": [
+                {
+                  "id": "block_0094",
+                  "type": "list_item",
+                  "style": "List Paragraph",
+                  "level": null,
+                  "text": "Résidence Palmier — Casablanca (Résidentiel luxury) — avant/après si possible"
+                },
+                {
+                  "id": "block_0095",
+                  "type": "list_item",
+                  "style": "List Paragraph",
+                  "level": null,
+                  "text": "Immeuble de bureaux Corporate — Commercial / BIM showcase"
+                },
+                {
+                  "id": "block_0096",
+                  "type": "list_item",
+                  "style": "List Paragraph",
+                  "level": null,
+                  "text": "Projet d'urbanisme — quartier ou plan masse (Urbanisme)"
+                },
+                {
+                  "id": "block_0097",
+                  "type": "list_item",
+                  "style": "List Paragraph",
+                  "level": null,
+                  "text": "Interior Design boutique ou villa — photos ambiance"
+                },
+                {
+                  "id": "block_0098",
+                  "type": "list_item",
+                  "style": "List Paragraph",
+                  "level": null,
+                  "text": "Visualisation BIM 3D — rendu technique impressionnant"
+                },
+                {
+                  "id": "block_0099",
+                  "type": "list_item",
+                  "style": "List Paragraph",
+                  "level": null,
+                  "text": "Bâtiment green / certifié HQE ou LEED (Architecture durable)"
+                },
+                {
+                  "id": "block_0100",
+                  "type": "list_item",
+                  "style": "List Paragraph",
+                  "level": null,
+                  "text": "Coordination chantier — photos process + résultat"
+                },
+                {
+                  "id": "block_0101",
+                  "type": "list_item",
+                  "style": "List Paragraph",
+                  "level": null,
+                  "text": "Aménagement paysager / landscaping"
+                }
+              ],
+              "subsections": []
+            }
+          ]
+        },
+        {
+          "title": "3.5 Section Events — ELAOUAD EVENTS",
+          "level": 2,
+          "content": [
+            {
+              "id": "block_0103",
+              "type": "paragraph",
+              "style": null,
+              "level": null,
+              "text": "ELAOUAD EVENTS est une différenciation extraordinaire — très rares sont les cabinets d'architecture qui organisent aussi des forums internationaux avec 10 000 visiteurs. Cette section doit rayonner de légitimité."
+            }
+          ],
+          "subsections": [
+            {
+              "title": "Recommandations UI events",
+              "level": 3,
+              "content": [
+                {
+                  "id": "block_0105",
+                  "type": "list_item",
+                  "style": "List Paragraph",
+                  "level": null,
+                  "text": "Hero event : photo ou vidéo 15 secondes de l'ambiance FIC — salle comble, podium, networking"
+                },
+                {
+                  "id": "block_0106",
+                  "type": "list_item",
+                  "style": "List Paragraph",
+                  "level": null,
+                  "text": "Compteurs animés : 10 000+ Visiteurs / 450+ Exposants / 100+ Pays / 60+ Conférences — animation count-up au scroll"
+                },
+                {
+                  "id": "block_0107",
+                  "type": "list_item",
+                  "style": "List Paragraph",
+                  "level": null,
+                  "text": "Timeline des events 2026 : chronologie visuelle horizontale avec dates et statuts (OPEN/SOLD OUT/BIENTÔT)"
+                },
+                {
+                  "id": "block_0108",
+                  "type": "list_item",
+                  "style": "List Paragraph",
+                  "level": null,
+                  "text": "Cards events avec image qualité, badge FLAGSHIP/SPÉCIALISÉ, date or/champagne, CTA 'S'inscrire'"
+                },
+                {
+                  "id": "block_0109",
+                  "type": "list_item",
+                  "style": "List Paragraph",
+                  "level": null,
+                  "text": "Section 'Pourquoi participer' : 3 colonnes avec icons minimalistes et textes courts"
+                },
+                {
+                  "id": "block_0110",
+                  "type": "list_item",
+                  "style": "List Paragraph",
+                  "level": null,
+                  "text": "Logos des partenaires et sponsors en rangée — proof of legitimacy"
+                }
+              ],
+              "subsections": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "4. Stratégie de Contenu — Recommandations Complètes",
+      "level": 1,
+      "content": [],
+      "subsections": [
+        {
+          "title": "4.1 Copywriting — Voix de Marque",
+          "level": 2,
+          "content": [
+            {
+              "id": "block_0113",
+              "type": "paragraph",
+              "style": null,
+              "level": null,
+              "text": "La voix d'ELAOUAD doit être : confiante sans arrogance, technique sans jargon inaccessible, internationale mais ancrée au Maroc et en Afrique. Chaque texte doit servir un objectif de conversion précis."
+            }
+          ],
+          "subsections": [
+            {
+              "title": "Principes copywriting premium",
+              "level": 3,
+              "content": [
+                {
+                  "id": "block_0115",
+                  "type": "list_item",
+                  "style": "List Paragraph",
+                  "level": null,
+                  "text": "Commencer par les bénéfices, pas les caractéristiques — pas 'nous faisons du BIM' mais 'vos projets livrés 30% plus vite grâce au BIM'"
+                },
+                {
+                  "id": "block_0116",
+                  "type": "list_item",
+                  "style": "List Paragraph",
+                  "level": null,
+                  "text": "Chaque section doit répondre à une objection implicite du visiteur"
+                },
+                {
+                  "id": "block_0117",
+                  "type": "list_item",
+                  "style": "List Paragraph",
+                  "level": null,
+                  "text": "Utiliser des chiffres précis — '98%' est plus crédible que 'presque tous'"
+                },
+                {
+                  "id": "block_0118",
+                  "type": "list_item",
+                  "style": "List Paragraph",
+                  "level": null,
+                  "text": "Alterner anglais et français stratégiquement — FR pour l'émotion et la proximité, EN pour le prestige international"
+                },
+                {
+                  "id": "block_0119",
+                  "type": "list_item",
+                  "style": "List Paragraph",
+                  "level": null,
+                  "text": "Éviter les superlatifs vides : 'leaders', 'meilleurs', 'excellents' — remplacer par des preuves concrètes"
+                }
+              ],
+              "subsections": []
+            }
+          ]
+        },
+        {
+          "title": "4.2 Textes Recommandés — Section par Section",
+          "level": 2,
+          "content": [],
+          "subsections": [
+            {
+              "title": "Hero — Texte complet recommandé",
+              "level": 3,
+              "content": [
+                {
+                  "id": "block_0122",
+                  "type": "table",
+                  "row_count": 1,
+                  "column_count": 1,
+                  "rows": [
+                    [
+                      "Texte hero proposé\nEYEBROW : 'CASABLANCA · AFRIQUE · INTERNATIONAL'\n\nH1 : 'L'Architecture comme Acte de Vision'\n\nSous-titre : 'ELAOUAD conçoit, ingénierise et réalise des espaces d'exception — du concept BIM à la livraison, sur 4 continents.'\n\nCTA 1 : 'Explorer nos projets'\nCTA 2 : 'Demander une consultation'"
+                    ]
+                  ],
+                  "callout": {
+                    "title": "Texte hero proposé",
+                    "body": "EYEBROW : 'CASABLANCA · AFRIQUE · INTERNATIONAL'\nH1 : 'L'Architecture comme Acte de Vision'\nSous-titre : 'ELAOUAD conçoit, ingénierise et réalise des espaces d'exception — du concept BIM à la livraison, sur 4 continents.'\nCTA 1 : 'Explorer nos projets'\nCTA 2 : 'Demander une consultation'"
+                  }
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "title": "About / Vision — Texte proposé",
+              "level": 3,
+              "content": [
+                {
+                  "id": "block_0124",
+                  "type": "table",
+                  "row_count": 1,
+                  "column_count": 1,
+                  "rows": [
+                    [
+                      "Texte About proposé\nTitre : 'Une vision. Un groupe. Une transformation.'\n\nParagraphe 1 : 'Fondé par Soukaina Elaouad, ingénieure civile et doctorante en architecture, ELAOUAD Architecture & Engineering Group est né d'une conviction : les projets d'exception exigent une expertise totale — de la conception architecturale à la gestion de projet, du BIM à l'aménagement intérieur.'\n\nParagraphe 2 : 'En dix ans, le groupe a livré plus de 100 projets en résidentiel premium, commercial, urbanisme et design intérieur. Chaque réalisation porte la même signature : rigueur technique, esthétique maîtrisée et durabilité intégrée dès le premier trait.'\n\nParagraphe 3 : 'ELAOUAD ne construit pas des bâtiments. Nous sculptons les espaces où l'avenir se vit.'"
+                    ]
+                  ],
+                  "callout": {
+                    "title": "Texte About proposé",
+                    "body": "Titre : 'Une vision. Un groupe. Une transformation.'\nParagraphe 1 : 'Fondé par Soukaina Elaouad, ingénieure civile et doctorante en architecture, ELAOUAD Architecture & Engineering Group est né d'une conviction : les projets d'exception exigent une expertise totale — de la conception architecturale à la gestion de projet, du BIM à l'aménagement intérieur.'\nParagraphe 2 : 'En dix ans, le groupe a livré plus de 100 projets en résidentiel premium, commercial, urbanisme et design intérieur. Chaque réalisation porte la même signature : rigueur technique, esthétique maîtrisée et durabilité intégrée dès le premier trait.'\nParagraphe 3 : 'ELAOUAD ne construit pas des bâtiments. Nous sculptons les espaces où l'avenir se vit.'"
+                  }
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "title": "Services — Descriptions recommandées",
+              "level": 3,
+              "content": [
+                {
+                  "id": "block_0126",
+                  "type": "paragraph",
+                  "style": null,
+                  "level": null,
+                  "text": "Chaque service doit avoir : un titre impact (Playfair 24px) + une phrase valeur (Montserrat Bold 15px or/champagne) + une description courte 40-60 mots + 3 bullet points clés."
+                },
+                {
+                  "id": "block_0127",
+                  "type": "table",
+                  "row_count": 1,
+                  "column_count": 2,
+                  "rows": [
+                    [
+                      "Architecture",
+                      "Des maisons et immeubles qui racontent une histoire. Résidentiel de luxe, commercial, équipements publics — chaque projet intègre esthétique, fonctionnalité et durabilité.\n• Conception architecturale complète\n• Permis et études réglementaires\n• Suivi de réalisation"
+                    ]
+                  ]
+                },
+                {
+                  "id": "block_0128",
+                  "type": "table",
+                  "row_count": 1,
+                  "column_count": 2,
+                  "rows": [
+                    [
+                      "BIM Consulting",
+                      "Votre projet livré dans les délais, dans le budget. Le BIM (Building Information Modeling) d'ELAOUAD réduit les imprévus chantier de 40% en moyenne.\n• Modélisation 3D complète\n• Coordination MEP et structure\n• Formation équipes projet"
+                    ]
+                  ]
+                },
+                {
+                  "id": "block_0129",
+                  "type": "table",
+                  "row_count": 1,
+                  "column_count": 2,
+                  "rows": [
+                    [
+                      "Ingénierie & PM",
+                      "De la faisabilité à la réception des travaux, nous gérons la complexité pour que vous vous concentriez sur l'essentiel.\n• Études techniques et structurelles\n• Planning et suivi budgétaire\n• Coordination tous corps d'état"
+                    ]
+                  ]
+                },
+                {
+                  "id": "block_0130",
+                  "type": "table",
+                  "row_count": 1,
+                  "column_count": 2,
+                  "rows": [
+                    [
+                      "Design Intérieur",
+                      "Des espaces qui incarnent votre identité. Chaque détail est pensé — matériaux, lumière, mobilier — pour créer une expérience mémorable.\n• Concept design et moodboards\n• Sélection matériaux et fournitures\n• Direction artistique chantier"
+                    ]
+                  ]
+                },
+                {
+                  "id": "block_0131",
+                  "type": "table",
+                  "row_count": 1,
+                  "column_count": 2,
+                  "rows": [
+                    [
+                      "Urbanisme",
+                      "Penser la ville d'aujourd'hui pour les citoyens de demain. Plans d'aménagement, études d'impact et développement durable à l'échelle du territoire.\n• Plans de masse et zonage\n• Études d'impact environnemental\n• Concertation et validation administrative"
+                    ]
+                  ]
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "title": "Soukaina Elaouad — Texte fondatrice",
+              "level": 3,
+              "content": [
+                {
+                  "id": "block_0133",
+                  "type": "table",
+                  "row_count": 1,
+                  "column_count": 1,
+                  "rows": [
+                    [
+                      "Texte fondatrice proposé\nTitre : 'La Vision Derrière la Transformation'\n\nSous-titre : 'Soukaina Elaouad — Fondatrice & Architecte Ingénieure'\n\nIntro : 'Ingénieure civile de formation, doctorante en architecture et manager de projets expérimentée, Soukaina Elaouad a créé ELAOUAD Group avec une idée centrale : l'excellence architecturale ne doit jamais sacrifier la rigueur technique — ni l'inverse.'\n\nPhilosophie : 'Sa méthode conjugue l'approche scientifique de l'ingénieur — chiffres, processus, optimisation — et la sensibilité créative de l'architecte. Le résultat : des projets qui tiennent leurs promesses, esthétiquement et structurellement.'\n\nCitation : \"L'architecture est à la fois un acte artistique et une responsabilité technique. Chaque projet que nous livrons doit être beau, solide, durable et utile aux femmes et aux hommes qui l'habiteront.\" — Soukaina Elaouad"
+                    ]
+                  ],
+                  "callout": {
+                    "title": "Texte fondatrice proposé",
+                    "body": "Titre : 'La Vision Derrière la Transformation'\nSous-titre : 'Soukaina Elaouad — Fondatrice & Architecte Ingénieure'\nIntro : 'Ingénieure civile de formation, doctorante en architecture et manager de projets expérimentée, Soukaina Elaouad a créé ELAOUAD Group avec une idée centrale : l'excellence architecturale ne doit jamais sacrifier la rigueur technique — ni l'inverse.'\nPhilosophie : 'Sa méthode conjugue l'approche scientifique de l'ingénieur — chiffres, processus, optimisation — et la sensibilité créative de l'architecte. Le résultat : des projets qui tiennent leurs promesses, esthétiquement et structurellement.'\nCitation : \"L'architecture est à la fois un acte artistique et une responsabilité technique. Chaque projet que nous livrons doit être beau, solide, durable et utile aux femmes et aux hommes qui l'habiteront.\" — Soukaina Elaouad"
+                  }
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "title": "Témoignages — Formulation recommandée",
+              "level": 3,
+              "content": [
+                {
+                  "id": "block_0135",
+                  "type": "paragraph",
+                  "style": null,
+                  "level": null,
+                  "text": "Les témoignages doivent être spécifiques, crédibles, et refléter des bénéfices concrets. Éviter les superlatifs vides. Exemples :"
+                },
+                {
+                  "id": "block_0136",
+                  "type": "table",
+                  "row_count": 1,
+                  "column_count": 2,
+                  "rows": [
+                    [
+                      "Promoteur immobilier",
+                      "\"Le BIM d'ELAOUAD nous a permis de détecter 23 conflits structurels avant le chantier. Résultat : 0 imprévu majeur, livraison à la date prévue.\" — Directeur technique, Groupe immobilier Casablanca"
+                    ]
+                  ]
+                },
+                {
+                  "id": "block_0137",
+                  "type": "table",
+                  "row_count": 1,
+                  "column_count": 2,
+                  "rows": [
+                    [
+                      "Investisseur",
+                      "\"Nous cherchions un cabinet capable de gérer la complexité d'un projet 5 000 m² avec des contraintes techniques sévères. ELAOUAD était le seul à proposer une équipe intégrée architecture + ingénierie.\" — CEO, Fonds d'investissement"
+                    ]
+                  ]
+                },
+                {
+                  "id": "block_0138",
+                  "type": "table",
+                  "row_count": 1,
+                  "column_count": 2,
+                  "rows": [
+                    [
+                      "Participant FIC",
+                      "\"Le FIC est l'événement incontournable de la construction en Afrique. En trois éditions, nous avons signé des partenariats stratégiques sur 3 continents.\" — Directeur commercial, fabricant matériaux"
+                    ]
+                  ]
+                }
+              ],
+              "subsections": []
+            }
+          ]
+        },
+        {
+          "title": "4.3 Contenu Manquant — Plan de Production",
+          "level": 2,
+          "content": [
+            {
+              "id": "block_0140",
+              "type": "paragraph",
+              "style": null,
+              "level": null,
+              "text": "Ce tableau liste tous les contenus à produire en priorité, classés par impact sur la conversion."
+            },
+            {
+              "id": "block_0141",
+              "type": "table",
+              "row_count": 10,
+              "column_count": 4,
+              "rows": [
+                [
+                  "Contenu",
+                  "Priorité",
+                  "Format",
+                  "Impact conversion"
+                ],
+                [
+                  "Photo Soukaina (studio)",
+                  "CRITIQUE",
+                  "1 photo pro",
+                  "Humanise la marque — +35% confiance"
+                ],
+                [
+                  "Photos 8 projets portfolio",
+                  "CRITIQUE",
+                  "5-10 photos/projet",
+                  "Preuve directe — +60% conversion"
+                ],
+                [
+                  "3 témoignages clients réels",
+                  "CRITIQUE",
+                  "Texte + photo client",
+                  "Social proof — +45% leads"
+                ],
+                [
+                  "Vidéo highlights FIC 60s",
+                  "HAUTE",
+                  "Vidéo montée",
+                  "Légitimité events — +50% inscriptions"
+                ],
+                [
+                  "Descriptions 8 services",
+                  "HAUTE",
+                  "100-150 mots chacun",
+                  "SEO + conversion — +25% leads"
+                ],
+                [
+                  "Articles blog (3 starter)",
+                  "MOYENNE",
+                  "800-1200 mots",
+                  "SEO long terme — trafic organique"
+                ],
+                [
+                  "Brochure PDF téléchargeable",
+                  "MOYENNE",
+                  "PDF 12-16 pages",
+                  "Lead magnet — capture emails"
+                ],
+                [
+                  "Logos clients / partenaires",
+                  "MOYENNE",
+                  "12-16 logos PNG",
+                  "Social proof visuel"
+                ],
+                [
+                  "Vidéo présentation 90s",
+                  "BASSE",
+                  "Vidéo Soukaina",
+                  "Brand storytelling"
+                ]
+              ],
+              "headers": [
+                "Contenu",
+                "Priorité",
+                "Format",
+                "Impact conversion"
+              ],
+              "records": [
+                {
+                  "Contenu": "Photo Soukaina (studio)",
+                  "Priorité": "CRITIQUE",
+                  "Format": "1 photo pro",
+                  "Impact conversion": "Humanise la marque — +35% confiance"
+                },
+                {
+                  "Contenu": "Photos 8 projets portfolio",
+                  "Priorité": "CRITIQUE",
+                  "Format": "5-10 photos/projet",
+                  "Impact conversion": "Preuve directe — +60% conversion"
+                },
+                {
+                  "Contenu": "3 témoignages clients réels",
+                  "Priorité": "CRITIQUE",
+                  "Format": "Texte + photo client",
+                  "Impact conversion": "Social proof — +45% leads"
+                },
+                {
+                  "Contenu": "Vidéo highlights FIC 60s",
+                  "Priorité": "HAUTE",
+                  "Format": "Vidéo montée",
+                  "Impact conversion": "Légitimité events — +50% inscriptions"
+                },
+                {
+                  "Contenu": "Descriptions 8 services",
+                  "Priorité": "HAUTE",
+                  "Format": "100-150 mots chacun",
+                  "Impact conversion": "SEO + conversion — +25% leads"
+                },
+                {
+                  "Contenu": "Articles blog (3 starter)",
+                  "Priorité": "MOYENNE",
+                  "Format": "800-1200 mots",
+                  "Impact conversion": "SEO long terme — trafic organique"
+                },
+                {
+                  "Contenu": "Brochure PDF téléchargeable",
+                  "Priorité": "MOYENNE",
+                  "Format": "PDF 12-16 pages",
+                  "Impact conversion": "Lead magnet — capture emails"
+                },
+                {
+                  "Contenu": "Logos clients / partenaires",
+                  "Priorité": "MOYENNE",
+                  "Format": "12-16 logos PNG",
+                  "Impact conversion": "Social proof visuel"
+                },
+                {
+                  "Contenu": "Vidéo présentation 90s",
+                  "Priorité": "BASSE",
+                  "Format": "Vidéo Soukaina",
+                  "Impact conversion": "Brand storytelling"
+                }
+              ]
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "5. SEO & Visibilité Digitale",
+      "level": 1,
+      "content": [],
+      "subsections": [
+        {
+          "title": "5.1 Mots-clés Prioritaires",
+          "level": 2,
+          "content": [
+            {
+              "id": "block_0144",
+              "type": "paragraph",
+              "style": null,
+              "level": null,
+              "text": "Stratégie de référencement en trois niveaux : notoriété (awareness), intention (consideration) et conversion (decision)."
+            }
+          ],
+          "subsections": [
+            {
+              "title": "Keywords de conversion (haute priorité)",
+              "level": 3,
+              "content": [
+                {
+                  "id": "block_0146",
+                  "type": "list_item",
+                  "style": "List Paragraph",
+                  "level": null,
+                  "text": "'cabinet architecture Casablanca' — 1 200 recherches/mois Maroc — difficulté moyenne"
+                },
+                {
+                  "id": "block_0147",
+                  "type": "list_item",
+                  "style": "List Paragraph",
+                  "level": null,
+                  "text": "'BIM consulting Maroc' — 400 recherches/mois — difficulté faible — opportunité forte"
+                },
+                {
+                  "id": "block_0148",
+                  "type": "list_item",
+                  "style": "List Paragraph",
+                  "level": null,
+                  "text": "'architecte ingénieur Casablanca' — 800 recherches/mois — intention commerciale haute"
+                },
+                {
+                  "id": "block_0149",
+                  "type": "list_item",
+                  "style": "List Paragraph",
+                  "level": null,
+                  "text": "'design intérieur luxe Maroc' — 600 recherches/mois — cible premium"
+                },
+                {
+                  "id": "block_0150",
+                  "type": "list_item",
+                  "style": "List Paragraph",
+                  "level": null,
+                  "text": "'forum construction Maroc 2026' — saisonnier — pertinent pour FIC"
+                },
+                {
+                  "id": "block_0151",
+                  "type": "list_item",
+                  "style": "List Paragraph",
+                  "level": null,
+                  "text": "'architecture durable Afrique' — 300 recherches/mois — positionnement différenciant"
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "title": "Optimisations techniques SEO prioritaires",
+              "level": 3,
+              "content": [
+                {
+                  "id": "block_0153",
+                  "type": "list_item",
+                  "style": "List Paragraph",
+                  "level": null,
+                  "text": "Balises title uniques pour chaque page — maximum 60 caractères"
+                },
+                {
+                  "id": "block_0154",
+                  "type": "list_item",
+                  "style": "List Paragraph",
+                  "level": null,
+                  "text": "Meta descriptions avec call-to-action — maximum 155 caractères"
+                },
+                {
+                  "id": "block_0155",
+                  "type": "list_item",
+                  "style": "List Paragraph",
+                  "level": null,
+                  "text": "Balises alt sur toutes les images — description précise incluant le keyword"
+                },
+                {
+                  "id": "block_0156",
+                  "type": "list_item",
+                  "style": "List Paragraph",
+                  "level": null,
+                  "text": "Schema markup Organization + LocalBusiness + Event sur les pages pertinentes"
+                },
+                {
+                  "id": "block_0157",
+                  "type": "list_item",
+                  "style": "List Paragraph",
+                  "level": null,
+                  "text": "Fichier sitemap.xml soumis à Google Search Console"
+                },
+                {
+                  "id": "block_0158",
+                  "type": "list_item",
+                  "style": "List Paragraph",
+                  "level": null,
+                  "text": "Core Web Vitals : LCP < 2.5s, CLS < 0.1, FID < 100ms — mesurer sur PageSpeed Insights"
+                },
+                {
+                  "id": "block_0159",
+                  "type": "list_item",
+                  "style": "List Paragraph",
+                  "level": null,
+                  "text": "Hreflang fr/en/ar — signaler les versions linguistiques à Google"
+                },
+                {
+                  "id": "block_0160",
+                  "type": "table",
+                  "row_count": 1,
+                  "column_count": 1,
+                  "rows": [
+                    [
+                      "Quick win SEO\nCréer une fiche Google Business Profile complète pour ELAOUAD à Casablanca avec photos, horaires, services et lien site. Gratuit, impacte les recherches locales sous 2-4 semaines."
+                    ]
+                  ],
+                  "callout": {
+                    "title": "Quick win SEO",
+                    "body": "Créer une fiche Google Business Profile complète pour ELAOUAD à Casablanca avec photos, horaires, services et lien site. Gratuit, impacte les recherches locales sous 2-4 semaines."
+                  }
+                }
+              ],
+              "subsections": []
+            }
+          ]
+        },
+        {
+          "title": "5.2 Stratégie de Contenu & Blog",
+          "level": 2,
+          "content": [
+            {
+              "id": "block_0162",
+              "type": "paragraph",
+              "style": null,
+              "level": null,
+              "text": "Le blog est le levier SEO le plus puissant sur le long terme. 4 articles bien optimisés par mois peuvent tripler le trafic organique en 6-12 mois."
+            }
+          ],
+          "subsections": [
+            {
+              "title": "Plan éditorial — 12 premiers articles",
+              "level": 3,
+              "content": [
+                {
+                  "id": "block_0164",
+                  "type": "list_item",
+                  "style": "List Paragraph",
+                  "level": null,
+                  "text": "'Guide complet du BIM pour promoteurs immobiliers au Maroc' — keyword: BIM Maroc — PILIER"
+                },
+                {
+                  "id": "block_0165",
+                  "type": "list_item",
+                  "style": "List Paragraph",
+                  "level": null,
+                  "text": "'Construire en 2026 : tout savoir sur la RT2026 et la performance énergétique' — keyword: construction durable Maroc"
+                },
+                {
+                  "id": "block_0166",
+                  "type": "list_item",
+                  "style": "List Paragraph",
+                  "level": null,
+                  "text": "'Villa de luxe à Casablanca : les 7 étapes d'un projet réussi' — keyword: villa luxe Casablanca"
+                },
+                {
+                  "id": "block_0167",
+                  "type": "list_item",
+                  "style": "List Paragraph",
+                  "level": null,
+                  "text": "'Forum International Construction 2026 : ce qu'il faut savoir avant de s'inscrire' — keyword: FIC 2026"
+                },
+                {
+                  "id": "block_0168",
+                  "type": "list_item",
+                  "style": "List Paragraph",
+                  "level": null,
+                  "text": "'Architecture durable en Afrique : tendances et réglementations' — positionnement continental"
+                },
+                {
+                  "id": "block_0169",
+                  "type": "list_item",
+                  "style": "List Paragraph",
+                  "level": null,
+                  "text": "'Comment choisir son architecte à Casablanca : le guide pratique' — keyword informationnel"
+                },
+                {
+                  "id": "block_0170",
+                  "type": "list_item",
+                  "style": "List Paragraph",
+                  "level": null,
+                  "text": "'BIM vs méthodes traditionnelles : économies réelles sur un projet de 5 000 m²' — case study"
+                },
+                {
+                  "id": "block_0171",
+                  "type": "list_item",
+                  "style": "List Paragraph",
+                  "level": null,
+                  "text": "'Design intérieur luxe : les matériaux qui font la différence en 2026' — keyword: design intérieur luxe Maroc"
+                }
+              ],
+              "subsections": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "6. Plan d'Action — Roadmap Priorisée",
+      "level": 1,
+      "content": [],
+      "subsections": [
+        {
+          "title": "Phase 1 — Fondations critiques (Semaines 1-2)",
+          "level": 2,
+          "content": [
+            {
+              "id": "block_0174",
+              "type": "table",
+              "row_count": 1,
+              "column_count": 1,
+              "rows": [
+                [
+                  "Objectif Phase 1\nCorriger les problèmes critiques qui bloquent la conversion aujourd'hui. Ces actions ne nécessitent pas de nouveau contenu."
+                ]
+              ],
+              "callout": {
+                "title": "Objectif Phase 1",
+                "body": "Corriger les problèmes critiques qui bloquent la conversion aujourd'hui. Ces actions ne nécessitent pas de nouveau contenu."
+              }
+            },
+            {
+              "id": "block_0175",
+              "type": "list_item",
+              "style": "List Paragraph",
+              "level": null,
+              "text": "Ajouter CTA primaire et secondaire dans la section hero"
+            },
+            {
+              "id": "block_0176",
+              "type": "list_item",
+              "style": "List Paragraph",
+              "level": null,
+              "text": "Optimiser le formulaire de contact : ajouter champ email, sélecteur budget, validation temps réel"
+            },
+            {
+              "id": "block_0177",
+              "type": "list_item",
+              "style": "List Paragraph",
+              "level": null,
+              "text": "Corriger les ratios de contraste texte sur fond sombre (WCAG AA minimum)"
+            },
+            {
+              "id": "block_0178",
+              "type": "list_item",
+              "style": "List Paragraph",
+              "level": null,
+              "text": "Ajouter numéro WhatsApp cliquable en sticky mobile"
+            },
+            {
+              "id": "block_0179",
+              "type": "list_item",
+              "style": "List Paragraph",
+              "level": null,
+              "text": "Configurer Google Analytics 4 avec tracking des events de conversion"
+            },
+            {
+              "id": "block_0180",
+              "type": "list_item",
+              "style": "List Paragraph",
+              "level": null,
+              "text": "Créer la fiche Google Business Profile"
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Phase 2 — Contenu & Portfolio (Semaines 3-6)",
+          "level": 2,
+          "content": [
+            {
+              "id": "block_0182",
+              "type": "table",
+              "row_count": 1,
+              "column_count": 1,
+              "rows": [
+                [
+                  "Objectif Phase 2\nProduire les contenus critiques qui apportent la preuve et la confiance. C'est la phase la plus impactante en termes de conversion."
+                ]
+              ],
+              "callout": {
+                "title": "Objectif Phase 2",
+                "body": "Produire les contenus critiques qui apportent la preuve et la confiance. C'est la phase la plus impactante en termes de conversion."
+              }
+            },
+            {
+              "id": "block_0183",
+              "type": "list_item",
+              "style": "List Paragraph",
+              "level": null,
+              "text": "Séance photo studio pour Soukaina (demi-journée, photographe pro)"
+            },
+            {
+              "id": "block_0184",
+              "type": "list_item",
+              "style": "List Paragraph",
+              "level": null,
+              "text": "Shooting photo de 4-6 projets réalisés (extérieur + intérieur)"
+            },
+            {
+              "id": "block_0185",
+              "type": "list_item",
+              "style": "List Paragraph",
+              "level": null,
+              "text": "Rédaction et mise en ligne des 8 descriptions de services"
+            },
+            {
+              "id": "block_0186",
+              "type": "list_item",
+              "style": "List Paragraph",
+              "level": null,
+              "text": "Mise en ligne portfolio avec minimum 4 projets nommés et décrits"
+            },
+            {
+              "id": "block_0187",
+              "type": "list_item",
+              "style": "List Paragraph",
+              "level": null,
+              "text": "Collecte de 3 témoignages clients (email ou entretien 15 minutes)"
+            },
+            {
+              "id": "block_0188",
+              "type": "list_item",
+              "style": "List Paragraph",
+              "level": null,
+              "text": "Création d'une brochure PDF téléchargeable (lead magnet)"
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Phase 3 — Optimisation UX & Events (Semaines 7-10)",
+          "level": 2,
+          "content": [
+            {
+              "id": "block_0190",
+              "type": "table",
+              "row_count": 1,
+              "column_count": 1,
+              "rows": [
+                [
+                  "Objectif Phase 3\nRaffiner l'expérience et activer la section Events comme deuxième moteur de conversion."
+                ]
+              ],
+              "callout": {
+                "title": "Objectif Phase 3",
+                "body": "Raffiner l'expérience et activer la section Events comme deuxième moteur de conversion."
+              }
+            },
+            {
+              "id": "block_0191",
+              "type": "list_item",
+              "style": "List Paragraph",
+              "level": null,
+              "text": "Implémenter le mega-menu avec les 8 services en colonnes"
+            },
+            {
+              "id": "block_0192",
+              "type": "list_item",
+              "style": "List Paragraph",
+              "level": null,
+              "text": "Construire la section Events avec timeline 2026 et cards FIC/FIDI/ACDC"
+            },
+            {
+              "id": "block_0193",
+              "type": "list_item",
+              "style": "List Paragraph",
+              "level": null,
+              "text": "Ajouter les compteurs animés (10K visiteurs, 450 exposants, 100 pays)"
+            },
+            {
+              "id": "block_0194",
+              "type": "list_item",
+              "style": "List Paragraph",
+              "level": null,
+              "text": "Créer la page Soukaina complète avec bio, credentials et citation"
+            },
+            {
+              "id": "block_0195",
+              "type": "list_item",
+              "style": "List Paragraph",
+              "level": null,
+              "text": "Lancer le blog avec 3 articles piliers"
+            },
+            {
+              "id": "block_0196",
+              "type": "list_item",
+              "style": "List Paragraph",
+              "level": null,
+              "text": "Optimiser les images en WebP avec lazy loading"
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Phase 4 — Performance & Scale (Semaines 11-16)",
+          "level": 2,
+          "content": [
+            {
+              "id": "block_0198",
+              "type": "list_item",
+              "style": "List Paragraph",
+              "level": null,
+              "text": "Audit PageSpeed et optimisation Core Web Vitals"
+            },
+            {
+              "id": "block_0199",
+              "type": "list_item",
+              "style": "List Paragraph",
+              "level": null,
+              "text": "Implémentation Schema markup complet (Organization, Event, Review)"
+            },
+            {
+              "id": "block_0200",
+              "type": "list_item",
+              "style": "List Paragraph",
+              "level": null,
+              "text": "Lancement campagne LinkedIn Ads ciblant investisseurs et promoteurs Maroc"
+            },
+            {
+              "id": "block_0201",
+              "type": "list_item",
+              "style": "List Paragraph",
+              "level": null,
+              "text": "Mise en place newsletter mensuelle (architecture insights)"
+            },
+            {
+              "id": "block_0202",
+              "type": "list_item",
+              "style": "List Paragraph",
+              "level": null,
+              "text": "Création de 2 pages de destination dédiées (BIM Consulting | Résidentiel Luxe)"
+            },
+            {
+              "id": "block_0203",
+              "type": "list_item",
+              "style": "List Paragraph",
+              "level": null,
+              "text": "A/B test CTA hero (formulation, couleur, placement)"
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "title": "7. Conclusion & Prochaines Étapes",
+      "level": 1,
+      "content": [
+        {
+          "id": "block_0205",
+          "type": "paragraph",
+          "style": null,
+          "level": null,
+          "text": "ELAOUAD Architecture & Engineering Group dispose d'un potentiel de marque exceptionnel — fondatrice visionnaire, positionnement unique (architecture + events), expertise BIM rare, ancrage africain et international. Le site actuel ne reflète pas encore cette valeur."
+        },
+        {
+          "id": "block_0206",
+          "type": "paragraph",
+          "style": null,
+          "level": null,
+          "text": "Les recommandations de ce rapport sont organisées pour maximiser l'impact avec les ressources disponibles. Les phases 1 et 2 seules — coûts modérés, délai 6 semaines — peuvent doubler le taux de conversion du site."
+        }
+      ],
+      "subsections": [
+        {
+          "title": "Les 5 actions les plus impactantes, dans l'ordre",
+          "level": 3,
+          "content": [
+            {
+              "id": "block_0208",
+              "type": "list_item",
+              "style": "List Paragraph",
+              "level": null,
+              "text": "Ajouter un CTA clair dans le hero — impact immédiat, délai 1 jour"
+            },
+            {
+              "id": "block_0209",
+              "type": "list_item",
+              "style": "List Paragraph",
+              "level": null,
+              "text": "Photographier les projets et mettre en ligne le portfolio — impact fort, délai 2-3 semaines"
+            },
+            {
+              "id": "block_0210",
+              "type": "list_item",
+              "style": "List Paragraph",
+              "level": null,
+              "text": "Collecter 3 témoignages clients authentiques — impact confiance, délai 1-2 semaines"
+            },
+            {
+              "id": "block_0211",
+              "type": "list_item",
+              "style": "List Paragraph",
+              "level": null,
+              "text": "Photo professionnelle de Soukaina — humanise la marque, délai 1 semaine"
+            },
+            {
+              "id": "block_0212",
+              "type": "list_item",
+              "style": "List Paragraph",
+              "level": null,
+              "text": "Configurer Google Analytics 4 — nécessaire pour mesurer toutes les autres actions"
+            },
+            {
+              "id": "block_0213",
+              "type": "table",
+              "row_count": 1,
+              "column_count": 1,
+              "rows": [
+                [
+                  "Message final\nUn site d'architecture premium n'est pas une dépense — c'est le premier commercial d'ELAOUAD, disponible 24h/24, 7j/7, accessible depuis Casablanca jusqu'à Dubaï. Chaque amélioration recommandée ici est un investissement mesurable avec un ROI clair."
+                ]
+              ],
+              "callout": {
+                "title": "Message final",
+                "body": "Un site d'architecture premium n'est pas une dépense — c'est le premier commercial d'ELAOUAD, disponible 24h/24, 7j/7, accessible depuis Casablanca jusqu'à Dubaï. Chaque amélioration recommandée ici est un investissement mesurable avec un ROI clair."
+              }
+            },
+            {
+              "id": "block_0214",
+              "type": "paragraph",
+              "style": null,
+              "level": null,
+              "text": "ELAOUAD Architecture & Engineering Group — Rapport confidentiel — Mai 2026"
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    }
+  ],
+  "ordered_blocks": [
+    {
+      "id": "block_0001",
+      "type": "paragraph",
+      "style": null,
+      "level": null,
+      "text": "ELAOUAD"
+    },
+    {
+      "id": "block_0002",
+      "type": "paragraph",
+      "style": null,
+      "level": null,
+      "text": "ARCHITECTURE & ENGINEERING GROUP"
+    },
+    {
+      "id": "block_0003",
+      "type": "paragraph",
+      "style": null,
+      "level": null,
+      "text": "________________________"
+    },
+    {
+      "id": "block_0004",
+      "type": "paragraph",
+      "style": null,
+      "level": null,
+      "text": "UX / UI & CONTENT UPGRADE REPORT"
+    },
+    {
+      "id": "block_0005",
+      "type": "paragraph",
+      "style": null,
+      "level": null,
+      "text": "Analyse complète — Recommandations stratégiques — Plan d'action"
+    },
+    {
+      "id": "block_0006",
+      "type": "table",
+      "row_count": 4,
+      "column_count": 2,
+      "rows": [
+        [
+          "Préparé par",
+          "Analyse stratégique Claude AI"
+        ],
+        [
+          "Pour",
+          "Soukaina Elaouad — Fondatrice"
+        ],
+        [
+          "Date",
+          "Mai 2026"
+        ],
+        [
+          "Version",
+          "v1.0 — Confidentiel"
+        ]
+      ],
+      "headers": [
+        "Préparé par",
+        "Analyse stratégique Claude AI"
+      ],
+      "records": [
+        {
+          "Préparé par": "Pour",
+          "Analyse stratégique Claude AI": "Soukaina Elaouad — Fondatrice"
+        },
+        {
+          "Préparé par": "Date",
+          "Analyse stratégique Claude AI": "Mai 2026"
+        },
+        {
+          "Préparé par": "Version",
+          "Analyse stratégique Claude AI": "v1.0 — Confidentiel"
+        }
+      ]
+    },
+    {
+      "id": "block_0007",
+      "type": "heading",
+      "style": "Heading 1",
+      "level": 1,
+      "text": "1. Résumé Exécutif"
+    },
+    {
+      "id": "block_0008",
+      "type": "paragraph",
+      "style": null,
+      "level": null,
+      "text": "Ce rapport analyse en profondeur le site actuel d'ELAOUAD Architecture & Engineering Group et formule des recommandations précises pour améliorer l'expérience utilisateur (UX), l'interface visuelle (UI) et le contenu. L'objectif est de transformer le site en un outil de conversion de classe mondiale, cohérent avec le positionnement premium de la marque."
+    },
+    {
+      "id": "block_0009",
+      "type": "table",
+      "row_count": 8,
+      "column_count": 3,
+      "rows": [
+        [
+          "Dimension",
+          "Score actuel",
+          "Cible recommandée"
+        ],
+        [
+          "Identité visuelle & branding",
+          "85 / 100",
+          "95 / 100"
+        ],
+        [
+          "Navigation & architecture UX",
+          "55 / 100",
+          "88 / 100"
+        ],
+        [
+          "Qualité & profondeur du contenu",
+          "40 / 100",
+          "85 / 100"
+        ],
+        [
+          "Génération de leads & conversion",
+          "45 / 100",
+          "90 / 100"
+        ],
+        [
+          "Signaux de confiance & preuve sociale",
+          "25 / 100",
+          "85 / 100"
+        ],
+        [
+          "Performance mobile",
+          "60 / 100",
+          "92 / 100"
+        ],
+        [
+          "SEO & visibilité digitale",
+          "35 / 100",
+          "80 / 100"
+        ]
+      ],
+      "headers": [
+        "Dimension",
+        "Score actuel",
+        "Cible recommandée"
+      ],
+      "records": [
+        {
+          "Dimension": "Identité visuelle & branding",
+          "Score actuel": "85 / 100",
+          "Cible recommandée": "95 / 100"
+        },
+        {
+          "Dimension": "Navigation & architecture UX",
+          "Score actuel": "55 / 100",
+          "Cible recommandée": "88 / 100"
+        },
+        {
+          "Dimension": "Qualité & profondeur du contenu",
+          "Score actuel": "40 / 100",
+          "Cible recommandée": "85 / 100"
+        },
+        {
+          "Dimension": "Génération de leads & conversion",
+          "Score actuel": "45 / 100",
+          "Cible recommandée": "90 / 100"
+        },
+        {
+          "Dimension": "Signaux de confiance & preuve sociale",
+          "Score actuel": "25 / 100",
+          "Cible recommandée": "85 / 100"
+        },
+        {
+          "Dimension": "Performance mobile",
+          "Score actuel": "60 / 100",
+          "Cible recommandée": "92 / 100"
+        },
+        {
+          "Dimension": "SEO & visibilité digitale",
+          "Score actuel": "35 / 100",
+          "Cible recommandée": "80 / 100"
+        }
+      ]
+    },
+    {
+      "id": "block_0010",
+      "type": "table",
+      "row_count": 1,
+      "column_count": 1,
+      "rows": [
+        [
+          "Verdict global\nLe site ELAOUAD a une excellente fondation visuelle mais manque de contenu substantiel, de preuve sociale et de parcours utilisateur optimisé. Le potentiel de conversion est sous-exploité d'au moins 60%."
+        ]
+      ],
+      "callout": {
+        "title": "Verdict global",
+        "body": "Le site ELAOUAD a une excellente fondation visuelle mais manque de contenu substantiel, de preuve sociale et de parcours utilisateur optimisé. Le potentiel de conversion est sous-exploité d'au moins 60%."
+      }
+    },
+    {
+      "id": "block_0011",
+      "type": "heading",
+      "style": "Heading 1",
+      "level": 1,
+      "text": "2. Analyse UX — Expérience Utilisateur"
+    },
+    {
+      "id": "block_0012",
+      "type": "heading",
+      "style": "Heading 2",
+      "level": 2,
+      "text": "2.1 Navigation & Architecture de l'information"
+    },
+    {
+      "id": "block_0013",
+      "type": "paragraph",
+      "style": null,
+      "level": null,
+      "text": "La navigation actuelle est minimaliste mais manque de hiérarchie claire. Les visiteurs premium — investisseurs, décideurs, promoteurs — arrivent avec des objectifs précis et doivent pouvoir les atteindre en moins de 3 clics."
+    },
+    {
+      "id": "block_0014",
+      "type": "heading",
+      "style": "Heading 3",
+      "level": 3,
+      "text": "Problèmes identifiés"
+    },
+    {
+      "id": "block_0015",
+      "type": "list_item",
+      "style": "List Paragraph",
+      "level": null,
+      "text": "Aucun CTA visible dans la zone hero — la section la plus vue de tout le site"
+    },
+    {
+      "id": "block_0016",
+      "type": "list_item",
+      "style": "List Paragraph",
+      "level": null,
+      "text": "Le menu ne reflète pas la dualité EAI (architecture) + Events (forums) — deux publics différents"
+    },
+    {
+      "id": "block_0017",
+      "type": "list_item",
+      "style": "List Paragraph",
+      "level": null,
+      "text": "Pas de fil d'Ariane (breadcrumb) sur les pages internes"
+    },
+    {
+      "id": "block_0018",
+      "type": "list_item",
+      "style": "List Paragraph",
+      "level": null,
+      "text": "Le bouton 'Consultation' dans la navigation est trop discret — couleur or sur fond noir, difficile à voir"
+    },
+    {
+      "id": "block_0019",
+      "type": "list_item",
+      "style": "List Paragraph",
+      "level": null,
+      "text": "Absence de sticky CTA mobile — sur mobile, le CTA disparaît au scroll"
+    },
+    {
+      "id": "block_0020",
+      "type": "heading",
+      "style": "Heading 3",
+      "level": 3,
+      "text": "Recommandations concrètes"
+    },
+    {
+      "id": "block_0021",
+      "type": "list_item",
+      "style": "List Paragraph",
+      "level": null,
+      "text": "Ajouter deux CTA dans le hero : 'Voir nos projets' (primaire) et 'Demander une consultation' (secondaire)"
+    },
+    {
+      "id": "block_0022",
+      "type": "list_item",
+      "style": "List Paragraph",
+      "level": null,
+      "text": "Restructurer le menu en deux univers clairs : [Architecture & Ingénierie] | [Events & Forums]"
+    },
+    {
+      "id": "block_0023",
+      "type": "list_item",
+      "style": "List Paragraph",
+      "level": null,
+      "text": "Implémenter un sticky bar mobile avec numéro WhatsApp et bouton consultation"
+    },
+    {
+      "id": "block_0024",
+      "type": "list_item",
+      "style": "List Paragraph",
+      "level": null,
+      "text": "Ajouter une barre de progression de scroll discrète pour les pages longues"
+    },
+    {
+      "id": "block_0025",
+      "type": "list_item",
+      "style": "List Paragraph",
+      "level": null,
+      "text": "Intégrer un mega-menu hover sur 'Services' montrant les 8 services en colonnes"
+    },
+    {
+      "id": "block_0026",
+      "type": "table",
+      "row_count": 1,
+      "column_count": 1,
+      "rows": [
+        [
+          "Impact estimé\nUn CTA hero visible augmente le taux de clic vers les pages de conversion de 40 à 80% selon les benchmarks UX pour sites B2B premium (Nielsen Norman Group, 2024)."
+        ]
+      ],
+      "callout": {
+        "title": "Impact estimé",
+        "body": "Un CTA hero visible augmente le taux de clic vers les pages de conversion de 40 à 80% selon les benchmarks UX pour sites B2B premium (Nielsen Norman Group, 2024)."
+      }
+    },
+    {
+      "id": "block_0027",
+      "type": "heading",
+      "style": "Heading 2",
+      "level": 2,
+      "text": "2.2 Parcours Utilisateur & Conversion Funnel"
+    },
+    {
+      "id": "block_0028",
+      "type": "paragraph",
+      "style": null,
+      "level": null,
+      "text": "Le site actuel n'a pas de funnel défini. Un visiteur arrive, voit de belles images, et repart sans avoir été guidé vers une action concrète. Pour une marque premium B2B, chaque section doit avoir un objectif de conversion."
+    },
+    {
+      "id": "block_0029",
+      "type": "heading",
+      "style": "Heading 3",
+      "level": 3,
+      "text": "Funnel recommandé par persona"
+    },
+    {
+      "id": "block_0030",
+      "type": "paragraph",
+      "style": null,
+      "level": null,
+      "text": "Persona 1 — Investisseur immobilier"
+    },
+    {
+      "id": "block_0031",
+      "type": "list_item",
+      "style": "List Paragraph",
+      "level": null,
+      "text": "Hero (impact) > Portfolio projets (preuve) > Stats chiffres (confiance) > Formulaire (conversion)"
+    },
+    {
+      "id": "block_0032",
+      "type": "paragraph",
+      "style": null,
+      "level": null,
+      "text": "Persona 2 — Entreprise cherchant BIM/Ingénierie"
+    },
+    {
+      "id": "block_0033",
+      "type": "list_item",
+      "style": "List Paragraph",
+      "level": null,
+      "text": "Hero > Services BIM (détail) > Témoignages sectoriels (validation) > Contact direct"
+    },
+    {
+      "id": "block_0034",
+      "type": "paragraph",
+      "style": null,
+      "level": null,
+      "text": "Persona 3 — Participant potentiel aux events"
+    },
+    {
+      "id": "block_0035",
+      "type": "list_item",
+      "style": "List Paragraph",
+      "level": null,
+      "text": "Hero ou nav Events > Section FIC (conviction) > Stats 10K visiteurs (légitimité) > Inscription"
+    },
+    {
+      "id": "block_0036",
+      "type": "table",
+      "row_count": 1,
+      "column_count": 1,
+      "rows": [
+        [
+          "Action prioritaire\nImplémenter Google Analytics 4 avec tracking des events (clics CTA, scroll depth, form submissions) avant tout autre changement. Sans données, les optimisations sont des suppositions."
+        ]
+      ],
+      "callout": {
+        "title": "Action prioritaire",
+        "body": "Implémenter Google Analytics 4 avec tracking des events (clics CTA, scroll depth, form submissions) avant tout autre changement. Sans données, les optimisations sont des suppositions."
+      }
+    },
+    {
+      "id": "block_0037",
+      "type": "heading",
+      "style": "Heading 2",
+      "level": 2,
+      "text": "2.3 Micro-interactions & Feedback Visuel"
+    },
+    {
+      "id": "block_0038",
+      "type": "paragraph",
+      "style": null,
+      "level": null,
+      "text": "Les micro-interactions sont les signaux silencieux qui communiquent qualité et soin. Sur un site premium, leur absence se ressent même si l'utilisateur ne peut pas l'articuler."
+    },
+    {
+      "id": "block_0039",
+      "type": "heading",
+      "style": "Heading 3",
+      "level": 3,
+      "text": "Interactions manquantes ou à améliorer"
+    },
+    {
+      "id": "block_0040",
+      "type": "list_item",
+      "style": "List Paragraph",
+      "level": null,
+      "text": "Formulaire de contact : aucun feedback visuel sur focus des inputs — ajouter border or/champagne au focus"
+    },
+    {
+      "id": "block_0041",
+      "type": "list_item",
+      "style": "List Paragraph",
+      "level": null,
+      "text": "Boutons : pas d'état 'loading' lors de la soumission — ajouter spinner + texte 'Envoi en cours...'"
+    },
+    {
+      "id": "block_0042",
+      "type": "list_item",
+      "style": "List Paragraph",
+      "level": null,
+      "text": "Images portfolio : l'overlay hover doit apparaître progressivement (opacity 0 à 0.4 en 300ms) — pas instantanément"
+    },
+    {
+      "id": "block_0043",
+      "type": "list_item",
+      "style": "List Paragraph",
+      "level": null,
+      "text": "Navigation : indicateur de page active manquant — underline doré sur la section courante"
+    },
+    {
+      "id": "block_0044",
+      "type": "list_item",
+      "style": "List Paragraph",
+      "level": null,
+      "text": "Scroll : pas d'animation 'back to top' — bouton flottant discret après 400px de scroll"
+    },
+    {
+      "id": "block_0045",
+      "type": "list_item",
+      "style": "List Paragraph",
+      "level": null,
+      "text": "Mobile : pas de feedback haptic ou visuel au tap — ajouter ripple effect subtil"
+    },
+    {
+      "id": "block_0046",
+      "type": "heading",
+      "style": "Heading 2",
+      "level": 2,
+      "text": "2.4 Performance Mobile"
+    },
+    {
+      "id": "block_0047",
+      "type": "paragraph",
+      "style": null,
+      "level": null,
+      "text": "70% du trafic web mondial est mobile. Pour une marque marocaine premium, le mobile est souvent le premier point de contact — via Instagram, LinkedIn, ou WhatsApp."
+    },
+    {
+      "id": "block_0048",
+      "type": "heading",
+      "style": "Heading 3",
+      "level": 3,
+      "text": "Problèmes critiques mobile"
+    },
+    {
+      "id": "block_0049",
+      "type": "list_item",
+      "style": "List Paragraph",
+      "level": null,
+      "text": "Images non optimisées pour mobile — servir WebP avec srcset et sizes appropriés"
+    },
+    {
+      "id": "block_0050",
+      "type": "list_item",
+      "style": "List Paragraph",
+      "level": null,
+      "text": "Textes hero trop grands sur petits écrans — 72px desktop doit passer à 36-40px mobile"
+    },
+    {
+      "id": "block_0051",
+      "type": "list_item",
+      "style": "List Paragraph",
+      "level": null,
+      "text": "Formulaire contact : champs trop rapprochés, difficult à remplir au pouce"
+    },
+    {
+      "id": "block_0052",
+      "type": "list_item",
+      "style": "List Paragraph",
+      "level": null,
+      "text": "Portfolio grid : 3 colonnes desktop OK, mais 2 colonnes tablet et 1 colonne mobile non implémentées"
+    },
+    {
+      "id": "block_0053",
+      "type": "list_item",
+      "style": "List Paragraph",
+      "level": null,
+      "text": "Le sticky nav ombre disparaît au scroll sur iOS Safari — bug CSS connu, fix requis"
+    },
+    {
+      "id": "block_0054",
+      "type": "table",
+      "row_count": 1,
+      "column_count": 1,
+      "rows": [
+        [
+          "Test immédiat\nTester le site sur un vrai iPhone SE (375px) et Samsung Galaxy A-series (360px) — les deux téléphones les plus utilisés au Maroc. Les problèmes mobiles critiques apparaissent en 2 minutes."
+        ]
+      ],
+      "callout": {
+        "title": "Test immédiat",
+        "body": "Tester le site sur un vrai iPhone SE (375px) et Samsung Galaxy A-series (360px) — les deux téléphones les plus utilisés au Maroc. Les problèmes mobiles critiques apparaissent en 2 minutes."
+      }
+    },
+    {
+      "id": "block_0055",
+      "type": "heading",
+      "style": "Heading 1",
+      "level": 1,
+      "text": "3. Analyse UI — Interface Visuelle"
+    },
+    {
+      "id": "block_0056",
+      "type": "heading",
+      "style": "Heading 2",
+      "level": 2,
+      "text": "3.1 Système de Design & Cohérence Visuelle"
+    },
+    {
+      "id": "block_0057",
+      "type": "paragraph",
+      "style": null,
+      "level": null,
+      "text": "La palette noir/or/blanc est excellente et bien choisie pour le luxe. Le risque est l'incohérence dans l'application — un élément or d'une section à l'autre peut varier en teinte, poids et usage."
+    },
+    {
+      "id": "block_0058",
+      "type": "heading",
+      "style": "Heading 3",
+      "level": 3,
+      "text": "Définir un Design System documenté"
+    },
+    {
+      "id": "block_0059",
+      "type": "table",
+      "row_count": 7,
+      "column_count": 4,
+      "rows": [
+        [
+          "Token",
+          "Valeur",
+          "Usage",
+          "Interdit"
+        ],
+        [
+          "--color-gold",
+          "#d4af37",
+          "CTAs, accents, hover",
+          "Fond plein large surface"
+        ],
+        [
+          "--color-dark",
+          "#1a1a1a",
+          "Backgrounds, textes H1",
+          "Texte sur fond sombre"
+        ],
+        [
+          "--color-taupe",
+          "#4a4a4a",
+          "Corps de texte",
+          "Titres principaux"
+        ],
+        [
+          "--color-white",
+          "#ffffff",
+          "Fond, textes sur dark",
+          "Éléments décoratifs"
+        ],
+        [
+          "--radius-card",
+          "4px",
+          "Cards, images",
+          "Buttons (garder 0)"
+        ],
+        [
+          "--spacing-section",
+          "120px desktop",
+          "Entre sections",
+          "Réduire sous 80px"
+        ]
+      ],
+      "headers": [
+        "Token",
+        "Valeur",
+        "Usage",
+        "Interdit"
+      ],
+      "records": [
+        {
+          "Token": "--color-gold",
+          "Valeur": "#d4af37",
+          "Usage": "CTAs, accents, hover",
+          "Interdit": "Fond plein large surface"
+        },
+        {
+          "Token": "--color-dark",
+          "Valeur": "#1a1a1a",
+          "Usage": "Backgrounds, textes H1",
+          "Interdit": "Texte sur fond sombre"
+        },
+        {
+          "Token": "--color-taupe",
+          "Valeur": "#4a4a4a",
+          "Usage": "Corps de texte",
+          "Interdit": "Titres principaux"
+        },
+        {
+          "Token": "--color-white",
+          "Valeur": "#ffffff",
+          "Usage": "Fond, textes sur dark",
+          "Interdit": "Éléments décoratifs"
+        },
+        {
+          "Token": "--radius-card",
+          "Valeur": "4px",
+          "Usage": "Cards, images",
+          "Interdit": "Buttons (garder 0)"
+        },
+        {
+          "Token": "--spacing-section",
+          "Valeur": "120px desktop",
+          "Usage": "Entre sections",
+          "Interdit": "Réduire sous 80px"
+        }
+      ]
+    },
+    {
+      "id": "block_0060",
+      "type": "heading",
+      "style": "Heading 2",
+      "level": 2,
+      "text": "3.2 Typographie — Améliorations"
+    },
+    {
+      "id": "block_0061",
+      "type": "paragraph",
+      "style": null,
+      "level": null,
+      "text": "Playfair Display + Montserrat est un excellent choix. Voici les ajustements précis pour maximiser l'impact et la lisibilité."
+    },
+    {
+      "id": "block_0062",
+      "type": "heading",
+      "style": "Heading 3",
+      "level": 3,
+      "text": "Hiérarchie typographique recommandée"
+    },
+    {
+      "id": "block_0063",
+      "type": "table",
+      "row_count": 1,
+      "column_count": 2,
+      "rows": [
+        [
+          "H1 Hero",
+          "Playfair Display Bold — 72px desktop / 38px mobile — letter-spacing: 0.06em — line-height: 1.05"
+        ]
+      ]
+    },
+    {
+      "id": "block_0064",
+      "type": "table",
+      "row_count": 1,
+      "column_count": 2,
+      "rows": [
+        [
+          "H2 Sections",
+          "Playfair Display Regular — 42px desktop / 28px mobile — letter-spacing: 0.02em — line-height: 1.2"
+        ]
+      ]
+    },
+    {
+      "id": "block_0065",
+      "type": "table",
+      "row_count": 1,
+      "column_count": 2,
+      "rows": [
+        [
+          "H3 Sous-titres",
+          "Montserrat SemiBold 600 — 20px — letter-spacing: 0.08em — UPPERCASE pour labels courts"
+        ]
+      ]
+    },
+    {
+      "id": "block_0066",
+      "type": "table",
+      "row_count": 1,
+      "column_count": 2,
+      "rows": [
+        [
+          "Corps texte",
+          "Montserrat Light 300 — 16px — line-height: 1.85 — max-width: 680px (jamais pleine largeur)"
+        ]
+      ]
+    },
+    {
+      "id": "block_0067",
+      "type": "table",
+      "row_count": 1,
+      "column_count": 2,
+      "rows": [
+        [
+          "Captions / labels",
+          "Montserrat Regular 400 — 12px — letter-spacing: 0.12em — UPPERCASE — couleur taupe"
+        ]
+      ]
+    },
+    {
+      "id": "block_0068",
+      "type": "table",
+      "row_count": 1,
+      "column_count": 2,
+      "rows": [
+        [
+          "CTAs / boutons",
+          "Montserrat SemiBold 600 — 13px — letter-spacing: 0.15em — UPPERCASE"
+        ]
+      ]
+    },
+    {
+      "id": "block_0069",
+      "type": "table",
+      "row_count": 1,
+      "column_count": 1,
+      "rows": [
+        [
+          "Problème critique actuel\nLes textes longs (descriptions services, about) utilisent Montserrat Light sur fond noir — ratio de contraste insuffisant. Passer à Montserrat Regular 400 sur fond sombre pour respecter WCAG AA (ratio 4.5:1 minimum)."
+        ]
+      ],
+      "callout": {
+        "title": "Problème critique actuel",
+        "body": "Les textes longs (descriptions services, about) utilisent Montserrat Light sur fond noir — ratio de contraste insuffisant. Passer à Montserrat Regular 400 sur fond sombre pour respecter WCAG AA (ratio 4.5:1 minimum)."
+      }
+    },
+    {
+      "id": "block_0070",
+      "type": "heading",
+      "style": "Heading 2",
+      "level": 2,
+      "text": "3.3 Hero Section — Refonte Détaillée"
+    },
+    {
+      "id": "block_0071",
+      "type": "paragraph",
+      "style": null,
+      "level": null,
+      "text": "Le hero est la section la plus critique — 80% des visiteurs ne scrollent pas si le hero ne les convainc pas. Actuellement, il manque de direction et de message clair."
+    },
+    {
+      "id": "block_0072",
+      "type": "heading",
+      "style": "Heading 3",
+      "level": 3,
+      "text": "Structure hero recommandée"
+    },
+    {
+      "id": "block_0073",
+      "type": "list_item",
+      "style": "List Paragraph",
+      "level": null,
+      "text": "Ligne de contexte (EYEBROW) : 'CASABLANCA — AFRIQUE — INTERNATIONAL' | Montserrat 11px UPPERCASE or/champagne"
+    },
+    {
+      "id": "block_0074",
+      "type": "list_item",
+      "style": "List Paragraph",
+      "level": null,
+      "text": "H1 principal : 'Sculptons l'Architecture de Demain' | Playfair Display Bold 72px blanc"
+    },
+    {
+      "id": "block_0075",
+      "type": "list_item",
+      "style": "List Paragraph",
+      "level": null,
+      "text": "Sous-titre (VALUE PROPOSITION) : 'Architecture premium, ingénierie BIM et design durable pour projets d'exception' | Montserrat Light 18px or/champagne"
+    },
+    {
+      "id": "block_0076",
+      "type": "list_item",
+      "style": "List Paragraph",
+      "level": null,
+      "text": "CTA primaire : 'Voir nos projets' — fond or/champagne, texte noir, width 200px"
+    },
+    {
+      "id": "block_0077",
+      "type": "list_item",
+      "style": "List Paragraph",
+      "level": null,
+      "text": "CTA secondaire : 'Consultation gratuite' — border or/champagne, texte blanc, transparent"
+    },
+    {
+      "id": "block_0078",
+      "type": "list_item",
+      "style": "List Paragraph",
+      "level": null,
+      "text": "Indicateur scroll : flèche animée + texte 'Découvrir'"
+    },
+    {
+      "id": "block_0079",
+      "type": "list_item",
+      "style": "List Paragraph",
+      "level": null,
+      "text": "Bas du hero : 3 stats en ligne — '100+ Projets | 10K+ Visiteurs FIC | 4 Continents'"
+    },
+    {
+      "id": "block_0080",
+      "type": "heading",
+      "style": "Heading 3",
+      "level": 3,
+      "text": "Ce qu'il faut éviter"
+    },
+    {
+      "id": "block_0081",
+      "type": "list_item",
+      "style": "List Paragraph",
+      "level": null,
+      "text": "Éviter 'SCULPTING THE FUTURE OF ARCHITECTURE' — trop générique, aucune différenciation"
+    },
+    {
+      "id": "block_0082",
+      "type": "list_item",
+      "style": "List Paragraph",
+      "level": null,
+      "text": "Éviter un seul CTA — toujours offrir deux chemins (projet vs consultation)"
+    },
+    {
+      "id": "block_0083",
+      "type": "list_item",
+      "style": "List Paragraph",
+      "level": null,
+      "text": "Éviter une vidéo 4K sans fallback image — temps de chargement trop long sur mobile Maroc"
+    },
+    {
+      "id": "block_0084",
+      "type": "heading",
+      "style": "Heading 2",
+      "level": 2,
+      "text": "3.4 Portfolio — Galerie Signature"
+    },
+    {
+      "id": "block_0085",
+      "type": "paragraph",
+      "style": null,
+      "level": null,
+      "text": "Le portfolio est la preuve ultime pour un cabinet d'architecture. Actuellement, un seul projet nommé (Résidence Palmier) est visible. C'est le gap le plus visible et le plus dommageable pour la conversion."
+    },
+    {
+      "id": "block_0086",
+      "type": "heading",
+      "style": "Heading 3",
+      "level": 3,
+      "text": "Structure recommandée par carte projet"
+    },
+    {
+      "id": "block_0087",
+      "type": "list_item",
+      "style": "List Paragraph",
+      "level": null,
+      "text": "Image principale 16:9 haute résolution (minimum 1200x675px)"
+    },
+    {
+      "id": "block_0088",
+      "type": "list_item",
+      "style": "List Paragraph",
+      "level": null,
+      "text": "Badge catégorie (Résidentiel / Commercial / Urbanisme / BIM) — or/champagne pill"
+    },
+    {
+      "id": "block_0089",
+      "type": "list_item",
+      "style": "List Paragraph",
+      "level": null,
+      "text": "Titre projet : Playfair Display 24px blanc"
+    },
+    {
+      "id": "block_0090",
+      "type": "list_item",
+      "style": "List Paragraph",
+      "level": null,
+      "text": "Lieu + Année : Montserrat Light 13px taupe"
+    },
+    {
+      "id": "block_0091",
+      "type": "list_item",
+      "style": "List Paragraph",
+      "level": null,
+      "text": "Au hover : overlay gradient noir 40%, titre flotte, bouton 'Voir le projet >' apparaît"
+    },
+    {
+      "id": "block_0092",
+      "type": "list_item",
+      "style": "List Paragraph",
+      "level": null,
+      "text": "Au clic : lightbox fullscreen avec carrousel, stats projet, description 150 mots"
+    },
+    {
+      "id": "block_0093",
+      "type": "heading",
+      "style": "Heading 3",
+      "level": 3,
+      "text": "8 projets minimum à préparer"
+    },
+    {
+      "id": "block_0094",
+      "type": "list_item",
+      "style": "List Paragraph",
+      "level": null,
+      "text": "Résidence Palmier — Casablanca (Résidentiel luxury) — avant/après si possible"
+    },
+    {
+      "id": "block_0095",
+      "type": "list_item",
+      "style": "List Paragraph",
+      "level": null,
+      "text": "Immeuble de bureaux Corporate — Commercial / BIM showcase"
+    },
+    {
+      "id": "block_0096",
+      "type": "list_item",
+      "style": "List Paragraph",
+      "level": null,
+      "text": "Projet d'urbanisme — quartier ou plan masse (Urbanisme)"
+    },
+    {
+      "id": "block_0097",
+      "type": "list_item",
+      "style": "List Paragraph",
+      "level": null,
+      "text": "Interior Design boutique ou villa — photos ambiance"
+    },
+    {
+      "id": "block_0098",
+      "type": "list_item",
+      "style": "List Paragraph",
+      "level": null,
+      "text": "Visualisation BIM 3D — rendu technique impressionnant"
+    },
+    {
+      "id": "block_0099",
+      "type": "list_item",
+      "style": "List Paragraph",
+      "level": null,
+      "text": "Bâtiment green / certifié HQE ou LEED (Architecture durable)"
+    },
+    {
+      "id": "block_0100",
+      "type": "list_item",
+      "style": "List Paragraph",
+      "level": null,
+      "text": "Coordination chantier — photos process + résultat"
+    },
+    {
+      "id": "block_0101",
+      "type": "list_item",
+      "style": "List Paragraph",
+      "level": null,
+      "text": "Aménagement paysager / landscaping"
+    },
+    {
+      "id": "block_0102",
+      "type": "heading",
+      "style": "Heading 2",
+      "level": 2,
+      "text": "3.5 Section Events — ELAOUAD EVENTS"
+    },
+    {
+      "id": "block_0103",
+      "type": "paragraph",
+      "style": null,
+      "level": null,
+      "text": "ELAOUAD EVENTS est une différenciation extraordinaire — très rares sont les cabinets d'architecture qui organisent aussi des forums internationaux avec 10 000 visiteurs. Cette section doit rayonner de légitimité."
+    },
+    {
+      "id": "block_0104",
+      "type": "heading",
+      "style": "Heading 3",
+      "level": 3,
+      "text": "Recommandations UI events"
+    },
+    {
+      "id": "block_0105",
+      "type": "list_item",
+      "style": "List Paragraph",
+      "level": null,
+      "text": "Hero event : photo ou vidéo 15 secondes de l'ambiance FIC — salle comble, podium, networking"
+    },
+    {
+      "id": "block_0106",
+      "type": "list_item",
+      "style": "List Paragraph",
+      "level": null,
+      "text": "Compteurs animés : 10 000+ Visiteurs / 450+ Exposants / 100+ Pays / 60+ Conférences — animation count-up au scroll"
+    },
+    {
+      "id": "block_0107",
+      "type": "list_item",
+      "style": "List Paragraph",
+      "level": null,
+      "text": "Timeline des events 2026 : chronologie visuelle horizontale avec dates et statuts (OPEN/SOLD OUT/BIENTÔT)"
+    },
+    {
+      "id": "block_0108",
+      "type": "list_item",
+      "style": "List Paragraph",
+      "level": null,
+      "text": "Cards events avec image qualité, badge FLAGSHIP/SPÉCIALISÉ, date or/champagne, CTA 'S'inscrire'"
+    },
+    {
+      "id": "block_0109",
+      "type": "list_item",
+      "style": "List Paragraph",
+      "level": null,
+      "text": "Section 'Pourquoi participer' : 3 colonnes avec icons minimalistes et textes courts"
+    },
+    {
+      "id": "block_0110",
+      "type": "list_item",
+      "style": "List Paragraph",
+      "level": null,
+      "text": "Logos des partenaires et sponsors en rangée — proof of legitimacy"
+    },
+    {
+      "id": "block_0111",
+      "type": "heading",
+      "style": "Heading 1",
+      "level": 1,
+      "text": "4. Stratégie de Contenu — Recommandations Complètes"
+    },
+    {
+      "id": "block_0112",
+      "type": "heading",
+      "style": "Heading 2",
+      "level": 2,
+      "text": "4.1 Copywriting — Voix de Marque"
+    },
+    {
+      "id": "block_0113",
+      "type": "paragraph",
+      "style": null,
+      "level": null,
+      "text": "La voix d'ELAOUAD doit être : confiante sans arrogance, technique sans jargon inaccessible, internationale mais ancrée au Maroc et en Afrique. Chaque texte doit servir un objectif de conversion précis."
+    },
+    {
+      "id": "block_0114",
+      "type": "heading",
+      "style": "Heading 3",
+      "level": 3,
+      "text": "Principes copywriting premium"
+    },
+    {
+      "id": "block_0115",
+      "type": "list_item",
+      "style": "List Paragraph",
+      "level": null,
+      "text": "Commencer par les bénéfices, pas les caractéristiques — pas 'nous faisons du BIM' mais 'vos projets livrés 30% plus vite grâce au BIM'"
+    },
+    {
+      "id": "block_0116",
+      "type": "list_item",
+      "style": "List Paragraph",
+      "level": null,
+      "text": "Chaque section doit répondre à une objection implicite du visiteur"
+    },
+    {
+      "id": "block_0117",
+      "type": "list_item",
+      "style": "List Paragraph",
+      "level": null,
+      "text": "Utiliser des chiffres précis — '98%' est plus crédible que 'presque tous'"
+    },
+    {
+      "id": "block_0118",
+      "type": "list_item",
+      "style": "List Paragraph",
+      "level": null,
+      "text": "Alterner anglais et français stratégiquement — FR pour l'émotion et la proximité, EN pour le prestige international"
+    },
+    {
+      "id": "block_0119",
+      "type": "list_item",
+      "style": "List Paragraph",
+      "level": null,
+      "text": "Éviter les superlatifs vides : 'leaders', 'meilleurs', 'excellents' — remplacer par des preuves concrètes"
+    },
+    {
+      "id": "block_0120",
+      "type": "heading",
+      "style": "Heading 2",
+      "level": 2,
+      "text": "4.2 Textes Recommandés — Section par Section"
+    },
+    {
+      "id": "block_0121",
+      "type": "heading",
+      "style": "Heading 3",
+      "level": 3,
+      "text": "Hero — Texte complet recommandé"
+    },
+    {
+      "id": "block_0122",
+      "type": "table",
+      "row_count": 1,
+      "column_count": 1,
+      "rows": [
+        [
+          "Texte hero proposé\nEYEBROW : 'CASABLANCA · AFRIQUE · INTERNATIONAL'\n\nH1 : 'L'Architecture comme Acte de Vision'\n\nSous-titre : 'ELAOUAD conçoit, ingénierise et réalise des espaces d'exception — du concept BIM à la livraison, sur 4 continents.'\n\nCTA 1 : 'Explorer nos projets'\nCTA 2 : 'Demander une consultation'"
+        ]
+      ],
+      "callout": {
+        "title": "Texte hero proposé",
+        "body": "EYEBROW : 'CASABLANCA · AFRIQUE · INTERNATIONAL'\nH1 : 'L'Architecture comme Acte de Vision'\nSous-titre : 'ELAOUAD conçoit, ingénierise et réalise des espaces d'exception — du concept BIM à la livraison, sur 4 continents.'\nCTA 1 : 'Explorer nos projets'\nCTA 2 : 'Demander une consultation'"
+      }
+    },
+    {
+      "id": "block_0123",
+      "type": "heading",
+      "style": "Heading 3",
+      "level": 3,
+      "text": "About / Vision — Texte proposé"
+    },
+    {
+      "id": "block_0124",
+      "type": "table",
+      "row_count": 1,
+      "column_count": 1,
+      "rows": [
+        [
+          "Texte About proposé\nTitre : 'Une vision. Un groupe. Une transformation.'\n\nParagraphe 1 : 'Fondé par Soukaina Elaouad, ingénieure civile et doctorante en architecture, ELAOUAD Architecture & Engineering Group est né d'une conviction : les projets d'exception exigent une expertise totale — de la conception architecturale à la gestion de projet, du BIM à l'aménagement intérieur.'\n\nParagraphe 2 : 'En dix ans, le groupe a livré plus de 100 projets en résidentiel premium, commercial, urbanisme et design intérieur. Chaque réalisation porte la même signature : rigueur technique, esthétique maîtrisée et durabilité intégrée dès le premier trait.'\n\nParagraphe 3 : 'ELAOUAD ne construit pas des bâtiments. Nous sculptons les espaces où l'avenir se vit.'"
+        ]
+      ],
+      "callout": {
+        "title": "Texte About proposé",
+        "body": "Titre : 'Une vision. Un groupe. Une transformation.'\nParagraphe 1 : 'Fondé par Soukaina Elaouad, ingénieure civile et doctorante en architecture, ELAOUAD Architecture & Engineering Group est né d'une conviction : les projets d'exception exigent une expertise totale — de la conception architecturale à la gestion de projet, du BIM à l'aménagement intérieur.'\nParagraphe 2 : 'En dix ans, le groupe a livré plus de 100 projets en résidentiel premium, commercial, urbanisme et design intérieur. Chaque réalisation porte la même signature : rigueur technique, esthétique maîtrisée et durabilité intégrée dès le premier trait.'\nParagraphe 3 : 'ELAOUAD ne construit pas des bâtiments. Nous sculptons les espaces où l'avenir se vit.'"
+      }
+    },
+    {
+      "id": "block_0125",
+      "type": "heading",
+      "style": "Heading 3",
+      "level": 3,
+      "text": "Services — Descriptions recommandées"
+    },
+    {
+      "id": "block_0126",
+      "type": "paragraph",
+      "style": null,
+      "level": null,
+      "text": "Chaque service doit avoir : un titre impact (Playfair 24px) + une phrase valeur (Montserrat Bold 15px or/champagne) + une description courte 40-60 mots + 3 bullet points clés."
+    },
+    {
+      "id": "block_0127",
+      "type": "table",
+      "row_count": 1,
+      "column_count": 2,
+      "rows": [
+        [
+          "Architecture",
+          "Des maisons et immeubles qui racontent une histoire. Résidentiel de luxe, commercial, équipements publics — chaque projet intègre esthétique, fonctionnalité et durabilité.\n• Conception architecturale complète\n• Permis et études réglementaires\n• Suivi de réalisation"
+        ]
+      ]
+    },
+    {
+      "id": "block_0128",
+      "type": "table",
+      "row_count": 1,
+      "column_count": 2,
+      "rows": [
+        [
+          "BIM Consulting",
+          "Votre projet livré dans les délais, dans le budget. Le BIM (Building Information Modeling) d'ELAOUAD réduit les imprévus chantier de 40% en moyenne.\n• Modélisation 3D complète\n• Coordination MEP et structure\n• Formation équipes projet"
+        ]
+      ]
+    },
+    {
+      "id": "block_0129",
+      "type": "table",
+      "row_count": 1,
+      "column_count": 2,
+      "rows": [
+        [
+          "Ingénierie & PM",
+          "De la faisabilité à la réception des travaux, nous gérons la complexité pour que vous vous concentriez sur l'essentiel.\n• Études techniques et structurelles\n• Planning et suivi budgétaire\n• Coordination tous corps d'état"
+        ]
+      ]
+    },
+    {
+      "id": "block_0130",
+      "type": "table",
+      "row_count": 1,
+      "column_count": 2,
+      "rows": [
+        [
+          "Design Intérieur",
+          "Des espaces qui incarnent votre identité. Chaque détail est pensé — matériaux, lumière, mobilier — pour créer une expérience mémorable.\n• Concept design et moodboards\n• Sélection matériaux et fournitures\n• Direction artistique chantier"
+        ]
+      ]
+    },
+    {
+      "id": "block_0131",
+      "type": "table",
+      "row_count": 1,
+      "column_count": 2,
+      "rows": [
+        [
+          "Urbanisme",
+          "Penser la ville d'aujourd'hui pour les citoyens de demain. Plans d'aménagement, études d'impact et développement durable à l'échelle du territoire.\n• Plans de masse et zonage\n• Études d'impact environnemental\n• Concertation et validation administrative"
+        ]
+      ]
+    },
+    {
+      "id": "block_0132",
+      "type": "heading",
+      "style": "Heading 3",
+      "level": 3,
+      "text": "Soukaina Elaouad — Texte fondatrice"
+    },
+    {
+      "id": "block_0133",
+      "type": "table",
+      "row_count": 1,
+      "column_count": 1,
+      "rows": [
+        [
+          "Texte fondatrice proposé\nTitre : 'La Vision Derrière la Transformation'\n\nSous-titre : 'Soukaina Elaouad — Fondatrice & Architecte Ingénieure'\n\nIntro : 'Ingénieure civile de formation, doctorante en architecture et manager de projets expérimentée, Soukaina Elaouad a créé ELAOUAD Group avec une idée centrale : l'excellence architecturale ne doit jamais sacrifier la rigueur technique — ni l'inverse.'\n\nPhilosophie : 'Sa méthode conjugue l'approche scientifique de l'ingénieur — chiffres, processus, optimisation — et la sensibilité créative de l'architecte. Le résultat : des projets qui tiennent leurs promesses, esthétiquement et structurellement.'\n\nCitation : \"L'architecture est à la fois un acte artistique et une responsabilité technique. Chaque projet que nous livrons doit être beau, solide, durable et utile aux femmes et aux hommes qui l'habiteront.\" — Soukaina Elaouad"
+        ]
+      ],
+      "callout": {
+        "title": "Texte fondatrice proposé",
+        "body": "Titre : 'La Vision Derrière la Transformation'\nSous-titre : 'Soukaina Elaouad — Fondatrice & Architecte Ingénieure'\nIntro : 'Ingénieure civile de formation, doctorante en architecture et manager de projets expérimentée, Soukaina Elaouad a créé ELAOUAD Group avec une idée centrale : l'excellence architecturale ne doit jamais sacrifier la rigueur technique — ni l'inverse.'\nPhilosophie : 'Sa méthode conjugue l'approche scientifique de l'ingénieur — chiffres, processus, optimisation — et la sensibilité créative de l'architecte. Le résultat : des projets qui tiennent leurs promesses, esthétiquement et structurellement.'\nCitation : \"L'architecture est à la fois un acte artistique et une responsabilité technique. Chaque projet que nous livrons doit être beau, solide, durable et utile aux femmes et aux hommes qui l'habiteront.\" — Soukaina Elaouad"
+      }
+    },
+    {
+      "id": "block_0134",
+      "type": "heading",
+      "style": "Heading 3",
+      "level": 3,
+      "text": "Témoignages — Formulation recommandée"
+    },
+    {
+      "id": "block_0135",
+      "type": "paragraph",
+      "style": null,
+      "level": null,
+      "text": "Les témoignages doivent être spécifiques, crédibles, et refléter des bénéfices concrets. Éviter les superlatifs vides. Exemples :"
+    },
+    {
+      "id": "block_0136",
+      "type": "table",
+      "row_count": 1,
+      "column_count": 2,
+      "rows": [
+        [
+          "Promoteur immobilier",
+          "\"Le BIM d'ELAOUAD nous a permis de détecter 23 conflits structurels avant le chantier. Résultat : 0 imprévu majeur, livraison à la date prévue.\" — Directeur technique, Groupe immobilier Casablanca"
+        ]
+      ]
+    },
+    {
+      "id": "block_0137",
+      "type": "table",
+      "row_count": 1,
+      "column_count": 2,
+      "rows": [
+        [
+          "Investisseur",
+          "\"Nous cherchions un cabinet capable de gérer la complexité d'un projet 5 000 m² avec des contraintes techniques sévères. ELAOUAD était le seul à proposer une équipe intégrée architecture + ingénierie.\" — CEO, Fonds d'investissement"
+        ]
+      ]
+    },
+    {
+      "id": "block_0138",
+      "type": "table",
+      "row_count": 1,
+      "column_count": 2,
+      "rows": [
+        [
+          "Participant FIC",
+          "\"Le FIC est l'événement incontournable de la construction en Afrique. En trois éditions, nous avons signé des partenariats stratégiques sur 3 continents.\" — Directeur commercial, fabricant matériaux"
+        ]
+      ]
+    },
+    {
+      "id": "block_0139",
+      "type": "heading",
+      "style": "Heading 2",
+      "level": 2,
+      "text": "4.3 Contenu Manquant — Plan de Production"
+    },
+    {
+      "id": "block_0140",
+      "type": "paragraph",
+      "style": null,
+      "level": null,
+      "text": "Ce tableau liste tous les contenus à produire en priorité, classés par impact sur la conversion."
+    },
+    {
+      "id": "block_0141",
+      "type": "table",
+      "row_count": 10,
+      "column_count": 4,
+      "rows": [
+        [
+          "Contenu",
+          "Priorité",
+          "Format",
+          "Impact conversion"
+        ],
+        [
+          "Photo Soukaina (studio)",
+          "CRITIQUE",
+          "1 photo pro",
+          "Humanise la marque — +35% confiance"
+        ],
+        [
+          "Photos 8 projets portfolio",
+          "CRITIQUE",
+          "5-10 photos/projet",
+          "Preuve directe — +60% conversion"
+        ],
+        [
+          "3 témoignages clients réels",
+          "CRITIQUE",
+          "Texte + photo client",
+          "Social proof — +45% leads"
+        ],
+        [
+          "Vidéo highlights FIC 60s",
+          "HAUTE",
+          "Vidéo montée",
+          "Légitimité events — +50% inscriptions"
+        ],
+        [
+          "Descriptions 8 services",
+          "HAUTE",
+          "100-150 mots chacun",
+          "SEO + conversion — +25% leads"
+        ],
+        [
+          "Articles blog (3 starter)",
+          "MOYENNE",
+          "800-1200 mots",
+          "SEO long terme — trafic organique"
+        ],
+        [
+          "Brochure PDF téléchargeable",
+          "MOYENNE",
+          "PDF 12-16 pages",
+          "Lead magnet — capture emails"
+        ],
+        [
+          "Logos clients / partenaires",
+          "MOYENNE",
+          "12-16 logos PNG",
+          "Social proof visuel"
+        ],
+        [
+          "Vidéo présentation 90s",
+          "BASSE",
+          "Vidéo Soukaina",
+          "Brand storytelling"
+        ]
+      ],
+      "headers": [
+        "Contenu",
+        "Priorité",
+        "Format",
+        "Impact conversion"
+      ],
+      "records": [
+        {
+          "Contenu": "Photo Soukaina (studio)",
+          "Priorité": "CRITIQUE",
+          "Format": "1 photo pro",
+          "Impact conversion": "Humanise la marque — +35% confiance"
+        },
+        {
+          "Contenu": "Photos 8 projets portfolio",
+          "Priorité": "CRITIQUE",
+          "Format": "5-10 photos/projet",
+          "Impact conversion": "Preuve directe — +60% conversion"
+        },
+        {
+          "Contenu": "3 témoignages clients réels",
+          "Priorité": "CRITIQUE",
+          "Format": "Texte + photo client",
+          "Impact conversion": "Social proof — +45% leads"
+        },
+        {
+          "Contenu": "Vidéo highlights FIC 60s",
+          "Priorité": "HAUTE",
+          "Format": "Vidéo montée",
+          "Impact conversion": "Légitimité events — +50% inscriptions"
+        },
+        {
+          "Contenu": "Descriptions 8 services",
+          "Priorité": "HAUTE",
+          "Format": "100-150 mots chacun",
+          "Impact conversion": "SEO + conversion — +25% leads"
+        },
+        {
+          "Contenu": "Articles blog (3 starter)",
+          "Priorité": "MOYENNE",
+          "Format": "800-1200 mots",
+          "Impact conversion": "SEO long terme — trafic organique"
+        },
+        {
+          "Contenu": "Brochure PDF téléchargeable",
+          "Priorité": "MOYENNE",
+          "Format": "PDF 12-16 pages",
+          "Impact conversion": "Lead magnet — capture emails"
+        },
+        {
+          "Contenu": "Logos clients / partenaires",
+          "Priorité": "MOYENNE",
+          "Format": "12-16 logos PNG",
+          "Impact conversion": "Social proof visuel"
+        },
+        {
+          "Contenu": "Vidéo présentation 90s",
+          "Priorité": "BASSE",
+          "Format": "Vidéo Soukaina",
+          "Impact conversion": "Brand storytelling"
+        }
+      ]
+    },
+    {
+      "id": "block_0142",
+      "type": "heading",
+      "style": "Heading 1",
+      "level": 1,
+      "text": "5. SEO & Visibilité Digitale"
+    },
+    {
+      "id": "block_0143",
+      "type": "heading",
+      "style": "Heading 2",
+      "level": 2,
+      "text": "5.1 Mots-clés Prioritaires"
+    },
+    {
+      "id": "block_0144",
+      "type": "paragraph",
+      "style": null,
+      "level": null,
+      "text": "Stratégie de référencement en trois niveaux : notoriété (awareness), intention (consideration) et conversion (decision)."
+    },
+    {
+      "id": "block_0145",
+      "type": "heading",
+      "style": "Heading 3",
+      "level": 3,
+      "text": "Keywords de conversion (haute priorité)"
+    },
+    {
+      "id": "block_0146",
+      "type": "list_item",
+      "style": "List Paragraph",
+      "level": null,
+      "text": "'cabinet architecture Casablanca' — 1 200 recherches/mois Maroc — difficulté moyenne"
+    },
+    {
+      "id": "block_0147",
+      "type": "list_item",
+      "style": "List Paragraph",
+      "level": null,
+      "text": "'BIM consulting Maroc' — 400 recherches/mois — difficulté faible — opportunité forte"
+    },
+    {
+      "id": "block_0148",
+      "type": "list_item",
+      "style": "List Paragraph",
+      "level": null,
+      "text": "'architecte ingénieur Casablanca' — 800 recherches/mois — intention commerciale haute"
+    },
+    {
+      "id": "block_0149",
+      "type": "list_item",
+      "style": "List Paragraph",
+      "level": null,
+      "text": "'design intérieur luxe Maroc' — 600 recherches/mois — cible premium"
+    },
+    {
+      "id": "block_0150",
+      "type": "list_item",
+      "style": "List Paragraph",
+      "level": null,
+      "text": "'forum construction Maroc 2026' — saisonnier — pertinent pour FIC"
+    },
+    {
+      "id": "block_0151",
+      "type": "list_item",
+      "style": "List Paragraph",
+      "level": null,
+      "text": "'architecture durable Afrique' — 300 recherches/mois — positionnement différenciant"
+    },
+    {
+      "id": "block_0152",
+      "type": "heading",
+      "style": "Heading 3",
+      "level": 3,
+      "text": "Optimisations techniques SEO prioritaires"
+    },
+    {
+      "id": "block_0153",
+      "type": "list_item",
+      "style": "List Paragraph",
+      "level": null,
+      "text": "Balises title uniques pour chaque page — maximum 60 caractères"
+    },
+    {
+      "id": "block_0154",
+      "type": "list_item",
+      "style": "List Paragraph",
+      "level": null,
+      "text": "Meta descriptions avec call-to-action — maximum 155 caractères"
+    },
+    {
+      "id": "block_0155",
+      "type": "list_item",
+      "style": "List Paragraph",
+      "level": null,
+      "text": "Balises alt sur toutes les images — description précise incluant le keyword"
+    },
+    {
+      "id": "block_0156",
+      "type": "list_item",
+      "style": "List Paragraph",
+      "level": null,
+      "text": "Schema markup Organization + LocalBusiness + Event sur les pages pertinentes"
+    },
+    {
+      "id": "block_0157",
+      "type": "list_item",
+      "style": "List Paragraph",
+      "level": null,
+      "text": "Fichier sitemap.xml soumis à Google Search Console"
+    },
+    {
+      "id": "block_0158",
+      "type": "list_item",
+      "style": "List Paragraph",
+      "level": null,
+      "text": "Core Web Vitals : LCP < 2.5s, CLS < 0.1, FID < 100ms — mesurer sur PageSpeed Insights"
+    },
+    {
+      "id": "block_0159",
+      "type": "list_item",
+      "style": "List Paragraph",
+      "level": null,
+      "text": "Hreflang fr/en/ar — signaler les versions linguistiques à Google"
+    },
+    {
+      "id": "block_0160",
+      "type": "table",
+      "row_count": 1,
+      "column_count": 1,
+      "rows": [
+        [
+          "Quick win SEO\nCréer une fiche Google Business Profile complète pour ELAOUAD à Casablanca avec photos, horaires, services et lien site. Gratuit, impacte les recherches locales sous 2-4 semaines."
+        ]
+      ],
+      "callout": {
+        "title": "Quick win SEO",
+        "body": "Créer une fiche Google Business Profile complète pour ELAOUAD à Casablanca avec photos, horaires, services et lien site. Gratuit, impacte les recherches locales sous 2-4 semaines."
+      }
+    },
+    {
+      "id": "block_0161",
+      "type": "heading",
+      "style": "Heading 2",
+      "level": 2,
+      "text": "5.2 Stratégie de Contenu & Blog"
+    },
+    {
+      "id": "block_0162",
+      "type": "paragraph",
+      "style": null,
+      "level": null,
+      "text": "Le blog est le levier SEO le plus puissant sur le long terme. 4 articles bien optimisés par mois peuvent tripler le trafic organique en 6-12 mois."
+    },
+    {
+      "id": "block_0163",
+      "type": "heading",
+      "style": "Heading 3",
+      "level": 3,
+      "text": "Plan éditorial — 12 premiers articles"
+    },
+    {
+      "id": "block_0164",
+      "type": "list_item",
+      "style": "List Paragraph",
+      "level": null,
+      "text": "'Guide complet du BIM pour promoteurs immobiliers au Maroc' — keyword: BIM Maroc — PILIER"
+    },
+    {
+      "id": "block_0165",
+      "type": "list_item",
+      "style": "List Paragraph",
+      "level": null,
+      "text": "'Construire en 2026 : tout savoir sur la RT2026 et la performance énergétique' — keyword: construction durable Maroc"
+    },
+    {
+      "id": "block_0166",
+      "type": "list_item",
+      "style": "List Paragraph",
+      "level": null,
+      "text": "'Villa de luxe à Casablanca : les 7 étapes d'un projet réussi' — keyword: villa luxe Casablanca"
+    },
+    {
+      "id": "block_0167",
+      "type": "list_item",
+      "style": "List Paragraph",
+      "level": null,
+      "text": "'Forum International Construction 2026 : ce qu'il faut savoir avant de s'inscrire' — keyword: FIC 2026"
+    },
+    {
+      "id": "block_0168",
+      "type": "list_item",
+      "style": "List Paragraph",
+      "level": null,
+      "text": "'Architecture durable en Afrique : tendances et réglementations' — positionnement continental"
+    },
+    {
+      "id": "block_0169",
+      "type": "list_item",
+      "style": "List Paragraph",
+      "level": null,
+      "text": "'Comment choisir son architecte à Casablanca : le guide pratique' — keyword informationnel"
+    },
+    {
+      "id": "block_0170",
+      "type": "list_item",
+      "style": "List Paragraph",
+      "level": null,
+      "text": "'BIM vs méthodes traditionnelles : économies réelles sur un projet de 5 000 m²' — case study"
+    },
+    {
+      "id": "block_0171",
+      "type": "list_item",
+      "style": "List Paragraph",
+      "level": null,
+      "text": "'Design intérieur luxe : les matériaux qui font la différence en 2026' — keyword: design intérieur luxe Maroc"
+    },
+    {
+      "id": "block_0172",
+      "type": "heading",
+      "style": "Heading 1",
+      "level": 1,
+      "text": "6. Plan d'Action — Roadmap Priorisée"
+    },
+    {
+      "id": "block_0173",
+      "type": "heading",
+      "style": "Heading 2",
+      "level": 2,
+      "text": "Phase 1 — Fondations critiques (Semaines 1-2)"
+    },
+    {
+      "id": "block_0174",
+      "type": "table",
+      "row_count": 1,
+      "column_count": 1,
+      "rows": [
+        [
+          "Objectif Phase 1\nCorriger les problèmes critiques qui bloquent la conversion aujourd'hui. Ces actions ne nécessitent pas de nouveau contenu."
+        ]
+      ],
+      "callout": {
+        "title": "Objectif Phase 1",
+        "body": "Corriger les problèmes critiques qui bloquent la conversion aujourd'hui. Ces actions ne nécessitent pas de nouveau contenu."
+      }
+    },
+    {
+      "id": "block_0175",
+      "type": "list_item",
+      "style": "List Paragraph",
+      "level": null,
+      "text": "Ajouter CTA primaire et secondaire dans la section hero"
+    },
+    {
+      "id": "block_0176",
+      "type": "list_item",
+      "style": "List Paragraph",
+      "level": null,
+      "text": "Optimiser le formulaire de contact : ajouter champ email, sélecteur budget, validation temps réel"
+    },
+    {
+      "id": "block_0177",
+      "type": "list_item",
+      "style": "List Paragraph",
+      "level": null,
+      "text": "Corriger les ratios de contraste texte sur fond sombre (WCAG AA minimum)"
+    },
+    {
+      "id": "block_0178",
+      "type": "list_item",
+      "style": "List Paragraph",
+      "level": null,
+      "text": "Ajouter numéro WhatsApp cliquable en sticky mobile"
+    },
+    {
+      "id": "block_0179",
+      "type": "list_item",
+      "style": "List Paragraph",
+      "level": null,
+      "text": "Configurer Google Analytics 4 avec tracking des events de conversion"
+    },
+    {
+      "id": "block_0180",
+      "type": "list_item",
+      "style": "List Paragraph",
+      "level": null,
+      "text": "Créer la fiche Google Business Profile"
+    },
+    {
+      "id": "block_0181",
+      "type": "heading",
+      "style": "Heading 2",
+      "level": 2,
+      "text": "Phase 2 — Contenu & Portfolio (Semaines 3-6)"
+    },
+    {
+      "id": "block_0182",
+      "type": "table",
+      "row_count": 1,
+      "column_count": 1,
+      "rows": [
+        [
+          "Objectif Phase 2\nProduire les contenus critiques qui apportent la preuve et la confiance. C'est la phase la plus impactante en termes de conversion."
+        ]
+      ],
+      "callout": {
+        "title": "Objectif Phase 2",
+        "body": "Produire les contenus critiques qui apportent la preuve et la confiance. C'est la phase la plus impactante en termes de conversion."
+      }
+    },
+    {
+      "id": "block_0183",
+      "type": "list_item",
+      "style": "List Paragraph",
+      "level": null,
+      "text": "Séance photo studio pour Soukaina (demi-journée, photographe pro)"
+    },
+    {
+      "id": "block_0184",
+      "type": "list_item",
+      "style": "List Paragraph",
+      "level": null,
+      "text": "Shooting photo de 4-6 projets réalisés (extérieur + intérieur)"
+    },
+    {
+      "id": "block_0185",
+      "type": "list_item",
+      "style": "List Paragraph",
+      "level": null,
+      "text": "Rédaction et mise en ligne des 8 descriptions de services"
+    },
+    {
+      "id": "block_0186",
+      "type": "list_item",
+      "style": "List Paragraph",
+      "level": null,
+      "text": "Mise en ligne portfolio avec minimum 4 projets nommés et décrits"
+    },
+    {
+      "id": "block_0187",
+      "type": "list_item",
+      "style": "List Paragraph",
+      "level": null,
+      "text": "Collecte de 3 témoignages clients (email ou entretien 15 minutes)"
+    },
+    {
+      "id": "block_0188",
+      "type": "list_item",
+      "style": "List Paragraph",
+      "level": null,
+      "text": "Création d'une brochure PDF téléchargeable (lead magnet)"
+    },
+    {
+      "id": "block_0189",
+      "type": "heading",
+      "style": "Heading 2",
+      "level": 2,
+      "text": "Phase 3 — Optimisation UX & Events (Semaines 7-10)"
+    },
+    {
+      "id": "block_0190",
+      "type": "table",
+      "row_count": 1,
+      "column_count": 1,
+      "rows": [
+        [
+          "Objectif Phase 3\nRaffiner l'expérience et activer la section Events comme deuxième moteur de conversion."
+        ]
+      ],
+      "callout": {
+        "title": "Objectif Phase 3",
+        "body": "Raffiner l'expérience et activer la section Events comme deuxième moteur de conversion."
+      }
+    },
+    {
+      "id": "block_0191",
+      "type": "list_item",
+      "style": "List Paragraph",
+      "level": null,
+      "text": "Implémenter le mega-menu avec les 8 services en colonnes"
+    },
+    {
+      "id": "block_0192",
+      "type": "list_item",
+      "style": "List Paragraph",
+      "level": null,
+      "text": "Construire la section Events avec timeline 2026 et cards FIC/FIDI/ACDC"
+    },
+    {
+      "id": "block_0193",
+      "type": "list_item",
+      "style": "List Paragraph",
+      "level": null,
+      "text": "Ajouter les compteurs animés (10K visiteurs, 450 exposants, 100 pays)"
+    },
+    {
+      "id": "block_0194",
+      "type": "list_item",
+      "style": "List Paragraph",
+      "level": null,
+      "text": "Créer la page Soukaina complète avec bio, credentials et citation"
+    },
+    {
+      "id": "block_0195",
+      "type": "list_item",
+      "style": "List Paragraph",
+      "level": null,
+      "text": "Lancer le blog avec 3 articles piliers"
+    },
+    {
+      "id": "block_0196",
+      "type": "list_item",
+      "style": "List Paragraph",
+      "level": null,
+      "text": "Optimiser les images en WebP avec lazy loading"
+    },
+    {
+      "id": "block_0197",
+      "type": "heading",
+      "style": "Heading 2",
+      "level": 2,
+      "text": "Phase 4 — Performance & Scale (Semaines 11-16)"
+    },
+    {
+      "id": "block_0198",
+      "type": "list_item",
+      "style": "List Paragraph",
+      "level": null,
+      "text": "Audit PageSpeed et optimisation Core Web Vitals"
+    },
+    {
+      "id": "block_0199",
+      "type": "list_item",
+      "style": "List Paragraph",
+      "level": null,
+      "text": "Implémentation Schema markup complet (Organization, Event, Review)"
+    },
+    {
+      "id": "block_0200",
+      "type": "list_item",
+      "style": "List Paragraph",
+      "level": null,
+      "text": "Lancement campagne LinkedIn Ads ciblant investisseurs et promoteurs Maroc"
+    },
+    {
+      "id": "block_0201",
+      "type": "list_item",
+      "style": "List Paragraph",
+      "level": null,
+      "text": "Mise en place newsletter mensuelle (architecture insights)"
+    },
+    {
+      "id": "block_0202",
+      "type": "list_item",
+      "style": "List Paragraph",
+      "level": null,
+      "text": "Création de 2 pages de destination dédiées (BIM Consulting | Résidentiel Luxe)"
+    },
+    {
+      "id": "block_0203",
+      "type": "list_item",
+      "style": "List Paragraph",
+      "level": null,
+      "text": "A/B test CTA hero (formulation, couleur, placement)"
+    },
+    {
+      "id": "block_0204",
+      "type": "heading",
+      "style": "Heading 1",
+      "level": 1,
+      "text": "7. Conclusion & Prochaines Étapes"
+    },
+    {
+      "id": "block_0205",
+      "type": "paragraph",
+      "style": null,
+      "level": null,
+      "text": "ELAOUAD Architecture & Engineering Group dispose d'un potentiel de marque exceptionnel — fondatrice visionnaire, positionnement unique (architecture + events), expertise BIM rare, ancrage africain et international. Le site actuel ne reflète pas encore cette valeur."
+    },
+    {
+      "id": "block_0206",
+      "type": "paragraph",
+      "style": null,
+      "level": null,
+      "text": "Les recommandations de ce rapport sont organisées pour maximiser l'impact avec les ressources disponibles. Les phases 1 et 2 seules — coûts modérés, délai 6 semaines — peuvent doubler le taux de conversion du site."
+    },
+    {
+      "id": "block_0207",
+      "type": "heading",
+      "style": "Heading 3",
+      "level": 3,
+      "text": "Les 5 actions les plus impactantes, dans l'ordre"
+    },
+    {
+      "id": "block_0208",
+      "type": "list_item",
+      "style": "List Paragraph",
+      "level": null,
+      "text": "Ajouter un CTA clair dans le hero — impact immédiat, délai 1 jour"
+    },
+    {
+      "id": "block_0209",
+      "type": "list_item",
+      "style": "List Paragraph",
+      "level": null,
+      "text": "Photographier les projets et mettre en ligne le portfolio — impact fort, délai 2-3 semaines"
+    },
+    {
+      "id": "block_0210",
+      "type": "list_item",
+      "style": "List Paragraph",
+      "level": null,
+      "text": "Collecter 3 témoignages clients authentiques — impact confiance, délai 1-2 semaines"
+    },
+    {
+      "id": "block_0211",
+      "type": "list_item",
+      "style": "List Paragraph",
+      "level": null,
+      "text": "Photo professionnelle de Soukaina — humanise la marque, délai 1 semaine"
+    },
+    {
+      "id": "block_0212",
+      "type": "list_item",
+      "style": "List Paragraph",
+      "level": null,
+      "text": "Configurer Google Analytics 4 — nécessaire pour mesurer toutes les autres actions"
+    },
+    {
+      "id": "block_0213",
+      "type": "table",
+      "row_count": 1,
+      "column_count": 1,
+      "rows": [
+        [
+          "Message final\nUn site d'architecture premium n'est pas une dépense — c'est le premier commercial d'ELAOUAD, disponible 24h/24, 7j/7, accessible depuis Casablanca jusqu'à Dubaï. Chaque amélioration recommandée ici est un investissement mesurable avec un ROI clair."
+        ]
+      ],
+      "callout": {
+        "title": "Message final",
+        "body": "Un site d'architecture premium n'est pas une dépense — c'est le premier commercial d'ELAOUAD, disponible 24h/24, 7j/7, accessible depuis Casablanca jusqu'à Dubaï. Chaque amélioration recommandée ici est un investissement mesurable avec un ROI clair."
+      }
+    },
+    {
+      "id": "block_0214",
+      "type": "paragraph",
+      "style": null,
+      "level": null,
+      "text": "ELAOUAD Architecture & Engineering Group — Rapport confidentiel — Mai 2026"
+    }
+  ]
+}

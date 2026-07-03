@@ -1,0 +1,184 @@
+{
+  "Hero": {
+    "location": "CASABLANQUE · AFRICA · INTERNATIONAL",
+    "titleLine1": "Architecture",
+    "titleLine2": "as an act",
+    "titleLine3": "of vision.",
+    "description": "ELAOUAD conceives, engineers and realizes exceptional spaces — from BIM concept to delivery, across 4 continents.",
+    "primaryCta": "Explore our projects",
+    "secondaryCta": "Request a consultation",
+    "projectsStat": "Projects",
+    "visitorsStat": "FIC visitors",
+    "continentsStat": "Continents",
+    "scroll": "Scroll to explore"
+  },
+  "Blueprint": {
+    "label": "From Vision to Structure",
+    "title": "Each line becomes matter.",
+    "description": "Each intention becomes space.",
+    "backgroundWord": "STRUCTURE",
+    "planNote": "Preliminary conceptual plan",
+    "steps": [
+      "Context and program analysis",
+      "Sketches and volumetric research",
+      "Project development",
+      "Permits and regulatory studies",
+      "Execution package",
+      "Construction supervision"
+    ]
+  },
+  "Manifesto": {
+    "label": "Our philosophy",
+    "backgroundWord": "MATTER",
+    "lines": [
+      "We do not construct buildings.",
+      "We carve intentions into stone."
+    ],
+    "subtitle": "Each project embodies our commitment to technical excellence and enduring beauty."
+  },
+  "Services": {
+    "label": "Our expertise",
+    "title": "Complete solutions for every phase of your project",
+    "subtitle": "From initial concept to final realization, we master all disciplines of contemporary architecture.",
+    "explore": "See details",
+    "01": {
+      "title": "Architecture",
+      "value": "Design with light, build with matter.",
+      "description": "Complete architectural design for residential, commercial, and public projects, with precise attention to context, light, and use.",
+      "bullets": [
+        "Architectural design",
+        "Permits and regulatory studies",
+        "Architectural supervision"
+      ]
+    },
+    "02": {
+      "title": "BIM Consulting",
+      "value": "Predictive engineering in service of precision.",
+      "description": "Intelligent modeling, spatial coordination, and data management to anticipate conflicts before construction.",
+      "bullets": [
+        "BIM digital model",
+        "MEP and structural coordination",
+        "Building data management"
+      ]
+    },
+    "03": {
+      "title": "Engineering & Project Management",
+      "value": "From sketch to handover, complete control.",
+      "description": "Technical leadership, cost control, scheduling coordination, and execution monitoring to protect time, budget, and quality.",
+      "bullets": [
+        "Technical studies",
+        "Planning and coordination",
+        "Construction economics"
+      ]
+    },
+    "04": {
+      "title": "Interior Design",
+      "value": "Spatial experience refined to the detail.",
+      "description": "Materials, light, furniture, and atmosphere are designed as a natural continuation of the architecture.",
+      "bullets": [
+        "Concept design",
+        "Material selection",
+        "Bespoke furniture"
+      ]
+    },
+    "05": {
+      "title": "Urban Planning",
+      "value": "Designing tomorrow's city at territorial scale.",
+      "description": "Masterplans, impact studies, and urban strategies for sustainable, legible, and lively districts.",
+      "bullets": [
+        "Masterplanning",
+        "Urban design",
+        "Impact studies"
+      ]
+    }
+  },
+  "Projets": {
+    "label": "Our portfolio",
+    "title": "Selected projects",
+    "description": "An overview of our work across different typologies and contexts.",
+    "viewAll": "See all projects",
+    "viewProject": "See project",
+    "filtersLabel": "Filter by category",
+    "all": "All"
+  },
+  "Apropos": {
+    "label": "About",
+    "founderLines": [
+      "Soukaina Elaouad",
+      "Founder & Architect Engineer"
+    ],
+    "role": "Founder & Architect Engineer",
+    "quote": "Architecture is both an artistic act and a technical responsibility. Every project we deliver must be beautiful, solid, durable and useful.",
+    "description": "With over 15 years of experience in prestigious projects across Africa and Europe, Soukaina Elaouad leads ELAOUAD with a vision that combines technical precision and artistic sensitivity.",
+    "cred1": "Graduate of the National School of Architecture",
+    "cred2": "Expert in BIM and sustainable design",
+    "cred3": "Member of the Moroccan Order of Architects"
+  },
+  "Events": {
+    "label": "Events",
+    "headlineLines": [
+      "ELAOUAD",
+      "EVENTS"
+    ],
+    "event": "International Interior Design Forum",
+    "date": "December 3 - 5, 2026",
+    "location": "Casablanca, Morocco",
+    "whyTitle": "Why participate?",
+    "cta": "Learn more",
+    "exhibitorCta": "Become an exhibitor",
+    "partnerCta": "Request partnership dossier",
+    "viewAll": "See all events",
+    "timeline": [
+      "Day 1: Trends and innovations",
+      "Day 2: Technical workshops",
+      "Day 3: Business networking"
+    ],
+    "whyItems": [
+      "Access to latest international trends",
+      "Networking with industry professionals",
+      "Practical workshops and specialized conferences",
+      "Exclusive business opportunities"
+    ]
+  },
+  "Testimonials": {
+    "label": "Testimonials",
+    "previous": "Previous",
+    "next": "Next",
+    "goTo": "Go to testimonial {number}"
+  },
+  "CallToAction": {
+    "label": "Initiate a Collaboration",
+    "headlineLines": [
+      "Your project deserves",
+      "excellence."
+    ],
+    "primaryCta": "Contact us",
+    "secondaryCta": "See our approach",
+    "email": "Email",
+    "phone": "Phone",
+    "office": "Office",
+    "officeValue": "Casablanca, Morocco"
+  },
+  "Footer": {
+    "navigation": "Navigation",
+    "expertises": "Expertise",
+    "events": "Events",
+    "contact": "Contact",
+    "languages": "Languages",
+    "backToTop": "Back to top",
+    "copyright": "© 2026 ELAOUAD. All rights reserved.",
+    "marquee": [
+      "ARCHITECTURE",
+      "BIM CONSULTING",
+      "INTERIOR DESIGN",
+      "URBAN PLANNING",
+      "EVENTS",
+      "CASABLANCA",
+      "AFRICA",
+      "INTERNATIONAL",
+      "PRECISION",
+      "AMBITION",
+      "VISION"
+    ]
+  }
+}
