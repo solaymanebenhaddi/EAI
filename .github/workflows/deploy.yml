@@ -24,6 +24,13 @@ jobs:
       - name: Build Next.js
         run: npm run build
 
+      - name: List FTP Directories (Debug)
+        run: |
+          echo "=== Root FTP List ==="
+          curl --connect-timeout 10 -s -u "${{ secrets.FTP_USERNAME }}:${{ secrets.FTP_PASSWORD }}" "ftp://${{ secrets.FTP_SERVER }}/" || echo "Root list failed"
+          echo "=== public_html List ==="
+          curl --connect-timeout 10 -s -u "${{ secrets.FTP_USERNAME }}:${{ secrets.FTP_PASSWORD }}" "ftp://${{ secrets.FTP_SERVER }}/public_html/" || echo "public_html list failed"
+
       - name: Deploy via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
