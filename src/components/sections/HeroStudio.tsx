@@ -116,11 +116,22 @@ export default function HeroStudio() {
     const clock = new THREE.Clock()
 
     const manager = new THREE.LoadingManager()
+    
+    // Add a fallback timeout so we never get stuck indefinitely at 0%
+    const fallbackTimer = setTimeout(() => {
+      setIsReady(true)
+    }, 5000)
+
     manager.onProgress = (url, loaded, total) => {
       setLoadingProgress(Math.round((loaded / total) * 100))
     }
     manager.onLoad = () => {
+      clearTimeout(fallbackTimer)
       setTimeout(() => setIsReady(true), 500)
+    }
+    manager.onError = () => {
+      clearTimeout(fallbackTimer)
+      setIsReady(true)
     }
 
     const isMobile = () => window.innerWidth < 768
@@ -129,7 +140,7 @@ export default function HeroStudio() {
       if (!canvasRef.current) return
 
       refs.scene = new THREE.Scene()
-      const bgTexture = new THREE.TextureLoader(manager).load('/assets/backgound_hero.png')
+      const bgTexture = new THREE.TextureLoader(manager).load('/assets/backgound_hero.webp')
       bgTexture.colorSpace = THREE.SRGBColorSpace
       refs.scene.background = bgTexture
       refs.scene.fog = new THREE.FogExp2(0x050a14, 0.00045) // Lighter fog so bg is visible
@@ -362,13 +373,13 @@ export default function HeroStudio() {
 
     const createCitySkyline = () => {
       const textureLoader = new THREE.TextureLoader(manager)
-      const concreteTex = textureLoader.load('/textures/concrete.png')
+      const concreteTex = textureLoader.load('/textures/concrete.webp')
       concreteTex.wrapS = concreteTex.wrapT = THREE.RepeatWrapping
 
-      const windowTex = textureLoader.load('/textures/windows.png')
+      const windowTex = textureLoader.load('/textures/windows.webp')
       windowTex.wrapS = windowTex.wrapT = THREE.RepeatWrapping
       
-      const streetTex = textureLoader.load('/textures/streets.png')
+      const streetTex = textureLoader.load('/textures/streets.webp')
       streetTex.wrapS = streetTex.wrapT = THREE.RepeatWrapping
       streetTex.repeat.set(30, 30)
 
