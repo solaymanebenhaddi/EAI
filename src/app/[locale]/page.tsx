@@ -7,8 +7,12 @@ import TransformationView from "@/components/sections/TransformationView"
 import TestimonialsCarousel from "@/components/sections/TestimonialsCarousel"
 import EventsShowcase from "@/components/sections/EventsShowcase"
 import ProjectControl from "@/components/sections/ProjectControl"
+import {setRequestLocale} from 'next-intl/server';
 
-export default function Home() {
+export default async function Home({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+
   return (
     <main className="flex flex-col w-full bg-[var(--color-background)]">
       <HeroStudio />
