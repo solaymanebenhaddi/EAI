@@ -1,0 +1,271 @@
+{
+  "Nav": {
+    "home": "Home",
+    "expertises": "Competenze",
+    "transformation": "Trasformazione",
+    "method": "Metodo",
+    "portfolio": "Portfolio",
+    "discuss": "Discutere il progetto",
+    "subtitle": "Studio di architettura e ingegneria basato in Marocco."
+  },
+  "Hero": {
+    "subtitle": "STUDIO DI ARCHITETTURA E INGEGNERIA",
+    "title1": "Progettare",
+    "title2": "il futuro.",
+    "scroll": "Scorri per esplorare"
+  },
+  "HeroSlides": {
+    "VISION": {
+      "title": "VISIONE",
+      "subtitle": "Ogni progetto inizia con un'idea chiara."
+    },
+    "METHOD": {
+      "title": "METODO",
+      "subtitle": "Trasformiamo le idee in sistemi costruibili."
+    },
+    "STRUCTURE": {
+      "title": "STRUTTURA",
+      "subtitle": "Architettura, ingegneria e coordinamento in un unico processo."
+    },
+    "TRUST": {
+      "title": "FIDUCIA",
+      "subtitle": "Dal concetto alla realizzazione, con precisione e maestria."
+    },
+    "ELAOUAD": {
+      "title": "ELAOUAD",
+      "subtitle": "Architecture & Engineering Group"
+    }
+  },
+  "Vision": {
+    "eyebrow": "La Nostra Visione",
+    "title": "Una visione.\nUn gruppo.\nUna trasformazione.",
+    "p1": "Fondato da Soukaina Elaouad, ingegnere civile e dottoranda in architettura, l'ELAOUAD Architecture & Engineering Group nasce da una convinzione: i progetti eccezionali richiedono competenze totali—dalla progettazione architettonica alla gestione del progetto, dal BIM al design degli interni.",
+    "p2": "In dieci anni, il gruppo ha consegnato oltre 100 progetti nei settori residenziale di lusso, commerciale, urbanistico e interior design. Ogni realizzazione porta la stessa firma: rigore tecnico, estetica padroneggiata e sostenibilità integrata fin dal primo schizzo.",
+    "p3": "ELAOUAD non costruisce solo edifici. Scolpiamo gli spazi in cui vivrà il futuro.",
+    "stats": [
+      {
+        "value": "100+",
+        "label": "Progetti Consegnati"
+      },
+      {
+        "value": "10",
+        "label": "Anni di Esperienza"
+      },
+      {
+        "value": "4",
+        "label": "Continenti"
+      }
+    ]
+  },
+  "Founder": {
+    "eyebrow": "La Fondatrice",
+    "title": "La Visione Dietro\nla Trasformazione",
+    "name": "Soukaina Elaouad",
+    "role": "Fondatrice e Architetto Ingegnere",
+    "intro": "Ingegnere civile di formazione, dottoranda in architettura ed esperta project manager, Soukaina Elaouad ha creato il Gruppo ELAOUAD con un'idea centrale: l'eccellenza architettonica non deve mai sacrificare il rigore tecnico—né viceversa.",
+    "philosophy": "Il suo metodo combina l'approccio scientifico dell'ingegnere—numeri, processi, ottimizzazione—con la sensibilità creativa dell'architetto. Il risultato: progetti che mantengono le promesse, esteticamente e strutturalmente.",
+    "quote": "L'architettura è sia un atto artistico che una responsabilità tecnica. Ogni progetto che consegniamo deve essere bello, solido, sostenibile e utile alle persone che lo abiteranno."
+  },
+  "Services": {
+    "eyebrow": "Le Nostre Competenze",
+    "items": [
+      {
+        "num": "01",
+        "title": "Architettura",
+        "value": "Spazi che raccontano una storia",
+        "desc": "Residenziale di lusso, commerciale, strutture pubbliche: ogni progetto integra estetica, funzionalità e sostenibilità.",
+        "bullets": [
+          "Progettazione completa",
+          "Permessi e studi",
+          "Supervisione cantieri"
+        ]
+      },
+      {
+        "num": "02",
+        "title": "BIM Consulting",
+        "value": "Progetti consegnati il 30% più velocemente",
+        "desc": "Il Building Information Modeling riduce in media gli imprevisti in cantiere del 40% attraverso una precisa coordinazione digitale.",
+        "bullets": [
+          "Modellazione 3D",
+          "Coordinamento MEP",
+          "Formazione team"
+        ]
+      },
+      {
+        "num": "03",
+        "title": "Ingegneria & PM",
+        "value": "La complessità, padroneggiata",
+        "desc": "Dalla fattibilità alla consegna finale, gestiamo la complessità affinché possiate concentrarvi sull'essenziale.",
+        "bullets": [
+          "Studi tecnici",
+          "Pianificazione e budget",
+          "Coordinamento generale"
+        ]
+      },
+      {
+        "num": "04",
+        "title": "Interior Design",
+        "value": "Spazi che incarnano la tua identità",
+        "desc": "Ogni dettaglio è considerato—materiali, luce, arredamento—per creare un'esperienza memorabile.",
+        "bullets": [
+          "Concept e moodboard",
+          "Selezione materiali",
+          "Direzione artistica"
+        ]
+      },
+      {
+        "num": "05",
+        "title": "Urbanistica",
+        "value": "Pensare la città di domani",
+        "desc": "Piani regolatori, studi di impatto e sviluppo sostenibile su scala territoriale per costruire città più umane.",
+        "bullets": [
+          "Pianificazione territoriale",
+          "Studi di impatto",
+          "Consultazione pubblica"
+        ]
+      }
+    ],
+    "title": "Una catena\ncompleta\ndi competenze."
+  },
+  "Method": {
+    "eyebrow": "Il Nostro Metodo",
+    "title": "Ridurre\nl'incertezza.",
+    "desc": "Dallo schizzo alla consegna delle chiavi, il nostro processo garantisce un controllo totale sulla qualità, sulle scadenze e sul budget.",
+    "steps": [
+      {
+        "num": "01",
+        "title": "Diagnosi e Inquadramento"
+      },
+      {
+        "num": "02",
+        "title": "Studio di Fattibilità"
+      },
+      {
+        "num": "03",
+        "title": "Progettazione Architettonica"
+      },
+      {
+        "num": "04",
+        "title": "Sviluppo Tecnico"
+      },
+      {
+        "num": "05",
+        "title": "Coordinamento e Follow-up"
+      },
+      {
+        "num": "06",
+        "title": "Consegna e Supporto"
+      }
+    ]
+  },
+  "Ecosystem": {
+    "eyebrow": "Ecosistema",
+    "title": "Costruire,\nunire e\ntrasmettere.",
+    "desc": "Tre pilastri complementari che plasmano il futuro dell'architettura e delle costruzioni in Marocco e in Africa.",
+    "items": [
+      {
+        "num": "01",
+        "name": "ELAOUAD Architecture & Engineering",
+        "text": "Progettazione, studi, coordinamento.",
+        "tags": [
+          "Design",
+          "Ingegneria",
+          "BIM"
+        ]
+      },
+      {
+        "num": "02",
+        "name": "EAI Events",
+        "text": "Incontri professionali e fiere.",
+        "tags": [
+          "Fiere",
+          "Forum",
+          "Networking"
+        ]
+      },
+      {
+        "num": "03",
+        "name": "EAI Courses / Formazione",
+        "text": "Trasmissione di competenze pratiche.",
+        "tags": [
+          "Formazione",
+          "Software BIM"
+        ]
+      }
+    ]
+  },
+  "Contact": {
+    "eyebrow": "Contatto",
+    "title": "Il tuo progetto\nmerita una\nvisione chiara.",
+    "success": "Richiesta inviata",
+    "successDesc": "Ti contatteremo entro 24 ore per discutere del tuo progetto.",
+    "form": {
+      "name": "Nome Completo *",
+      "phone": "Telefono *",
+      "type": "Tipo di Progetto",
+      "msg": "Parlaci del tuo progetto",
+      "btn": "Invia Richiesta",
+      "sending": "Invio in corso...",
+      "error": "Si è verificato un errore. Riprova."
+    },
+    "types": {
+      "archi": "Architettura",
+      "bim": "BIM",
+      "coord": "Coordinamento",
+      "etude": "Studi"
+    }
+  },
+  "Footer": {
+    "brand": "ELAOUAD",
+    "desc": "Studio di architettura e ingegneria basato in Marocco. Progettazione, studi, coordinamento e supervisione.",
+    "navTitle": "Navigazione",
+    "expTitle": "Competenze",
+    "contactTitle": "Contatto",
+    "rights": "Tutti i diritti riservati.",
+    "slogan": "Progettare · Studiare · Coordinare · Costruire"
+  },
+  "Events": {
+    "eyebrow": "Eventi ELAOUAD",
+    "title": "Costruire,\nunire e trasmettere.",
+    "description": "ELAOUAD Events organizza incontri professionali che plasmano il futuro delle costruzioni in Africa. Il Forum Internazionale delle Costruzioni (FIC) riunisce ogni anno decisori, innovatori e talenti del settore.",
+    "stats": [
+      {
+        "value": "3",
+        "label": "Edizioni FIC"
+      },
+      {
+        "value": "2000+",
+        "label": "Partecipanti"
+      },
+      {
+        "value": "15",
+        "label": "Paesi rappresentati"
+      }
+    ],
+    "cta": "Scopri i nostri eventi"
+  },
+  "Portfolio": {
+    "title": "Progetti Firma.",
+    "desc": "Scorri per esplorare le nostre realizzazioni e clicca per ingrandire. Dall'architettura al design, ogni progetto racconta la nostra passione per l'eccellenza."
+  },
+  "Transformation": {
+    "eyebrow": "Trasformazione",
+    "title": "Trasformare\nuna visione\nin spazio reale.",
+    "desc": "Ogni intervento inizia con uno stato esistente. Il nostro ruolo è trasformarlo in una soluzione chiara e sostenibile.",
+    "tags": [
+      "Analisi",
+      "Progettazione",
+      "Coordinamento",
+      "Supervisione"
+    ],
+    "cta": "Scopri il nostro approccio",
+    "before": "Prima",
+    "after": "Dopo",
+    "existant": "Stato Esistente",
+    "projete": "Spazio Progettato"
+  },
+  "SEO": {
+    "title": "ELAOUAD Architettura & Ingegneria | Progettazione, BIM, Studi",
+    "description": "Studio di architettura, ingegneria e coordinamento progetti con sede in Marocco. Esperienza in progettazione, BIM e supervisione di cantiere."
+  }
+}

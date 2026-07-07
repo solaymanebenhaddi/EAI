@@ -7,6 +7,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { siteData } from "@/data/site"
 import { Button } from "@/components/ui/Button"
 import { cn } from "@/lib/utils"
+import { useTranslations } from "next-intl"
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -21,11 +22,28 @@ export default function ProjectControl() {
   const [sent, setSent] = useState(false)
   const [hoveredPanel, setHoveredPanel] = useState<number | null>(null)
 
+  const [errorMsg, setErrorMsg] = useState<string | null>(null)
+
+  const tMethod = useTranslations('Method')
+  const tEco = useTranslations('Ecosystem')
+  const tContact = useTranslations('Contact')
+  const tFooter = useTranslations('Footer')
+
+  const methodTitleLines = tMethod('title').split('\n')
+  const ecoTitleLines = tEco('title').split('\n')
+  const contactTitleLines = tContact('title').split('\n')
+
+  const methodSteps = tMethod.raw('steps') as any[]
+  const ecoItems = tEco.raw('items') as any[]
+
   const submit = (e: React.FormEvent) => {
     e.preventDefault()
     if (!form.name || !form.phone) return
     setSending(true)
-    setTimeout(() => { 
+    setErrorMsg(null)
+    
+    // Simulate network delay for now
+    setTimeout(() => {
       setSending(false)
       setSent(true)
       setForm({ name: '', phone: '', type: '', msg: '' })
@@ -105,17 +123,19 @@ export default function ProjectControl() {
         
         <div className="max-w-7xl mx-auto w-full grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-24 items-center relative z-10">
           <div className="method-item">
-            <span className="text-[var(--color-eai-olive)] text-[10px] uppercase tracking-[0.22em] font-semibold">Notre Méthode</span>
+            <span className="text-[var(--color-eai-olive)] text-[10px] uppercase tracking-[0.22em] font-semibold">{tMethod('eyebrow')}</span>
             <h2 className="font-sans text-[clamp(3rem,6vw,5rem)] leading-[0.9] font-extrabold uppercase tracking-tight mt-6 drop-shadow-sm">
-              Réduire<br/>l'incertitude.
+              {methodTitleLines.map((line: string, i: number) => (
+                <span key={i} className="block">{line}</span>
+              ))}
             </h2>
             <p className="mt-8 text-white/60 text-sm md:text-base leading-relaxed max-w-md">
-              De l'esquisse à la remise des clés, notre processus garantit un contrôle total sur la qualité, les délais et le budget.
+              {tMethod('desc')}
             </p>
           </div>
           
           <div className="space-y-0">
-            {siteData.methodSteps.map((s, i) => (
+            {methodSteps.map((s, i) => (
               <div key={s.num} className="method-item grid grid-cols-[40px_1fr] gap-6 border-t border-white/10 py-6 group hover:border-eai-olive/60 transition-colors">
                 <span className="text-[var(--color-eai-olive)] text-xs tracking-[0.16em] font-semibold mt-1">{s.num}</span>
                 <div>
@@ -134,111 +154,83 @@ export default function ProjectControl() {
       <section 
         id="ecosystem"
         ref={ecosystemRef}
-        className="min-h-screen w-full flex flex-col px-4 md:px-12 py-20 bg-fixed bg-cover bg-center text-[var(--color-eai-paper)] relative overflow-hidden"
-        style={{ backgroundImage: 'url(/assets/elaouad-events-formation.webp)' }}
+        className="w-full flex flex-col px-4 md:px-12 py-32 bg-[var(--color-eai-charcoal)] text-[var(--color-eai-paper)] relative overflow-hidden"
       >
-        <div className="absolute inset-0 bg-eai-charcoal/80 backdrop-blur-[2px] pointer-events-none" />
-        <div className="max-w-7xl mx-auto w-full mb-12 relative z-10">
-          <span className="text-[var(--color-eai-olive)] text-[10px] uppercase tracking-[0.22em] font-semibold block mb-4">Écosystème</span>
-          <h3 className="font-sans text-white text-[clamp(2.5rem,5vw,4.5rem)] leading-[0.9] font-extrabold uppercase tracking-tight">
-            Construire,<br/>réunir et transmettre.
-          </h3>
+        <div className="max-w-7xl mx-auto w-full mb-16 md:mb-24 relative z-10">
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-8">
+            <div>
+              <span className="text-[var(--color-eai-olive)] text-[10px] uppercase tracking-[0.22em] font-semibold block mb-6">{tEco('eyebrow')}</span>
+              <h3 className="font-sans text-white text-[clamp(2.5rem,5vw,4.5rem)] leading-[0.9] font-extrabold uppercase tracking-tight">
+                {ecoTitleLines.map((line: string, i: number) => (
+                  <span key={i} className="block">{line}</span>
+                ))}
+              </h3>
+            </div>
+            <p className="text-white/60 text-sm md:text-base max-w-sm leading-relaxed">
+              {tEco('desc')}
+            </p>
+          </div>
         </div>
 
-        {/* Vertical Split Panels Container */}
-        <div className="flex-1 w-full min-h-[500px] flex flex-col lg:flex-row gap-4 relative z-10">
-          {siteData.ecosystem.map((b, idx) => {
-            const isHovered = hoveredPanel === idx
-            const isAnyHovered = hoveredPanel !== null
-            
-            // Map index to a specific background image
+        {/* 3-Column Premium Grid */}
+        <div className="max-w-7xl mx-auto w-full grid grid-cols-1 md:grid-cols-3 gap-6 relative z-10">
+          {ecoItems.map((b, idx) => {
             const panelImage = idx === 0 
               ? siteData.images.expertise 
               : idx === 1 
               ? siteData.images.ecosystem 
               : siteData.images.after
 
+            const isCard2 = idx === 1;
+            const isCard3 = idx === 2;
+            const url = isCard2 ? 'https://events.eai-construction.com' : isCard3 ? 'https://courses.eai-construction.com' : undefined;
+            const Component = url ? 'a' : 'div';
+            const props = url ? { href: url, target: '_blank', rel: 'noopener noreferrer' } : {};
+
             return (
-              <div
+              <Component
                 key={b.num}
-                role="button"
-                tabIndex={0}
-                aria-expanded={isHovered}
-                onMouseEnter={() => setHoveredPanel(idx)}
-                onMouseLeave={() => setHoveredPanel(null)}
-                onClick={() => setHoveredPanel(idx === hoveredPanel ? null : idx)}
-                onKeyDown={(e) => {
-                  if (e.key === 'Enter' || e.key === ' ') {
-                    e.preventDefault()
-                    setHoveredPanel(idx === hoveredPanel ? null : idx)
-                  }
-                }}
-                className={cn(
-                  "ecosystem-panel relative overflow-hidden rounded-2xl cursor-pointer flex flex-col justify-end p-6 md:p-10 transition-all duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] border border-white/[0.04]",
-                  // Dynamic flex scaling based on hover state
-                  isHovered 
-                    ? "flex-[2.5]" 
-                    : isAnyHovered 
-                    ? "flex-[0.8] opacity-60" 
-                    : "flex-[1]"
-                )}
-                style={{ minHeight: '280px' }}
+                {...props}
+                className={`ecosystem-panel group relative h-[450px] md:h-[600px] w-full overflow-hidden flex flex-col justify-end p-8 md:p-10 border border-white/10 bg-white/5 ${url ? 'cursor-pointer block no-underline' : ''}`}
               >
-                {/* Background Image panel */}
+                {/* Background Image - scales softly on hover */}
                 <div 
-                  className="absolute inset-0 transition-transform duration-[1.5s] ease-[cubic-bezier(0.25,1,0.5,1)]"
-                  style={{
-                    backgroundImage: `url(${panelImage})`,
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'center',
-                    transform: isHovered ? 'scale(1.05)' : 'scale(1)'
-                  }}
+                  className="absolute inset-0 bg-cover bg-center transition-transform duration-[1.5s] ease-[cubic-bezier(0.25,1,0.5,1)] group-hover:scale-105"
+                  style={{ backgroundImage: `url(${panelImage})` }}
                 />
                 
-                {/* Visual shade overlays */}
-                <div className={cn(
-                  "absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent transition-opacity duration-700",
-                  isHovered ? "opacity-100" : "opacity-85"
-                )} />
+                {/* Dual Gradient Overlay for depth and text legibility */}
+                <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/40 to-black/90 transition-opacity duration-700 group-hover:opacity-80" />
+                <div className="absolute inset-0 bg-[var(--color-eai-charcoal)]/40 mix-blend-multiply opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
 
-                {/* Content inside panel */}
-                <div className="relative z-10 w-full flex flex-col">
-                  {/* Number tag */}
-                  <span className="text-[var(--color-eai-olive)] text-xs uppercase tracking-[0.16em] font-extrabold mb-3">
-                    {b.num}
-                  </span>
-
-                  {/* Title */}
-                  <h4 className="text-white text-xl md:text-2xl font-sans font-bold uppercase tracking-tight">
-                    {b.name}
-                  </h4>
-
-                  {/* Hidden description that expands on hover */}
-                  <div className={cn(
-                    "transition-all duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] overflow-hidden",
-                    isHovered 
-                      ? "max-h-[200px] opacity-100 mt-4 translate-y-0" 
-                      : "max-h-0 opacity-0 translate-y-4"
-                  )}>
-                    <p className="text-white/70 text-sm leading-relaxed font-medium">
-                      {b.text}
-                    </p>
-                    
-                    {/* Bullet list of services/key features under each member */}
-                    <div className="mt-4 pt-4 border-t border-white/10 flex flex-wrap gap-x-4 gap-y-2">
-                      {idx === 0 && ['Conception', 'Ingénierie', 'BIM'].map(tag => (
-                        <span key={tag} className="text-[10px] uppercase tracking-[0.12em] font-bold text-white/50 bg-white/10 px-2.5 py-1 rounded-full">{tag}</span>
-                      ))}
-                      {idx === 1 && ['Salons', 'Forums', 'B2B Networking'].map(tag => (
-                        <span key={tag} className="text-[10px] uppercase tracking-[0.12em] font-bold text-white/50 bg-white/10 px-2.5 py-1 rounded-full">{tag}</span>
-                      ))}
-                      {idx === 2 && ['Formations', 'Logiciels BIM', 'Chantier'].map(tag => (
-                        <span key={tag} className="text-[10px] uppercase tracking-[0.12em] font-bold text-white/50 bg-white/10 px-2.5 py-1 rounded-full">{tag}</span>
+                {/* Content */}
+                <div className="relative z-10 flex flex-col h-full justify-between">
+                  {/* Top: Number & Tags */}
+                  <div className="flex justify-between items-start opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-700 ease-[cubic-bezier(0.25,1,0.5,1)]">
+                    <span className="text-[var(--color-eai-olive)] text-xs uppercase tracking-[0.2em] font-extrabold">
+                      {b.num}
+                    </span>
+                    <div className="flex flex-col gap-2 items-end">
+                      {b.tags.map((tag: string) => (
+                        <span key={tag} className="text-[9px] uppercase tracking-[0.15em] font-bold text-white/70 bg-white/10 px-3 py-1.5 rounded-sm backdrop-blur-md">{tag}</span>
                       ))}
                     </div>
                   </div>
+
+                  {/* Bottom: Title & Text */}
+                  <div className="transform transition-transform duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] translate-y-8 group-hover:translate-y-0">
+                    <h4 className="text-white text-2xl md:text-3xl font-sans font-bold uppercase tracking-tight mb-4">
+                      {b.name}
+                    </h4>
+                    <p className="text-white/70 text-sm leading-relaxed font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-700 delay-100">
+                      {b.text}
+                    </p>
+                  </div>
                 </div>
-              </div>
+                
+                {/* Animated bottom border accent */}
+                <div className="absolute bottom-0 left-0 h-1 bg-[var(--color-eai-olive)] w-0 group-hover:w-full transition-all duration-700 ease-[cubic-bezier(0.25,1,0.5,1)]" />
+              </Component>
             )
           })}
         </div>
@@ -254,9 +246,11 @@ export default function ProjectControl() {
       >
         <div className="max-w-7xl mx-auto w-full grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-24 items-start">
           <div className="contact-elem">
-            <span className="text-[var(--color-eai-olive)] text-[10px] uppercase tracking-[0.22em] font-semibold">Contact</span>
+            <span className="text-[var(--color-eai-olive)] text-[10px] uppercase tracking-[0.22em] font-semibold">{tContact('eyebrow')}</span>
             <h2 className="font-sans text-[clamp(3rem,6vw,5rem)] leading-[0.92] font-extrabold uppercase tracking-tight mt-6 text-[var(--color-eai-charcoal)]">
-              Votre projet<br/>mérite une<br/>vision claire.
+              {contactTitleLines.map((line: string, i: number) => (
+                <span key={i} className="block">{line}</span>
+              ))}
             </h2>
             <div className="mt-8 text-[var(--color-eai-charcoal)]/60 text-sm leading-relaxed font-medium space-y-2">
               <a href={`mailto:${siteData.contact.email}`} className="block hover:text-[var(--color-eai-olive)] transition-colors text-lg text-[var(--color-eai-charcoal)]">{siteData.contact.email}</a>
@@ -269,8 +263,14 @@ export default function ProjectControl() {
             {sent && (
               <div className="absolute inset-0 bg-white z-20 flex flex-col items-center justify-center p-6 text-center">
                 <div className="w-20 h-20 rounded-full bg-[var(--color-eai-olive)]/15 border-2 border-[var(--color-eai-olive)] flex items-center justify-center text-[var(--color-eai-olive)] text-3xl font-bold mb-6">✓</div>
-                <h4 className="font-sans text-3xl font-extrabold uppercase tracking-tight text-[var(--color-eai-charcoal)]">Demande envoyée</h4>
-                <p className="text-[var(--color-eai-charcoal)]/60 text-base mt-3 max-w-[250px]">Nous vous contacterons sous 24 heures pour discuter de votre projet.</p>
+                <h4 className="font-sans text-3xl font-extrabold uppercase tracking-tight text-[var(--color-eai-charcoal)]">{tContact('success')}</h4>
+                <p className="text-[var(--color-eai-charcoal)]/60 text-base mt-3 max-w-[250px]">{tContact('successDesc')}</p>
+              </div>
+            )}
+            
+            {errorMsg && (
+              <div className="absolute top-4 left-1/2 -translate-x-1/2 bg-red-500 text-white text-xs px-4 py-2 rounded shadow-md z-30">
+                {errorMsg}
               </div>
             )}
 
@@ -278,32 +278,32 @@ export default function ProjectControl() {
               <div className="grid gap-2 relative">
                 <input name="name" value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })} required
                   className="peer w-full bg-transparent border-b border-[var(--color-eai-charcoal)]/20 px-1 py-3 text-[var(--color-eai-charcoal)] outline-none focus:border-[var(--color-eai-olive)] transition-colors text-sm rounded-none" />
-                <label className={cn("absolute left-1 top-3 text-sm text-[var(--color-eai-charcoal)]/40 transition-all pointer-events-none", form.name ? "-translate-y-6 text-[10px]" : "peer-focus:-translate-y-6 peer-focus:text-[10px] peer-focus:text-[var(--color-eai-olive)]")}>Nom complet *</label>
+                <label className={cn("absolute left-1 top-3 text-sm text-[var(--color-eai-charcoal)]/40 transition-all pointer-events-none", form.name ? "-translate-y-6 text-[10px]" : "peer-focus:-translate-y-6 peer-focus:text-[10px] peer-focus:text-[var(--color-eai-olive)]")}>{tContact('form.name')}</label>
               </div>
               
               <div className="grid gap-2 relative">
                 <input name="phone" value={form.phone} onChange={(e) => setForm({ ...form, phone: e.target.value })} required
                   className="peer w-full bg-transparent border-b border-[var(--color-eai-charcoal)]/20 px-1 py-3 text-[var(--color-eai-charcoal)] outline-none focus:border-[var(--color-eai-olive)] transition-colors text-sm rounded-none" />
-                <label className={cn("absolute left-1 top-3 text-sm text-[var(--color-eai-charcoal)]/40 transition-all pointer-events-none", form.phone ? "-translate-y-6 text-[10px]" : "peer-focus:-translate-y-6 peer-focus:text-[10px] peer-focus:text-[var(--color-eai-olive)]")}>Téléphone *</label>
+                <label className={cn("absolute left-1 top-3 text-sm text-[var(--color-eai-charcoal)]/40 transition-all pointer-events-none", form.phone ? "-translate-y-6 text-[10px]" : "peer-focus:-translate-y-6 peer-focus:text-[10px] peer-focus:text-[var(--color-eai-olive)]")}>{tContact('form.phone')}</label>
               </div>
 
               <select name="type" value={form.type} onChange={(e) => setForm({ ...form, type: e.target.value })}
                 className={cn("w-full bg-transparent border-b border-[var(--color-eai-charcoal)]/20 px-1 py-3 outline-none focus:border-[var(--color-eai-olive)] transition-colors text-sm rounded-none appearance-none cursor-pointer", form.type ? "text-[var(--color-eai-charcoal)]" : "text-[var(--color-eai-charcoal)]/40")}>
-                <option value="" disabled hidden>Type de projet</option>
-                <option value="archi" className="text-[var(--color-eai-charcoal)]">Architecture</option>
-                <option value="bim" className="text-[var(--color-eai-charcoal)]">BIM</option>
-                <option value="coord" className="text-[var(--color-eai-charcoal)]">Coordination</option>
-                <option value="etude" className="text-[var(--color-eai-charcoal)]">Études</option>
+                <option value="" disabled hidden>{tContact('form.type')}</option>
+                <option value="archi" className="text-[var(--color-eai-charcoal)]">{tContact('types.archi')}</option>
+                <option value="bim" className="text-[var(--color-eai-charcoal)]">{tContact('types.bim')}</option>
+                <option value="coord" className="text-[var(--color-eai-charcoal)]">{tContact('types.coord')}</option>
+                <option value="etude" className="text-[var(--color-eai-charcoal)]">{tContact('types.etude')}</option>
               </select>
 
               <div className="grid gap-2 relative mt-2">
                 <textarea name="msg" value={form.msg} onChange={(e) => setForm({ ...form, msg: e.target.value })} rows={3}
                   className="peer w-full bg-transparent border-b border-[var(--color-eai-charcoal)]/20 px-1 py-3 text-[var(--color-eai-charcoal)] outline-none focus:border-[var(--color-eai-olive)] transition-colors text-sm rounded-none resize-none" />
-                <label className={cn("absolute left-1 top-3 text-sm text-[var(--color-eai-charcoal)]/40 transition-all pointer-events-none", form.msg ? "-translate-y-6 text-[10px]" : "peer-focus:-translate-y-6 peer-focus:text-[10px] peer-focus:text-[var(--color-eai-olive)]")}>Parlez-nous de votre projet</label>
+                <label className={cn("absolute left-1 top-3 text-sm text-[var(--color-eai-charcoal)]/40 transition-all pointer-events-none", form.msg ? "-translate-y-6 text-[10px]" : "peer-focus:-translate-y-6 peer-focus:text-[10px] peer-focus:text-[var(--color-eai-olive)]")}>{tContact('form.msg')}</label>
               </div>
 
               <Button type="submit" disabled={sending} className="w-full mt-6 h-14 shadow-md text-xs">
-                {sending ? 'Envoi en cours...' : 'Envoyer la demande'}
+                {sending ? tContact('form.sending') : tContact('form.btn')}
               </Button>
             </form>
           </div>
@@ -317,14 +317,14 @@ export default function ProjectControl() {
         <div className="absolute inset-0 bg-gradient-to-r from-white/5 to-transparent pointer-events-none" />
         
         <div className="relative z-10">
-          <span className="text-[var(--color-eai-olive)] uppercase tracking-[0.16em] font-semibold text-[10px]">ELAOUAD</span>
+          <span className="text-[var(--color-eai-olive)] uppercase tracking-[0.16em] font-semibold text-[10px]">{tFooter('brand')}</span>
           <p className="text-white/50 mt-4 leading-relaxed text-xs max-w-[250px]">
-            Bureau d'architecture et d'ingénierie basé au Maroc. Conception, études, coordination et suivi.
+            {tFooter('desc')}
           </p>
         </div>
         
         <div className="hidden md:block relative z-10">
-          <span className="text-[var(--color-eai-olive)] uppercase tracking-[0.16em] font-semibold text-[10px]">Navigation</span>
+          <span className="text-[var(--color-eai-olive)] uppercase tracking-[0.16em] font-semibold text-[10px]">{tFooter('navTitle')}</span>
           <div className="mt-4 flex flex-col gap-2 text-white/60 text-xs">
             {['Accueil', 'Expertises', 'Méthode', 'Contact'].map((l) => (
               <span key={l} onClick={() => document.getElementById(l.toLowerCase())?.scrollIntoView({behavior: 'smooth'})} className="hover:text-[var(--color-eai-olive)] transition-colors cursor-pointer w-fit">{l}</span>
@@ -333,7 +333,7 @@ export default function ProjectControl() {
         </div>
         
         <div className="hidden md:block relative z-10">
-          <span className="text-[var(--color-eai-olive)] uppercase tracking-[0.16em] font-semibold text-[10px]">Expertises</span>
+          <span className="text-[var(--color-eai-olive)] uppercase tracking-[0.16em] font-semibold text-[10px]">{tFooter('expTitle')}</span>
           <div className="mt-4 flex flex-col gap-2 text-white/60 text-xs">
             {['Architecture d\'intérieur', 'Urbanisme', 'BIM Consulting', 'Topographie', 'Études de faisabilité'].map((l) => (
               <span key={l} className="cursor-default">{l}</span>
@@ -342,7 +342,7 @@ export default function ProjectControl() {
         </div>
         
         <div className="relative z-10">
-          <span className="text-[var(--color-eai-olive)] uppercase tracking-[0.16em] font-semibold text-[10px]">Contact</span>
+          <span className="text-[var(--color-eai-olive)] uppercase tracking-[0.16em] font-semibold text-[10px]">{tFooter('contactTitle')}</span>
           <div className="mt-4 flex flex-col gap-2 text-white/60 text-xs">
             <a href={`mailto:${siteData.contact.email}`} className="hover:text-[var(--color-eai-olive)] transition-colors w-fit">{siteData.contact.email}</a>
             <span>{siteData.contact.phone}</span>
@@ -351,8 +351,8 @@ export default function ProjectControl() {
         </div>
         
         <div className="col-span-2 md:col-span-4 border-t border-white/10 pt-6 mt-4 text-white/40 text-[10px] relative z-10 flex flex-col md:flex-row justify-between items-center gap-4">
-          <span>© {new Date().getFullYear()} ELAOUAD Architecture et Ingénierie. Tous droits réservés.</span>
-          <span className="tracking-[0.14em] uppercase text-[9px]">Concevoir · Étudier · Coordonner · Réaliser</span>
+          <span>© {new Date().getFullYear()} {tFooter('brand')}. {tFooter('rights')}</span>
+          <span className="tracking-[0.14em] uppercase text-[9px]">{tFooter('slogan')}</span>
         </div>
       </footer>
     </>

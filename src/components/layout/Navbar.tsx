@@ -2,8 +2,10 @@
 
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'motion/react'
+import { useTranslations } from 'next-intl'
 import { siteData } from '@/data/site'
 import { cn } from '@/lib/utils'
+import LanguageSwitcher from '../ui/LanguageSwitcher'
 
 export default function Navbar() {
   const [open, setOpen] = useState(false)
@@ -20,11 +22,13 @@ export default function Navbar() {
     return () => { document.body.style.overflow = '' }
   }, [open])
 
+  const t = useTranslations('Nav')
+
   const links = [
-    { label: 'Accueil', id: '#hero' },
-    { label: 'Expertises', id: '#expertises' },
-    { label: 'Transformation', id: '#transformation' },
-    { label: 'Méthode', id: '#methode' },
+    { label: t('home'), id: '#hero' },
+    { label: t('expertises'), id: '#expertises' },
+    { label: t('transformation'), id: '#transformation' },
+    { label: t('method'), id: '#methode' },
   ]
 
   const scrollTo = (id: string) => {
@@ -78,8 +82,11 @@ export default function Navbar() {
           onClick={(e) => { e.preventDefault(); scrollTo('#contact'); }} 
           className="hidden md:inline-flex px-5 py-2 border border-white/30 text-[11px] uppercase tracking-[0.14em] text-white font-bold bg-white/5 hover:bg-white hover:text-black transition-all duration-200 rounded-sm no-underline"
         >
-          Discuter du projet
+          {t('discuss')}
         </a>
+        <div className="hidden md:flex ml-4 border-l border-white/20 pl-4 items-center">
+          <LanguageSwitcher />
+        </div>
 
         {/* Hamburger */}
         <button 
@@ -133,13 +140,13 @@ export default function Navbar() {
                   transition={{ delay: 0.4 }}
                   className="mt-10 pt-6 border-t border-foreground/10"
                 >
-                  <p className="text-xs text-foreground/50 leading-relaxed mb-4">Bureau d&apos;architecture et d&apos;ingénierie basé au Maroc.</p>
+                  <p className="text-xs text-foreground/50 leading-relaxed mb-4">{t('subtitle')}</p>
                   <a 
                     href="#contact"
                     onClick={(e) => { e.preventDefault(); scrollTo('#contact'); }} 
                     className="w-full py-4 bg-foreground text-[var(--color-background)] text-xs uppercase tracking-[0.14em] hover:bg-[var(--color-eai-olive)] hover:text-[var(--color-eai-black)] transition-colors duration-200 font-medium block text-center no-underline"
                   >
-                    Discuter de votre projet
+                    {t('discuss')}
                   </a>
                 </motion.div>
               </div>

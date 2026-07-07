@@ -4,6 +4,7 @@ import React, { useEffect, useRef } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { siteData } from '@/data/site'
+import { useTranslations } from 'next-intl'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -76,8 +77,11 @@ export default function VisionStatement() {
     return () => ctx.revert()
   }, [])
 
+  const t = useTranslations('Vision')
+  const titleLines = t('title').split('\n')
+  const paragraphs = [t('p1'), t('p2'), t('p3')]
+  const stats = t.raw('stats') as {value: string, label: string}[]
   const { vision } = siteData
-  const titleLines = vision.title.split('\n')
 
   return (
     <section
@@ -89,7 +93,7 @@ export default function VisionStatement() {
       <div className="max-w-[1440px] mx-auto px-6 md:px-12 lg:px-20 h-full flex flex-col justify-center">
         {/* Eyebrow */}
         <p className="vision-title-line text-xs tracking-[0.3em] uppercase opacity-50 mb-6">
-          {vision.eyebrow}
+          {t('eyebrow')}
         </p>
 
         {/* Main content grid */}
@@ -108,11 +112,11 @@ export default function VisionStatement() {
             </h2>
 
             <div className="space-y-6 max-w-xl">
-              {vision.paragraphs.map((p, i) => (
+              {paragraphs.map((p, i) => (
                 <p
                   key={i}
                   className={`vision-paragraph text-[clamp(0.9rem,1.1vw,1.05rem)] leading-relaxed ${
-                    i === vision.paragraphs.length - 1
+                    i === paragraphs.length - 1
                       ? 'font-serif text-[clamp(1.1rem,1.4vw,1.3rem)] italic opacity-90'
                       : 'opacity-65'
                   }`}
@@ -138,7 +142,7 @@ export default function VisionStatement() {
 
         {/* Stats row */}
         <div ref={statsRef} className="grid grid-cols-3 gap-8 mt-16 pt-12 border-t border-white/10">
-          {vision.stats.map((stat, i) => (
+          {stats.map((stat, i) => (
             <div key={i} className="vision-stat text-center lg:text-left">
               <span className="block font-sans text-[clamp(2.5rem,4vw,3.8rem)] font-extrabold leading-none mb-2 tracking-tight">
                 {stat.value}

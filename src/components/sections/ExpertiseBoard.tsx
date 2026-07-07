@@ -6,6 +6,7 @@ import gsap from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { siteData } from "@/data/site"
 import { cn } from "@/lib/utils"
+import { useTranslations } from "next-intl"
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -14,6 +15,9 @@ export default function ExpertiseBoard() {
   const containerRef = useRef<HTMLElement>(null)
   const headerRef = useRef<HTMLDivElement>(null)
   const cardsRef = useRef<HTMLDivElement>(null)
+  const t = useTranslations('Services')
+  const items = t.raw('items') as any[]
+  const titleLines = t('title').split('\n')
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -59,13 +63,15 @@ export default function ExpertiseBoard() {
     >
       <div className="max-w-[1440px] mx-auto px-6 md:px-12 lg:px-20">
         {/* Header row */}
-        <div ref={headerRef} className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
+        <div ref={headerRef} className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16 px-4">
           <div>
             <span className="text-eai-olive text-[10px] uppercase tracking-[0.22em] font-semibold mb-4 block">
-              Savoir-faire
+              {t('eyebrow')}
             </span>
             <h2 className="font-sans text-eai-paper text-[clamp(2.4rem,5vw,4rem)] leading-[0.9] font-extrabold uppercase tracking-tight">
-              Une chaîne<br/>complète<br/>d&apos;expertises.
+              {titleLines.map((line: string, i: number) => (
+                <span key={i} className="block">{line}</span>
+              ))}
             </h2>
           </div>
 
@@ -81,8 +87,8 @@ export default function ExpertiseBoard() {
         </div>
 
         {/* 5 Core Service Cards */}
-        <div ref={cardsRef} className="space-y-3">
-          {siteData.coreServices.map((service, i) => {
+        <div ref={cardsRef} className="space-y-3 px-4">
+          {items.map((service, i) => {
             const isExpanded = expandedIdx === i
             return (
               <div
@@ -158,7 +164,7 @@ export default function ExpertiseBoard() {
                           </p>
 
                           <ul className="space-y-2">
-                            {service.bullets.map((bullet, j) => (
+                            {service.bullets.map((bullet: string, j: number) => (
                               <li key={j} className="flex items-start gap-3 text-sm text-eai-charcoal/70">
                                 <span className="w-1.5 h-1.5 rounded-full bg-eai-olive mt-1.5 shrink-0" />
                                 {bullet}

@@ -11,6 +11,7 @@ import { EffectComposer } from 'three/examples/jsm/postprocessing/EffectComposer
 import { RenderPass } from 'three/examples/jsm/postprocessing/RenderPass'
 // @ts-ignore
 import { UnrealBloomPass } from 'three/examples/jsm/postprocessing/UnrealBloomPass'
+import { useTranslations } from 'next-intl'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -52,39 +53,45 @@ export default function HeroStudio() {
   const smoothLookAt = useRef({ x: -10, y: 56, z: -820 })
 
   const [isReady, setIsReady] = useState(false)
+  const [loadingProgress, setLoadingProgress] = useState(0)
   const [activeIndex, setActiveIndex] = useState(0)
+
+  const t = useTranslations('HeroSlides')
 
   const sections = useMemo(
     () => [
       {
-        title: 'ELAOUAD',
-        subtitle: [
-          'From line to skyline,',
-          'we transform vision into structure'
-        ],
+        title: t('VISION.title'),
+        subtitle: [t('VISION.subtitle')],
         camera: { x: -30, y: 78, z: 460 },
         lookAt: { x: -10, y: 56, z: -820 }
       },
       {
-        title: 'STRUCTURE',
-        subtitle: [
-          'Every plan becomes a system,',
-          'every system becomes a space'
-        ],
+        title: t('METHOD.title'),
+        subtitle: [t('METHOD.subtitle')],
         camera: { x: 34, y: 84, z: -420 },
         lookAt: { x: 4, y: 72, z: -1680 }
       },
       {
-        title: 'TRUST',
-        subtitle: [
-          'Built with precision,',
-          'designed to stand with confidence'
-        ],
+        title: t('STRUCTURE.title'),
+        subtitle: [t('STRUCTURE.subtitle')],
         camera: { x: 0, y: 112, z: -1420 },
         lookAt: { x: 0, y: 92, z: -2980 }
+      },
+      {
+        title: t('TRUST.title'),
+        subtitle: [t('TRUST.subtitle')],
+        camera: { x: -20, y: 138, z: -2300 },
+        lookAt: { x: 0, y: 105, z: -4000 }
+      },
+      {
+        title: t('ELAOUAD.title'),
+        subtitle: [t('ELAOUAD.subtitle')],
+        camera: { x: 0, y: 150, z: -2700 },
+        lookAt: { x: 0, y: 120, z: -4800 }
       }
     ],
-    []
+    [t]
   )
 
   const threeRefs = useRef<any>({
@@ -108,14 +115,24 @@ export default function HeroStudio() {
     const refs = threeRefs.current
     const clock = new THREE.Clock()
 
+    const manager = new THREE.LoadingManager()
+    manager.onProgress = (url, loaded, total) => {
+      setLoadingProgress(Math.round((loaded / total) * 100))
+    }
+    manager.onLoad = () => {
+      setTimeout(() => setIsReady(true), 500)
+    }
+
     const isMobile = () => window.innerWidth < 768
 
     const initThree = () => {
       if (!canvasRef.current) return
 
       refs.scene = new THREE.Scene()
-      refs.scene.background = new THREE.Color(0xe9dfc9)
-      refs.scene.fog = new THREE.FogExp2(0xe9dfc9, 0.00065) // Natural ambient fog
+      const bgTexture = new THREE.TextureLoader(manager).load('/assets/backgound_hero.png')
+      bgTexture.colorSpace = THREE.SRGBColorSpace
+      refs.scene.background = bgTexture
+      refs.scene.fog = new THREE.FogExp2(0x050a14, 0.00045) // Lighter fog so bg is visible
 
       refs.camera = new THREE.PerspectiveCamera(
         55,
@@ -146,7 +163,11 @@ export default function HeroStudio() {
       refs.renderer.setSize(window.innerWidth, window.innerHeight)
       refs.renderer.setPixelRatio(Math.min(window.devicePixelRatio, isMobile() ? 1.5 : 2))
       refs.renderer.toneMapping = THREE.ACESFilmicToneMapping
-      refs.renderer.toneMappingExposure = 0.72
+      refs.renderer.toneMappingExposure = 0.85
+      
+      // Enable Shadows for Cinematic Realism
+      refs.renderer.shadowMap.enabled = true
+      refs.renderer.shadowMap.type = THREE.PCFSoftShadowMap
 
       if ('outputColorSpace' in refs.renderer) {
         refs.renderer.outputColorSpace = THREE.SRGBColorSpace
@@ -168,34 +189,44 @@ export default function HeroStudio() {
       }
 
       createLighting()
-      createAtmosphere()
-      createHazePlane()
-      createSunGlow()
+      // createAtmosphere()
+      // createHazePlane()
+      // createSunGlow()
       createCitySkyline()
       createAtmosphericParticles()
 
       updateFromScroll(0)
       createScrollTrigger()
 
-      setIsReady(true)
+      // setIsReady(true) handled by manager.onLoad
       animate()
     }
 
     const createLighting = () => {
-      const ambient = new THREE.AmbientLight(0xf5e4c8, 1.15)
+      const ambient = new THREE.AmbientLight(0x111625, 0.6)
       refs.scene.add(ambient)
 
-      const sunKey = new THREE.DirectionalLight(0xffddb3, 1.5)
-      sunKey.position.set(260, 240, 180)
-      refs.scene.add(sunKey)
+      const moonKey = new THREE.DirectionalLight(0xb5cfff, 1.8)
+      moonKey.position.set(260, 440, 180)
+      moonKey.castShadow = true
+      moonKey.shadow.mapSize.width = 1024
+      moonKey.shadow.mapSize.height = 1024
+      moonKey.shadow.camera.near = 10
+      moonKey.shadow.camera.far = 3000
+      moonKey.shadow.camera.left = -1500
+      moonKey.shadow.camera.right = 1500
+      moonKey.shadow.camera.top = 1500
+      moonKey.shadow.camera.bottom = -1500
+      moonKey.shadow.bias = -0.002
+      refs.scene.add(moonKey)
 
-      const coolFill = new THREE.DirectionalLight(0x9fb6c6, 0.45)
+      const coolFill = new THREE.DirectionalLight(0x405570, 0.6)
       coolFill.position.set(-220, 80, 120)
       refs.scene.add(coolFill)
 
-      const backRim = new THREE.DirectionalLight(0xffc17f, 0.65)
-      backRim.position.set(100, 120, -500)
-      refs.scene.add(backRim)
+      const cityRim = new THREE.DirectionalLight(0xffaa44, 0.5) // City glow from below
+      cityRim.position.set(0, -100, -500)
+      refs.scene.add(cityRim)
     }
 
     const createAtmosphere = () => {
@@ -204,8 +235,8 @@ export default function HeroStudio() {
       const material = new THREE.ShaderMaterial({
         uniforms: {
           time: { value: 0 },
-          colorA: { value: new THREE.Color(0xffe3b6) },
-          colorB: { value: new THREE.Color(0x6d8794) }
+          colorA: { value: new THREE.Color(0x0a1526) },
+          colorB: { value: new THREE.Color(0x02050a) }
         },
         vertexShader: `
           varying vec3 vNormal;
@@ -249,8 +280,8 @@ export default function HeroStudio() {
         uniforms: {
           time: { value: 0 },
           opacity: { value: 0.2 },
-          warm: { value: new THREE.Color(0xf3ddaf) },
-          cool: { value: new THREE.Color(0x7b8d92) }
+          warm: { value: new THREE.Color(0x1a2639) },
+          cool: { value: new THREE.Color(0x050a14) }
         },
         vertexShader: `
           varying vec2 vUv;
@@ -295,7 +326,7 @@ export default function HeroStudio() {
       const material = new THREE.ShaderMaterial({
         uniforms: {
           opacity: { value: 0.32 },
-          color: { value: new THREE.Color(0xffdd9b) }
+          color: { value: new THREE.Color(0xc9dfff) } // Moonlight
         },
         vertexShader: `
           varying vec2 vUv;
@@ -330,135 +361,69 @@ export default function HeroStudio() {
     }
 
     const createCitySkyline = () => {
-      // 9 Massive layered arrays of building sizes and depth placements.
-      // Keeping values consistently tall so the camera fly-through is constantly surrounded by architecture.
+      const textureLoader = new THREE.TextureLoader(manager)
+      const concreteTex = textureLoader.load('/textures/concrete.png')
+      concreteTex.wrapS = concreteTex.wrapT = THREE.RepeatWrapping
+
+      const windowTex = textureLoader.load('/textures/windows.png')
+      windowTex.wrapS = windowTex.wrapT = THREE.RepeatWrapping
+      
+      const streetTex = textureLoader.load('/textures/streets.png')
+      streetTex.wrapS = streetTex.wrapT = THREE.RepeatWrapping
+      streetTex.repeat.set(30, 30)
+
+      // Add Ground Plane for realism
+      const groundGeom = new THREE.PlaneGeometry(8000, 8000)
+      const groundMat = new THREE.MeshStandardMaterial({
+        color: 0x111111,
+        map: streetTex,
+        roughness: 0.8,
+        metalness: 0.2
+      })
+      const ground = new THREE.Mesh(groundGeom, groundMat)
+      ground.rotation.x = -Math.PI / 2
+      ground.position.y = -210
+      ground.receiveShadow = true
+      refs.scene.add(ground)
+
+      const injectTriplanar = (shader: any) => {
+        shader.vertexShader = `
+          varying vec3 vWorldPos;
+          ${shader.vertexShader}
+        `.replace(
+          `#include <worldpos_vertex>`,
+          `#include <worldpos_vertex>
+           vWorldPos = (modelMatrix * vec4(transformed, 1.0)).xyz;`
+        )
+        shader.fragmentShader = `
+          varying vec3 vWorldPos;
+          ${shader.fragmentShader}
+        `.replace(
+          `#include <map_fragment>`,
+          `
+          #ifdef USE_MAP
+            vec3 blend = abs(vNormal);
+            blend /= dot(blend, vec3(1.0));
+            vec4 cx = texture2D(map, vWorldPos.yz * 0.03);
+            vec4 cy = texture2D(map, vWorldPos.xz * 0.03);
+            vec4 cz = texture2D(map, vWorldPos.xy * 0.03);
+            vec4 sampledDiffuseColor = cx * blend.x + cy * blend.y + cz * blend.z;
+            diffuseColor *= sampledDiffuseColor;
+          #endif
+          `
+        )
+      }
+
       const layers = [
-        {
-          z: -100,
-          count: 8,
-          width: 1000,
-          minH: 300,
-          maxH: 700,
-          minW: 60,
-          maxW: 130,
-          depth: [40, 80],
-          color: 0x0f171e,
-          opacity: 1.0,
-          windowOpacity: 0.9,
-          windowChance: 0.25
-        },
-        {
-          z: -300,
-          count: 12,
-          width: 1300,
-          minH: 300,
-          maxH: 700,
-          minW: 50,
-          maxW: 110,
-          depth: [35, 70],
-          color: 0x18222b,
-          opacity: 0.9,
-          windowOpacity: 0.8,
-          windowChance: 0.2
-        },
-        {
-          z: -600,
-          count: 16,
-          width: 1600,
-          minH: 300,
-          maxH: 700,
-          minW: 40,
-          maxW: 90,
-          depth: [30, 60],
-          color: 0x28333c,
-          opacity: 0.8,
-          windowOpacity: 0.65,
-          windowChance: 0.15
-        },
-        {
-          z: -900,
-          count: 20,
-          width: 1900,
-          minH: 300,
-          maxH: 650,
-          minW: 35,
-          maxW: 80,
-          depth: [25, 50],
-          color: 0x38444e,
-          opacity: 0.7,
-          windowOpacity: 0.5,
-          windowChance: 0.1
-        },
-        {
-          z: -1300,
-          count: 24,
-          width: 2200,
-          minH: 250,
-          maxH: 650,
-          minW: 30,
-          maxW: 70,
-          depth: [20, 45],
-          color: 0x485560,
-          opacity: 0.6,
-          windowOpacity: 0.35,
-          windowChance: 0.08
-        },
-        {
-          z: -1700,
-          count: 28,
-          width: 2600,
-          minH: 250,
-          maxH: 600,
-          minW: 25,
-          maxW: 60,
-          depth: [15, 35],
-          color: 0x5a6873,
-          opacity: 0.5,
-          windowOpacity: 0.25,
-          windowChance: 0.05
-        },
-        {
-          z: -2100,
-          count: 32,
-          width: 3000,
-          minH: 200,
-          maxH: 600,
-          minW: 20,
-          maxW: 50,
-          depth: [12, 30],
-          color: 0x707e8a,
-          opacity: 0.4,
-          windowOpacity: 0.15,
-          windowChance: 0.03
-        },
-        {
-          z: -2600,
-          count: 36,
-          width: 3500,
-          minH: 200,
-          maxH: 550,
-          minW: 18,
-          maxW: 45,
-          depth: [10, 25],
-          color: 0x8694a0,
-          opacity: 0.3,
-          windowOpacity: 0.1,
-          windowChance: 0.02
-        },
-        {
-          z: -3100,
-          count: 40,
-          width: 4000,
-          minH: 150,
-          maxH: 500,
-          minW: 15,
-          maxW: 40,
-          depth: [8, 20],
-          color: 0x9caab6,
-          opacity: 0.2,
-          windowOpacity: 0.05,
-          windowChance: 0.01
-        }
+        { z: -100, count: 6, width: 1400, minH: 300, maxH: 700, minW: 50, maxW: 90, depth: [40, 80], windowChance: 0.25 },
+        { z: -300, count: 12, width: 1300, minH: 300, maxH: 700, minW: 50, maxW: 110, depth: [35, 70], windowChance: 0.2 },
+        { z: -600, count: 16, width: 1600, minH: 300, maxH: 700, minW: 40, maxW: 90, depth: [30, 60], windowChance: 0.15 },
+        { z: -900, count: 20, width: 1900, minH: 300, maxH: 650, minW: 35, maxW: 80, depth: [25, 50], windowChance: 0.1 },
+        { z: -1300, count: 24, width: 2200, minH: 250, maxH: 650, minW: 30, maxW: 70, depth: [20, 45], windowChance: 0.08 },
+        { z: -1700, count: 28, width: 2600, minH: 250, maxH: 600, minW: 25, maxW: 60, depth: [15, 35], windowChance: 0.05 },
+        { z: -2100, count: 32, width: 3000, minH: 200, maxH: 600, minW: 20, maxW: 50, depth: [12, 30], windowChance: 0.03 },
+        { z: -2600, count: 36, width: 3500, minH: 200, maxH: 550, minW: 18, maxW: 45, depth: [10, 25], windowChance: 0.02 },
+        { z: -3100, count: 40, width: 4000, minH: 150, maxH: 500, minW: 15, maxW: 40, depth: [8, 20], windowChance: 0.01 }
       ]
 
       layers.forEach((layer, layerIndex) => {
@@ -473,26 +438,28 @@ export default function HeroStudio() {
         }
 
         const buildingGeometry = new THREE.BoxGeometry(1, 1, 1)
-        const buildingMaterial = new THREE.MeshStandardMaterial({
-          color: layer.color,
-          transparent: true,
-          opacity: layer.opacity,
-          roughness: 0.96,
-          metalness: 0.04
-        })
+        
+        // Depth gradient color based on layer index
+        const frontColor = new THREE.Color(0x1a2025) // Darker in front
+        const backColor = new THREE.Color(0x6a7580)  // Lighter in back
+        const layerColor = frontColor.clone().lerp(backColor, layerIndex / (layers.length - 1))
 
-        const roofMaterial = new THREE.MeshStandardMaterial({
-          color: layer.color,
-          transparent: true,
-          opacity: Math.min(1, layer.opacity + 0.08),
+        const buildingMaterial = new THREE.MeshStandardMaterial({
+          color: layerColor,
+          map: concreteTex,
           roughness: 0.95,
           metalness: 0.05
         })
+        buildingMaterial.onBeforeCompile = injectTriplanar
+
+        const roofMaterial = buildingMaterial.clone()
 
         const windowGeometry = new THREE.PlaneGeometry(3.4, 5.4)
         const windowMaterial = new THREE.MeshBasicMaterial({
+          color: 0xffffff,
+          map: windowTex,
           transparent: true,
-          opacity: layer.windowOpacity,
+          opacity: 0.9,
           depthWrite: false,
           side: THREE.DoubleSide
         })
@@ -516,14 +483,14 @@ export default function HeroStudio() {
           let height = randFloat(layer.minH, layer.maxH, seed + 2)
           let depth = randFloat(layer.depth[0], layer.depth[1], seed + 3)
 
-          if (layerIndex === 0 && i === 2) {
-            width = 118
+          if (layerIndex === 0 && i === 1) {
+            width = 80
             height = 660
             depth = 78
           }
 
-          if (layerIndex === 0 && i === 4) {
-            width = 92
+          if (layerIndex === 0 && i === 3) {
+            width = 75
             height = 500
             depth = 68
           }
@@ -539,20 +506,31 @@ export default function HeroStudio() {
             yBase + height / 2,
             randFloat(-18, 18, seed + 5)
           )
+          building.castShadow = true
+          building.receiveShadow = true
 
-          building.userData = {
-            height,
-            width,
-            depth,
-            seed
-          }
-
+          building.userData = { height, width, depth, seed }
           group.add(building)
 
-          // Rooftop details for all layers to enrich architectural shapes
+          // Architectural Setbacks for realism (adding tiered structure)
+          if (height > 350 && seededRandom(seed + 900) > 0.4) {
+             const setBackH = randFloat(40, 150, seed + 901)
+             const setback = new THREE.Mesh(buildingGeometry, buildingMaterial)
+             setback.scale.set(width * 0.7, setBackH, depth * 0.7)
+             setback.position.set(
+               building.position.x,
+               yBase + height + setBackH / 2,
+               building.position.z
+             )
+             setback.castShadow = true
+             setback.receiveShadow = true
+             group.add(setback)
+             height += setBackH // update total height for roof placement
+          }
+
+          // Rooftop details
           if (layerIndex <= 6) {
             const rooftopCount = layerIndex === 0 ? 3 : 2
-
             for (let r = 0; r < rooftopCount; r++) {
               const roofBox = new THREE.Mesh(buildingGeometry, roofMaterial)
               const rw = randFloat(5, 14, seed + 60 + r)
@@ -565,12 +543,13 @@ export default function HeroStudio() {
                 yBase + height + rh / 2,
                 building.position.z + randFloat(-depth * 0.25, depth * 0.25, seed + 100 + r)
               )
-
+              roofBox.castShadow = true
+              roofBox.receiveShadow = true
               group.add(roofBox)
             }
           }
 
-          // Spire/antenna details for 15% of buildings to create organic skyline spikes
+          // Spire/antenna
           if (seededRandom(seed + 99) < 0.18 && height > 280) {
             const antH = randFloat(30, 80, seed + 101)
             const antennaGeom = new THREE.CylinderGeometry(0.4, 0.4, antH, 4)
@@ -580,6 +559,7 @@ export default function HeroStudio() {
               yBase + height + antH / 2,
               building.position.z
             )
+            antenna.castShadow = true
             group.add(antenna)
           }
 
@@ -600,20 +580,19 @@ export default function HeroStudio() {
                 if (windowIndex >= maxWindowInstances) break
 
                 const wx = building.position.x - width / 2 + col * (width / cols)
-                const wy = building.position.y - height / 2 + row * (height / rows)
+                const wy = (yBase + height / 2) - height / 2 + row * (height / rows)
                 const wz = building.position.z + depth / 2 + 0.7
 
                 matrix.compose(new THREE.Vector3(wx, wy, wz), q, s)
                 windowMesh.setMatrixAt(windowIndex, matrix)
 
-                // Vary window light colors organically between amber, yellow and warm cream
                 const colSel = seededRandom(chanceSeed + 42)
                 if (colSel > 0.6) {
-                  colObj.setHex(0xffd9a1) // Warm amber
+                  colObj.setHex(0xffaa44) // Neon amber
                 } else if (colSel > 0.2) {
-                  colObj.setHex(0xffeba3) // Bright pale yellow
-                } else {
                   colObj.setHex(0xffffff) // White light
+                } else {
+                  colObj.setHex(0x555555) // Dim window
                 }
                 windowMesh.setColorAt(windowIndex, colObj)
 
@@ -662,7 +641,7 @@ export default function HeroStudio() {
       const material = new THREE.ShaderMaterial({
         uniforms: {
           time: { value: 0 },
-          color: { value: new THREE.Color(0xffe4b8) }
+          color: { value: new THREE.Color(0xffaa44) } // Ember glow
         },
         vertexShader: `
           attribute float size;
@@ -720,9 +699,6 @@ export default function HeroStudio() {
     }
 
     const createScrollTrigger = () => {
-      // Use a manual spacer approach. The hero section is position:fixed,
-      // and the spacer div provides the scroll distance.
-      // ScrollTrigger tracks the spacer, not the hero section itself.
       refs.scrollTrigger = ScrollTrigger.create({
         trigger: containerRef.current,
         start: 'top top',
@@ -780,7 +756,7 @@ export default function HeroStudio() {
         progressFillRef.current.style.transform = `scaleX(${progress})`
       }
 
-      // Parallax shifts on X axis, but keeping Z static so the buildings feel grounded and real
+      // Parallax shifts on X axis
       refs.cityLayers.forEach((layer: any, index: number) => {
         const foregroundWeight = 1 / (index + 1)
         layer.userData.targetX = (capProgress - 0.5) * 34 * foregroundWeight
@@ -911,10 +887,15 @@ export default function HeroStudio() {
       }
     }
 
-    initThree()
+    // Delay initialization slightly to let React unmount previous canvas cleanly during route transitions
+    const initTimer = setTimeout(() => {
+      initThree()
+    }, 50)
+    
     window.addEventListener('resize', handleResize)
 
     return () => {
+      clearTimeout(initTimer)
       if (refs.scrollTrigger) {
         refs.scrollTrigger.kill()
       }
@@ -933,7 +914,7 @@ export default function HeroStudio() {
 
       if (refs.renderer) {
         refs.renderer.dispose()
-        refs.renderer.forceContextLoss?.()
+        // Removed forceContextLoss to prevent browser WebGL context blocking on rapid remounts
       }
 
       refs.scene = null
@@ -978,7 +959,6 @@ export default function HeroStudio() {
     return () => ctx.revert()
   }, [isReady])
 
-  // Run the massive title letter entry animation once on load
   useEffect(() => {
     if (!isReady || !contentRef.current) return
 
@@ -1020,7 +1000,6 @@ export default function HeroStudio() {
 
   return (
     <>
-      {/* Premium Preloader Intro Screen */}
       <AnimatePresence>
         {!isReady && (
           <motion.div
@@ -1050,19 +1029,28 @@ export default function HeroStudio() {
                 />
               </div>
             </div>
+
+            {/* Bottom Left Progress Counter */}
+            <div className="absolute bottom-8 left-6 md:bottom-12 md:left-12 overflow-hidden mix-blend-difference">
+              <motion.div
+                initial={{ y: 50, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+                className="font-sans text-6xl md:text-[8rem] leading-none font-extrabold uppercase tracking-tight text-white drop-shadow-lg tabular-nums"
+              >
+                {loadingProgress}%
+              </motion.div>
+            </div>
           </motion.div>
         )}
       </AnimatePresence>
 
-      {/* Scroll spacer — gives the page enough scroll distance for the camera animation.
-          The hero section is fixed, so this spacer is what GSAP tracks. */}
       <div
         id="hero"
         ref={containerRef}
         className="relative w-full"
         style={{ height: `${sections.length * 100}vh` }}
       >
-        {/* Fixed hero layer — stays in viewport while user scrolls through the spacer */}
         <section className="hero-container city-hero" style={{ position: 'fixed', inset: 0, zIndex: 1 }}>
           <canvas ref={canvasRef} className="hero-canvas" />
 
@@ -1101,7 +1089,7 @@ export default function HeroStudio() {
 
                   <div className="hero-subtitle city-subtitle">
                     {section.subtitle.map((line, index) => (
-                      <p key={index} className="subtitle-line">
+                      <p key={index} className="subtitle-line text-[#f0e6d2] font-light tracking-wide text-lg md:text-xl drop-shadow-lg">
                         {line}
                       </p>
                     ))}

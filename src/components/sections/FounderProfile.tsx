@@ -4,6 +4,7 @@ import React, { useEffect, useRef } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { siteData } from '@/data/site'
+import { useTranslations } from 'next-intl'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -55,8 +56,9 @@ export default function FounderProfile() {
     return () => ctx.revert()
   }, [])
 
+  const t = useTranslations('Founder')
+  const titleLines = t('title').split('\n')
   const { founder } = siteData
-  const titleLines = founder.title.split('\n')
 
   return (
     <section
@@ -68,7 +70,7 @@ export default function FounderProfile() {
       <div className="max-w-[1440px] mx-auto px-6 md:px-12 lg:px-20 w-full">
         {/* Eyebrow */}
         <p className="founder-text-block text-xs tracking-[0.3em] uppercase text-eai-charcoal/40 mb-6">
-          {founder.eyebrow}
+          {t('eyebrow')}
         </p>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
@@ -76,7 +78,7 @@ export default function FounderProfile() {
           <div className="founder-image relative aspect-[3/4] max-h-[680px] rounded-2xl overflow-hidden shadow-2xl">
             <img
               src={founder.image}
-              alt={`${founder.name} — ${founder.role}`}
+              alt={`${t('name')} — ${t('role')}`}
               className="absolute inset-0 w-full h-full object-cover"
               loading="lazy"
               onError={(e) => {
@@ -112,25 +114,25 @@ export default function FounderProfile() {
             </h2>
 
             <p className="founder-text-block text-sm tracking-[0.15em] uppercase text-eai-charcoal/50 mb-8">
-              {founder.name} — {founder.role}
+              {t('name')} — {t('role')}
             </p>
 
             <div className="space-y-5 max-w-lg">
               <p className="founder-text-block text-[clamp(0.9rem,1.05vw,1rem)] leading-relaxed text-eai-charcoal/70">
-                {founder.intro}
+                {t('intro')}
               </p>
               <p className="founder-text-block text-[clamp(0.9rem,1.05vw,1rem)] leading-relaxed text-eai-charcoal/70">
-                {founder.philosophy}
+                {t('philosophy')}
               </p>
             </div>
 
             {/* Quote */}
             <blockquote className="founder-quote-block mt-10 pl-6 border-l-2 border-eai-olive/60">
               <p className="font-sans text-[clamp(1.05rem,1.3vw,1.25rem)] italic leading-relaxed text-eai-charcoal/80">
-                &ldquo;{founder.quote}&rdquo;
+                &ldquo;{t('quote')}&rdquo;
               </p>
               <cite className="block mt-4 text-xs tracking-[0.15em] uppercase text-eai-charcoal/40 not-italic">
-                — {founder.name}
+                — {t('name')}
               </cite>
             </blockquote>
           </div>
