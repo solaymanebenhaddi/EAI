@@ -421,46 +421,57 @@ export default function HeroStudio() {
           #ifdef USE_MAP
             vec3 blend = abs(vNormal);
             blend /= dot(blend, vec3(1.0));
-            vec4 cx = texture2D(map, vWorldPos.yz * 0.03);
-            vec4 cy = texture2D(map, vWorldPos.xz * 0.03);
-            vec4 cz = texture2D(map, vWorldPos.xy * 0.03);
+            vec4 cx = texture2D(map, vWorldPos.yz * 0.05);
+            vec4 cy = texture2D(map, vWorldPos.xz * 0.05);
+            vec4 cz = texture2D(map, vWorldPos.xy * 0.05);
             vec4 sampledDiffuseColor = cx * blend.x + cy * blend.y + cz * blend.z;
             
-            diffuseColor *= sampledDiffuseColor;
-            
-            // --- PROCEDURAL WINDOWS ---
-            // Only apply windows to walls (where y-normal is close to 0)
-            float isWall = step(0.5, 1.0 - abs(vNormal.y));
-            
-            // Map the 2D grid based on the facing normal
-            float useX = step(0.5, abs(vNormal.x));
-            vec2 winGrid = mix(vWorldPos.xy, vWorldPos.zy, useX);
-            
-            // Window scaling (adjusts how large the windows are)
-            vec2 winScale = vec2(0.08, 0.05);
-            vec2 winUv = fract(winGrid * winScale);
-            vec2 winId = floor(winGrid * winScale);
-            
-            // Frame vs Glass (creates the borders between windows)
-            float isGlass = step(0.15, winUv.x) * step(0.2, winUv.y) * step(winUv.x, 0.85) * step(winUv.y, 0.8);
-            
-            if (isWall > 0.5 && isGlass > 0.5) {
-              // Generate a random value for this specific window pane
-              // We mix winId with some world pos variation so adjacent buildings don't share the exact same pattern perfectly
-              float noiseVal = hash(winId + floor(vWorldPos.x * 0.01) * 10.0 + floor(vWorldPos.z * 0.01) * 100.0);
-              
-              if (noiseVal > 0.92) {
-                // Neon Amber glowing window
-                diffuseColor.rgb = mix(diffuseColor.rgb, vec3(1.0, 0.6, 0.2) * 2.0, 0.9);
-              } else if (noiseVal > 0.75) {
-                // White/Blueish glowing window
-                diffuseColor.rgb = mix(diffuseColor.rgb, vec3(0.8, 0.9, 1.0) * 1.5, 0.85);
-              } else {
-                // Unlit dark glass
-                diffuseColor.rgb = mix(diffuseColor.rgb, vec3(0.02, 0.03, 0.04), 0.95);
-              }
-            }
+            // Mix the base layer color with the concrete texture to retain visibility
+            diffuseColor.rgb = mix(sampledDiffuseColor.rgb, diffuseColor.rgb, 0.4);
           #endif
+          `
+        ).replace(
+          `#include <emissivemap_fragment>`,
+          `
+          #include <emissivemap_fragment>
+          
+          // --- PROCEDURAL WINDOWS ---
+          // Only apply windows to walls (where y-normal is close to 0)
+          float isWall = step(0.5, 1.0 - abs(vNormal.y));
+          
+          // Map the 2D grid based on the facing normal
+          float useX = step(0.5, abs(vNormal.x));
+          vec2 winGrid = mix(vWorldPos.xy, vWorldPos.zy, useX);
+          
+          // Window scaling (adjusts how large the windows are)
+          vec2 winScale = vec2(0.12, 0.06);
+          vec2 winUv = fract(winGrid * winScale);
+          vec2 winId = floor(winGrid * winScale);
+          
+          // Smooth edges for realism (creates nice window frames)
+          float frameX = smoothstep(0.05, 0.15, winUv.x) * smoothstep(0.95, 0.85, winUv.x);
+          float frameY = smoothstep(0.1, 0.2, winUv.y) * smoothstep(0.9, 0.8, winUv.y);
+          float isGlass = frameX * frameY;
+          
+          if (isWall > 0.5 && isGlass > 0.1) {
+            // Generate a random value for this specific window pane
+            float noiseVal = hash(winId + floor(vWorldPos.x * 0.01) * 10.0 + floor(vWorldPos.z * 0.01) * 100.0);
+            vec3 glowColor = vec3(0.0);
+            
+            if (noiseVal > 0.92) {
+              // Neon Amber glowing window
+              glowColor = vec3(1.0, 0.55, 0.15) * 5.0;
+            } else if (noiseVal > 0.75) {
+              // White/Blueish glowing window
+              glowColor = vec3(0.7, 0.85, 1.0) * 4.0;
+            } else {
+              // Unlit dark glass - fake reflection by darkening the concrete behind it
+              diffuseColor.rgb *= (1.0 - isGlass * 0.75);
+            }
+            
+            // Add directly to emissive radiance so it glows independent of lighting/shadows!
+            totalEmissiveRadiance += glowColor * isGlass;
+          }
           `
         )
       }
