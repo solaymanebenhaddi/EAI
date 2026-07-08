@@ -408,6 +408,12 @@ export default function HeroStudio() {
         )
         shader.fragmentShader = `
           varying vec3 vWorldPos;
+          
+          // Pseudo-random noise for window lighting
+          float hash(vec2 p) {
+            return fract(sin(dot(p, vec2(12.9898, 78.233))) * 43758.5453);
+          }
+          
           ${shader.fragmentShader}
         `.replace(
           `#include <map_fragment>`,
@@ -419,7 +425,41 @@ export default function HeroStudio() {
             vec4 cy = texture2D(map, vWorldPos.xz * 0.03);
             vec4 cz = texture2D(map, vWorldPos.xy * 0.03);
             vec4 sampledDiffuseColor = cx * blend.x + cy * blend.y + cz * blend.z;
+            
             diffuseColor *= sampledDiffuseColor;
+            
+            // --- PROCEDURAL WINDOWS ---
+            // Only apply windows to walls (where y-normal is close to 0)
+            float isWall = step(0.5, 1.0 - abs(vNormal.y));
+            
+            // Map the 2D grid based on the facing normal
+            float useX = step(0.5, abs(vNormal.x));
+            vec2 winGrid = mix(vWorldPos.xy, vWorldPos.zy, useX);
+            
+            // Window scaling (adjusts how large the windows are)
+            vec2 winScale = vec2(0.08, 0.05);
+            vec2 winUv = fract(winGrid * winScale);
+            vec2 winId = floor(winGrid * winScale);
+            
+            // Frame vs Glass (creates the borders between windows)
+            float isGlass = step(0.15, winUv.x) * step(0.2, winUv.y) * step(winUv.x, 0.85) * step(winUv.y, 0.8);
+            
+            if (isWall > 0.5 && isGlass > 0.5) {
+              // Generate a random value for this specific window pane
+              // We mix winId with some world pos variation so adjacent buildings don't share the exact same pattern perfectly
+              float noiseVal = hash(winId + floor(vWorldPos.x * 0.01) * 10.0 + floor(vWorldPos.z * 0.01) * 100.0);
+              
+              if (noiseVal > 0.92) {
+                // Neon Amber glowing window
+                diffuseColor.rgb = mix(diffuseColor.rgb, vec3(1.0, 0.6, 0.2) * 2.0, 0.9);
+              } else if (noiseVal > 0.75) {
+                // White/Blueish glowing window
+                diffuseColor.rgb = mix(diffuseColor.rgb, vec3(0.8, 0.9, 1.0) * 1.5, 0.85);
+              } else {
+                // Unlit dark glass
+                diffuseColor.rgb = mix(diffuseColor.rgb, vec3(0.02, 0.03, 0.04), 0.95);
+              }
+            }
           #endif
           `
         )
@@ -465,26 +505,6 @@ export default function HeroStudio() {
 
         const roofMaterial = buildingMaterial.clone()
 
-        const windowGeometry = new THREE.PlaneGeometry(3.4, 5.4)
-        const windowMaterial = new THREE.MeshBasicMaterial({
-          color: 0xffffff,
-          map: windowTex,
-          transparent: true,
-          opacity: 0.9,
-          depthWrite: false,
-          side: THREE.DoubleSide
-        })
-
-        const maxWindowInstances = Math.max(1, layer.count * 280)
-        const windowMesh = new THREE.InstancedMesh(
-          windowGeometry,
-          windowMaterial,
-          maxWindowInstances
-        )
-
-        windowMesh.frustumCulled = false
-
-        let windowIndex = 0
         const spacing = layer.width / layer.count
 
         for (let i = 0; i < layer.count; i++) {
@@ -573,56 +593,6 @@ export default function HeroStudio() {
             antenna.castShadow = true
             group.add(antenna)
           }
-
-          if (layerIndex <= 7 && windowIndex < maxWindowInstances) {
-            const rows = Math.floor(height / 22)
-            const cols = Math.max(2, Math.floor(width / 15))
-
-            const q = new THREE.Quaternion()
-            const s = new THREE.Vector3(1, 1, 1)
-            const matrix = new THREE.Matrix4()
-            const colObj = new THREE.Color()
-
-            for (let row = 1; row < rows - 1; row++) {
-              for (let col = 1; col < cols - 1; col++) {
-                const chanceSeed = seed + row * 131 + col * 19
-
-                if (seededRandom(chanceSeed) > layer.windowChance) continue
-                if (windowIndex >= maxWindowInstances) break
-
-                const wx = building.position.x - width / 2 + col * (width / cols)
-                const wy = (yBase + height / 2) - height / 2 + row * (height / rows)
-                const wz = building.position.z + depth / 2 + 0.7
-
-                matrix.compose(new THREE.Vector3(wx, wy, wz), q, s)
-                windowMesh.setMatrixAt(windowIndex, matrix)
-
-                const colSel = seededRandom(chanceSeed + 42)
-                if (colSel > 0.6) {
-                  colObj.setHex(0xffaa44) // Neon amber
-                } else if (colSel > 0.2) {
-                  colObj.setHex(0xffffff) // White light
-                } else {
-                  colObj.setHex(0x555555) // Dim window
-                }
-                windowMesh.setColorAt(windowIndex, colObj)
-
-                windowIndex++;
-              }
-            }
-          }
-        }
-
-        if (windowIndex > 0) {
-          windowMesh.count = windowIndex
-          windowMesh.instanceMatrix.needsUpdate = true
-          if (windowMesh.instanceColor) {
-            windowMesh.instanceColor.needsUpdate = true
-          }
-          group.add(windowMesh)
-        } else {
-          windowGeometry.dispose()
-          windowMaterial.dispose()
         }
 
         refs.scene.add(group)
