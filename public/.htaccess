@@ -1,0 +1,12 @@
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  
+  # Redirect requests without trailing slashes to trailing slashes
+  # This matches Next.js trailingSlash: true behavior for SEO
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_URI} !(.*)/$
+  RewriteRule ^(.*)$ $1/ [L,R=301]
+</IfModule>
+
+# Handle 404 errors by serving the statically generated Next.js 404 page
+ErrorDocument 404 /404.html
