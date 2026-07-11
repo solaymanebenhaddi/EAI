@@ -5,7 +5,9 @@ import { motion, AnimatePresence } from 'motion/react'
 import { useTranslations } from 'next-intl'
 import { siteData } from '@/data/site'
 import { cn } from '@/lib/utils'
+import { Link, usePathname, useRouter } from '@/i18n/routing'
 import LanguageSwitcher from '../ui/LanguageSwitcher'
+import GlobalSearch from '../ui/GlobalSearch'
 
 export default function Navbar() {
   const [open, setOpen] = useState(false)
@@ -31,8 +33,17 @@ export default function Navbar() {
     { label: t('method'), id: '#methode' },
   ]
 
+  const pathname = usePathname()
+  const router = useRouter()
+
   const scrollTo = (id: string) => {
     setOpen(false)
+    
+    if (pathname !== '/') {
+      router.push('/' + id)
+      return
+    }
+
     const lenis = (window as any).lenis
     if (lenis) {
       lenis.scrollTo(id, { offset: 0, duration: 1.2 })
@@ -75,6 +86,12 @@ export default function Navbar() {
               {link.label}
             </a>
           ))}
+          <Link 
+            href="/careers" 
+            className="text-[11px] uppercase tracking-[0.14em] text-white hover:text-[var(--color-eai-olive)] transition-colors duration-200 cursor-pointer font-bold drop-shadow-[0_1px_2px_rgba(0,0,0,0.1)] no-underline"
+          >
+            Carrières
+          </Link>
         </div>
 
         <a 
@@ -84,8 +101,31 @@ export default function Navbar() {
         >
           {t('discuss')}
         </a>
-        <div className="hidden md:flex ml-4 border-l border-white/20 pl-4 items-center">
+        <div className="hidden md:flex ml-4 border-l border-white/20 pl-4 items-center gap-4">
+          <div className="flex items-center gap-2 mr-2">
+            {siteData.socials.map((social) => (
+              <a 
+                key={social.platform} 
+                href={social.url} 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="text-white hover:text-[var(--color-eai-olive)] transition-colors"
+                aria-label={social.platform}
+              >
+                {social.icon === 'linkedin' && (
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                )}
+                {social.icon === 'instagram' && (
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                )}
+                {social.icon === 'facebook' && (
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                )}
+              </a>
+            ))}
+          </div>
           <LanguageSwitcher />
+          <GlobalSearch />
         </div>
 
         {/* Hamburger */}
@@ -134,12 +174,29 @@ export default function Navbar() {
                   </motion.a>
                 ))}
                 
+                <motion.div
+                  initial={{ opacity: 0, x: 20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: 0.2 + links.length * 0.05 }}
+                >
+                  <Link 
+                    href="/careers" 
+                    onClick={() => setOpen(false)}
+                    className="font-sans font-extrabold text-4xl text-foreground hover:text-[var(--color-eai-olive)] transition-colors text-left py-1 cursor-pointer no-underline block"
+                  >
+                    Carrières
+                  </Link>
+                </motion.div>
+                
                 <motion.div 
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ delay: 0.4 }}
                   className="mt-10 pt-6 border-t border-foreground/10"
                 >
+                  <div className="flex justify-center mb-6">
+                    <GlobalSearch />
+                  </div>
                   <p className="text-xs text-foreground/50 leading-relaxed mb-4">{t('subtitle')}</p>
                   <a 
                     href="#contact"

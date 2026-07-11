@@ -285,6 +285,114 @@ export const siteData = {
     phone: '+212 520 19 87 38',
     address: 'Casablanca, Maroc',
   },
+  socials: [
+    { platform: 'LinkedIn', url: 'https://www.linkedin.com/company/elaouad-architecture-et-ingenierie', icon: 'linkedin' },
+    { platform: 'Instagram', url: 'https://www.instagram.com/elaouad_architectureingenierie/', icon: 'instagram' },
+    { platform: 'Facebook', url: 'https://www.facebook.com/elaouad.architecture.ingenierie', icon: 'facebook' },
+  ],
+  conception3D: {
+    eyebrow: 'Conception 3D',
+    title: 'Visualisez avant d\'exécuter',
+    description: 'Chez EAI, nous aidons nos clients à visualiser, valider et affiner leur espace avant l\'exécution des travaux. Grâce à nos rendus 3D photoréalistes, chaque détail est maîtrisé.',
+    categories: [
+      { name: 'Cuisine', image: '/assets/c3d_cuisine.png', description: 'Cuisines ergonomiques et esthétiques, pensées pour l\'usage quotidien.' },
+      { name: 'Bureau', image: '/assets/c3d_bureau.png', description: 'Espaces de travail optimisés pour la concentration et le bien-être.' },
+      { name: 'Villa', image: '/assets/c3d_villa.png', description: 'Villas de prestige avec un design intérieur d\'exception.' },
+      { name: 'Appartement', image: '/assets/c3d_appartement.png', description: 'Optimisation de l\'espace pour des appartements urbains élégants.' },
+      { name: 'Dressing', image: '/assets/c3d_dressing.png', description: 'Dressings sur mesure alliant rangement et design.' },
+      { name: 'Salle d\'eau', image: '/assets/c3d_salle_eau.png', description: 'Salles de bain modernes, apaisantes et fonctionnelles.' },
+      { name: 'Chambre', image: '/assets/c3d_chambre.png', description: 'Chambres à coucher conçues pour le repos et l\'élégance.' },
+      { name: 'Pièce de vie', image: '/assets/c3d_piece_de_vie.png', description: 'Salons et séjours chaleureux, véritables cœurs de la maison.' },
+      { name: 'Espace professionnel', image: '/assets/c3d_espace_pro.png', description: 'Locaux commerciaux et aménagements pour professionnels.' },
+    ]
+  },
+  turnkeyServices: {
+    eyebrow: 'Clé en main',
+    title: 'Services d\'aménagement clé en main',
+    description: 'Une gestion intégrale de votre projet, de l\'idée à la remise des clés.',
+    benefits: [
+      'Un interlocuteur unique et coordonné',
+      'Un meilleur contrôle du budget',
+      'Une cohérence totale entre conception et exécution',
+      'Une réduction des risques de coordination',
+      'Une supervision de projet professionnelle',
+      'Une planification claire et respectée',
+      'Une livraison axée sur la qualité'
+    ],
+    steps: [
+      { num: '01', title: 'Brief client' },
+      { num: '02', title: 'Relevé sur site' },
+      { num: '03', title: 'Concept intérieur' },
+      { num: '04', title: 'Plans 2D' },
+      { num: '05', title: 'Conception 3D' },
+      { num: '06', title: 'Choix des matériaux' },
+      { num: '07', title: 'Préparation du budget' },
+      { num: '08', title: 'Coordination technique' },
+      { num: '09', title: 'Exécution' },
+      { num: '10', title: 'Contrôle qualité' },
+      { num: '11', title: 'Livraison finale' },
+    ]
+  },
+  approachSteps: [
+    { num: '01', title: 'Découverte et brief client', desc: 'Compréhension approfondie de vos besoins.' },
+    { num: '02', title: 'Visite et relevé du site', desc: 'Analyse technique et spatiale des lieux.' },
+    { num: '03', title: 'Analyse des besoins et du budget', desc: 'Cadrage économique du projet.' },
+    { num: '04', title: 'Moodboard et direction créative', desc: 'Définition de l\'identité visuelle.' },
+    { num: '05', title: 'Plans d\'aménagement 2D', desc: 'Structuration et flux de circulation.' },
+    { num: '06', title: 'Conception et visualisation 3D', desc: 'Projections photoréalistes de l\'espace.' },
+    { num: '07', title: 'Choix des matériaux et finitions', desc: 'Sélection soignée des textures et couleurs.' },
+    { num: '08', title: 'Validation technique', desc: 'Vérification de la faisabilité.' },
+    { num: '09', title: 'Planification et exécution', desc: 'Suivi rigoureux des travaux.' },
+    { num: '10', title: 'Contrôle qualité et livraison', desc: 'Réception sans réserves.' }
+  ],
+  trainingOffer: {
+    eyebrow: 'Formation & Expertise',
+    title: 'Devenez un professionnel de l\'aménagement',
+    description: 'EAI partage son expertise à travers des formations pratiques et orientées marché. Maîtrisez le design d\'intérieur, la modélisation 3D, et la gestion de projet.',
+    topics: ['Design d\'intérieur résidentiel', 'Maîtrise des logiciels 3D et BIM', 'Coordination de chantier pour aménagements', 'Choix des matériaux et éclairage'],
+    videoUrl: '/assets/formation.jpeg',
+    externalUrl: 'https://courses.eai-construction.com' // Placeholder to be verified
+  },
+  mayushDesign: {
+    eyebrow: 'Mayush Design',
+    title: 'Découvrez notre plateforme d\'équipement intérieur',
+    description: 'Accédez à une sélection pointue de mobilier et d\'objets de décoration à travers notre plateforme dédiée, Mayush Design.',
+    url: 'https://mayushdesign.com',
+    categories: [
+      'Mobilier', 'Éclairage', 'Décoration', 'Cuisine', 'Dressing', 'Salle de bain', 'Mobilier de bureau', 'Accessoires intérieurs'
+    ],
+    image: '/assets/elaouad-after-interior.webp'
+  },
+  careers: [
+    {
+      id: 'interior-designer',
+      title: 'Architecte d\'Intérieur Senior',
+      department: 'Design',
+      location: 'Casablanca, Maroc',
+      contractType: 'CDI',
+      experienceLevel: '5+ années',
+      publishedAt: '2026-07-01',
+      description: 'Nous recherchons un(e) architecte d\'intérieur passionné(e) pour concevoir et superviser des projets résidentiels et professionnels premium.',
+      responsibilities: [
+        'Élaboration des concepts créatifs et moodboards.',
+        'Production de plans 2D détaillés et modèles 3D.',
+        'Sélection des matériaux et relation avec les fournisseurs.',
+        'Suivi architectural des chantiers.'
+      ],
+      requirements: [
+        'Diplôme en Architecture d\'Intérieur.',
+        'Maîtrise d\'AutoCAD, SketchUp, 3ds Max/V-Ray.',
+        'Solide expérience en gestion de projets clés en main.'
+      ]
+    }
+  ],
+  locationMap: {
+    address: 'Casablanca, Maroc',
+    lat: 33.521534,
+    lng: -7.639031,
+    embedUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3326.225043258565!2d-7.639030923381117!3d33.52153414556517!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda62d9cf51ddc95%3A0xe0baa79443c99b0d!2sElaouad%20Architecture%20et%20Ingenierie!5e0!3m2!1sen!2sus!4v1783786316071!5m2!1sen!2sus',
+    directionsUrl: 'https://maps.app.goo.gl/neBRKnuFxWP7xwxK8'
+  },
   images: {
     hero: '/assets/elaouad-hero-villa.webp',
     expertise: '/assets/elaouad-plans-bim-interior.webp',

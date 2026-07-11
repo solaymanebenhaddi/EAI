@@ -4,6 +4,8 @@ import React, { useEffect, useRef } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { siteData } from '@/data/site'
+import RemoteVideo from '@/components/ui/RemoteVideo'
+import { videoConfig } from '@/data/videoConfig'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -58,39 +60,47 @@ export default function EventsShowcase() {
 
       {/* Content */}
       <div className="relative z-10 max-w-[1440px] mx-auto px-6 md:px-12 lg:px-20 w-full py-20">
-        <div className="events-content max-w-2xl">
-          {/* Eyebrow */}
-          <p className="text-xs tracking-[0.3em] uppercase text-eai-olive mb-6">
-            {events.eyebrow}
-          </p>
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+          <div className="events-content lg:col-span-5 flex justify-center lg:justify-start">
+            <div className="w-full max-w-sm">
+              <RemoteVideo {...videoConfig.currentEvent} poster="/assets/elaouad-events-formation.webp" className="shadow-2xl border border-white/10" autoPlay={true} />
+            </div>
+          </div>
 
-          {/* Title */}
-          <h2 className="mb-8">
-            {titleLines.map((line, i) => (
-              <span
-                key={i}
-                className="block font-sans text-[clamp(2rem,4.5vw,3.6rem)] leading-[1.08] font-extrabold uppercase tracking-tight text-eai-paper"
-              >
-                {line}
-              </span>
-            ))}
-          </h2>
+          <div className="events-content lg:col-span-7 max-w-2xl">
+            {/* Eyebrow */}
+            <p className="text-xs tracking-[0.3em] uppercase text-eai-olive mb-6">
+              {events.eyebrow}
+            </p>
 
-          {/* Description */}
-          <p className="text-[clamp(0.9rem,1.1vw,1.05rem)] leading-relaxed text-eai-paper/65 max-w-lg mb-12">
-            {events.description}
-          </p>
+            {/* Title */}
+            <h2 className="mb-8">
+              {titleLines.map((line, i) => (
+                <span
+                  key={i}
+                  className="block font-sans text-[clamp(2rem,4.5vw,3.6rem)] leading-[1.08] font-extrabold uppercase tracking-tight text-eai-paper"
+                >
+                  {line}
+                </span>
+              ))}
+            </h2>
 
-          {/* CTA */}
-          <a
-            href="#contact"
-            className="inline-flex items-center gap-3 px-8 py-3.5 text-sm tracking-[0.15em] uppercase border border-eai-olive/60 text-eai-paper rounded-full hover:bg-eai-olive/15 transition-all duration-300"
-          >
-            {events.cta}
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" className="translate-x-0 group-hover:translate-x-1 transition-transform">
-              <path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-            </svg>
-          </a>
+            {/* Description */}
+            <p className="text-[clamp(0.9rem,1.1vw,1.05rem)] leading-relaxed text-eai-paper/65 max-w-lg mb-12">
+              {events.description}
+            </p>
+
+            {/* CTA */}
+            <a
+              href="#contact"
+              className="inline-flex items-center gap-3 px-8 py-3.5 text-sm tracking-[0.15em] uppercase border border-eai-olive/60 text-eai-paper rounded-full hover:bg-eai-olive/15 transition-all duration-300"
+            >
+              {events.cta}
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" className="translate-x-0 group-hover:translate-x-1 transition-transform">
+                <path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+            </a>
+          </div>
         </div>
 
         {/* Stats row */}

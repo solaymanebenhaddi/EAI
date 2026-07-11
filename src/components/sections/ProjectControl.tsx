@@ -8,6 +8,8 @@ import { siteData } from "@/data/site"
 import { Button } from "@/components/ui/Button"
 import { cn } from "@/lib/utils"
 import { useTranslations } from "next-intl"
+import { Link } from "@/i18n/routing"
+import MediaPressSection from "./MediaPressSection"
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -237,6 +239,11 @@ export default function ProjectControl() {
       </section>
 
       {/* ═══════════════════════════════════════════
+          SECTION: MEDIA & PRESS
+          ═══════════════════════════════════════════ */}
+      <MediaPressSection />
+
+      {/* ═══════════════════════════════════════════
           SECTION: CONTACT
           ═══════════════════════════════════════════ */}
       <section 
@@ -329,6 +336,7 @@ export default function ProjectControl() {
             {['Accueil', 'Expertises', 'Méthode', 'Contact'].map((l) => (
               <span key={l} onClick={() => document.getElementById(l.toLowerCase())?.scrollIntoView({behavior: 'smooth'})} className="hover:text-[var(--color-eai-olive)] transition-colors cursor-pointer w-fit">{l}</span>
             ))}
+            <Link href="/careers" className="hover:text-[var(--color-eai-olive)] transition-colors cursor-pointer w-fit no-underline">Carrières</Link>
           </div>
         </div>
         
@@ -351,6 +359,13 @@ export default function ProjectControl() {
         </div>
         
         <div className="col-span-2 md:col-span-4 border-t border-white/10 pt-6 mt-4 text-white/40 text-[10px] relative z-10 flex flex-col md:flex-row justify-between items-center gap-4">
+          <div className="flex gap-4">
+            {siteData.socials.map((s) => (
+              <a key={s.platform} href={s.url} target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors" aria-label={s.platform}>
+                {s.platform}
+              </a>
+            ))}
+          </div>
           <span>© {new Date().getFullYear()} {tFooter('brand')}. {tFooter('rights')}</span>
           <span className="tracking-[0.14em] uppercase text-[9px]">{tFooter('slogan')}</span>
         </div>
