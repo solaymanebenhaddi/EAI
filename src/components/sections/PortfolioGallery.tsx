@@ -3,6 +3,7 @@
 import InteractiveImageBentoGallery from "@/components/ui/bento-gallery"
 import { siteData } from '@/data/site'
 import { useTranslations } from 'next-intl'
+import ImageGallery from "@/components/ui/image-gallery"
 
 const spanPatterns = [
   "md:col-span-2 md:row-span-2",
@@ -15,6 +16,7 @@ const spanPatterns = [
   "md:row-span-1",
 ]
 
+import { galleryMedia } from '@/data/gallerieMedia'
 export default function PortfolioGallery() {
   const t = useTranslations('Portfolio')
 
@@ -38,6 +40,10 @@ export default function PortfolioGallery() {
         imageItems={imageItems}
         title={t('title')}
         description={t('desc')}
+      />
+      
+      <ImageGallery 
+        mediaItems={galleryMedia} 
       />
     </div>
   )
