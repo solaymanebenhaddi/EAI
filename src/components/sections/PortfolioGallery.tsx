@@ -23,21 +23,6 @@ const spanPatterns = [
 export default function PortfolioGallery() {
   const t = useTranslations('Portfolio')
 
-  // 1. Map signature portfolio items
-  const portfolioItems: ImageItem[] = siteData.portfolio.map((project, idx) => ({
-    id: `portfolio-${idx}`,
-    title: project.name,
-    desc: `${project.category} · ${project.location} · ${project.year}`,
-    url: project.image,
-    type: 'image', // Signature projects are currently images
-    details: {
-      category: project.category,
-      facts: project.facts,
-      missions: project.missions,
-      description: project.description,
-    },
-  }))
-
   // 2. Map latest creation gallery items
   const galleryItems: ImageItem[] = galleryMedia.map((media, idx) => ({
     id: `gallery-${idx}`,
@@ -45,9 +30,7 @@ export default function PortfolioGallery() {
     type: media.type as "image" | "video",
   }))
 
-  // 3. Merge both arrays
-  // You can interleave them or just append. We'll append for now so signature projects are first.
-  const mergedItems = [...portfolioItems, ...galleryItems]
+  const mergedItems = [...galleryItems]
 
   // 4. Assign alternating span patterns
   const finalImageItems = mergedItems.map((item, idx) => ({
