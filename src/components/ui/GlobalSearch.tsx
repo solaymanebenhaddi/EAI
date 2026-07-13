@@ -50,12 +50,7 @@ export default function GlobalSearch() {
       const q = query.toLowerCase()
       const found: any[] = []
 
-      // Search Portfolio
-      siteData.portfolio.forEach(item => {
-        if (item.name.toLowerCase().includes(q) || item.description.toLowerCase().includes(q)) {
-          found.push({ type: 'Projet', title: item.name, desc: item.description, link: '#transformation' })
-        }
-      })
+
 
       // Search 3D Conception
       siteData.conception3D.categories.forEach(item => {
