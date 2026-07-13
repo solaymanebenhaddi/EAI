@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "Bash(/plugin marketplace:*)",
+      "Bash(claude plugin:*)",
+      "Bash(ruflo:*)",
+      "Bash(npx ruflo@latest:*)",
+      "Bash(npm install:*)",
+      "Bash(TaskList:*)",
+      "Bash(claude mcp:*)",
+      "Bash(date /t)",
+      "Bash(time /t)"
+    ]
+  }
+}

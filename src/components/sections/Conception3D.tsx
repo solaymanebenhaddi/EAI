@@ -35,6 +35,23 @@ export default function Conception3D() {
 
   const { conception3D } = siteData
 
+  // Helper function to render a standard category item
+  const renderCategory = (cat: any, index: number, customClass = "") => (
+    <div key={index} className={`c3d-card group cursor-pointer flex flex-col ${customClass}`}>
+      <div className="relative w-full aspect-[4/3] rounded-lg overflow-hidden mb-4 shadow-sm">
+        <img
+          src={cat.image}
+          alt={cat.name}
+          className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+          loading="lazy"
+        />
+        <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-500" />
+      </div>
+      <h3 className="font-sans text-xl font-bold uppercase tracking-wide mb-2">{cat.name}</h3>
+      <p className="text-sm opacity-70 leading-relaxed flex-1">{cat.description}</p>
+    </div>
+  )
+
   return (
     <section
       ref={sectionRef}
@@ -54,26 +71,39 @@ export default function Conception3D() {
           </p>
         </div>
 
-        <div className="c3d-card w-full max-w-sm mx-auto mb-16 shadow-2xl">
-          <RemoteVideo {...videoConfig.conception3D} poster="/assets/elaouad-before-sketch.png" autoPlay={true} />
-        </div>
+        {/* 3-Column Flex Masonry to eliminate vertical gaps */}
+        <div className="flex flex-col lg:flex-row gap-8">
+          
+          {/* Column 1 */}
+          <div className="flex-1 flex flex-col gap-8">
+            {renderCategory(conception3D.categories[0], 0)}
+            {renderCategory(conception3D.categories[3], 3)}
+            {renderCategory(conception3D.categories[5], 5)}
+          </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {conception3D.categories.map((cat, i) => (
-            <div key={i} className="c3d-card group cursor-pointer">
-              <div className="relative aspect-[4/3] rounded-lg overflow-hidden mb-4">
-                <img
-                  src={cat.image}
-                  alt={cat.name}
-                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                  loading="lazy"
-                />
-                <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-500" />
-              </div>
-              <h3 className="font-sans text-xl font-bold uppercase tracking-wide mb-2">{cat.name}</h3>
-              <p className="text-sm opacity-70 leading-relaxed">{cat.description}</p>
+          {/* Column 2 (Center) */}
+          <div className="flex-1 flex flex-col gap-8">
+            {renderCategory(conception3D.categories[1], 1)}
+            
+            <div className="c3d-card rounded-lg overflow-hidden shadow-2xl relative bg-black aspect-[9/16] lg:aspect-auto lg:h-[600px]">
+              <RemoteVideo 
+                {...videoConfig.conception3D} 
+                poster="/assets/elaouad-before-sketch.png" 
+                autoPlay={true} 
+                className="absolute inset-0 w-full h-full object-cover"
+              />
             </div>
-          ))}
+
+            {renderCategory(conception3D.categories[6], 6)}
+          </div>
+
+          {/* Column 3 */}
+          <div className="flex-1 flex flex-col gap-8">
+            {renderCategory(conception3D.categories[2], 2)}
+            {renderCategory(conception3D.categories[4], 4)}
+            {renderCategory(conception3D.categories[7], 7)}
+          </div>
+
         </div>
       </div>
     </section>
