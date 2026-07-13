@@ -184,20 +184,19 @@ export default function HeroStudio() {
         refs.renderer.outputColorSpace = THREE.SRGBColorSpace
       }
 
-      // Performance Optimization: Bypass EffectComposer on mobile devices
-      if (!isMobile()) {
-        refs.composer = new EffectComposer(refs.renderer)
-        const renderPass = new RenderPass(refs.scene, refs.camera)
-        refs.composer.addPass(renderPass)
+      // Performance Optimization: Enabled Bloom on mobile per user request. 
+      // Strength is lowered in handleResize.
+      refs.composer = new EffectComposer(refs.renderer)
+      const renderPass = new RenderPass(refs.scene, refs.camera)
+      refs.composer.addPass(renderPass)
 
-        refs.bloomPass = new UnrealBloomPass(
-          new THREE.Vector2(window.innerWidth, window.innerHeight),
-          0.34,
-          0.32,
-          0.86
-        )
-        refs.composer.addPass(refs.bloomPass)
-      }
+      refs.bloomPass = new UnrealBloomPass(
+        new THREE.Vector2(window.innerWidth, window.innerHeight),
+        0.34,
+        0.32,
+        0.86
+      )
+      refs.composer.addPass(refs.bloomPass)
 
       createLighting()
       // createAtmosphere()

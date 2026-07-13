@@ -1,0 +1,11 @@
+{
+  "timestamp": "2026-07-09T01:12:26.323Z",
+  "projectRoot": "C:\\Users\\benjk\\Desktop\\EAI2",
+  "structure": {
+    "hasPackageJson": true,
+    "hasTsConfig": true,
+    "hasClaudeConfig": true,
+    "hasClaudeFlow": true
+  },
+  "scannedAt": 1783559546326
+}

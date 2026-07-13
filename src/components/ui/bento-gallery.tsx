@@ -12,16 +12,17 @@ import { cn } from "@/lib/utils" // Assumes a 'lib/utils.ts' file for 'cn'
 import { X } from "lucide-react"
 
 // Defines the structure for each image item in the gallery
-type ImageItem = {
+export type ImageItem = {
   id: number | string
-  title: string
-  desc: string
+  title?: string
+  desc?: string
   url: string
+  type?: "image" | "video"
   details?: {
-    category: string
-    facts: { label: string; value: string }[]
-    missions: string[]
-    description: string
+    category?: string
+    facts?: { label: string; value: string }[]
+    missions?: string[]
+    description?: string
   }
   span?: string
 }
@@ -54,7 +55,7 @@ const itemVariants: Variants = {
   },
 }
 
-// Modal component for displaying the selected image
+// Modal component for displaying the selected image/video
 const ImageModal = ({
   item,
   onClose,
@@ -62,6 +63,8 @@ const ImageModal = ({
   item: ImageItem
   onClose: () => void
 }) => {
+  const hasDetails = item.title || item.details?.description || item.desc;
+  
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -74,61 +77,81 @@ const ImageModal = ({
         initial={{ scale: 0.9, y: 20 }}
         animate={{ scale: 1, y: 0 }}
         exit={{ scale: 0.9, y: 20 }}
-        className="relative w-full max-w-6xl bg-eai-charcoal rounded-2xl overflow-hidden shadow-2xl flex flex-col md:flex-row"
+        className={cn(
+          "relative w-full bg-eai-charcoal rounded-2xl overflow-hidden shadow-2xl flex flex-col md:flex-row",
+          hasDetails ? "max-w-6xl" : "max-w-4xl"
+        )}
         onClick={(e) => e.stopPropagation()}
       >
-        {/* Left Side: Image */}
-        <div className="w-full md:w-2/3 h-[40vh] md:h-[80vh] relative bg-black/50">
-          <img
-            src={item.url}
-            alt={item.title}
-            className="absolute inset-0 w-full h-full object-cover"
-          />
-        </div>
-
-        {/* Right Side: Details */}
-        <div className="w-full md:w-1/3 p-6 md:p-10 flex flex-col justify-start overflow-y-auto border-l border-white/10 custom-scrollbar">
-          {item.details?.category && (
-            <span className="text-eai-olive text-[10px] uppercase tracking-[0.2em] font-bold mb-3 block">
-              {item.details.category}
-            </span>
-          )}
-          <h3 className="text-3xl md:text-4xl font-sans font-bold uppercase tracking-tight text-white mb-4">
-            {item.title}
-          </h3>
-          
-          <p className="text-white/70 text-sm leading-relaxed mb-8">
-            {item.details ? item.details.description : item.desc}
-          </p>
-
-          {item.details?.facts && (
-            <div className="grid grid-cols-2 gap-y-4 gap-x-2 mb-8 text-xs border-y border-white/10 py-5">
-              {item.details.facts.map((fact, i) => (
-                <div key={i} className="flex flex-col gap-1">
-                  <span className="text-white/40 uppercase tracking-widest text-[9px] font-bold">{fact.label}</span>
-                  <span className="text-white/90 font-medium">{fact.value}</span>
-                </div>
-              ))}
-            </div>
-          )}
-
-          {item.details?.missions && (
-            <div className="flex flex-col gap-3 pb-8">
-              <span className="text-white/40 uppercase tracking-widest text-[9px] font-bold mb-1">Missions EAI</span>
-              {item.details.missions.map((mission, i) => (
-                <div key={i} className="flex items-start gap-2 text-xs text-white/70">
-                  <span className="text-eai-olive text-[8px] mt-[4px]">■</span>
-                  <span className="leading-snug">{mission}</span>
-                </div>
-              ))}
-            </div>
+        {/* Left Side: Media */}
+        <div className={cn("relative bg-black/50", hasDetails ? "w-full md:w-2/3 h-[40vh] md:h-[80vh]" : "w-full h-[60vh] md:h-[80vh]")}>
+          {item.type === 'video' ? (
+            <video
+              src={item.url}
+              className="absolute inset-0 w-full h-full object-cover"
+              autoPlay
+              loop
+              muted
+              playsInline
+            />
+          ) : (
+            <img
+              src={item.url}
+              alt={item.title || "Gallery Media"}
+              className="absolute inset-0 w-full h-full object-cover"
+            />
           )}
         </div>
+
+        {/* Right Side: Details (only if they exist) */}
+        {hasDetails && (
+          <div className="w-full md:w-1/3 p-6 md:p-10 flex flex-col justify-start overflow-y-auto border-l border-white/10 custom-scrollbar">
+            {item.details?.category && (
+              <span className="text-eai-olive text-[10px] uppercase tracking-[0.2em] font-bold mb-3 block">
+                {item.details.category}
+              </span>
+            )}
+            {item.title && (
+              <h3 className="text-3xl md:text-4xl font-sans font-bold uppercase tracking-tight text-white mb-4">
+                {item.title}
+              </h3>
+            )}
+            
+            {(item.details?.description || item.desc) && (
+              <p className="text-white/70 text-sm leading-relaxed mb-8">
+                {item.details?.description || item.desc}
+              </p>
+            )}
+
+            {item.details?.facts && (
+              <div className="grid grid-cols-2 gap-y-4 gap-x-2 mb-8 text-xs border-y border-white/10 py-5">
+                {item.details.facts.map((fact, i) => (
+                  <div key={i} className="flex flex-col gap-1">
+                    <span className="text-white/40 uppercase tracking-widest text-[9px] font-bold">{fact.label}</span>
+                    <span className="text-white/90 font-medium">{fact.value}</span>
+                  </div>
+                ))}
+              </div>
+            )}
+
+            {item.details?.missions && (
+              <div className="flex flex-col gap-3 pb-8">
+                <span className="text-white/40 uppercase tracking-widest text-[9px] font-bold mb-1">Missions EAI</span>
+                {item.details.missions.map((mission, i) => (
+                  <div key={i} className="flex items-start gap-2 text-xs text-white/70">
+                    <span className="text-eai-olive text-[8px] mt-[4px]">■</span>
+                    <span className="leading-snug">{mission}</span>
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+        )}
 
         <button
           onClick={onClose}
-          className="absolute right-4 top-4 w-10 h-10 bg-black/50 backdrop-blur-md rounded-full flex items-center justify-center text-white/80 transition-colors hover:text-white hover:bg-black/80 border border-white/10"
-          aria-label="Close image view"
+          className="absolute right-4 top-4 w-10 h-10 bg-black/50 backdrop-blur-md rounded-full flex items-center justify-center text-white/80 transition-colors hover:text-white hover:bg-black/80 border border-white/10 z-10"
+          aria-label="Close media view"
         >
           <X size={20} />
         </button>
@@ -136,6 +159,69 @@ const ImageModal = ({
     </motion.div>
   )
 }
+
+// Sub-component for individual gallery items
+const GalleryCard = ({ item, onClick, onKeyDown }: { item: ImageItem; onClick: () => void; onKeyDown: (e: any) => void }) => {
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  const handleHoverStart = () => {
+    if (videoRef.current) {
+      videoRef.current.play().catch(() => {});
+    }
+  };
+
+  const handleHoverEnd = () => {
+    if (videoRef.current) {
+      videoRef.current.pause();
+    }
+  };
+
+  return (
+    <motion.div
+      variants={itemVariants}
+      className={cn(
+        "group relative flex h-full min-h-[15rem] w-full min-w-[15rem] cursor-pointer items-end overflow-hidden rounded-xl border border-white/10 bg-white/5 shadow-sm transition-shadow duration-300 ease-in-out hover:shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background",
+        item.span
+      )}
+      whileHover={{ scale: 1.02 }}
+      transition={{ type: "spring", stiffness: 300, damping: 20 }}
+      onClick={onClick}
+      onKeyDown={onKeyDown}
+      onHoverStart={handleHoverStart}
+      onHoverEnd={handleHoverEnd}
+      tabIndex={0}
+      aria-label={`View ${item.title || "Gallery Media"}`}
+    >
+      {item.type === 'video' ? (
+        <video
+          ref={videoRef}
+          src={item.url}
+          className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+          muted
+          loop
+          playsInline
+        />
+      ) : (
+        <img
+          src={item.url}
+          alt={item.title || "Gallery Image"}
+          className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+        />
+      )}
+      
+      {/* Overlay gradient */}
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+      
+      {/* Titles and Descriptions (only if provided) */}
+      {(item.title || item.desc) && (
+        <div className="relative z-10 translate-y-4 opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100 p-4">
+          {item.title && <h3 className="text-lg font-bold text-white uppercase tracking-tight">{item.title}</h3>}
+          {item.desc && <p className="mt-1 text-sm text-white/80">{item.desc}</p>}
+        </div>
+      )}
+    </motion.div>
+  );
+};
 
 // Main gallery component
 const InteractiveImageBentoGallery: React.FC<
@@ -153,15 +239,19 @@ const InteractiveImageBentoGallery: React.FC<
       if (gridRef.current && containerRef.current) {
         const containerWidth = containerRef.current.offsetWidth
         const gridWidth = gridRef.current.scrollWidth
-        // The '- 32' provides some padding at the end
         const newConstraint = Math.min(0, containerWidth - gridWidth - 32)
         setDragConstraint(newConstraint)
       }
     }
 
     calculateConstraints()
+    // Small timeout to allow grid layout to settle before calculating constraints
+    const timeout = setTimeout(calculateConstraints, 500)
     window.addEventListener("resize", calculateConstraints)
-    return () => window.removeEventListener("resize", calculateConstraints)
+    return () => {
+      window.removeEventListener("resize", calculateConstraints)
+      clearTimeout(timeout)
+    }
   }, [imageItems])
 
   // Framer Motion scroll animations
@@ -203,38 +293,20 @@ const InteractiveImageBentoGallery: React.FC<
         >
           <motion.div
             ref={gridRef}
-            className="grid auto-cols-[minmax(15rem,1fr)] grid-flow-col gap-4 px-4 md:px-8"
+            // Updated to grid-rows-3 to accommodate a larger number of merged items
+            className="grid grid-rows-3 auto-cols-[minmax(15rem,1fr)] grid-flow-col gap-4 px-4 md:px-8"
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: 0.2 }}
+            viewport={{ once: true, amount: 0 }}
           >
             {imageItems.map((item) => (
-              <motion.div
+              <GalleryCard
                 key={item.id}
-                variants={itemVariants}
-                className={cn(
-                  "group relative flex h-full min-h-[15rem] w-full min-w-[15rem] cursor-pointer items-end overflow-hidden rounded-xl border border-white/10 bg-white/5 p-4 shadow-sm transition-shadow duration-300 ease-in-out hover:shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background",
-                  item.span,
-                )}
-                whileHover={{ scale: 1.02 }}
-                transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                item={item}
                 onClick={() => setSelectedItem(item)}
                 onKeyDown={(e) => e.key === "Enter" && setSelectedItem(item)}
-                tabIndex={0}
-                aria-label={`View ${item.title}`}
-              >
-                <img
-                  src={item.url}
-                  alt={item.title}
-                  className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                />
-                <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
-                <div className="relative z-10 translate-y-4 opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
-                  <h3 className="text-lg font-bold text-white uppercase tracking-tight">{item.title}</h3>
-                  <p className="mt-1 text-sm text-white/80">{item.desc}</p>
-                </div>
-              </motion.div>
+              />
             ))}
           </motion.div>
         </motion.div>
