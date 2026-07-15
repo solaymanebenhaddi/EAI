@@ -123,6 +123,18 @@
           "Études d'impact",
           "Concertation"
         ]
+      },
+      {
+        "num": "06",
+        "title": "Conception 3D",
+        "value": "Visualisez avant d'exécuter",
+        "desc": "Rendus 3D photoréalistes de haute précision et animations immersives pour valider les volumes, l'éclairage et les matériaux avant travaux.",
+        "bullets": [
+          "Rendus photoréalistes 3D",
+          "Animations & visites virtuelles",
+          "Validation des matériaux"
+        ],
+        "badge": "Prestation Importante"
       }
     ],
     "title": "Une chaîne\ncomplète\nd'expertises."
@@ -175,12 +187,12 @@
       },
       {
         "num": "02",
-        "name": "EAI Events",
-        "text": "Rencontres professionnelles et salons.",
+        "name": "FIDI 2026",
+        "text": "Forum International de la Décoration d'Intérieur à Casablanca.",
         "tags": [
-          "Salons",
-          "Forums",
-          "Networking"
+          "FIDI 2026",
+          "Design",
+          "Casablanca"
         ]
       },
       {
@@ -226,20 +238,20 @@
   },
   "Events": {
     "eyebrow": "ELAOUAD Events",
-    "title": "Construire,\nréunir et transmettre.",
-    "description": "ELAOUAD Events organise des rencontres professionnelles qui façonnent l'avenir de la construction en Afrique. Le Forum International de la Construction (FIC) réunit chaque année les décideurs, innovateurs et talents du secteur.",
+    "title": "Forum FIDI 2026.",
+    "description": "FIDI 2026 (Forum International de la Décoration d'Intérieur) est le rendez-vous incontournable des professionnels du design d'espace en Afrique. Organisé par le Groupe ELAOUAD, ce forum réunit en quatre éditions créateurs de renom, marques de prestige et décideurs du secteur pour dessiner les tendances de demain.",
     "stats": [
       {
-        "value": "3",
-        "label": "Éditions FIC"
+        "value": "4ème",
+        "label": "Édition FIDI"
       },
       {
-        "value": "2000+",
-        "label": "Participants"
+        "value": "500+",
+        "label": "Professionnels"
       },
       {
-        "value": "15",
-        "label": "Pays représentés"
+        "value": "30+",
+        "label": "Conférenciers"
       }
     ],
     "cta": "Découvrir nos événements"

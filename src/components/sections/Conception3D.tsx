@@ -69,6 +69,16 @@ export default function Conception3D() {
           <p className="text-lg opacity-80 leading-relaxed">
             {conception3D.description}
           </p>
+          {conception3D.announcement && (
+            <div className="c3d-card mt-8 bg-[var(--color-eai-olive)]/15 border border-[var(--color-eai-olive)]/40 p-6 rounded-lg shadow-sm flex flex-col md:flex-row items-center gap-4">
+              <span className="bg-[var(--color-eai-olive)] text-[var(--color-eai-black)] font-extrabold text-[10px] uppercase tracking-wider px-3 py-1.5 rounded-sm whitespace-nowrap">
+                Prestation Clé
+              </span>
+              <p className="text-sm font-semibold opacity-90 text-[var(--color-eai-charcoal)] leading-relaxed">
+                {conception3D.announcement.replace('PRESTATION CLÉ : ', '')}
+              </p>
+            </div>
+          )}
         </div>
 
         {/* 3-Column Flex Masonry to eliminate vertical gaps */}

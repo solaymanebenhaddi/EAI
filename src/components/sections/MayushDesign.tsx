@@ -62,12 +62,15 @@ export default function MayushDesign() {
 
           <div className="flex flex-wrap gap-3 mb-10">
             {mayushDesign.categories.map((cat, i) => (
-              <span 
+              <a 
                 key={i} 
-                className="px-4 py-2 bg-slate-50 border border-slate-200 text-sm font-medium rounded-full text-[#1F2E3D] hover:border-[#ED9426] hover:text-[#ED9426] transition-colors duration-300"
+                href={mayushDesign.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-4 py-2 bg-slate-50 border border-slate-200 text-sm font-medium rounded-full text-[#1F2E3D] hover:border-[#ED9426] hover:text-[#ED9426] transition-colors duration-300 cursor-pointer no-underline block"
               >
                 {cat}
-              </span>
+              </a>
             ))}
           </div>
 

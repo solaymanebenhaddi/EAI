@@ -261,8 +261,12 @@ export default function ProjectControl() {
             </h2>
             <div className="mt-8 text-[var(--color-eai-charcoal)]/60 text-sm leading-relaxed font-medium space-y-2">
               <a href={`mailto:${siteData.contact.email}`} className="block hover:text-[var(--color-eai-olive)] transition-colors text-lg text-[var(--color-eai-charcoal)]">{siteData.contact.email}</a>
-              <span className="block">{siteData.contact.phone}</span>
-              <span className="block">{siteData.contact.address}</span>
+              <div className="flex flex-col gap-1 md:flex-row md:gap-3 items-start md:items-center text-base">
+                <a href="tel:+212666798536" className="hover:text-[var(--color-eai-olive)] transition-colors">+212 666 798536</a>
+                <span className="hidden md:inline opacity-30">|</span>
+                <a href="tel:+212688018863" className="hover:text-[var(--color-eai-olive)] transition-colors">+212 688 01 88 63</a>
+              </div>
+              <span className="block text-sm">{siteData.contact.address}</span>
             </div>
           </div>
 
@@ -333,8 +337,26 @@ export default function ProjectControl() {
         <div className="hidden md:block relative z-10">
           <span className="text-[var(--color-eai-olive)] uppercase tracking-[0.16em] font-semibold text-[10px]">{tFooter('navTitle')}</span>
           <div className="mt-4 flex flex-col gap-2 text-white/60 text-xs">
-            {['Accueil', 'Expertises', 'Méthode', 'Contact'].map((l) => (
-              <span key={l} onClick={() => document.getElementById(l.toLowerCase())?.scrollIntoView({behavior: 'smooth'})} className="hover:text-[var(--color-eai-olive)] transition-colors cursor-pointer w-fit">{l}</span>
+            {[
+              { label: 'Accueil', id: 'hero' },
+              { label: 'Expertises', id: 'expertises' },
+              { label: 'Méthode', id: 'methode' },
+              { label: 'Contact', id: 'contact' }
+            ].map((link) => (
+              <span 
+                key={link.label} 
+                onClick={() => {
+                  const element = document.getElementById(link.id);
+                  if (element) {
+                    element.scrollIntoView({ behavior: 'smooth' });
+                  } else if (link.id === 'hero') {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                  }
+                }} 
+                className="hover:text-[var(--color-eai-olive)] transition-colors cursor-pointer w-fit font-semibold"
+              >
+                {link.label}
+              </span>
             ))}
             <Link href="/careers" className="hover:text-[var(--color-eai-olive)] transition-colors cursor-pointer w-fit no-underline">Carrières</Link>
           </div>
@@ -351,9 +373,12 @@ export default function ProjectControl() {
         
         <div className="relative z-10">
           <span className="text-[var(--color-eai-olive)] uppercase tracking-[0.16em] font-semibold text-[10px]">{tFooter('contactTitle')}</span>
-          <div className="mt-4 flex flex-col gap-2 text-white/60 text-xs">
+          <div className="mt-4 flex flex-col gap-2 text-white/60 text-xs font-sans">
             <a href={`mailto:${siteData.contact.email}`} className="hover:text-[var(--color-eai-olive)] transition-colors w-fit">{siteData.contact.email}</a>
-            <span>{siteData.contact.phone}</span>
+            <div className="flex flex-col gap-1">
+              <a href="tel:+212666798536" className="hover:text-[var(--color-eai-olive)] transition-colors w-fit">+212 666 798536</a>
+              <a href="tel:+212688018863" className="hover:text-[var(--color-eai-olive)] transition-colors w-fit">+212 688 01 88 63</a>
+            </div>
             <span>{siteData.contact.address}</span>
           </div>
         </div>

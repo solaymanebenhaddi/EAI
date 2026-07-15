@@ -116,10 +116,15 @@ export default function ExpertiseBoard() {
                     </span>
 
                     <h3 className={cn(
-                      "font-sans text-lg md:text-xl font-extrabold uppercase tracking-tight flex-1",
+                      "font-sans text-lg md:text-xl font-extrabold uppercase tracking-tight flex flex-wrap items-center gap-3 flex-1",
                       isExpanded ? "text-eai-charcoal" : "text-eai-paper"
                     )}>
-                      {service.title}
+                      <span>{service.title}</span>
+                      {service.badge && (
+                        <span className="text-[9px] font-extrabold uppercase tracking-wider bg-[var(--color-eai-olive)] text-[var(--color-eai-black)] px-2 py-0.5 rounded-sm shadow-sm">
+                          {service.badge}
+                        </span>
+                      )}
                     </h3>
 
                     <span className={cn(
