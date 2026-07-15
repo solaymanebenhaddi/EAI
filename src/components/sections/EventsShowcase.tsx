@@ -92,8 +92,10 @@ export default function EventsShowcase() {
 
             {/* CTA */}
             <a
-              href="#contact"
-              className="inline-flex items-center gap-3 px-8 py-3.5 text-sm tracking-[0.15em] uppercase border border-eai-olive/60 text-eai-paper rounded-full hover:bg-eai-olive/15 transition-all duration-300"
+              href="https://events.eai-construction.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-3 px-8 py-3.5 text-sm tracking-[0.15em] uppercase border border-eai-olive/60 text-eai-paper rounded-full hover:bg-eai-olive/15 transition-all duration-300 no-underline"
             >
               {events.cta}
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none" className="translate-x-0 group-hover:translate-x-1 transition-transform">

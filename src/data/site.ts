@@ -95,7 +95,7 @@ export const siteData = {
       company: 'Fonds d\'investissement',
     },
     {
-      quote: 'Le FIC est l\'événement incontournable de la construction en Afrique. En trois éditions, nous avons signé des partenariats stratégiques sur 3 continents.',
+      quote: 'Le FIDI est l\'événement incontournable de la décoration d\'intérieur en Afrique. En quatre éditions, nous avons signé des partenariats stratégiques sur 3 continents.',
       author: 'Directeur commercial',
       company: 'Fabricant matériaux',
     },
@@ -106,12 +106,12 @@ export const siteData = {
      ═══════════════════════════════════════════ */
   events: {
     eyebrow: 'ELAOUAD Events',
-    title: 'Construire,\nréunir et transmettre.',
-    description: 'ELAOUAD Events organise des rencontres professionnelles qui façonnent l\'avenir de la construction en Afrique. Le Forum International de la Construction (FIC) réunit chaque année les décideurs, innovateurs et talents du secteur.',
+    title: 'Forum FIDI\n2026.',
+    description: 'FIDI 2026 (Forum International de la Décoration d\'Intérieur) est le rendez-vous incontournable des professionnels du design d\'espace en Afrique. Organisé par le Groupe ELAOUAD, ce forum réunit en quatre éditions créateurs de renom, marques de prestige et décideurs du secteur pour dessiner les tendances de demain.',
     stats: [
-      { value: '3', label: 'Éditions FIC' },
-      { value: '2000+', label: 'Participants' },
-      { value: '15', label: 'Pays représentés' },
+      { value: '4ème', label: 'Édition FIDI' },
+      { value: '500+', label: 'Professionnels' },
+      { value: '30+', label: 'Conférenciers' },
     ],
     cta: 'Découvrir nos événements',
     image: '/assets/elaouad-events-formation.webp',
@@ -147,7 +147,7 @@ export const siteData = {
   ],
   contact: {
     email: 'contact@eai-construction.com',
-    phone: '+212 520 19 87 38',
+    phone: '+212 666 798536 / +212 688018863',
     address: 'Casablanca, Maroc',
   },
   socials: [
@@ -158,6 +158,7 @@ export const siteData = {
   conception3D: {
     eyebrow: 'Conception 3D',
     title: 'Visualisez avant d\'exécuter',
+    announcement: 'PRESTATION CLÉ : La conception 3D chez EAI est une étape essentielle pour valider le design, l\'éclairage et les volumes de votre projet avant travaux, réduisant les risques d\'ajustement sur chantier.',
     description: 'Chez EAI, nous aidons nos clients à visualiser, valider et affiner leur espace avant l\'exécution des travaux. Grâce à nos rendus 3D photoréalistes, chaque détail est maîtrisé.',
     categories: [
       { name: 'Cuisine', image: '/assets/c3d_cuisine.png', description: 'Cuisines ergonomiques et esthétiques, pensées pour l\'usage quotidien.' },

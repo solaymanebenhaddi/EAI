@@ -1,6 +1,8 @@
 import HeroStudio from "@/components/sections/HeroStudio"
+import FidiHighlight from "@/components/sections/FidiHighlight"
 import InteriorDesignIntro from "@/components/sections/InteriorDesignIntro"
 import FounderProfile from "@/components/sections/FounderProfile"
+import ExpertiseBoard from "@/components/sections/ExpertiseBoard"
 import Conception3D from "@/components/sections/Conception3D"
 import TurnkeyServices from "@/components/sections/TurnkeyServices"
 import BeforeAfterVideos from "@/components/sections/BeforeAfterVideos"
@@ -29,8 +31,10 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
       <HeroStudio />
       {/* All sections after the hero need relative z-2 to slide OVER the fixed hero canvas */}
       <div className="relative z-[2] bg-[var(--color-background)]">
+        <FidiHighlight />
         <InteriorDesignIntro />
         <FounderProfile />
+        <ExpertiseBoard />
         <Conception3D />
         <TurnkeyServices />
         <BeforeAfterVideos />

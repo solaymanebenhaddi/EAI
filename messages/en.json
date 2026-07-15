@@ -123,6 +123,18 @@
           "Impact studies",
           "Public consultation"
         ]
+      },
+      {
+        "num": "06",
+        "title": "3D Design",
+        "value": "Visualize before executing",
+        "desc": "High-precision photorealistic 3D renderings and immersive animations to validate volumes, lighting, and materials before work starts.",
+        "bullets": [
+          "Photorealistic 3D renderings",
+          "Animations & virtual walkthroughs",
+          "Material validation"
+        ],
+        "badge": "Key Service"
       }
     ],
     "title": "A complete\nchain of\nexpertise."
@@ -175,12 +187,12 @@
       },
       {
         "num": "02",
-        "name": "EAI Events",
-        "text": "Professional meetings and exhibitions.",
+        "name": "FIDI 2026",
+        "text": "International Interior Decoration Forum in Casablanca.",
         "tags": [
-          "Exhibitions",
-          "Forums",
-          "Networking"
+          "FIDI 2026",
+          "Design",
+          "Casablanca"
         ]
       },
       {
@@ -226,20 +238,20 @@
   },
   "Events": {
     "eyebrow": "ELAOUAD Events",
-    "title": "Build,\nunite and transmit.",
-    "description": "ELAOUAD Events organizes professional meetings that shape the future of construction in Africa. The International Construction Forum (FIC) brings together decision-makers, innovators, and industry talents every year.",
+    "title": "FIDI Forum 2026.",
+    "description": "FIDI 2026 (International Interior Decoration Forum) is the major event for space design professionals in Africa. Organized by ELAOUAD Group, this forum brings together renowned creators, prestigious brands, and industry decision-makers over four editions to shape tomorrow's trends.",
     "stats": [
       {
-        "value": "3",
-        "label": "FIC Editions"
+        "value": "4th",
+        "label": "FIDI Edition"
       },
       {
-        "value": "2000+",
-        "label": "Attendees"
+        "value": "500+",
+        "label": "Professionnels"
       },
       {
-        "value": "15",
-        "label": "Countries represented"
+        "value": "30+",
+        "label": "Speakers"
       }
     ],
     "cta": "Discover our events"

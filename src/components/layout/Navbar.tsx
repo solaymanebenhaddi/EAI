@@ -2,12 +2,85 @@
 
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'motion/react'
-import { useTranslations } from 'next-intl'
+import { useTranslations, useLocale } from 'next-intl'
 import { siteData } from '@/data/site'
 import { cn } from '@/lib/utils'
 import { Link, usePathname, useRouter } from '@/i18n/routing'
 import LanguageSwitcher from '../ui/LanguageSwitcher'
 import GlobalSearch from '../ui/GlobalSearch'
+
+const announcements = {
+  fr: [
+    "📢 FIDI 2026 : Forum International de la Décoration d'Intérieur à Casablanca (4ème Édition)",
+    "✨ Prestation Clé : Conception & Visualisation 3D réaliste pour vos espaces",
+    "📞 Contactez-nous : +212 666 798536 / +212 688018863"
+  ],
+  en: [
+    "📢 FIDI 2026: International Interior Decoration Forum in Casablanca (4th Edition)",
+    "✨ Key Service: Realistic 3D Design & Space Visualization for your projects",
+    "📞 Call us: +212 666 798536 / +212 688018863"
+  ],
+  es: [
+    "📢 FIDI 2026: Foro Internacional de la Decoración de Interiores en Casablanca (4ª Edición)",
+    "✨ Servicio Clave: Diseño 3D realista y visualización espacial para sus proyectos",
+    "📞 Contáctenos: +212 666 798536 / +212 688018863"
+  ],
+  it: [
+    "📢 FIDI 2026: Forum Internazionale della Decorazione d'Interni a Casablanca (4ª Edizione)",
+    "✨ Servizio Chiave: Progettazione 3D realistica e visualizzazione spaziale",
+    "📞 Contattaci: +212 666 798536 / +212 688018863"
+  ],
+  ar: [
+    "📢 منتدى FIDI 2026: المنتدى الدولي للديكور الداخلي بالدار البيضاء (الدورة الرابعة)",
+    "✨ خدمة رئيسية: تصميم ثلاثي الأبعاد واقعي وتجسيد متكامل لمشاريعكم",
+    "📞 اتصل بنا: +212 666 798536 / +212 688018863"
+  ]
+};
+
+function AnnouncementBar() {
+  const locale = useLocale() as keyof typeof announcements;
+  const list = announcements[locale] || announcements.fr;
+  const [index, setIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIndex((prev) => (prev + 1) % list.length);
+    }, 4500);
+    return () => clearInterval(interval);
+  }, [list]);
+
+  const renderText = (text: string) => {
+    if (text.includes("+212")) {
+      const label = text.split(':')[0] + ': ';
+      return (
+        <span className="flex items-center gap-1.5 flex-wrap justify-center">
+          {label}
+          <a href="tel:+212666798536" className="text-[var(--color-eai-olive)] hover:underline font-extrabold">+212 666 798536</a>
+          <span className="opacity-30">|</span>
+          <a href="tel:+212688018863" className="text-[var(--color-eai-olive)] hover:underline font-extrabold">+212 688 01 88 63</a>
+        </span>
+      );
+    }
+    return text;
+  };
+
+  return (
+    <div className="w-full bg-[var(--color-eai-black)] text-[var(--color-eai-paper)] py-1.5 px-4 text-center border-b border-[var(--color-eai-olive)]/20 relative z-50 flex items-center justify-center min-h-[30px] overflow-hidden">
+      <AnimatePresence mode="wait">
+        <motion.div
+          key={index}
+          initial={{ y: 15, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          exit={{ y: -15, opacity: 0 }}
+          transition={{ duration: 0.5, ease: "easeInOut" }}
+          className="text-[9px] md:text-[10px] font-bold uppercase tracking-[0.12em]"
+        >
+          {renderText(list[index])}
+        </motion.div>
+      </AnimatePresence>
+    </div>
+  );
+}
 
 export default function Navbar() {
   const [open, setOpen] = useState(false)
@@ -56,14 +129,15 @@ export default function Navbar() {
   }
 
   return (
-    <>
+    <div className="fixed top-0 inset-x-0 z-50 flex flex-col w-full">
+      <AnnouncementBar />
       <motion.nav 
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
         className={cn(
-          "fixed top-0 inset-x-0 z-50 flex items-center justify-between px-4 md:px-8 py-4 transition-all duration-300",
-          scrolled ? "bg-white/15 backdrop-blur-md border-b border-white/10 shadow-lg" : "bg-transparent"
+          "w-full flex items-center justify-between px-4 md:px-8 py-4 transition-all duration-300",
+          scrolled ? "bg-[var(--color-eai-charcoal)]/95 backdrop-blur-md border-b border-white/10 shadow-lg" : "bg-transparent"
         )}
       >
         <a 
@@ -211,6 +285,6 @@ export default function Navbar() {
           </motion.div>
         )}
       </AnimatePresence>
-    </>
+    </div>
   )
 }

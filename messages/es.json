@@ -123,6 +123,18 @@
           "Estudios de impacto",
           "Consulta pública"
         ]
+      },
+      {
+        "num": "06",
+        "title": "Diseño 3D",
+        "value": "Visualice antes de ejecutar",
+        "desc": "Renders 3D fotorrealistas de alta precisión y animaciones inmersivas para validar volúmenes, iluminación y materiales antes de la obra.",
+        "bullets": [
+          "Renders fotorrealistas 3D",
+          "Animaciones y visitas virtuales",
+          "Validación de materiales"
+        ],
+        "badge": "Servicio Clave"
       }
     ],
     "title": "Una cadena\ncompleta\nde experiencia."
@@ -175,12 +187,12 @@
       },
       {
         "num": "02",
-        "name": "EAI Events",
-        "text": "Encuentros profesionales y ferias.",
+        "name": "FIDI 2026",
+        "text": "Foro Internacional de la Decoración de Interiores en Casablanca.",
         "tags": [
-          "Ferias",
-          "Foros",
-          "Networking"
+          "FIDI 2026",
+          "Diseño",
+          "Casablanca"
         ]
       },
       {
@@ -226,20 +238,20 @@
   },
   "Events": {
     "eyebrow": "Eventos ELAOUAD",
-    "title": "Construir,\nunir y transmitir.",
-    "description": "ELAOUAD Events organiza encuentros profesionales que dan forma al futuro de la construcción en África. El Foro Internacional de la Construcción (FIC) reúne cada año a responsables de la toma de decisiones, innovadores y talentos del sector.",
+    "title": "Foro FIDI 2026.",
+    "description": "FIDI 2026 (Foro Internacional de la Decoración de Interiores) es el evento de referencia para los profesionales del diseño de espacios en África. Organizado por el Grupo ELAOUAD, este foro reúne en cuatro ediciones a creadores de renombre, marcas de prestigio y líderes del sector para definir las tendencias del mañana.",
     "stats": [
       {
-        "value": "3",
-        "label": "Ediciones FIC"
+        "value": "4ª",
+        "label": "Edición FIDI"
       },
       {
-        "value": "2000+",
-        "label": "Asistentes"
+        "value": "500+",
+        "label": "Profesionales"
       },
       {
-        "value": "15",
-        "label": "Países representados"
+        "value": "30+",
+        "label": "Conferenciantes"
       }
     ],
     "cta": "Descubra nuestros eventos"
