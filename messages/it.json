@@ -75,7 +75,7 @@
         "value": "Spazi che raccontano una storia",
         "desc": "Residenziale di lusso, commerciale, strutture pubbliche: ogni progetto integra estetica, funzionalità e sostenibilità.",
         "bullets": [
-          "Concezione",
+          "Planimetria schematica 2D e Concezione",
           "Progetti: Elettricità, Idraulica, Disposizione, Climatizzazione",
           "Moodboard",
           "Selezione Materiali",
@@ -112,9 +112,9 @@
         "value": "Visualizza prima di eseguire",
         "desc": "Rendering 3D fotorealistici ad alta precisione e animazioni immersive per validare volumi, illuminazione e materiali prima dell'inizio dei lavori.",
         "bullets": [
-          "Rendering fotorealistici 3D",
-          "Animazioni e visite virtuali",
-          "Validazione dei materiali"
+          "Modello Completo - Viste 3D (360)",
+          "Progettazione del Progetto - 3D",
+          "Progettazione di Impianti"
         ],
         "badge": "Servizio Chiave"
       }
