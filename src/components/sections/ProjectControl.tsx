@@ -38,7 +38,7 @@ export default function ProjectControl() {
   const contactRef = useRef<HTMLElement>(null)
   const footerRef = useRef<HTMLDivElement>(null)
 
-  const [form, setForm] = useState({ name: '', email: '', phone: '', city: '', category: '', type: '', msg: '' })
+  const [form, setForm] = useState({ name: '', email: '', phone: '', city: '', category: '', type: '', msg: '', honeypot: '' })
   const [sending, setSending] = useState(false)
   const [sent, setSent] = useState(false)
   const [hoveredPanel, setHoveredPanel] = useState<number | null>(null)
@@ -58,7 +58,7 @@ export default function ProjectControl() {
   const methodSteps = tMethod.raw('steps') as any[]
   const ecoItems = tEco.raw('items') as any[]
 
-  const submit = (e: React.FormEvent) => {
+  const submit = async (e: React.FormEvent) => {
     e.preventDefault()
     
     const newErrors: Record<string, string> = {}
@@ -99,13 +99,27 @@ export default function ProjectControl() {
     setSending(true)
     setErrorMsg(null)
     
-    // Simulate network delay for now
-    setTimeout(() => {
-      setSending(false)
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ ...form, email: emailVal, phone: phoneVal })
+      })
+      
+      const data = await res.json()
+      
+      if (!res.ok) {
+        throw new Error(data.error || 'Une erreur est survenue lors de l’envoi. Veuillez réessayer.')
+      }
+      
       setSent(true)
-      setForm({ name: '', email: '', phone: '', city: '', category: '', type: '', msg: '' })
+      setForm({ name: '', email: '', phone: '', city: '', category: '', type: '', msg: '', honeypot: '' })
       setTimeout(() => setSent(false), 4000)
-    }, 1200)
+    } catch (err: any) {
+      setErrorMsg(err.message || 'Une erreur est survenue lors de l’envoi. Veuillez réessayer.')
+    } finally {
+      setSending(false)
+    }
   }
 
   useEffect(() => {
@@ -343,6 +357,7 @@ export default function ProjectControl() {
             )}
 
             <form onSubmit={submit} className="grid gap-6">
+              <input type="text" name="honeypot" value={form.honeypot} onChange={(e) => setForm({ ...form, honeypot: e.target.value })} className="hidden" tabIndex={-1} autoComplete="off" aria-hidden="true" />
               <div className="grid gap-2 relative">
                 <input name="name" value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })} required
                   className="peer w-full bg-transparent border-b border-[var(--color-eai-charcoal)]/20 px-1 py-3 text-[var(--color-eai-charcoal)] outline-none focus:border-[var(--color-eai-olive)] transition-colors text-sm rounded-none" />
