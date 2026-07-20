@@ -265,6 +265,8 @@ export default function ProjectControl() {
                 <a href="tel:+212666798536" className="hover:text-[var(--color-eai-olive)] transition-colors">+212 666 798536</a>
                 <span className="hidden md:inline opacity-30">|</span>
                 <a href="tel:+212688018863" className="hover:text-[var(--color-eai-olive)] transition-colors">+212 688 01 88 63</a>
+                <span className="hidden md:inline opacity-30">|</span>
+                <a href="tel:+212520198738" className="hover:text-[var(--color-eai-olive)] transition-colors">+212 520 198738</a>
               </div>
               <span className="block text-sm">{siteData.contact.address}</span>
             </div>
@@ -378,6 +380,7 @@ export default function ProjectControl() {
             <div className="flex flex-col gap-1">
               <a href="tel:+212666798536" className="hover:text-[var(--color-eai-olive)] transition-colors w-fit">+212 666 798536</a>
               <a href="tel:+212688018863" className="hover:text-[var(--color-eai-olive)] transition-colors w-fit">+212 688 01 88 63</a>
+              <a href="tel:+212520198738" className="hover:text-[var(--color-eai-olive)] transition-colors w-fit">+212 520 198738</a>
             </div>
             <span>{siteData.contact.address}</span>
           </div>
