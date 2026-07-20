@@ -64,12 +64,12 @@ export default function MayushDesign() {
             {mayushDesign.categories.map((cat, i) => (
               <a 
                 key={i} 
-                href={mayushDesign.url}
+                href={cat.url}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-4 py-2 bg-slate-50 border border-slate-200 text-sm font-medium rounded-full text-[#1F2E3D] hover:border-[#ED9426] hover:text-[#ED9426] transition-colors duration-300 cursor-pointer no-underline block"
               >
-                {cat}
+                {cat.name}
               </a>
             ))}
           </div>
