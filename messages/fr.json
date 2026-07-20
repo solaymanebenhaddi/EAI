@@ -108,17 +108,6 @@
       },
       {
         "num": "04",
-        "title": "Urbanisme",
-        "value": "Penser la ville de demain",
-        "desc": "Plans d'aménagement, études d'impact et développement durable à l'échelle du territoire pour construire des villes plus humaines.",
-        "bullets": [
-          "Plans de masse",
-          "Études d'impact",
-          "Concertation"
-        ]
-      },
-      {
-        "num": "05",
         "title": "Conception 3D",
         "value": "Visualisez avant d'exécuter",
         "desc": "Rendus 3D photoréalistes de haute précision et animations immersives pour valider les volumes, l'éclairage et les matériaux avant travaux.",
