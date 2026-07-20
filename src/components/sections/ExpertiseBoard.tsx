@@ -170,7 +170,7 @@ export default function ExpertiseBoard() {
 
                           <ul className="space-y-2">
                             {service.bullets.map((bullet: string, j: number) => (
-                              <li key={j} className="flex items-start gap-3 text-sm text-eai-charcoal/70">
+                              <li key={j} className="flex items-start gap-3 text-sm font-bold text-eai-charcoal">
                                 <span className="w-1.5 h-1.5 rounded-full bg-eai-olive mt-1.5 shrink-0" />
                                 {bullet}
                               </li>
