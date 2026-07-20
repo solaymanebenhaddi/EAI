@@ -16,7 +16,8 @@ export default function CareersClient({ careers }: { careers: any[] }) {
     linkedin: '',
     portfolio: '',
     message: '',
-    consent: false
+    consent: false,
+    honeypot: ''
   })
   const [file, setFile] = useState<File | null>(null)
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle')
@@ -49,13 +50,15 @@ export default function CareersClient({ careers }: { careers: any[] }) {
         formData.append('cv', file)
       }
 
-      const res = await fetch('/api/apply', {
+      const res = await fetch('/api/careers/apply', {
         method: 'POST',
         body: formData
       })
 
+      const data = await res.json().catch(() => ({}))
+
       if (!res.ok) {
-        throw new Error('Erreur lors de la soumission')
+        throw new Error(data.error || 'Erreur lors de la soumission')
       }
 
       setStatus('success')
@@ -136,7 +139,13 @@ export default function CareersClient({ careers }: { careers: any[] }) {
               <h3 className="text-2xl font-bold uppercase tracking-tight mb-4 text-[var(--color-eai-charcoal)]">Candidature envoyée</h3>
               <p className="opacity-70 max-w-sm">Merci de votre intérêt. Notre équipe RH étudiera votre profil et reviendra vers vous très prochainement.</p>
               <button 
-                onClick={() => setStatus('idle')}
+                onClick={() => {
+                  setStatus('idle')
+                  setForm({
+                    name: '', email: '', phone: '', experience: '', linkedin: '', portfolio: '', message: '', consent: false, honeypot: ''
+                  })
+                  setFile(null)
+                }}
                 className="mt-8 px-6 py-2 border border-[var(--color-eai-charcoal)] text-sm uppercase tracking-widest font-bold hover:bg-[var(--color-eai-charcoal)] hover:text-white transition-colors"
               >
                 Nouvelle candidature
@@ -156,6 +165,7 @@ export default function CareersClient({ careers }: { careers: any[] }) {
               )}
 
               <form onSubmit={handleApply} className="space-y-6">
+                <input type="text" name="honeypot" value={form.honeypot} onChange={e => setForm({...form, honeypot: e.target.value})} className="hidden" tabIndex={-1} autoComplete="off" aria-hidden="true" />
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="space-y-2">
                     <label className="text-xs uppercase tracking-widest font-bold opacity-70">Nom complet *</label>
