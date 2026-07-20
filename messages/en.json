@@ -71,13 +71,17 @@
     "items": [
       {
         "num": "01",
-        "title": "Architecture",
+        "title": "Architecture & Interior Design",
         "value": "Spaces that tell a story",
         "desc": "Luxury residential, commercial, public facilities—each project integrates aesthetics, functionality, and sustainability to create exceptional living spaces.",
         "bullets": [
-          "Full architectural design",
-          "Permits and studies",
-          "Construction supervision"
+          "Conception",
+          "Plans: Electricity, Plumbing, Layout, Air conditioning",
+          "Moodboards",
+          "Material Selection",
+          "Site Support",
+          "Works supervision",
+          "Studies: Technical + Financial"
         ]
       },
       {
@@ -104,17 +108,6 @@
       },
       {
         "num": "04",
-        "title": "Interior Design",
-        "value": "Spaces that embody your identity",
-        "desc": "Every detail is considered—materials, light, furniture—to create a memorable experience reflecting each client's unique identity.",
-        "bullets": [
-          "Concept & moodboards",
-          "Material selection",
-          "Art direction"
-        ]
-      },
-      {
-        "num": "05",
         "title": "Urban Planning",
         "value": "Thinking the city of tomorrow",
         "desc": "Master plans, impact studies, and sustainable development at a territorial scale to build more human cities.",
@@ -125,7 +118,7 @@
         ]
       },
       {
-        "num": "06",
+        "num": "05",
         "title": "3D Design",
         "value": "Visualize before executing",
         "desc": "High-precision photorealistic 3D renderings and immersive animations to validate volumes, lighting, and materials before work starts.",
