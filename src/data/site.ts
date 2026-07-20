@@ -147,7 +147,7 @@ export const siteData = {
   ],
   contact: {
     email: 'contact@eai-construction.com',
-    phone: '+212 666 798536 / +212 688018863',
+    phone: '+212 666 798536 / +212 688018863 / +212 520 198738',
     address: 'Casablanca, Maroc',
   },
   socials: [

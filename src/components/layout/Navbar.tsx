@@ -13,27 +13,27 @@ const announcements = {
   fr: [
     "📢 FIDI 2026 : Forum International de la Décoration d'Intérieur à Casablanca (4ème Édition)",
     "✨ Prestation Clé : Conception & Visualisation 3D réaliste pour vos espaces",
-    "📞 Contactez-nous : +212 666 798536 / +212 688018863"
+    "📞 Contactez-nous : +212 666 798536 / +212 688018863 / +212 520 198738"
   ],
   en: [
     "📢 FIDI 2026: International Interior Decoration Forum in Casablanca (4th Edition)",
     "✨ Key Service: Realistic 3D Design & Space Visualization for your projects",
-    "📞 Call us: +212 666 798536 / +212 688018863"
+    "📞 Call us: +212 666 798536 / +212 688018863 / +212 520 198738"
   ],
   es: [
     "📢 FIDI 2026: Foro Internacional de la Decoración de Interiores en Casablanca (4ª Edición)",
     "✨ Servicio Clave: Diseño 3D realista y visualización espacial para sus proyectos",
-    "📞 Contáctenos: +212 666 798536 / +212 688018863"
+    "📞 Contáctenos: +212 666 798536 / +212 688018863 / +212 520 198738"
   ],
   it: [
     "📢 FIDI 2026: Forum Internazionale della Decorazione d'Interni a Casablanca (4ª Edizione)",
     "✨ Servizio Chiave: Progettazione 3D realistica e visualizzazione spaziale",
-    "📞 Contattaci: +212 666 798536 / +212 688018863"
+    "📞 Contattaci: +212 666 798536 / +212 688018863 / +212 520 198738"
   ],
   ar: [
     "📢 منتدى FIDI 2026: المنتدى الدولي للديكور الداخلي بالدار البيضاء (الدورة الرابعة)",
     "✨ خدمة رئيسية: تصميم ثلاثي الأبعاد واقعي وتجسيد متكامل لمشاريعكم",
-    "📞 اتصل بنا: +212 666 798536 / +212 688018863"
+    "📞 اتصل بنا: +212 666 798536 / +212 688018863 / +212 520 198738"
   ]
 };
 
@@ -58,6 +58,8 @@ function AnnouncementBar() {
           <a href="tel:+212666798536" className="text-[var(--color-eai-olive)] hover:underline font-extrabold">+212 666 798536</a>
           <span className="opacity-30">|</span>
           <a href="tel:+212688018863" className="text-[var(--color-eai-olive)] hover:underline font-extrabold">+212 688 01 88 63</a>
+          <span className="opacity-30">|</span>
+          <a href="tel:+212520198738" className="text-[var(--color-eai-olive)] hover:underline font-extrabold">+212 520 198738</a>
         </span>
       );
     }
