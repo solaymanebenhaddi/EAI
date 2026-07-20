@@ -92,7 +92,7 @@ export default function EventsShowcase() {
 
             {/* CTA */}
             <a
-              href="https://events.eai-construction.com"
+              href="https://events.eai-construction.com/fidi26-2/"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-3 px-8 py-3.5 text-sm tracking-[0.15em] uppercase border border-eai-olive/60 text-eai-paper rounded-full hover:bg-eai-olive/15 transition-all duration-300 no-underline"
