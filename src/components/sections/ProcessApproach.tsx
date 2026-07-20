@@ -67,7 +67,7 @@ export default function ProcessApproach() {
           <div className="pa-elem w-full h-full relative shadow-2xl rounded-none lg:rounded-l-xl overflow-hidden">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img 
-              src="/assets/proccess.png" 
+              src="/assets/processnew.png" 
               alt="Process EAI" 
               className="absolute inset-0 w-full h-full object-cover"
             />
