@@ -33,7 +33,7 @@
     },
     "ELAOUAD": {
       "title": "ELAOUAD",
-      "subtitle": "Architecture & Engineering Group"
+      "subtitle": "Grupo de Arquitectura e Ingeniería"
     }
   },
   "Vision": {
@@ -97,7 +97,7 @@
       },
       {
         "num": "03",
-        "title": "Ingeniería y PM",
+        "title": "Ingeniería y Gestión de Proyectos",
         "value": "La complejidad, dominada",
         "desc": "Desde la viabilidad hasta la entrega final, gestionamos la complejidad para que pueda concentrarse en lo esencial.",
         "bullets": [
@@ -159,7 +159,7 @@
     "items": [
       {
         "num": "01",
-        "name": "ELAOUAD Architecture & Engineering",
+        "name": "ELAOUAD Arquitectura e Ingeniería",
         "text": "Diseño, estudios, coordinación.",
         "tags": [
           "Diseño",
@@ -179,7 +179,7 @@
       },
       {
         "num": "03",
-        "name": "EAI Courses / Formación",
+        "name": "Cursos / Formación EAI",
         "text": "Transmisión de habilidades prácticas.",
         "tags": [
           "Formación",
@@ -261,5 +261,253 @@
   "SEO": {
     "title": "ELAOUAD Arquitectura e Ingeniería | Diseño, BIM, Estudios",
     "description": "Estudio de arquitectura, ingeniería y coordinación de proyectos con sede en Marruecos. Experiencia en diseño, BIM y supervisión de obras."
+  },
+  "ProcessApproach": {
+    "eyebrow": "Descubrir Nuestro Enfoque",
+    "title": "El proceso EAI",
+    "desc": "Desde la idea inicial hasta el espacio finalizado, cada paso está estructurado para garantizar calidad, cumplimiento de presupuesto y excelencia arquitectónica.",
+    "steps": [
+      {
+        "num": "01",
+        "title": "Descubrimiento y briefing del cliente",
+        "desc": "Comprensión profunda de sus necesidades."
+      },
+      {
+        "num": "02",
+        "title": "Visita y estudio del sitio",
+        "desc": "Análisis técnico y espacial de la ubicación."
+      },
+      {
+        "num": "03",
+        "title": "Análisis de necesidades y presupuesto",
+        "desc": "Alcance económico del proyecto."
+      },
+      {
+        "num": "04",
+        "title": "Moodboard y dirección creativa",
+        "desc": "Definición de la identidad visual."
+      },
+      {
+        "num": "05",
+        "title": "Planos de distribución 2D",
+        "desc": "Estructuración y flujo de circulación."
+      },
+      {
+        "num": "06",
+        "title": "Diseño 3D y visualización",
+        "desc": "Proyecciones fotorrealistas del espacio."
+      },
+      {
+        "num": "07",
+        "title": "Selección de materiales y acabados",
+        "desc": "Cuidadosa selección de texturas y colores."
+      },
+      {
+        "num": "08",
+        "title": "Validación técnica",
+        "desc": "Verificación de viabilidad."
+      },
+      {
+        "num": "09",
+        "title": "Planificación y ejecución",
+        "desc": "Supervisión rigurosa de obras."
+      },
+      {
+        "num": "10",
+        "title": "Control de calidad y entrega",
+        "desc": "Entrega sin defectos."
+      }
+    ]
+  },
+  "InteriorDesignIntro": {
+    "eyebrow": "Diseño Interior y Distribución",
+    "title": "Esculpir el espacio, \n Revelar el potencial.",
+    "p1": "EAI se destaca como especialista en distribución interior y diseño de espacios. Creamos entornos personalizados para proyectos residenciales y profesionales, combinando sensibilidad creativa con rigor técnico.",
+    "p2": "Mediante la visualización 3D antes de la ejecución y nuestro servicio de acondicionamiento llave en mano, transformamos cada espacio para que refleje su identidad única, controlando al mismo tiempo costos y plazos."
+  },
+  "TestimonialsCarousel": {
+    "eyebrow": "Opiniones de Clientes",
+    "title": "Prueba de\nConfianza.",
+    "desc": "Lo que dicen nuestros socios sobre nuestro rigor en ingeniería y creatividad.",
+    "testimonials": [
+      {
+        "quote": "El BIM de ELAOUAD nos permitió detectar 23 conflictos estructurales antes de la obra. Resultado: 0 imprevistos mayores, entregado a tiempo.",
+        "author": "Director Técnico",
+        "company": "Grupo Inmobiliario, Casablanca"
+      },
+      {
+        "quote": "Buscábamos una firma capaz de gestionar la complejidad de un proyecto de 5.000 m² con estrictas restricciones técnicas. ELAOUAD fue el único en ofrecer un equipo integrado de arquitectura + ingeniería.",
+        "author": "CEO",
+        "company": "Fondo de Inversión"
+      },
+      {
+        "quote": "FIDI es el evento imprescindible de decoración de interiores en África. A lo largo de cuatro ediciones, hemos firmado alianzas estratégicas en 3 continentes.",
+        "author": "Director Comercial",
+        "company": "Fabricante de Materiales"
+      }
+    ]
+  },
+  "TurnkeyServices": {
+    "eyebrow": "Llave en mano",
+    "title": "Servicios de acondicionamiento llave en mano",
+    "description": "Gestión integral de su proyecto, desde la idea hasta la entrega de llaves.",
+    "benefits": [
+      "Un único punto de contacto coordinado",
+      "Mejor control del presupuesto",
+      "Total coherencia entre diseño y ejecución",
+      "Reducción de riesgos de coordinación",
+      "Supervisión profesional del proyecto",
+      "Planificación clara y respetada",
+      "Entrega centrada en la calidad"
+    ],
+    "steps": [
+      {
+        "num": "01",
+        "title": "Briefing Cliente"
+      },
+      {
+        "num": "02",
+        "title": "Estudio del Sitio"
+      },
+      {
+        "num": "03",
+        "title": "Concepto Interior"
+      },
+      {
+        "num": "04",
+        "title": "Planos 2D"
+      },
+      {
+        "num": "05",
+        "title": "Diseño 3D"
+      },
+      {
+        "num": "06",
+        "title": "Selección de Materiales"
+      },
+      {
+        "num": "07",
+        "title": "Presupuesto"
+      },
+      {
+        "num": "08",
+        "title": "Coordinación Técnica"
+      },
+      {
+        "num": "09",
+        "title": "Ejecución"
+      },
+      {
+        "num": "10",
+        "title": "Control de Calidad"
+      },
+      {
+        "num": "11",
+        "title": "Entrega Final"
+      }
+    ]
+  },
+  "TrainingCourses": {
+    "eyebrow": "Formación y Experiencia",
+    "title": "Conviértase en un profesional de interiores",
+    "description": "EAI comparte su experiencia a través de formación práctica y orientada al mercado. Domine el diseño de interiores, el modelado 3D y la gestión de proyectos.",
+    "topics": [
+      "Diseño de interiores residencial",
+      "Dominio de software 3D y BIM",
+      "Coordinación de obra para interiores",
+      "Elección de materiales e iluminación"
+    ]
+  },
+  "MayushDesign": {
+    "eyebrow": "Mayush Design",
+    "title": "Descubra nuestra plataforma de equipamiento interior",
+    "description": "Acceda a una cuidada selección de mobiliario y objetos decorativos a través de nuestra plataforma dedicada, Mayush Design."
+  },
+  "Conception3D": {
+    "eyebrow": "Diseño 3D",
+    "title": "Visualice antes de ejecutar",
+    "announcement": "SERVICIO CLAVE: El diseño 3D en EAI es un paso esencial para validar el diseño, la iluminación y los volúmenes de su proyecto antes de la obra, reduciendo los riesgos de ajustes en sitio.",
+    "description": "En EAI, ayudamos a nuestros clientes a visualizar, validar y perfeccionar su espacio antes de la ejecución. Con nuestros renders 3D fotorrealistas, cada detalle está controlado.",
+    "categories": [
+      {
+        "name": "Cocina",
+        "description": "Cocinas ergonómicas y estéticas pensadas para el uso diario."
+      },
+      {
+        "name": "Oficina",
+        "description": "Espacios de trabajo optimizados para la concentración y el bienestar."
+      },
+      {
+        "name": "Villa",
+        "description": "Villas de prestigio con un diseño interior excepcional."
+      },
+      {
+        "name": "Apartamento",
+        "description": "Optimización del espacio para apartamentos urbanos elegantes."
+      },
+      {
+        "name": "Vestidor",
+        "description": "Vestidores a medida que combinan almacenaje y diseño."
+      },
+      {
+        "name": "Baño",
+        "description": "Baños modernos, relajantes y funcionales."
+      },
+      {
+        "name": "Dormitorio",
+        "description": "Dormitorios diseñados para el descanso y la elegancia."
+      },
+      {
+        "name": "Sala de estar",
+        "description": "Espacios cálidos, el verdadero corazón del hogar."
+      }
+    ]
+  },
+  "LocationMap": {
+    "title": "Nuestra Sede",
+    "desc": "Venga a discutir su proyecto con nuestros expertos en arquitectura y diseño de interiores.",
+    "cta": "Obtener direcciones"
+  },
+  "Careers": {
+    "applySuccess": "Gracias por su interés. Nuestro equipo de RRHH revisará su perfil y se pondrá en contacto con usted muy pronto."
+  },
+  "VideoTitles": {
+    "interiorDesign": "Descubra nuestro universo de diseño interior",
+    "conception3D": "Visualice su proyecto antes de su realización",
+    "turnkey": "De la concepción a la entrega",
+    "process": "Nuestro método, de la idea a la realización",
+    "training": "Fórmese en profesiones del diseño interior",
+    "mayush": "Descubra nuestra selección para sus espacios",
+    "currentEvent": "Descubra nuestro próximo evento"
+  },
+  "CareersClient": {
+    "openPositions": "Puestos abiertos",
+    "noPositions": "No hay puestos abiertos en este momento. No dude en enviar una solicitud espontánea.",
+    "responsibilities": "Responsabilidades:",
+    "requirements": "Requisitos:",
+    "applySuccessTitle": "Solicitud enviada",
+    "applySuccessDesc": "Gracias por su interés. Nuestro equipo de RRHH revisará su perfil y se pondrá en contacto con usted en breve.",
+    "newApplication": "Nueva solicitud",
+    "applyTitlePrefix": "Solicitar:",
+    "spontaneousApply": "Solicitud espontánea",
+    "fillFormDesc": "Complete el formulario a continuación para enviarnos su perfil.",
+    "form": {
+      "fullName": "Nombre completo *",
+      "email": "Correo electrónico *",
+      "phone": "Teléfono *",
+      "experience": "Experiencia *",
+      "linkedin": "Perfil de LinkedIn",
+      "portfolio": "Portafolio / Sitio Web",
+      "message": "Mensaje de presentación",
+      "cv": "CV (PDF, Máx 5MB) *",
+      "consent": "Acepto que mis datos personales sean procesados como parte de este proceso de contratación.",
+      "selectOption": "Seleccionar...",
+      "filePrompt": "Haga clic para seleccionar un archivo",
+      "sending": "Enviando...",
+      "sendBtn": "Enviar solicitud",
+      "errorConsent": "Por favor, acepte la política de privacidad.",
+      "errorFileSize": "El archivo es demasiado grande (Máx 5MB).",
+      "errorSubmit": "Ocurrió un error."
+    }
   }
 }

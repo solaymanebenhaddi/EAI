@@ -7,11 +7,14 @@ import { siteData } from '@/data/site'
 import { ArrowRight } from 'lucide-react'
 import RemoteVideo from '@/components/ui/RemoteVideo'
 import { videoConfig } from '@/data/videoConfig'
+import { useTranslations } from 'next-intl'
 
 gsap.registerPlugin(ScrollTrigger)
 
 export default function TrainingCourses() {
   const sectionRef = useRef<HTMLElement>(null)
+  const t = useTranslations('TrainingCourses')
+  const topics = t.raw('topics') as string[]
 
   useEffect(() => {
     if (!sectionRef.current) return
@@ -46,17 +49,17 @@ export default function TrainingCourses() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div>
             <p className="tc-elem text-xs tracking-[0.3em] uppercase opacity-60 mb-4 font-bold text-[var(--color-eai-olive)]">
-              {trainingOffer.eyebrow}
+              {t('eyebrow')}
             </p>
             <h2 className="tc-elem font-sans text-4xl md:text-5xl lg:text-6xl font-extrabold uppercase tracking-tight mb-8">
-              {trainingOffer.title}
+              {t('title')}
             </h2>
             <p className="tc-elem text-lg opacity-80 leading-relaxed mb-8 max-w-lg">
-              {trainingOffer.description}
+              {t('description')}
             </p>
             
             <ul className="tc-elem space-y-4 mb-10">
-              {trainingOffer.topics.map((topic, i) => (
+              {topics.map((topic, i) => (
                 <li key={i} className="flex items-center gap-3 border-b border-white/10 pb-4">
                   <ArrowRight className="w-4 h-4 text-[var(--color-eai-olive)]" />
                   <span className="font-medium opacity-90">{topic}</span>

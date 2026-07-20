@@ -4,8 +4,10 @@ import React, { useState } from 'react'
 import { motion, AnimatePresence } from 'motion/react'
 import { cn } from '@/lib/utils'
 import { CheckCircle2, ChevronDown, Paperclip, Loader2 } from 'lucide-react'
+import { useTranslations } from 'next-intl'
 
 export default function CareersClient({ careers }: { careers: any[] }) {
+  const t = useTranslations('CareersClient')
   const [selectedJob, setSelectedJob] = useState<string | null>(null)
   
   const [form, setForm] = useState({
@@ -26,7 +28,7 @@ export default function CareersClient({ careers }: { careers: any[] }) {
   const handleApply = async (e: React.FormEvent) => {
     e.preventDefault()
     if (!form.consent) {
-      setErrorMsg('Veuillez accepter la politique de confidentialité.')
+      setErrorMsg(t('form.errorConsent'))
       return
     }
     
@@ -36,7 +38,7 @@ export default function CareersClient({ careers }: { careers: any[] }) {
     // Client-side validation for file size (e.g. 5MB max)
     if (file && file.size > 5 * 1024 * 1024) {
       setStatus('error')
-      setErrorMsg('Le fichier est trop volumineux (Max 5MB).')
+      setErrorMsg(t('form.errorFileSize'))
       return
     }
 
@@ -58,13 +60,13 @@ export default function CareersClient({ careers }: { careers: any[] }) {
       const data = await res.json().catch(() => ({}))
 
       if (!res.ok) {
-        throw new Error(data.error || 'Erreur lors de la soumission')
+        throw new Error(data.error || t('form.errorSubmit'))
       }
 
       setStatus('success')
     } catch (err: any) {
       setStatus('error')
-      setErrorMsg(err.message || 'Une erreur est survenue.')
+      setErrorMsg(err.message || t('form.errorSubmit'))
     }
   }
 
@@ -73,11 +75,11 @@ export default function CareersClient({ careers }: { careers: any[] }) {
       {/* Job Listing */}
       <div className="lg:col-span-5 space-y-6">
         <h2 className="text-xl font-bold uppercase tracking-widest text-[var(--color-eai-charcoal)] mb-8">
-          Postes ouverts
+          {t('openPositions')}
         </h2>
         {careers.length === 0 ? (
           <div className="p-8 border border-[var(--color-eai-charcoal)]/10 rounded-lg text-center opacity-60">
-            Aucun poste n'est ouvert pour le moment. N'hésitez pas à déposer une candidature spontanée.
+            {t('noPositions')}
           </div>
         ) : (
           careers.map(job => (
@@ -109,14 +111,14 @@ export default function CareersClient({ careers }: { careers: any[] }) {
                       <p>{job.description}</p>
                       
                       <div>
-                        <strong className="block mb-2">Responsabilités :</strong>
+                        <strong className="block mb-2">{t('responsibilities')}</strong>
                         <ul className="list-disc pl-4 space-y-1 opacity-80">
                           {job.responsibilities.map((r: string, i: number) => <li key={i}>{r}</li>)}
                         </ul>
                       </div>
                       
                       <div>
-                        <strong className="block mb-2">Prérequis :</strong>
+                        <strong className="block mb-2">{t('requirements')}</strong>
                         <ul className="list-disc pl-4 space-y-1 opacity-80">
                           {job.requirements.map((r: string, i: number) => <li key={i}>{r}</li>)}
                         </ul>
@@ -136,8 +138,8 @@ export default function CareersClient({ careers }: { careers: any[] }) {
           {status === 'success' ? (
             <div className="flex flex-col items-center justify-center py-20 text-center">
               <CheckCircle2 className="w-20 h-20 text-[var(--color-eai-olive)] mb-6" />
-              <h3 className="text-2xl font-bold uppercase tracking-tight mb-4 text-[var(--color-eai-charcoal)]">Candidature envoyée</h3>
-              <p className="opacity-70 max-w-sm">Merci de votre intérêt. Notre équipe RH étudiera votre profil et reviendra vers vous très prochainement.</p>
+              <h3 className="text-2xl font-bold uppercase tracking-tight mb-4 text-[var(--color-eai-charcoal)]">{t('applySuccessTitle')}</h3>
+              <p className="opacity-70 max-w-sm">{t('applySuccessDesc')}</p>
               <button 
                 onClick={() => {
                   setStatus('idle')
@@ -148,15 +150,15 @@ export default function CareersClient({ careers }: { careers: any[] }) {
                 }}
                 className="mt-8 px-6 py-2 border border-[var(--color-eai-charcoal)] text-sm uppercase tracking-widest font-bold hover:bg-[var(--color-eai-charcoal)] hover:text-white transition-colors"
               >
-                Nouvelle candidature
+                {t('newApplication')}
               </button>
             </div>
           ) : (
             <>
               <h2 className="text-2xl font-bold uppercase tracking-tight text-[var(--color-eai-charcoal)] mb-2">
-                {selectedJob ? `Postuler : ${careers.find(c => c.id === selectedJob)?.title}` : 'Candidature Spontanée'}
+                {selectedJob ? `${t('applyTitlePrefix')} ${careers.find(c => c.id === selectedJob)?.title}` : t('spontaneousApply')}
               </h2>
-              <p className="opacity-60 text-sm mb-8">Remplissez le formulaire ci-dessous pour nous envoyer votre profil.</p>
+              <p className="opacity-60 text-sm mb-8">{t('fillFormDesc')}</p>
               
               {status === 'error' && (
                 <div className="bg-red-50 text-red-600 p-4 rounded-md text-sm mb-6 border border-red-200">
@@ -168,24 +170,24 @@ export default function CareersClient({ careers }: { careers: any[] }) {
                 <input type="text" name="honeypot" value={form.honeypot} onChange={e => setForm({...form, honeypot: e.target.value})} className="hidden" tabIndex={-1} autoComplete="off" aria-hidden="true" />
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="space-y-2">
-                    <label className="text-xs uppercase tracking-widest font-bold opacity-70">Nom complet *</label>
+                    <label className="text-xs uppercase tracking-widest font-bold opacity-70">{t('form.fullName')}</label>
                     <input required type="text" value={form.name} onChange={e => setForm({...form, name: e.target.value})} className="w-full bg-transparent border-b border-[var(--color-eai-charcoal)]/20 py-2 outline-none focus:border-[var(--color-eai-olive)] text-[var(--color-eai-charcoal)]" />
                   </div>
                   <div className="space-y-2">
-                    <label className="text-xs uppercase tracking-widest font-bold opacity-70">Email *</label>
+                    <label className="text-xs uppercase tracking-widest font-bold opacity-70">{t('form.email')}</label>
                     <input required type="email" value={form.email} onChange={e => setForm({...form, email: e.target.value})} className="w-full bg-transparent border-b border-[var(--color-eai-charcoal)]/20 py-2 outline-none focus:border-[var(--color-eai-olive)] text-[var(--color-eai-charcoal)]" />
                   </div>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="space-y-2">
-                    <label className="text-xs uppercase tracking-widest font-bold opacity-70">Téléphone *</label>
+                    <label className="text-xs uppercase tracking-widest font-bold opacity-70">{t('form.phone')}</label>
                     <input required type="tel" value={form.phone} onChange={e => setForm({...form, phone: e.target.value})} className="w-full bg-transparent border-b border-[var(--color-eai-charcoal)]/20 py-2 outline-none focus:border-[var(--color-eai-olive)] text-[var(--color-eai-charcoal)]" />
                   </div>
                   <div className="space-y-2">
-                    <label className="text-xs uppercase tracking-widest font-bold opacity-70">Expérience *</label>
+                    <label className="text-xs uppercase tracking-widest font-bold opacity-70">{t('form.experience')}</label>
                     <select required value={form.experience} onChange={e => setForm({...form, experience: e.target.value})} className="w-full bg-transparent border-b border-[var(--color-eai-charcoal)]/20 py-2 outline-none focus:border-[var(--color-eai-olive)] text-[var(--color-eai-charcoal)]">
-                      <option value="" disabled hidden>Sélectionnez...</option>
+                      <option value="" disabled hidden>{t('form.selectOption')}</option>
                       <option value="0-2">0 - 2 ans</option>
                       <option value="3-5">3 - 5 ans</option>
                       <option value="5-10">5 - 10 ans</option>
@@ -196,25 +198,25 @@ export default function CareersClient({ careers }: { careers: any[] }) {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="space-y-2">
-                    <label className="text-xs uppercase tracking-widest font-bold opacity-70">Profil LinkedIn</label>
+                    <label className="text-xs uppercase tracking-widest font-bold opacity-70">{t('form.linkedin')}</label>
                     <input type="url" value={form.linkedin} onChange={e => setForm({...form, linkedin: e.target.value})} placeholder="https://" className="w-full bg-transparent border-b border-[var(--color-eai-charcoal)]/20 py-2 outline-none focus:border-[var(--color-eai-olive)] text-[var(--color-eai-charcoal)]" />
                   </div>
                   <div className="space-y-2">
-                    <label className="text-xs uppercase tracking-widest font-bold opacity-70">Portfolio / Site Web</label>
+                    <label className="text-xs uppercase tracking-widest font-bold opacity-70">{t('form.portfolio')}</label>
                     <input type="url" value={form.portfolio} onChange={e => setForm({...form, portfolio: e.target.value})} placeholder="https://" className="w-full bg-transparent border-b border-[var(--color-eai-charcoal)]/20 py-2 outline-none focus:border-[var(--color-eai-olive)] text-[var(--color-eai-charcoal)]" />
                   </div>
                 </div>
 
                 <div className="space-y-2">
-                  <label className="text-xs uppercase tracking-widest font-bold opacity-70">Message de motivation</label>
+                  <label className="text-xs uppercase tracking-widest font-bold opacity-70">{t('form.message')}</label>
                   <textarea rows={4} value={form.message} onChange={e => setForm({...form, message: e.target.value})} className="w-full bg-transparent border-b border-[var(--color-eai-charcoal)]/20 py-2 outline-none focus:border-[var(--color-eai-olive)] text-[var(--color-eai-charcoal)] resize-none" />
                 </div>
 
                 <div className="space-y-2">
-                  <label className="text-xs uppercase tracking-widest font-bold opacity-70">CV (PDF, Max 5MB) *</label>
+                  <label className="text-xs uppercase tracking-widest font-bold opacity-70">{t('form.cv')}</label>
                   <label className="flex items-center gap-4 p-4 border border-[var(--color-eai-charcoal)]/20 border-dashed rounded-lg cursor-pointer hover:bg-black/5 transition-colors">
                     <Paperclip className="w-5 h-5 opacity-60" />
-                    <span className="text-sm opacity-80 flex-1">{file ? file.name : "Cliquez pour sélectionner un fichier"}</span>
+                    <span className="text-sm opacity-80 flex-1">{file ? file.name : t('form.filePrompt')}</span>
                     <input required type="file" accept=".pdf,.doc,.docx" className="hidden" onChange={e => setFile(e.target.files?.[0] || null)} />
                   </label>
                 </div>
@@ -222,7 +224,7 @@ export default function CareersClient({ careers }: { careers: any[] }) {
                 <label className="flex items-start gap-3 mt-6 cursor-pointer">
                   <input type="checkbox" required checked={form.consent} onChange={e => setForm({...form, consent: e.target.checked})} className="mt-1" />
                   <span className="text-xs opacity-70 leading-relaxed">
-                    J'accepte que mes données personnelles soient traitées dans le cadre de ce processus de recrutement.
+                    {t('form.consent')}
                   </span>
                 </label>
 
@@ -231,7 +233,7 @@ export default function CareersClient({ careers }: { careers: any[] }) {
                   disabled={status === 'loading'}
                   className="w-full py-4 bg-[var(--color-eai-charcoal)] text-white text-sm font-bold uppercase tracking-widest hover:bg-[var(--color-eai-olive)] hover:text-[var(--color-eai-black)] transition-colors flex justify-center items-center gap-3"
                 >
-                  {status === 'loading' ? <><Loader2 className="w-4 h-4 animate-spin" /> Envoi...</> : 'Envoyer la candidature'}
+                  {status === 'loading' ? <><Loader2 className="w-4 h-4 animate-spin" /> {t('form.sending')}</> : t('form.sendBtn')}
                 </button>
               </form>
             </>

@@ -5,11 +5,13 @@ import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { siteData } from '@/data/site'
 import { MapPin } from 'lucide-react'
+import { useTranslations } from 'next-intl'
 
 gsap.registerPlugin(ScrollTrigger)
 
 export default function LocationMap() {
   const sectionRef = useRef<HTMLElement>(null)
+  const t = useTranslations('LocationMap')
 
   useEffect(() => {
     if (!sectionRef.current) return
@@ -43,13 +45,13 @@ export default function LocationMap() {
       <div className="max-w-[1440px] mx-auto px-6 md:px-12 lg:px-20 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         <div className="lm-elem">
           <h2 className="font-sans text-3xl font-extrabold uppercase tracking-tight mb-4">
-            Notre Siège
+            {t('title')}
           </h2>
           <div className="flex items-start gap-4 opacity-80 mb-6">
             <MapPin className="w-6 h-6 shrink-0 mt-1 text-[var(--color-eai-olive)]" />
             <div>
               <p className="text-lg leading-relaxed">{contact.address}</p>
-              <p className="mt-2 text-sm">Venez discuter de votre projet avec nos experts en architecture et design d'intérieur.</p>
+              <p className="mt-2 text-sm">{t('desc')}</p>
             </div>
           </div>
           <a
@@ -58,7 +60,7 @@ export default function LocationMap() {
             rel="noopener noreferrer"
             className="inline-flex px-6 py-3 border border-white/30 text-xs uppercase tracking-widest hover:bg-white hover:text-[var(--color-eai-charcoal)] transition-colors duration-300"
           >
-            Obtenir l'itinéraire
+            {t('cta')}
           </a>
         </div>
         <div className="lm-elem relative aspect-[16/9] lg:aspect-[4/3] w-full rounded-xl overflow-hidden bg-white/5">

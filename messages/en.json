@@ -97,7 +97,7 @@
       },
       {
         "num": "03",
-        "title": "Engineering & PM",
+        "title": "Engineering & Project Management",
         "value": "Complexity, mastered",
         "desc": "From feasibility to final handover, we manage the complexity so you can focus on the essentials.",
         "bullets": [
@@ -229,7 +229,7 @@
       },
       {
         "value": "500+",
-        "label": "Professionnels"
+        "label": "Professionals"
       },
       {
         "value": "30+",
@@ -261,5 +261,253 @@
   "SEO": {
     "title": "ELAOUAD Architecture & Engineering | Design, BIM, Studies",
     "description": "Architecture, engineering, and project coordination firm based in Morocco. Expertise in design, BIM, and site supervision."
+  },
+  "ProcessApproach": {
+    "eyebrow": "Discover Our Approach",
+    "title": "The EAI Process",
+    "desc": "From the initial idea to the finalized space, every step is structured to ensure quality, budget adherence, and architectural excellence.",
+    "steps": [
+      {
+        "num": "01",
+        "title": "Discovery and Client Brief",
+        "desc": "In-depth understanding of your needs."
+      },
+      {
+        "num": "02",
+        "title": "Site Visit and Survey",
+        "desc": "Technical and spatial analysis of the location."
+      },
+      {
+        "num": "03",
+        "title": "Needs and Budget Analysis",
+        "desc": "Economic scoping of the project."
+      },
+      {
+        "num": "04",
+        "title": "Moodboard and Creative Direction",
+        "desc": "Defining the visual identity."
+      },
+      {
+        "num": "05",
+        "title": "2D Layout Plans",
+        "desc": "Structuring and circulation flow."
+      },
+      {
+        "num": "06",
+        "title": "3D Design and Visualization",
+        "desc": "Photorealistic projections of the space."
+      },
+      {
+        "num": "07",
+        "title": "Materials and Finishes Selection",
+        "desc": "Careful selection of textures and colors."
+      },
+      {
+        "num": "08",
+        "title": "Technical Validation",
+        "desc": "Feasibility verification."
+      },
+      {
+        "num": "09",
+        "title": "Planning and Execution",
+        "desc": "Rigorous supervision of works."
+      },
+      {
+        "num": "10",
+        "title": "Quality Control and Delivery",
+        "desc": "Defect-free handover."
+      }
+    ]
+  },
+  "InteriorDesignIntro": {
+    "eyebrow": "Interior Design & Layout",
+    "title": "Sculpting space, \n Revealing potential.",
+    "p1": "EAI stands as a specialist in interior layout and space design. We create customized environments for residential and professional projects, combining creative sensitivity with technical rigor.",
+    "p2": "Through 3D visualization prior to execution and our turnkey layout service, we transform every space to reflect your unique identity, while controlling costs and deadlines."
+  },
+  "TestimonialsCarousel": {
+    "eyebrow": "Client Reviews",
+    "title": "Proof of\nTrust.",
+    "desc": "What our partners say about our engineering rigor and creativity.",
+    "testimonials": [
+      {
+        "quote": "ELAOUAD's BIM enabled us to detect 23 structural conflicts before construction. Result: 0 major contingencies, delivered on schedule.",
+        "author": "Technical Director",
+        "company": "Real Estate Group, Casablanca"
+      },
+      {
+        "quote": "We were looking for a firm capable of managing the complexity of a 5,000 m² project with severe technical constraints. ELAOUAD was the only one to offer an integrated architecture + engineering team.",
+        "author": "CEO",
+        "company": "Investment Fund"
+      },
+      {
+        "quote": "FIDI is the must-attend interior decoration event in Africa. Over four editions, we have signed strategic partnerships across 3 continents.",
+        "author": "Sales Director",
+        "company": "Materials Manufacturer"
+      }
+    ]
+  },
+  "TurnkeyServices": {
+    "eyebrow": "Turnkey",
+    "title": "Turnkey Layout Services",
+    "description": "Comprehensive management of your project, from idea to key handover.",
+    "benefits": [
+      "A single, coordinated point of contact",
+      "Better budget control",
+      "Total consistency between design and execution",
+      "Reduction of coordination risks",
+      "Professional project supervision",
+      "Clear and respected planning",
+      "Quality-focused delivery"
+    ],
+    "steps": [
+      {
+        "num": "01",
+        "title": "Client Brief"
+      },
+      {
+        "num": "02",
+        "title": "Site Survey"
+      },
+      {
+        "num": "03",
+        "title": "Interior Concept"
+      },
+      {
+        "num": "04",
+        "title": "2D Plans"
+      },
+      {
+        "num": "05",
+        "title": "3D Design"
+      },
+      {
+        "num": "06",
+        "title": "Materials Choice"
+      },
+      {
+        "num": "07",
+        "title": "Budget Preparation"
+      },
+      {
+        "num": "08",
+        "title": "Technical Coordination"
+      },
+      {
+        "num": "09",
+        "title": "Execution"
+      },
+      {
+        "num": "10",
+        "title": "Quality Control"
+      },
+      {
+        "num": "11",
+        "title": "Final Delivery"
+      }
+    ]
+  },
+  "TrainingCourses": {
+    "eyebrow": "Training & Expertise",
+    "title": "Become a layout professional",
+    "description": "EAI shares its expertise through practical, market-oriented training. Master interior design, 3D modeling, and project management.",
+    "topics": [
+      "Residential interior design",
+      "Mastery of 3D and BIM software",
+      "Site coordination for layouts",
+      "Choice of materials and lighting"
+    ]
+  },
+  "MayushDesign": {
+    "eyebrow": "Mayush Design",
+    "title": "Discover our interior equipment platform",
+    "description": "Access a specialized selection of furniture and decorative objects through our dedicated platform, Mayush Design."
+  },
+  "Conception3D": {
+    "eyebrow": "3D Design",
+    "title": "Visualize before executing",
+    "announcement": "KEY SERVICE: 3D design at EAI is an essential step to validate the design, lighting, and volumes of your project before work begins, reducing the risks of on-site adjustments.",
+    "description": "At EAI, we help our clients visualize, validate, and refine their space before works are executed. With our photorealistic 3D renders, every detail is mastered.",
+    "categories": [
+      {
+        "name": "Kitchen",
+        "description": "Ergonomic and aesthetic kitchens designed for daily use."
+      },
+      {
+        "name": "Office",
+        "description": "Workspaces optimized for concentration and well-being."
+      },
+      {
+        "name": "Villa",
+        "description": "Prestigious villas with exceptional interior design."
+      },
+      {
+        "name": "Apartment",
+        "description": "Space optimization for elegant urban apartments."
+      },
+      {
+        "name": "Walk-in Closet",
+        "description": "Custom closets combining storage and design."
+      },
+      {
+        "name": "Bathroom",
+        "description": "Modern, soothing, and functional bathrooms."
+      },
+      {
+        "name": "Bedroom",
+        "description": "Bedrooms designed for rest and elegance."
+      },
+      {
+        "name": "Living Room",
+        "description": "Warm living spaces, the true heart of the home."
+      }
+    ]
+  },
+  "LocationMap": {
+    "title": "Our Headquarters",
+    "desc": "Come discuss your project with our architecture and interior design experts.",
+    "cta": "Get Directions"
+  },
+  "Careers": {
+    "applySuccess": "Thank you for your interest. Our HR team will review your profile and get back to you very soon."
+  },
+  "VideoTitles": {
+    "interiorDesign": "Discover our interior design universe",
+    "conception3D": "Visualize your project before its realization",
+    "turnkey": "From conception to delivery",
+    "process": "Our method, from idea to realization",
+    "training": "Train for interior design professions",
+    "mayush": "Discover our selection for your spaces",
+    "currentEvent": "Discover our upcoming event"
+  },
+  "CareersClient": {
+    "openPositions": "Open Positions",
+    "noPositions": "No positions are currently open. Feel free to submit a spontaneous application.",
+    "responsibilities": "Responsibilities:",
+    "requirements": "Requirements:",
+    "applySuccessTitle": "Application Sent",
+    "applySuccessDesc": "Thank you for your interest. Our HR team will review your profile and get back to you shortly.",
+    "newApplication": "New Application",
+    "applyTitlePrefix": "Apply for:",
+    "spontaneousApply": "Spontaneous Application",
+    "fillFormDesc": "Fill out the form below to send us your profile.",
+    "form": {
+      "fullName": "Full Name *",
+      "email": "Email *",
+      "phone": "Phone *",
+      "experience": "Experience *",
+      "linkedin": "LinkedIn Profile",
+      "portfolio": "Portfolio / Website",
+      "message": "Cover Message",
+      "cv": "Resume (PDF, Max 5MB) *",
+      "consent": "I agree that my personal data will be processed as part of this recruitment process.",
+      "selectOption": "Select...",
+      "filePrompt": "Click to select a file",
+      "sending": "Sending...",
+      "sendBtn": "Send Application",
+      "errorConsent": "Please accept the privacy policy.",
+      "errorFileSize": "The file is too large (Max 5MB).",
+      "errorSubmit": "An error occurred."
+    }
   }
 }

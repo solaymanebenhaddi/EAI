@@ -7,11 +7,13 @@ import { siteData } from '@/data/site'
 import { ExternalLink } from 'lucide-react'
 import RemoteVideo from '@/components/ui/RemoteVideo'
 import { videoConfig } from '@/data/videoConfig'
+import { useTranslations } from 'next-intl'
 
 gsap.registerPlugin(ScrollTrigger)
 
 export default function MayushDesign() {
   const sectionRef = useRef<HTMLElement>(null)
+  const t = useTranslations('MayushDesign')
 
   useEffect(() => {
     if (!sectionRef.current) return
@@ -54,10 +56,10 @@ export default function MayushDesign() {
           </div>
           
           <h2 className="font-sans text-2xl md:text-3xl font-extrabold uppercase tracking-tight mb-6 text-[#1F2E3D]">
-            {mayushDesign.title}
+            {t('title')}
           </h2>
           <p className="text-lg opacity-80 leading-relaxed mb-8 text-[#4A5568]">
-            {mayushDesign.description}
+            {t('description')}
           </p>
 
           <div className="flex flex-wrap gap-3 mb-10">
