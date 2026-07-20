@@ -71,13 +71,17 @@
     "items": [
       {
         "num": "01",
-        "title": "Architettura",
+        "title": "Architettura e Interior Design",
         "value": "Spazi che raccontano una storia",
         "desc": "Residenziale di lusso, commerciale, strutture pubbliche: ogni progetto integra estetica, funzionalità e sostenibilità.",
         "bullets": [
-          "Progettazione completa",
-          "Permessi e studi",
-          "Supervisione cantieri"
+          "Concezione",
+          "Progetti: Elettricità, Idraulica, Disposizione, Climatizzazione",
+          "Moodboard",
+          "Selezione Materiali",
+          "Supporto in Cantiere",
+          "Supervisione dei lavori",
+          "Studi: Tecnici + Finanziari"
         ]
       },
       {
@@ -104,17 +108,6 @@
       },
       {
         "num": "04",
-        "title": "Interior Design",
-        "value": "Spazi che incarnano la tua identità",
-        "desc": "Ogni dettaglio è considerato—materiali, luce, arredamento—per creare un'esperienza memorabile.",
-        "bullets": [
-          "Concept e moodboard",
-          "Selezione materiali",
-          "Direzione artistica"
-        ]
-      },
-      {
-        "num": "05",
         "title": "Urbanistica",
         "value": "Pensare la città di domani",
         "desc": "Piani regolatori, studi di impatto e sviluppo sostenibile su scala territoriale per costruire città più umane.",
@@ -125,7 +118,7 @@
         ]
       },
       {
-        "num": "06",
+        "num": "05",
         "title": "Progettazione 3D",
         "value": "Visualizza prima di eseguire",
         "desc": "Rendering 3D fotorealistici ad alta precisione e animazioni immersive per validare volumi, illuminazione e materiali prima dell'inizio dei lavori.",

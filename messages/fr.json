@@ -71,13 +71,17 @@
     "items": [
       {
         "num": "01",
-        "title": "Architecture",
+        "title": "Architecture & Design Intérieur",
         "value": "Des espaces qui racontent une histoire",
         "desc": "Résidentiel de luxe, commercial, équipements publics — chaque projet intègre esthétique, fonctionnalité et durabilité pour créer des lieux de vie exceptionnels.",
         "bullets": [
-          "Conception architecturale",
-          "Permis et études",
-          "Suivi de réalisation"
+          "Conception",
+          "Plans : Électricité, Plomberie, Aménagement, climatisation",
+          "Moodboards",
+          "Sélection Matériaux",
+          "Accompagnement Chantier",
+          "Suivi de travaux",
+          "Études : Techniques + Financières"
         ]
       },
       {
@@ -104,17 +108,6 @@
       },
       {
         "num": "04",
-        "title": "Design Intérieur",
-        "value": "Des espaces qui incarnent votre identité",
-        "desc": "Chaque détail est pensé — matériaux, lumière, mobilier — pour créer une expérience mémorable qui reflète l'identité unique de chaque client.",
-        "bullets": [
-          "Concept et moodboards",
-          "Sélection matériaux",
-          "Direction artistique"
-        ]
-      },
-      {
-        "num": "05",
         "title": "Urbanisme",
         "value": "Penser la ville de demain",
         "desc": "Plans d'aménagement, études d'impact et développement durable à l'échelle du territoire pour construire des villes plus humaines.",
@@ -125,7 +118,7 @@
         ]
       },
       {
-        "num": "06",
+        "num": "05",
         "title": "Conception 3D",
         "value": "Visualisez avant d'exécuter",
         "desc": "Rendus 3D photoréalistes de haute précision et animations immersives pour valider les volumes, l'éclairage et les matériaux avant travaux.",
