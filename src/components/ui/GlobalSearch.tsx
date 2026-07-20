@@ -68,8 +68,8 @@ export default function GlobalSearch() {
 
       // Search Mayush
       siteData.mayushDesign.categories.forEach(item => {
-        if (item.toLowerCase().includes(q)) {
-          found.push({ type: 'Mayush Design', title: item, desc: 'Catégorie de produit', link: '#mayush-design' })
+        if (item.name.toLowerCase().includes(q)) {
+          found.push({ type: 'Mayush Design', title: item.name, desc: 'Catégorie de produit', link: item.url })
         }
       })
 
