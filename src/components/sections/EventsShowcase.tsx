@@ -106,7 +106,7 @@ export default function EventsShowcase() {
         </div>
 
         {/* Stats row */}
-        <div className="events-stats-row grid grid-cols-3 gap-8 mt-16 pt-12 border-t border-white/10 max-w-xl">
+        <div className="events-stats-row grid grid-cols-2 lg:grid-cols-4 gap-8 mt-16 pt-12 border-t border-white/10 max-w-4xl">
           {events.stats.map((stat, i) => (
             <div key={i} className="events-stat">
               <span className="block font-sans text-[clamp(2.0rem,3.5vw,3rem)] font-extrabold text-eai-paper leading-none mb-2 tracking-tight">

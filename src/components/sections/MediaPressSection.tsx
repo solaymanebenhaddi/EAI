@@ -1,6 +1,55 @@
 'use client';
 
 import { useEffect, useRef, useState, useCallback } from 'react';
+import { useLocale } from 'next-intl';
+
+const content = {
+  fr: {
+    badge: "Dans la presse",
+    title: "Presse & Médias",
+    desc: "Explorez notre dernière couverture médiatique, nos interviews télévisées et les temps forts de la presse concernant nos événements. Nos initiatives continues attirent régulièrement l'attention des principales publications du secteur et des réseaux de diffusion nationaux, renforçant notre position de leader dans l'innovation architecturale et le développement durable au Maghreb.",
+    coverage: "Couverture Médiatique",
+    releases: "Communiqués de Presse",
+    interviews: "Interviews Officielles",
+    download: "Télécharger le kit presse"
+  },
+  en: {
+    badge: "In the News",
+    title: "Press & Media",
+    desc: "Explore the latest media coverage, television interviews, and press highlights from our events. Our ongoing initiatives consistently capture the attention of leading industry publications and national broadcast networks, reinforcing our position as a leader in architectural innovation and sustainable development across the Maghreb.",
+    coverage: "Media Coverage",
+    releases: "Press Releases",
+    interviews: "Official Interviews",
+    download: "Download Press Kit"
+  },
+  es: {
+    badge: "En las noticias",
+    title: "Prensa y Medios",
+    desc: "Explore nuestra cobertura mediática más reciente, entrevistas en televisión y los momentos destacados de la prensa sobre nuestros eventos. Nuestras iniciativas continuas atraen constantemente la atención de las principales publicaciones de la industria y las redes nacionales de transmisión, reforzando nuestra posición como líderes en innovación arquitectónica y desarrollo sostenible en el Magreb.",
+    coverage: "Cobertura Mediática",
+    releases: "Comunicados de Prensa",
+    interviews: "Entrevistas Oficiales",
+    download: "Descargar Kit de Prensa"
+  },
+  it: {
+    badge: "Nelle Notizie",
+    title: "Stampa e Media",
+    desc: "Esplora le ultime coperture mediatiche, interviste televisive e momenti salienti della stampa sui nostri eventi. Le nostre iniziative continue catturano costantemente l'attenzione delle principali testate di settore e delle reti nazionali, rafforzando la nostra posizione di leader nell'innovazione architettonica e nello sviluppo sostenibile nel Maghreb.",
+    coverage: "Copertura Mediatica",
+    releases: "Comunicati Stampa",
+    interviews: "Interviste Ufficiali",
+    download: "Scarica il Press Kit"
+  },
+  ar: {
+    badge: "في الأخبار",
+    title: "الصحافة والإعلام",
+    desc: "اكتشف أحدث التغطيات الإعلامية والمقابلات التلفزيونية وأبرز ما تناولته الصحافة حول فعالياتنا. تستقطب مبادراتنا المستمرة اهتمام أبرز المنشورات المتخصصة وشبكات البث الوطنية، مما يعزز مكانتنا الرائدة في الابتكار المعماري والتنمية المستدامة في المغرب العربي.",
+    coverage: "التغطية الإعلامية",
+    releases: "بيانات صحفية",
+    interviews: "مقابلات رسمية",
+    download: "تحميل الملف الصحفي"
+  }
+};
 
 // ---- Default data -----------------------------------------------------
 // Swap this for a prop, a CMS fetch, or a JSON import.
@@ -28,6 +77,9 @@ function getSlidesToShow(width: number) {
 }
 
 export default function MediaPressSection({ videos = DEFAULT_VIDEOS }) {
+  const locale = useLocale() as keyof typeof content;
+  const t = content[locale] || content.fr;
+
   const [currentIndex, setCurrentIndex] = useState(0);
   const [slidesToShow, setSlidesToShow] = useState(4);
   const [modalOpen, setModalOpen] = useState(false);
@@ -125,28 +177,19 @@ export default function MediaPressSection({ videos = DEFAULT_VIDEOS }) {
         <div className="media-about">
           <div className="highlights-badge">
             <span className="badge-pulse" />
-            <span>In the News</span>
+            <span>{t.badge}</span>
           </div>
-          <h2>Press & Media</h2>
+          <h2>{t.title}</h2>
           <p>
-            Explore the latest media coverage, television interviews, and press highlights from our events.
-            Our ongoing initiatives consistently capture the attention of leading industry publications and
-            national broadcast networks, reinforcing our position as a leader in architectural innovation 
-            and sustainable development across the Maghreb.
+            {t.desc}
           </p>
           <div className="media-kpis">
-            <span>Media Coverage</span>
-            <span>Press Releases</span>
-            <span>Official Interviews</span>
+            <span>{t.coverage}</span>
+            <span>{t.releases}</span>
+            <span>{t.interviews}</span>
           </div>
 
-          <a href="#press-kit" className="press-media-btn">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-              <path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"></path>
-              <circle cx="12" cy="13" r="3"></circle>
-            </svg>
-            Download Press Kit
-          </a>
+
         </div>
       </div>
 

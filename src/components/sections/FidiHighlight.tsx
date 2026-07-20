@@ -20,8 +20,9 @@ const content = {
     cta: "Réserver votre place",
     stats: [
       { value: "4ème", label: "Édition Annuelle" },
+      { value: "50,000+", label: "Visiteurs" },
       { value: "500+", label: "Professionnels" },
-      { value: "30+", label: "Exposants & Speakers" }
+      { value: "80+", label: "Exposants" }
     ]
   },
   en: {
@@ -34,8 +35,9 @@ const content = {
     cta: "Book your pass",
     stats: [
       { value: "4th", label: "Annual Edition" },
+      { value: "50,000+", label: "Visitors" },
       { value: "500+", label: "Professionals" },
-      { value: "30+", label: "Exhibitors & Speakers" }
+      { value: "80+", label: "Exhibitors" }
     ]
   },
   es: {
@@ -48,8 +50,9 @@ const content = {
     cta: "Reservar su plaza",
     stats: [
       { value: "4ª", label: "Edición Anual" },
+      { value: "50.000+", label: "Visitantes" },
       { value: "500+", label: "Profesionales" },
-      { value: "30+", label: "Expositores y Ponentes" }
+      { value: "80+", label: "Expositores" }
     ]
   },
   it: {
@@ -62,8 +65,9 @@ const content = {
     cta: "Prenota il tuo pass",
     stats: [
       { value: "4ª", label: "Edizione Annuale" },
+      { value: "50.000+", label: "Visitatori" },
       { value: "500+", label: "Professionisti" },
-      { value: "30+", label: "Espositori & Relatori" }
+      { value: "80+", label: "Espositori" }
     ]
   },
   ar: {
@@ -76,8 +80,9 @@ const content = {
     cta: "احجز مقعدك الآن",
     stats: [
       { value: "الرابعة", label: "الدورة السنوية" },
-      { value: "500+", label: "محترف مشارك" },
-      { value: "30+", label: "عارض ومتحدث" }
+      { value: "+50,000", label: "زائر" },
+      { value: "+500", label: "محترف مشارك" },
+      { value: "+80", label: "عارض" }
     ]
   }
 }
