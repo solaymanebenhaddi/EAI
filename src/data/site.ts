@@ -110,8 +110,9 @@ export const siteData = {
     description: 'FIDI 2026 (Forum International de la Décoration d\'Intérieur) est le rendez-vous incontournable des professionnels du design d\'espace en Afrique. Organisé par le Groupe ELAOUAD, ce forum réunit en quatre éditions créateurs de renom, marques de prestige et décideurs du secteur pour dessiner les tendances de demain.',
     stats: [
       { value: '4ème', label: 'Édition FIDI' },
+      { value: '50000+', label: 'Visiteurs' },
       { value: '500+', label: 'Professionnels' },
-      { value: '30+', label: 'Conférenciers' },
+      { value: '80+', label: 'Exposants' },
     ],
     cta: 'Découvrir nos événements',
     image: '/assets/elaouad-events-formation.webp',
