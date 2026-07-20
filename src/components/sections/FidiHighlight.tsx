@@ -151,7 +151,7 @@ export default function FidiHighlight() {
 
             <div className="fidi-anim pt-4">
               <a 
-                href="https://events.eai-construction.com" 
+                href="https://events.eai-construction.com/fidi26-2/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-3 px-8 py-4 bg-[var(--color-eai-olive)] text-[var(--color-eai-black)] font-bold text-xs uppercase tracking-widest hover:bg-white transition-all duration-300 rounded-sm shadow-lg shadow-[var(--color-eai-olive)]/15 group no-underline"
