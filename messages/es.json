@@ -75,7 +75,7 @@
         "value": "Espacios que cuentan una historia",
         "desc": "Residencial de lujo, comercial, instalaciones públicas: cada proyecto integra estética, funcionalidad y sostenibilidad.",
         "bullets": [
-          "Concepción",
+          "Plano esquemático 2D y Concepción",
           "Planos: Electricidad, Fontanería, Distribución, Climatización",
           "Moodboards",
           "Selección de Materiales",
@@ -112,8 +112,9 @@
         "value": "Visualice antes de ejecutar",
         "desc": "Renders 3D fotorrealistas de alta precisión y animaciones inmersivas para validar volúmenes, iluminación y materiales antes de la obra.",
         "bullets": [
-          "Renders fotorrealistas 3D",
-          "Animaciones y visitas virtuales"
+          "Maqueta Completa - Vistas 3D (360)",
+          "Diseño del Proyecto - 3D",
+          "Diseño de Instalaciones"
         ],
         "badge": "Servicio Clave"
       }

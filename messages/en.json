@@ -75,7 +75,7 @@
         "value": "Spaces that tell a story",
         "desc": "Luxury residential, commercial, public facilities—each project integrates aesthetics, functionality, and sustainability to create exceptional living spaces.",
         "bullets": [
-          "Conception",
+          "2D Schematic Plan and Conception",
           "Plans: Electricity, Plumbing, Layout, Air conditioning",
           "Moodboards",
           "Material Selection",
@@ -112,8 +112,9 @@
         "value": "Visualize before executing",
         "desc": "High-precision photorealistic 3D renderings and immersive animations to validate volumes, lighting, and materials before work starts.",
         "bullets": [
-          "Photorealistic 3D renderings",
-          "Animations & virtual walkthroughs"
+          "Full Model - 3D Views (360)",
+          "Project Design - 3D",
+          "Installation Design"
         ],
         "badge": "Key Service"
       }

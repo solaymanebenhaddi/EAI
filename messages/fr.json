@@ -75,7 +75,7 @@
         "value": "Des espaces qui racontent une histoire",
         "desc": "Résidentiel de luxe, commercial, équipements publics — chaque projet intègre esthétique, fonctionnalité et durabilité pour créer des lieux de vie exceptionnels.",
         "bullets": [
-          "Conception",
+          "Plan schématique 2D et Conception",
           "Plans : Électricité, Plomberie, Aménagement, climatisation",
           "Moodboards",
           "Sélection Matériaux",
@@ -112,8 +112,9 @@
         "value": "Visualisez avant d'exécuter",
         "desc": "Rendus 3D photoréalistes de haute précision et animations immersives pour valider les volumes, l'éclairage et les matériaux avant travaux.",
         "bullets": [
-          "Rendus photoréalistes 3D",
-          "Animations & visites virtuelles"
+          "Maquette Complète - Vues 3D (360)",
+          "Conception du Projet - 3D",
+          "Conception d'installations"
         ],
         "badge": "Prestation Importante"
       }
