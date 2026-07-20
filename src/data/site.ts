@@ -224,7 +224,13 @@ export const siteData = {
     description: 'Accédez à une sélection pointue de mobilier et d\'objets de décoration à travers notre plateforme dédiée, Mayush Design.',
     url: 'https://mayushdesign.com',
     categories: [
-      'Mobilier', 'Éclairage', 'Décoration', 'Cuisine', 'Dressing', 'Salle de bain', 'Mobilier de bureau', 'Accessoires intérieurs'
+      { name: 'Mobilier', url: 'https://www.mayushdesign.com/category/ameublement' },
+      { name: 'Éclairage', url: 'https://www.mayushdesign.com/category/eclairage' },
+      { name: 'Décoration', url: 'https://www.mayushdesign.com/category/decorations' },
+      { name: 'Cuisine', url: 'https://www.mayushdesign.com/category/decocuisine' },
+      { name: 'Salle de bain', url: 'https://www.mayushdesign.com/category/deco-salle-de-bain' },
+      { name: 'Mobilier de bureau', url: 'https://www.mayushdesign.com/category/office-furniture' },
+      { name: 'Accessoires intérieurs', url: 'https://www.mayushdesign.com/category/accessories' }
     ],
     image: '/assets/elaouad-after-interior.webp'
   },
