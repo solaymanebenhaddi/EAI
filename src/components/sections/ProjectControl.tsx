@@ -13,17 +13,37 @@ import MediaPressSection from "./MediaPressSection"
 
 gsap.registerPlugin(ScrollTrigger)
 
+const MOROCCAN_CITIES = [
+  'Agadir', 'Al Hoceïma', 'Béni Mellal', 'Berrechid', 'Casablanca', 'Dakhla', 
+  'El Jadida', 'Errachidia', 'Essaouira', 'Fès', 'Guelmim', 'Ifrane', 'Kénitra', 
+  'Khémisset', 'Khénifra', 'Khouribga', 'Laâyoune', 'Larache', 'Marrakech', 
+  'Meknès', 'Mohammedia', 'Nador', 'Ouarzazate', 'Oujda', 'Rabat', 'Safi', 
+  'Salé', 'Settat', 'Tanger', 'Taroudant', 'Taza', 'Témara', 'Tétouan', 'Autre ville'
+];
+
+const RESIDENTIAL_PROJECTS = [
+  'Villa', 'Appartement', 'Studio', 'Duplex', 'Maison individuelle', 'Penthouse', 
+  'Loft', 'Riad', 'Résidence', 'Rénovation résidentielle', 'Aménagement intérieur résidentiel', 'Autre projet résidentiel'
+];
+
+const COMMERCIAL_PROJECTS = [
+  'Plateau de bureaux', 'Bureau', 'Siège d’entreprise', 'Showroom', 'Boutique', 
+  'Local commercial', 'Restaurant ou café', 'Hôtel ou riad', 'Cabinet ou clinique', 
+  'Espace de coworking', 'Salon ou spa', 'Rénovation commerciale', 'Aménagement intérieur commercial', 'Autre projet commercial'
+];
+
 export default function ProjectControl() {
   const methodRef = useRef<HTMLElement>(null)
   const ecosystemRef = useRef<HTMLElement>(null)
   const contactRef = useRef<HTMLElement>(null)
   const footerRef = useRef<HTMLDivElement>(null)
 
-  const [form, setForm] = useState({ name: '', phone: '', type: '', msg: '' })
+  const [form, setForm] = useState({ name: '', email: '', phone: '', city: '', category: '', type: '', msg: '' })
   const [sending, setSending] = useState(false)
   const [sent, setSent] = useState(false)
   const [hoveredPanel, setHoveredPanel] = useState<number | null>(null)
 
+  const [errors, setErrors] = useState<Record<string, string>>({})
   const [errorMsg, setErrorMsg] = useState<string | null>(null)
 
   const tMethod = useTranslations('Method')
@@ -40,7 +60,42 @@ export default function ProjectControl() {
 
   const submit = (e: React.FormEvent) => {
     e.preventDefault()
-    if (!form.name || !form.phone) return
+    
+    const newErrors: Record<string, string> = {}
+    
+    if (!form.name.trim()) newErrors.name = 'Le nom est obligatoire.'
+    
+    const emailVal = form.email.trim().toLowerCase()
+    if (!emailVal) {
+      newErrors.email = 'L’adresse e-mail est obligatoire.'
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailVal)) {
+      newErrors.email = 'Veuillez saisir une adresse e-mail valide.'
+    }
+    
+    let phoneVal = form.phone.replace(/[\s\-\.\(\)]/g, '')
+    if (!phoneVal) {
+      newErrors.phone = 'Le numéro de téléphone est obligatoire.'
+    } else if (!/^(?:(?:\+|00)212|0)[5-7]\d{8}$/.test(phoneVal)) {
+      newErrors.phone = 'Veuillez saisir un numéro de téléphone marocain valide.'
+    }
+    
+    if (!form.city) {
+      newErrors.city = 'Veuillez sélectionner une ville.'
+    }
+    
+    if (!form.category) {
+      newErrors.category = 'Veuillez sélectionner une catégorie de projet.'
+    }
+    
+    if (!form.type) {
+      newErrors.type = 'Veuillez sélectionner un type de projet.'
+    }
+    
+    setErrors(newErrors)
+    if (Object.keys(newErrors).length > 0) return
+    
+    setForm(prev => ({ ...prev, email: emailVal, phone: phoneVal }))
+    
     setSending(true)
     setErrorMsg(null)
     
@@ -48,7 +103,7 @@ export default function ProjectControl() {
     setTimeout(() => {
       setSending(false)
       setSent(true)
-      setForm({ name: '', phone: '', type: '', msg: '' })
+      setForm({ name: '', email: '', phone: '', city: '', category: '', type: '', msg: '' })
       setTimeout(() => setSent(false), 4000)
     }, 1200)
   }
@@ -292,22 +347,54 @@ export default function ProjectControl() {
                 <input name="name" value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })} required
                   className="peer w-full bg-transparent border-b border-[var(--color-eai-charcoal)]/20 px-1 py-3 text-[var(--color-eai-charcoal)] outline-none focus:border-[var(--color-eai-olive)] transition-colors text-sm rounded-none" />
                 <label className={cn("absolute left-1 top-3 text-sm text-[var(--color-eai-charcoal)]/40 transition-all pointer-events-none", form.name ? "-translate-y-6 text-[10px]" : "peer-focus:-translate-y-6 peer-focus:text-[10px] peer-focus:text-[var(--color-eai-olive)]")}>{tContact('form.name')}</label>
+                {errors.name && <span className="text-red-500 text-xs mt-1">{errors.name}</span>}
               </div>
               
               <div className="grid gap-2 relative">
-                <input name="phone" value={form.phone} onChange={(e) => setForm({ ...form, phone: e.target.value })} required
-                  className="peer w-full bg-transparent border-b border-[var(--color-eai-charcoal)]/20 px-1 py-3 text-[var(--color-eai-charcoal)] outline-none focus:border-[var(--color-eai-olive)] transition-colors text-sm rounded-none" />
-                <label className={cn("absolute left-1 top-3 text-sm text-[var(--color-eai-charcoal)]/40 transition-all pointer-events-none", form.phone ? "-translate-y-6 text-[10px]" : "peer-focus:-translate-y-6 peer-focus:text-[10px] peer-focus:text-[var(--color-eai-olive)]")}>{tContact('form.phone')}</label>
+                <input type="email" name="email" value={form.email} onChange={(e) => setForm({ ...form, email: e.target.value })} placeholder="exemple@email.com" required
+                  className="peer w-full bg-transparent border-b border-[var(--color-eai-charcoal)]/20 px-1 py-3 text-[var(--color-eai-charcoal)] outline-none focus:border-[var(--color-eai-olive)] transition-colors text-sm rounded-none placeholder:text-transparent focus:placeholder:text-[var(--color-eai-charcoal)]/40" />
+                <label className={cn("absolute left-1 top-3 text-sm text-[var(--color-eai-charcoal)]/40 transition-all pointer-events-none", form.email ? "-translate-y-6 text-[10px]" : "peer-focus:-translate-y-6 peer-focus:text-[10px] peer-focus:text-[var(--color-eai-olive)]")}>Adresse e-mail *</label>
+                {errors.email && <span className="text-red-500 text-xs mt-1">{errors.email}</span>}
               </div>
 
-              <select name="type" value={form.type} onChange={(e) => setForm({ ...form, type: e.target.value })}
-                className={cn("w-full bg-transparent border-b border-[var(--color-eai-charcoal)]/20 px-1 py-3 outline-none focus:border-[var(--color-eai-olive)] transition-colors text-sm rounded-none appearance-none cursor-pointer", form.type ? "text-[var(--color-eai-charcoal)]" : "text-[var(--color-eai-charcoal)]/40")}>
-                <option value="" disabled hidden>{tContact('form.type')}</option>
-                <option value="archi" className="text-[var(--color-eai-charcoal)]">{tContact('types.archi')}</option>
-                <option value="bim" className="text-[var(--color-eai-charcoal)]">{tContact('types.bim')}</option>
-                <option value="coord" className="text-[var(--color-eai-charcoal)]">{tContact('types.coord')}</option>
-                <option value="etude" className="text-[var(--color-eai-charcoal)]">{tContact('types.etude')}</option>
-              </select>
+              <div className="grid gap-2 relative">
+                <input type="tel" name="phone" value={form.phone} onChange={(e) => setForm({ ...form, phone: e.target.value })} required
+                  className="peer w-full bg-transparent border-b border-[var(--color-eai-charcoal)]/20 px-1 py-3 text-[var(--color-eai-charcoal)] outline-none focus:border-[var(--color-eai-olive)] transition-colors text-sm rounded-none" />
+                <label className={cn("absolute left-1 top-3 text-sm text-[var(--color-eai-charcoal)]/40 transition-all pointer-events-none", form.phone ? "-translate-y-6 text-[10px]" : "peer-focus:-translate-y-6 peer-focus:text-[10px] peer-focus:text-[var(--color-eai-olive)]")}>{tContact('form.phone')}</label>
+                {errors.phone && <span className="text-red-500 text-xs mt-1">{errors.phone}</span>}
+              </div>
+
+              <div className="grid gap-2 relative mt-2">
+                <label className="absolute left-1 -top-3 text-[10px] text-[var(--color-eai-charcoal)]/40 transition-all pointer-events-none">Ville *</label>
+                <select name="city" value={form.city} onChange={(e) => setForm({ ...form, city: e.target.value })}
+                  className={cn("w-full bg-transparent border-b border-[var(--color-eai-charcoal)]/20 px-1 py-3 outline-none focus:border-[var(--color-eai-olive)] transition-colors text-sm rounded-none appearance-none cursor-pointer", form.city ? "text-[var(--color-eai-charcoal)]" : "text-[var(--color-eai-charcoal)]/40")}>
+                  <option value="" disabled hidden>Sélectionnez votre ville</option>
+                  {MOROCCAN_CITIES.map(city => <option key={city} value={city} className="text-[var(--color-eai-charcoal)]">{city}</option>)}
+                </select>
+                {errors.city && <span className="text-red-500 text-xs mt-1">{errors.city}</span>}
+              </div>
+
+              <div className="grid gap-2 relative mt-2">
+                <label className="absolute left-1 -top-3 text-[10px] text-[var(--color-eai-charcoal)]/40 transition-all pointer-events-none">Catégorie du projet *</label>
+                <select name="category" value={form.category} onChange={(e) => setForm({ ...form, category: e.target.value, type: '' })}
+                  className={cn("w-full bg-transparent border-b border-[var(--color-eai-charcoal)]/20 px-1 py-3 outline-none focus:border-[var(--color-eai-olive)] transition-colors text-sm rounded-none appearance-none cursor-pointer", form.category ? "text-[var(--color-eai-charcoal)]" : "text-[var(--color-eai-charcoal)]/40")}>
+                  <option value="" disabled hidden>Sélectionnez une catégorie</option>
+                  <option value="Résidentiel" className="text-[var(--color-eai-charcoal)]">Résidentiel</option>
+                  <option value="Commercial" className="text-[var(--color-eai-charcoal)]">Commercial</option>
+                </select>
+                {errors.category && <span className="text-red-500 text-xs mt-1">{errors.category}</span>}
+              </div>
+
+              <div className="grid gap-2 relative mt-2">
+                <label className="absolute left-1 -top-3 text-[10px] text-[var(--color-eai-charcoal)]/40 transition-all pointer-events-none">Type de projet *</label>
+                <select name="type" value={form.type} onChange={(e) => setForm({ ...form, type: e.target.value })} disabled={!form.category}
+                  className={cn("w-full bg-transparent border-b border-[var(--color-eai-charcoal)]/20 px-1 py-3 outline-none focus:border-[var(--color-eai-olive)] transition-colors text-sm rounded-none appearance-none", form.type ? "text-[var(--color-eai-charcoal)]" : "text-[var(--color-eai-charcoal)]/40", !form.category && "opacity-50 cursor-not-allowed")}>
+                  <option value="" disabled hidden>Sélectionnez un type de projet</option>
+                  {form.category === 'Résidentiel' && RESIDENTIAL_PROJECTS.map(type => <option key={type} value={type} className="text-[var(--color-eai-charcoal)]">{type}</option>)}
+                  {form.category === 'Commercial' && COMMERCIAL_PROJECTS.map(type => <option key={type} value={type} className="text-[var(--color-eai-charcoal)]">{type}</option>)}
+                </select>
+                {errors.type && <span className="text-red-500 text-xs mt-1">{errors.type}</span>}
+              </div>
 
               <div className="grid gap-2 relative mt-2">
                 <textarea name="msg" value={form.msg} onChange={(e) => setForm({ ...form, msg: e.target.value })} rows={3}
