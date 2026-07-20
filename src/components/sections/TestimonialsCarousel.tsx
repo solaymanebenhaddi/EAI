@@ -6,6 +6,8 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { siteData } from '@/data/site'
 import { cn } from '@/lib/utils'
 
+import { useTranslations } from 'next-intl'
+
 gsap.registerPlugin(ScrollTrigger)
 
 // Map each testimonial to a corresponding premium project/context asset
@@ -20,7 +22,8 @@ export default function TestimonialsCarousel() {
   const [active, setActive] = useState(0)
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null)
 
-  const { testimonials } = siteData
+  const t = useTranslations('TestimonialsCarousel')
+  const testimonials = t.raw('testimonials') as Array<{quote: string, author: string, company: string}>
   const total = testimonials.length
 
   const startTimer = useCallback(() => {
@@ -64,6 +67,8 @@ export default function TestimonialsCarousel() {
     return () => ctx.revert()
   }, [])
 
+  const titleLines = t('title').split('\n')
+
   return (
     <section
       ref={sectionRef}
@@ -79,20 +84,25 @@ export default function TestimonialsCarousel() {
         <div className="flex flex-col md:flex-row md:items-end justify-between border-b border-eai-charcoal/10 pb-8 mb-12 lg:mb-16">
           <div>
             <span className="text-eai-olive text-[10px] uppercase tracking-[0.22em] font-semibold block mb-4">
-              Avis Clients
+              {t('eyebrow')}
             </span>
             <h2 className="font-sans text-[clamp(2.2rem,4.5vw,3.6rem)] leading-[0.95] font-extrabold uppercase tracking-tight">
-              Preuve de<br />confiance.
+              {titleLines.map((line, i) => (
+                <React.Fragment key={i}>
+                  {line}
+                  {i < titleLines.length - 1 && <br />}
+                </React.Fragment>
+              ))}
             </h2>
           </div>
           <p className="text-sm text-eai-charcoal/50 max-w-xs mt-4 md:mt-0 font-medium leading-relaxed">
-            Ce que disent nos partenaires à propos de notre rigueur d&apos;ingénierie et de notre créativité.
+            {t('desc')}
           </p>
         </div>
 
         {/* Carousel Container */}
         <div className="relative min-h-[520px] md:min-h-[440px] lg:min-h-[400px] w-full">
-          {testimonials.map((t, i) => {
+          {testimonials.map((testim, i) => {
             const isActive = active === i
             return (
               <div
@@ -148,17 +158,17 @@ export default function TestimonialsCarousel() {
                     <blockquote className="relative">
                       <span className="text-eai-olive/20 text-[5rem] font-sans absolute -top-8 -left-4 select-none leading-none">&ldquo;</span>
                       <p className="font-sans text-[clamp(1.15rem,2vw,1.75rem)] leading-[1.35] font-semibold text-eai-charcoal tracking-tight max-w-2xl pl-6 relative z-10">
-                        {t.quote}
+                        {testim.quote}
                       </p>
                     </blockquote>
 
                     <div className="pl-6">
                       <cite className="not-italic">
                         <span className="block text-base font-bold text-eai-charcoal uppercase tracking-wider">
-                          {t.author}
+                          {testim.author}
                         </span>
                         <span className="block text-xs font-semibold text-eai-olive uppercase tracking-[0.2em] mt-1">
-                          {t.company}
+                          {testim.company}
                         </span>
                       </cite>
                     </div>

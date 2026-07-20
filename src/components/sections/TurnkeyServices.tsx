@@ -7,11 +7,15 @@ import { siteData } from '@/data/site'
 import { CheckCircle2 } from 'lucide-react'
 import RemoteVideo from '@/components/ui/RemoteVideo'
 import { videoConfig } from '@/data/videoConfig'
+import { useTranslations } from 'next-intl'
 
 gsap.registerPlugin(ScrollTrigger)
 
 export default function TurnkeyServices() {
   const sectionRef = useRef<HTMLElement>(null)
+  const t = useTranslations('TurnkeyServices')
+  const benefits = t.raw('benefits') as string[]
+  const steps = t.raw('steps') as Array<{num: string, title: string}>
 
   useEffect(() => {
     if (!sectionRef.current) return
@@ -34,8 +38,6 @@ export default function TurnkeyServices() {
     return () => ctx.revert()
   }, [])
 
-  const { turnkeyServices } = siteData
-
   return (
     <section
       ref={sectionRef}
@@ -51,16 +53,16 @@ export default function TurnkeyServices() {
         <div className="lg:col-span-8 flex flex-col gap-10">
           <div>
             <p className="ts-elem text-xs tracking-[0.3em] uppercase opacity-50 mb-4 text-[var(--color-eai-olive)] font-bold">
-              {turnkeyServices.eyebrow}
+              {t('eyebrow')}
             </p>
             <h2 className="ts-elem font-sans text-4xl md:text-5xl font-extrabold uppercase tracking-tight mb-6 leading-tight">
-              {turnkeyServices.title}
+              {t('title')}
             </h2>
             <p className="ts-elem text-lg opacity-80 leading-relaxed mb-8">
-              {turnkeyServices.description}
+              {t('description')}
             </p>
             <ul className="ts-elem space-y-3">
-              {turnkeyServices.benefits.map((benefit, i) => (
+              {benefits.map((benefit, i) => (
                 <li key={i} className="flex items-start gap-3">
                   <CheckCircle2 className="w-5 h-5 text-[var(--color-eai-olive)] shrink-0 mt-0.5" />
                   <span className="opacity-90">{benefit}</span>
@@ -70,7 +72,7 @@ export default function TurnkeyServices() {
           </div>
           
           <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
-            {turnkeyServices.steps.map((step, i) => (
+            {steps.map((step, i) => (
               <div key={i} className="ts-elem bg-white/5 p-4 rounded-lg border border-white/10 hover:border-[var(--color-eai-olive)] transition-colors">
                 <div className="text-[var(--color-eai-olive)] text-[10px] font-bold tracking-widest mb-1">STEP {step.num}</div>
                 <h3 className="font-bold text-sm leading-tight">{step.title}</h3>

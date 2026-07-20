@@ -4,11 +4,14 @@ import React, { useEffect, useRef } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { siteData } from '@/data/site'
+import { useTranslations } from 'next-intl'
 
 gsap.registerPlugin(ScrollTrigger)
 
 export default function ProcessApproach() {
   const sectionRef = useRef<HTMLElement>(null)
+  const t = useTranslations('ProcessApproach')
+  const steps = t.raw('steps') as Array<{num: string, title: string, desc: string}>
 
   useEffect(() => {
     if (!sectionRef.current) return
@@ -41,18 +44,18 @@ export default function ProcessApproach() {
         <div className="lg:col-span-8 px-6 md:px-12 lg:pl-20 xl:pl-[calc((100vw-1440px)/2+5rem)] lg:pr-16">
           <div className="mb-12">
             <p className="pa-elem text-xs tracking-[0.3em] uppercase opacity-60 mb-4 font-bold text-[var(--color-eai-olive)]">
-              Découvrir Notre Approche
+              {t('eyebrow')}
             </p>
             <h2 className="pa-elem font-sans text-4xl md:text-5xl font-extrabold uppercase tracking-tight mb-6">
-              Le processus EAI
+              {t('title')}
             </h2>
             <p className="pa-elem text-lg opacity-80 leading-relaxed max-w-2xl">
-              De l'idée initiale à l'espace finalisé, chaque étape est structurée pour garantir la qualité, le respect du budget et l'excellence architecturale.
+              {t('desc')}
             </p>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
-            {siteData.approachSteps.map((step, i) => (
+            {steps.map((step, i) => (
               <div key={i} className="pa-elem relative pt-6 border-t-2 border-[var(--color-eai-charcoal)]/10 hover:border-[var(--color-eai-olive)] transition-colors duration-300">
                 <span className="absolute -top-[3px] left-0 w-1.5 h-1.5 rounded-full bg-[var(--color-eai-charcoal)]" />
                 <div className="text-[var(--color-eai-olive)] text-lg font-bold mb-2 leading-none">{step.num}</div>

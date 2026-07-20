@@ -33,7 +33,7 @@
     },
     "ELAOUAD": {
       "title": "ELAOUAD",
-      "subtitle": "Architecture & Engineering Group"
+      "subtitle": "Gruppo di Architettura e Ingegneria"
     }
   },
   "Vision": {
@@ -71,7 +71,7 @@
     "items": [
       {
         "num": "01",
-        "title": "Architettura e Interior Design",
+        "title": "Architettura e Design d'Interni",
         "value": "Spazi che raccontano una storia",
         "desc": "Residenziale di lusso, commerciale, strutture pubbliche: ogni progetto integra estetica, funzionalità e sostenibilità.",
         "bullets": [
@@ -86,9 +86,9 @@
       },
       {
         "num": "02",
-        "title": "BIM Consulting",
+        "title": "Consulenza BIM",
         "value": "Progetti consegnati il 30% più velocemente",
-        "desc": "Il Building Information Modeling riduce in media gli imprevisti in cantiere del 40% attraverso una precisa coordinazione digitale.",
+        "desc": "La Modellazione delle Informazioni di Costruzione (BIM) riduce in media gli imprevisti in cantiere del 40% attraverso una precisa coordinazione digitale.",
         "bullets": [
           "Modellazione 3D",
           "Coordinamento MEP",
@@ -97,7 +97,7 @@
       },
       {
         "num": "03",
-        "title": "Ingegneria & PM",
+        "title": "Ingegneria e Gestione Progetti",
         "value": "La complessità, padroneggiata",
         "desc": "Dalla fattibilità alla consegna finale, gestiamo la complessità affinché possiate concentrarvi sull'essenziale.",
         "bullets": [
@@ -159,7 +159,7 @@
     "items": [
       {
         "num": "01",
-        "name": "ELAOUAD Architecture & Engineering",
+        "name": "ELAOUAD Architettura e Ingegneria",
         "text": "Progettazione, studi, coordinamento.",
         "tags": [
           "Design",
@@ -179,7 +179,7 @@
       },
       {
         "num": "03",
-        "name": "EAI Courses / Formazione",
+        "name": "Corsi / Formazione EAI",
         "text": "Trasmissione di competenze pratiche.",
         "tags": [
           "Formazione",
@@ -261,5 +261,253 @@
   "SEO": {
     "title": "ELAOUAD Architettura & Ingegneria | Progettazione, BIM, Studi",
     "description": "Studio di architettura, ingegneria e coordinamento progetti con sede in Marocco. Esperienza in progettazione, BIM e supervisione di cantiere."
+  },
+  "ProcessApproach": {
+    "eyebrow": "Scoprire il Nostro Approccio",
+    "title": "Il processo EAI",
+    "desc": "Dall'idea iniziale allo spazio finalizzato, ogni fase è strutturata per garantire qualità, rispetto del budget ed eccellenza architettonica.",
+    "steps": [
+      {
+        "num": "01",
+        "title": "Scoperta e briefing cliente",
+        "desc": "Comprensione approfondita delle tue esigenze."
+      },
+      {
+        "num": "02",
+        "title": "Visita e rilievo del sito",
+        "desc": "Analisi tecnica e spaziale della location."
+      },
+      {
+        "num": "03",
+        "title": "Analisi di esigenze e budget",
+        "desc": "Inquadramento economico del progetto."
+      },
+      {
+        "num": "04",
+        "title": "Moodboard e direzione creativa",
+        "desc": "Definizione dell'identità visiva."
+      },
+      {
+        "num": "05",
+        "title": "Planimetrie 2D",
+        "desc": "Strutturazione e flussi di circolazione."
+      },
+      {
+        "num": "06",
+        "title": "Progettazione 3D e visualizzazione",
+        "desc": "Proiezioni fotorealistiche dello spazio."
+      },
+      {
+        "num": "07",
+        "title": "Scelta di materiali e finiture",
+        "desc": "Selezione accurata di texture e colori."
+      },
+      {
+        "num": "08",
+        "title": "Validazione tecnica",
+        "desc": "Verifica di fattibilità."
+      },
+      {
+        "num": "09",
+        "title": "Pianificazione ed esecuzione",
+        "desc": "Supervisione rigorosa dei lavori."
+      },
+      {
+        "num": "10",
+        "title": "Controllo qualità e consegna",
+        "desc": "Consegna senza difetti."
+      }
+    ]
+  },
+  "InteriorDesignIntro": {
+    "eyebrow": "Design d'Interni e Allestimento",
+    "title": "Scolpire lo spazio, \n Rivelare il potenziale.",
+    "p1": "EAI si pone come specialista nell'allestimento d'interni e nel design degli spazi. Creiamo ambienti personalizzati per progetti residenziali e professionali, unendo sensibilità creativa a rigore tecnico.",
+    "p2": "Attraverso la visualizzazione 3D prima dell'esecuzione e il nostro servizio chiavi in mano, trasformiamo ogni spazio per riflettere la tua identità unica, controllando costi e scadenze."
+  },
+  "TestimonialsCarousel": {
+    "eyebrow": "Recensioni dei Clienti",
+    "title": "Prova di\nFiducia.",
+    "desc": "Cosa dicono i nostri partner sul nostro rigore ingegneristico e sulla nostra creatività.",
+    "testimonials": [
+      {
+        "quote": "Il BIM di ELAOUAD ci ha permesso di rilevare 23 conflitti strutturali prima del cantiere. Risultato: 0 imprevisti maggiori, consegnato in orario.",
+        "author": "Direttore Tecnico",
+        "company": "Gruppo Immobiliare, Casablanca"
+      },
+      {
+        "quote": "Cercavamo uno studio capace di gestire la complessità di un progetto di 5.000 m² con rigidi vincoli tecnici. ELAOUAD è stato l'unico ad offrire un team integrato di architettura + ingegneria.",
+        "author": "CEO",
+        "company": "Fondo di Investimento"
+      },
+      {
+        "quote": "FIDI è l'evento imperdibile della decorazione d'interni in Africa. Nel corso di quattro edizioni, abbiamo stretto partnership strategiche in 3 continenti.",
+        "author": "Direttore Commerciale",
+        "company": "Produttore di Materiali"
+      }
+    ]
+  },
+  "TurnkeyServices": {
+    "eyebrow": "Chiavi in mano",
+    "title": "Servizi di allestimento chiavi in mano",
+    "description": "Gestione integrale del tuo progetto, dall'idea alla consegna delle chiavi.",
+    "benefits": [
+      "Un unico interlocutore coordinato",
+      "Miglior controllo del budget",
+      "Totale coerenza tra progettazione ed esecuzione",
+      "Riduzione dei rischi di coordinamento",
+      "Supervisione professionale del progetto",
+      "Pianificazione chiara e rispettata",
+      "Consegna incentrata sulla qualità"
+    ],
+    "steps": [
+      {
+        "num": "01",
+        "title": "Briefing Cliente"
+      },
+      {
+        "num": "02",
+        "title": "Rilievo del Sito"
+      },
+      {
+        "num": "03",
+        "title": "Concept d'Interni"
+      },
+      {
+        "num": "04",
+        "title": "Planimetrie 2D"
+      },
+      {
+        "num": "05",
+        "title": "Progettazione 3D"
+      },
+      {
+        "num": "06",
+        "title": "Scelta Materiali"
+      },
+      {
+        "num": "07",
+        "title": "Preventivazione"
+      },
+      {
+        "num": "08",
+        "title": "Coordinamento Tecnico"
+      },
+      {
+        "num": "09",
+        "title": "Esecuzione"
+      },
+      {
+        "num": "10",
+        "title": "Controllo Qualità"
+      },
+      {
+        "num": "11",
+        "title": "Consegna Finale"
+      }
+    ]
+  },
+  "TrainingCourses": {
+    "eyebrow": "Formazione e Competenze",
+    "title": "Diventa un professionista dell'allestimento",
+    "description": "EAI condivide la sua esperienza attraverso una formazione pratica e orientata al mercato. Padroneggia l'interior design, la modellazione 3D e la gestione dei progetti.",
+    "topics": [
+      "Interior design residenziale",
+      "Padronanza dei software 3D e BIM",
+      "Coordinamento di cantiere per interni",
+      "Scelta dei materiali e dell'illuminazione"
+    ]
+  },
+  "MayushDesign": {
+    "eyebrow": "Mayush Design",
+    "title": "Scopri la nostra piattaforma di arredamento",
+    "description": "Accedi a una selezione accurata di mobili e oggetti decorativi attraverso la nostra piattaforma dedicata, Mayush Design."
+  },
+  "Conception3D": {
+    "eyebrow": "Progettazione 3D",
+    "title": "Visualizza prima di eseguire",
+    "announcement": "SERVIZIO CHIAVE: La progettazione 3D presso EAI è un passaggio essenziale per convalidare il design, l'illuminazione e i volumi del tuo progetto prima dei lavori, riducendo i rischi di modifiche in cantiere.",
+    "description": "In EAI, aiutiamo i nostri clienti a visualizzare, convalidare e perfezionare i loro spazi prima dell'esecuzione. Con i nostri render 3D fotorealistici, ogni dettaglio è sotto controllo.",
+    "categories": [
+      {
+        "name": "Cucina",
+        "description": "Cucine ergonomiche ed estetiche pensate per l'uso quotidiano."
+      },
+      {
+        "name": "Ufficio",
+        "description": "Spazi di lavoro ottimizzati per la concentrazione e il benessere."
+      },
+      {
+        "name": "Villa",
+        "description": "Ville di prestigio con un design d'interni eccezionale."
+      },
+      {
+        "name": "Appartamento",
+        "description": "Ottimizzazione dello spazio per eleganti appartamenti urbani."
+      },
+      {
+        "name": "Cabina Armadio",
+        "description": "Cabine armadio su misura che uniscono ordine e design."
+      },
+      {
+        "name": "Bagno",
+        "description": "Bagni moderni, rilassanti e funzionali."
+      },
+      {
+        "name": "Camera da letto",
+        "description": "Camere da letto concepite per il riposo e l'eleganza."
+      },
+      {
+        "name": "Soggiorno",
+        "description": "Spazi living accoglienti, il vero cuore della casa."
+      }
+    ]
+  },
+  "LocationMap": {
+    "title": "La Nostra Sede",
+    "desc": "Vieni a discutere il tuo progetto con i nostri esperti di architettura e interior design.",
+    "cta": "Ottieni indicazioni stradali"
+  },
+  "Careers": {
+    "applySuccess": "Grazie per l'interesse. Il nostro team HR esaminerà il tuo profilo e ti risponderà al più presto."
+  },
+  "VideoTitles": {
+    "interiorDesign": "Scopri il nostro universo di interior design",
+    "conception3D": "Visualizza il tuo progetto prima della sua realizzazione",
+    "turnkey": "Dalla concezione alla consegna",
+    "process": "Il nostro metodo, dall'idea alla realizzazione",
+    "training": "Formati per le professioni dell'interior design",
+    "mayush": "Scopri la nostra selezione per i tuoi spazi",
+    "currentEvent": "Scopri il nostro prossimo evento"
+  },
+  "CareersClient": {
+    "openPositions": "Posizioni aperte",
+    "noPositions": "Al momento non ci sono posizioni aperte. Sentiti libero di inviare una candidatura spontanea.",
+    "responsibilities": "Responsabilità:",
+    "requirements": "Requisiti:",
+    "applySuccessTitle": "Candidatura inviata",
+    "applySuccessDesc": "Grazie per il tuo interesse. Il nostro team HR esaminerà il tuo profilo e ti contatterà a breve.",
+    "newApplication": "Nuova candidatura",
+    "applyTitlePrefix": "Candidati per:",
+    "spontaneousApply": "Candidatura spontanea",
+    "fillFormDesc": "Compila il modulo sottostante per inviarci il tuo profilo.",
+    "form": {
+      "fullName": "Nome e cognome *",
+      "email": "Email *",
+      "phone": "Telefono *",
+      "experience": "Esperienza *",
+      "linkedin": "Profilo LinkedIn",
+      "portfolio": "Portfolio / Sito Web",
+      "message": "Messaggio di presentazione",
+      "cv": "CV (PDF, Max 5MB) *",
+      "consent": "Accetto che i miei dati personali vengano trattati nell'ambito di questo processo di selezione.",
+      "selectOption": "Seleziona...",
+      "filePrompt": "Clicca per selezionare un file",
+      "sending": "Invio...",
+      "sendBtn": "Invia candidatura",
+      "errorConsent": "Si prega di accettare la politica sulla privacy.",
+      "errorFileSize": "Il file è troppo grande (Max 5MB).",
+      "errorSubmit": "Si è verificato un errore."
+    }
   }
 }

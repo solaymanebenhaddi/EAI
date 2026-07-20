@@ -6,11 +6,14 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { siteData } from '@/data/site'
 import RemoteVideo from '@/components/ui/RemoteVideo'
 import { videoConfig } from '@/data/videoConfig'
+import { useTranslations } from 'next-intl'
 
 gsap.registerPlugin(ScrollTrigger)
 
 export default function EventsShowcase() {
   const sectionRef = useRef<HTMLElement>(null)
+  const t = useTranslations('Events')
+  const stats = t.raw('stats') as Array<{value: string, label: string}>
 
   useEffect(() => {
     if (!sectionRef.current) return
@@ -46,7 +49,7 @@ export default function EventsShowcase() {
   }, [])
 
   const { events } = siteData
-  const titleLines = events.title.split('\n')
+  const titleLines = t('title').split('\n')
 
   return (
     <section
@@ -70,7 +73,7 @@ export default function EventsShowcase() {
           <div className="events-content lg:col-span-7 max-w-2xl">
             {/* Eyebrow */}
             <p className="text-xs tracking-[0.3em] uppercase text-eai-olive mb-6">
-              {events.eyebrow}
+              {t('eyebrow')}
             </p>
 
             {/* Title */}
@@ -87,7 +90,7 @@ export default function EventsShowcase() {
 
             {/* Description */}
             <p className="text-[clamp(0.9rem,1.1vw,1.05rem)] leading-relaxed text-eai-paper/65 max-w-lg mb-12">
-              {events.description}
+              {t('description')}
             </p>
 
             {/* CTA */}
@@ -97,7 +100,7 @@ export default function EventsShowcase() {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-3 px-8 py-3.5 text-sm tracking-[0.15em] uppercase border border-eai-olive/60 text-eai-paper rounded-full hover:bg-eai-olive/15 transition-all duration-300 no-underline"
             >
-              {events.cta}
+              {t('cta')}
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none" className="translate-x-0 group-hover:translate-x-1 transition-transform">
                 <path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
@@ -107,7 +110,7 @@ export default function EventsShowcase() {
 
         {/* Stats row */}
         <div className="events-stats-row grid grid-cols-2 lg:grid-cols-4 gap-8 mt-16 pt-12 border-t border-white/10 max-w-4xl">
-          {events.stats.map((stat, i) => (
+          {stats.map((stat, i) => (
             <div key={i} className="events-stat">
               <span className="block font-sans text-[clamp(2.0rem,3.5vw,3rem)] font-extrabold text-eai-paper leading-none mb-2 tracking-tight">
                 {stat.value}
