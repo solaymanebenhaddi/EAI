@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { motion, AnimatePresence } from 'motion/react'
 import { cn } from '@/lib/utils'
 import { CheckCircle2, ChevronDown, Paperclip, Loader2 } from 'lucide-react'
@@ -9,6 +9,7 @@ import { useTranslations } from 'next-intl'
 export default function CareersClient({ careers }: { careers: any[] }) {
   const t = useTranslations('CareersClient')
   const [selectedJob, setSelectedJob] = useState<string | null>(null)
+  const formStartedAtRef = useRef(0)
   
   const [form, setForm] = useState({
     name: '',
@@ -24,6 +25,10 @@ export default function CareersClient({ careers }: { careers: any[] }) {
   const [file, setFile] = useState<File | null>(null)
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle')
   const [errorMsg, setErrorMsg] = useState('')
+
+  useEffect(() => {
+    formStartedAtRef.current = Date.now()
+  }, [])
 
   const handleApply = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -45,6 +50,7 @@ export default function CareersClient({ careers }: { careers: any[] }) {
     try {
       const formData = new FormData()
       formData.append('jobId', selectedJob || 'spontaneous')
+      formData.append('formStartedAt', formStartedAtRef.current.toString())
       Object.entries(form).forEach(([key, value]) => {
         formData.append(key, value.toString())
       })
@@ -70,6 +76,7 @@ export default function CareersClient({ careers }: { careers: any[] }) {
       }
 
       setStatus('success')
+      formStartedAtRef.current = Date.now()
     } catch (err: any) {
       setStatus('error')
       setErrorMsg(err.message || t('form.errorSubmit'))
