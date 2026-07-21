@@ -52,12 +52,18 @@ export default function CareersClient({ careers }: { careers: any[] }) {
         formData.append('cv', file)
       }
 
-      const res = await fetch('/api/careers/apply', {
+      const endpoint = process.env.NODE_ENV === 'development' ? '/api/careers/apply' : '/api/careers-apply.php'
+      const res = await fetch(endpoint, {
         method: 'POST',
         body: formData
       })
 
-      const data = await res.json().catch(() => ({}))
+      const contentType = res.headers.get('content-type') || ''
+      if (!contentType.includes('application/json')) {
+        throw new Error(`${t('form.errorSubmit')} (${res.status})`)
+      }
+
+      const data = await res.json()
 
       if (!res.ok) {
         throw new Error(data.error || t('form.errorSubmit'))

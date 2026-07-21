@@ -100,12 +100,18 @@ export default function ProjectControl() {
     setErrorMsg(null)
     
     try {
-      const res = await fetch('/api/contact', {
+      const endpoint = process.env.NODE_ENV === 'development' ? '/api/contact' : '/api/contact.php'
+      const res = await fetch(endpoint, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ ...form, email: emailVal, phone: phoneVal })
       })
-      
+
+      const contentType = res.headers.get('content-type') || ''
+      if (!contentType.includes('application/json')) {
+        throw new Error(`Réponse inattendue du serveur (${res.status}).`)
+      }
+
       const data = await res.json()
       
       if (!res.ok) {
