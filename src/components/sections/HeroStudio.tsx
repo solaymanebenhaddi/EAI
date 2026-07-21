@@ -27,9 +27,20 @@ const randFloat = (min: number, max: number, seed: number) => {
   return min + seededRandom(seed) * (max - min)
 }
 
+const isArabic = (text: string) => /[\u0600-\u06FF]/.test(text)
+
 const splitTitle = (text: string) => {
+  if (isArabic(text)) {
+    // For Arabic, split by words to preserve cursive joining and RTL flow
+    return text.split(' ').map((word, index, arr) => (
+      <React.Fragment key={`word-${index}`}>
+        <span className="title-char inline-block" dir="rtl">{word}</span>
+        {index < arr.length - 1 && ' '}
+      </React.Fragment>
+    ))
+  }
   return text.split('').map((char, index) => (
-    <span key={`${char}-${index}`} className="title-char">
+    <span key={`${char}-${index}`} className="title-char inline-block">
       {char === ' ' ? '\u00A0' : char}
     </span>
   ))
