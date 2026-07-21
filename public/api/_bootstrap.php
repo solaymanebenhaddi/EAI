@@ -14,9 +14,20 @@ const EAI_COMPOSER_AUTOLOAD = '/home/eaiconst/eai-api/vendor/autoload.php';
 const EAI_MAIL_CONFIG = '/home/eaiconst/eai-private/mail-config.php';
 const EAI_RATE_LIMIT_DIR = '/home/eaiconst/eai-private/rate-limits';
 
+// Submission limits are shared by the contact and careers endpoints.
+const EAI_IP_DAILY_LIMIT = 3;
+const EAI_IP_BURST_LIMIT = 2;
+const EAI_NETWORK_DAILY_LIMIT = 15;
+const EAI_IDENTITY_DAILY_LIMIT = 3;
+const EAI_GLOBAL_BURST_LIMIT = 15;
+const EAI_GLOBAL_DAILY_LIMIT = 100;
+
 header('Content-Type: application/json; charset=utf-8');
 header('Cache-Control: no-store, max-age=0');
 header('X-Content-Type-Options: nosniff');
+header('X-Frame-Options: DENY');
+header('Referrer-Policy: no-referrer');
+header("Content-Security-Policy: default-src 'none'; frame-ancestors 'none'; base-uri 'none'");
 
 if (!is_file(EAI_COMPOSER_AUTOLOAD) || !is_readable(EAI_COMPOSER_AUTOLOAD)) {
     error_log('EAI mail API: Composer autoloader is missing or unreadable.');
@@ -45,16 +56,23 @@ function apiRequirePost(): void
 
 function apiRequireSameOrigin(): void
 {
-    $origin = $_SERVER['HTTP_ORIGIN'] ?? '';
-    $requestHost = strtolower(explode(':', $_SERVER['HTTP_HOST'] ?? '')[0]);
+    $origin = trim((string) ($_SERVER['HTTP_ORIGIN'] ?? ''));
+    $referer = trim((string) ($_SERVER['HTTP_REFERER'] ?? ''));
+    $source = $origin !== '' ? $origin : $referer;
+    $requestHost = strtolower((string) parse_url(
+        'https://' . ($_SERVER['HTTP_HOST'] ?? ''),
+        PHP_URL_HOST
+    ));
+    $sourceHost = strtolower((string) parse_url($source, PHP_URL_HOST));
 
-    // Non-browser clients may omit Origin. Browser submissions must be same-origin.
-    if ($origin === '') {
-        return;
+    // Legitimate browser fetches provide Origin or Referer. Requiring one blocks
+    // blind cross-site posts; it is not treated as the only bot defense.
+    if ($source === '' || $sourceHost === '' || $requestHost === '' || !hash_equals($requestHost, $sourceHost)) {
+        apiRespond(['error' => 'Origine de la requête non autorisée.'], 403);
     }
 
-    $originHost = strtolower((string) parse_url($origin, PHP_URL_HOST));
-    if ($originHost === '' || $requestHost === '' || !hash_equals($requestHost, $originHost)) {
+    $fetchSite = strtolower(trim((string) ($_SERVER['HTTP_SEC_FETCH_SITE'] ?? '')));
+    if ($fetchSite !== '' && !in_array($fetchSite, ['same-origin', 'same-site'], true)) {
         apiRespond(['error' => 'Origine de la requête non autorisée.'], 403);
     }
 }
@@ -62,6 +80,32 @@ function apiRequireSameOrigin(): void
 function apiContentLength(): int
 {
     return max(0, (int) ($_SERVER['CONTENT_LENGTH'] ?? 0));
+}
+
+function apiRequireContentType(string $expected): void
+{
+    $contentType = strtolower(trim((string) ($_SERVER['CONTENT_TYPE'] ?? '')));
+    $mediaType = trim(explode(';', $contentType, 2)[0]);
+
+    if ($mediaType === '' || !hash_equals(strtolower($expected), $mediaType)) {
+        apiRespond(['error' => 'Le type de contenu de la requête est invalide.'], 415);
+    }
+}
+
+function apiRequireHumanTiming($value): void
+{
+    if (!is_scalar($value) || !preg_match('/^\d{13}$/', (string) $value)) {
+        apiRespond(['error' => 'Veuillez actualiser la page puis réessayer.'], 400);
+    }
+
+    $nowMilliseconds = (int) floor(microtime(true) * 1000);
+    $elapsed = $nowMilliseconds - (int) $value;
+
+    // Three seconds rejects instant bot posts. Six hours leaves ample time for
+    // accessibility needs while preventing indefinitely reusable stale pages.
+    if ($elapsed < 3000 || $elapsed > 6 * 60 * 60 * 1000) {
+        apiRespond(['error' => 'Veuillez actualiser la page puis réessayer.'], 400);
+    }
 }
 
 function apiText($value, int $maxLength): string
@@ -189,46 +233,195 @@ function apiEmailTemplate(string $title, string $contentHtml): string
 HTML;
 }
 
-function apiRateLimit(string $bucket, int $maximum, int $windowSeconds): bool
+function apiEnsureRateLimitDirectory(): void
 {
     if (!is_dir(EAI_RATE_LIMIT_DIR) && !mkdir(EAI_RATE_LIMIT_DIR, 0700, true) && !is_dir(EAI_RATE_LIMIT_DIR)) {
-        error_log('EAI mail API: Unable to create the rate-limit directory.');
-        return true; // Fail open so a filesystem issue does not block legitimate leads.
+        throw new RuntimeException('Unable to create the rate-limit directory.');
     }
 
-    $ip = $_SERVER['REMOTE_ADDR'] ?? 'unknown';
-    $key = hash('sha256', $bucket . '|' . $ip);
-    $path = EAI_RATE_LIMIT_DIR . '/' . $key . '.json';
-    $handle = @fopen($path, 'c+');
+    @chmod(EAI_RATE_LIMIT_DIR, 0700);
+}
 
-    if ($handle === false || !flock($handle, LOCK_EX)) {
+function apiCleanupRateLimitFiles(): void
+{
+    $marker = EAI_RATE_LIMIT_DIR . '/.cleanup';
+    $lastCleanup = @filemtime($marker);
+    if ($lastCleanup !== false && time() - $lastCleanup < 3600) {
+        return;
+    }
+
+    $handle = @fopen($marker, 'c+');
+    if ($handle === false || !flock($handle, LOCK_EX | LOCK_NB)) {
         if (is_resource($handle)) {
             fclose($handle);
         }
-        error_log('EAI mail API: Unable to open the rate-limit state.');
-        return true;
+        return;
     }
 
-    $raw = stream_get_contents($handle);
-    $state = is_string($raw) && $raw !== '' ? json_decode($raw, true) : null;
-    $now = time();
+    clearstatcache(true, $marker);
+    $lastCleanup = @filemtime($marker);
+    if ($lastCleanup === false || time() - $lastCleanup >= 3600) {
+        $files = glob(EAI_RATE_LIMIT_DIR . '/*.json');
+        $removed = 0;
 
-    if (!is_array($state) || !isset($state['started'], $state['count']) || $now - (int) $state['started'] >= $windowSeconds) {
-        $state = ['started' => $now, 'count' => 0];
-    }
+        if (is_array($files)) {
+            foreach ($files as $file) {
+                if ($removed >= 500) {
+                    break;
+                }
 
-    $allowed = (int) $state['count'] < $maximum;
-    if ($allowed) {
-        $state['count'] = (int) $state['count'] + 1;
-        rewind($handle);
-        ftruncate($handle, 0);
-        fwrite($handle, json_encode($state));
-        fflush($handle);
+                $modified = @filemtime($file);
+                if ($modified !== false && time() - $modified > 2 * 86400 && @unlink($file)) {
+                    $removed++;
+                }
+            }
+        }
+
+        @touch($marker);
+        @chmod($marker, 0600);
     }
 
     flock($handle, LOCK_UN);
     fclose($handle);
-    @chmod($path, 0600);
+}
 
-    return $allowed;
+function apiClientIp(): string
+{
+    $ip = trim((string) ($_SERVER['REMOTE_ADDR'] ?? ''));
+    return filter_var($ip, FILTER_VALIDATE_IP) !== false ? $ip : 'unknown';
+}
+
+function apiClientNetwork(string $ip): string
+{
+    if (filter_var($ip, FILTER_VALIDATE_IP, FILTER_FLAG_IPV4) !== false) {
+        $parts = explode('.', $ip);
+        return implode('.', array_slice($parts, 0, 3)) . '.0/24';
+    }
+
+    if (filter_var($ip, FILTER_VALIDATE_IP, FILTER_FLAG_IPV6) !== false) {
+        $packed = inet_pton($ip);
+        if ($packed !== false) {
+            return substr(bin2hex($packed), 0, 16) . '/64';
+        }
+    }
+
+    return 'unknown';
+}
+
+function apiConsumeRateLimit(string $bucket, string $identifier, int $maximum, int $windowSeconds): array
+{
+    apiEnsureRateLimitDirectory();
+    apiCleanupRateLimitFiles();
+
+    $key = hash('sha256', $bucket . '|' . $identifier);
+    $path = EAI_RATE_LIMIT_DIR . '/' . $key . '.json';
+    $handle = @fopen($path, 'c+');
+
+    if ($handle === false) {
+        throw new RuntimeException('Unable to open the rate-limit state.');
+    }
+
+    if (!flock($handle, LOCK_EX)) {
+        fclose($handle);
+        throw new RuntimeException('Unable to lock the rate-limit state.');
+    }
+
+    try {
+        $raw = stream_get_contents($handle);
+        $state = is_string($raw) && $raw !== '' ? json_decode($raw, true) : null;
+        $now = time();
+
+        if (!is_array($state)
+            || !isset($state['started'], $state['count'])
+            || $now - (int) $state['started'] >= $windowSeconds
+        ) {
+            $state = ['started' => $now, 'count' => 0];
+        }
+
+        $expiresAt = (int) $state['started'] + $windowSeconds;
+        if ((int) $state['count'] >= $maximum) {
+            return [
+                'allowed' => false,
+                'retry_after' => max(1, $expiresAt - $now),
+            ];
+        }
+
+        $state['count'] = (int) $state['count'] + 1;
+        $state['updated'] = $now;
+        $encoded = json_encode($state);
+
+        if (!is_string($encoded)
+            || !rewind($handle)
+            || !ftruncate($handle, 0)
+            || fwrite($handle, $encoded) === false
+            || !fflush($handle)
+        ) {
+            throw new RuntimeException('Unable to persist the rate-limit state.');
+        }
+
+        @chmod($path, 0600);
+
+        return [
+            'allowed' => true,
+            'retry_after' => max(1, $expiresAt - $now),
+        ];
+    } finally {
+        flock($handle, LOCK_UN);
+        fclose($handle);
+    }
+}
+
+function apiEnforceRateLimit(string $bucket, string $identifier, int $maximum, int $windowSeconds): void
+{
+    try {
+        $result = apiConsumeRateLimit($bucket, $identifier, $maximum, $windowSeconds);
+    } catch (Throwable $error) {
+        error_log('EAI mail API rate-limit failure (' . $bucket . '): ' . $error->getMessage());
+        apiRespond(['error' => 'Le service est temporairement indisponible. Veuillez réessayer.'], 503);
+    }
+
+    if (!$result['allowed']) {
+        header('Retry-After: ' . (int) $result['retry_after']);
+        apiRespond(['error' => 'La limite d’envoi a été atteinte. Veuillez réessayer plus tard.'], 429);
+    }
+}
+
+function apiGuardRequest(string $contentType, int $maximumBytes): void
+{
+    apiRequirePost();
+    apiRequireSameOrigin();
+    apiRequireContentType($contentType);
+
+    if (apiContentLength() > $maximumBytes) {
+        apiRespond(['error' => 'La requête est trop volumineuse.'], 413);
+    }
+
+    // A single shared counter bounds PHP work even when an attacker rotates IPs.
+    apiEnforceRateLimit('request-global-minute', 'site', 60, 60);
+}
+
+function apiProtectSubmission(string $scope, string $email, string $phone, string $fingerprint): void
+{
+    $ip = apiClientIp();
+    $network = apiClientNetwork($ip);
+    $emailIdentity = strtolower(trim($email));
+    $phoneIdentity = preg_replace('/\D+/', '', $phone);
+    $phoneIdentity = is_string($phoneIdentity) && $phoneIdentity !== '' ? $phoneIdentity : 'unknown';
+
+    // Put narrow limits before global counters so repeated abuse from one identity
+    // cannot consume the whole site's allowance after that identity is blocked.
+    $limits = [
+        ['submission-ip-burst', 'ip|' . $ip, EAI_IP_BURST_LIMIT, 10 * 60],
+        ['submission-ip-daily', 'ip|' . $ip, EAI_IP_DAILY_LIMIT, 86400],
+        ['submission-network-daily', 'network|' . $network, EAI_NETWORK_DAILY_LIMIT, 86400],
+        ['submission-email-daily', 'email|' . $emailIdentity, EAI_IDENTITY_DAILY_LIMIT, 86400],
+        ['submission-phone-daily', 'phone|' . $phoneIdentity, EAI_IDENTITY_DAILY_LIMIT, 86400],
+        ['submission-duplicate', $scope . '|' . $fingerprint, 2, 30 * 60],
+        ['submission-global-burst', 'site', EAI_GLOBAL_BURST_LIMIT, 10 * 60],
+        ['submission-global-daily', 'site', EAI_GLOBAL_DAILY_LIMIT, 86400],
+    ];
+
+    foreach ($limits as $limit) {
+        apiEnforceRateLimit($limit[0], $limit[1], $limit[2], $limit[3]);
+    }
 }

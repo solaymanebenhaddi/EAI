@@ -4,16 +4,7 @@ declare(strict_types=1);
 
 require_once __DIR__ . '/_bootstrap.php';
 
-apiRequirePost();
-apiRequireSameOrigin();
-
-if (apiContentLength() > 32768) {
-    apiRespond(['error' => 'La requête est trop volumineuse.'], 413);
-}
-
-if (!apiRateLimit('contact', 5, 60)) {
-    apiRespond(['error' => 'Trop de requêtes. Veuillez patienter.'], 429);
-}
+apiGuardRequest('application/json', 32768);
 
 try {
     $rawBody = file_get_contents('php://input');
@@ -26,6 +17,8 @@ try {
     if (apiText($body['honeypot'] ?? '', 200) !== '') {
         apiRespond(['success' => true]);
     }
+
+    apiRequireHumanTiming($body['formStartedAt'] ?? null);
 
     $name = apiText($body['name'] ?? '', 100);
     $email = strtolower(apiText($body['email'] ?? '', 100));
@@ -55,6 +48,16 @@ try {
     if (!in_array($category, ['Résidentiel', 'Commercial'], true)) {
         apiRespond(['error' => 'Veuillez sélectionner une catégorie de projet valide.'], 400);
     }
+
+    $fingerprint = hash('sha256', implode('|', [
+        $email,
+        $normalizedPhone,
+        $city,
+        $category,
+        $type,
+        $message,
+    ]));
+    apiProtectSubmission('contact', $email, $normalizedPhone, $fingerprint);
 
     $config = apiLoadMailConfig();
     $safeName = apiEscape($name);

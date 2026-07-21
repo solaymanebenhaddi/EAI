@@ -68,21 +68,14 @@ function careersOptionalUrl(string $value): ?string
     return in_array($scheme, ['http', 'https'], true) ? $value : null;
 }
 
-apiRequirePost();
-apiRequireSameOrigin();
-
-if (apiContentLength() > 7 * 1024 * 1024) {
-    apiRespond(['error' => 'La candidature est trop volumineuse.'], 413);
-}
-
-if (!apiRateLimit('careers', 3, 60)) {
-    apiRespond(['error' => 'Trop de requêtes. Veuillez patienter.'], 429);
-}
+apiGuardRequest('multipart/form-data', 7 * 1024 * 1024);
 
 try {
     if (apiText($_POST['honeypot'] ?? '', 200) !== '') {
         apiRespond(['success' => true]);
     }
+
+    apiRequireHumanTiming($_POST['formStartedAt'] ?? null);
 
     $name = apiText($_POST['name'] ?? '', 100);
     $email = strtolower(apiText($_POST['email'] ?? '', 100));
@@ -157,6 +150,17 @@ try {
     ];
     $safeAttachmentName = 'CV_' . preg_replace('/[^A-Za-z0-9_-]/', '_', $jobId)
         . '_' . gmdate('Ymd_His') . '.' . $extension;
+
+    $fingerprint = hash('sha256', implode('|', [
+        $email,
+        $phone,
+        $jobId,
+        $experience,
+        $message,
+        $originalName,
+        (string) $cvSize,
+    ]));
+    apiProtectSubmission('careers', $email, $phone, $fingerprint);
 
     $config = apiLoadMailConfig();
     $jobTitle = $jobs[$jobId];

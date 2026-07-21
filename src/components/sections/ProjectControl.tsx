@@ -37,6 +37,7 @@ export default function ProjectControl() {
   const ecosystemRef = useRef<HTMLElement>(null)
   const contactRef = useRef<HTMLElement>(null)
   const footerRef = useRef<HTMLDivElement>(null)
+  const formStartedAtRef = useRef(0)
 
   const [form, setForm] = useState({ name: '', email: '', phone: '', city: '', category: '', type: '', msg: '', honeypot: '' })
   const [sending, setSending] = useState(false)
@@ -57,6 +58,10 @@ export default function ProjectControl() {
 
   const methodSteps = tMethod.raw('steps') as any[]
   const ecoItems = tEco.raw('items') as any[]
+
+  useEffect(() => {
+    formStartedAtRef.current = Date.now()
+  }, [])
 
   const submit = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -104,7 +109,12 @@ export default function ProjectControl() {
       const res = await fetch(endpoint, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ ...form, email: emailVal, phone: phoneVal })
+        body: JSON.stringify({
+          ...form,
+          email: emailVal,
+          phone: phoneVal,
+          formStartedAt: formStartedAtRef.current
+        })
       })
 
       const contentType = res.headers.get('content-type') || ''
@@ -120,6 +130,7 @@ export default function ProjectControl() {
       
       setSent(true)
       setForm({ name: '', email: '', phone: '', city: '', category: '', type: '', msg: '', honeypot: '' })
+      formStartedAtRef.current = Date.now()
       setTimeout(() => setSent(false), 4000)
     } catch (err: any) {
       setErrorMsg(err.message || 'Une erreur est survenue lors de l’envoi. Veuillez réessayer.')

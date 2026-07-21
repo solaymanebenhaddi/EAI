@@ -1,4 +1,5 @@
 Options -Indexes
+LimitRequestBody 7340032
 
 <Files "_bootstrap.php">
   Require all denied
