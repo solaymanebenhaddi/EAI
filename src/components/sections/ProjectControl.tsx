@@ -8,8 +8,8 @@ import { siteData } from "@/data/site"
 import { Button } from "@/components/ui/Button"
 import { cn } from "@/lib/utils"
 import { useTranslations } from "next-intl"
-import { Link } from "@/i18n/routing"
 import MediaPressSection from "./MediaPressSection"
+import SiteFooter from "@/components/layout/SiteFooter"
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -36,7 +36,6 @@ export default function ProjectControl() {
   const methodRef = useRef<HTMLElement>(null)
   const ecosystemRef = useRef<HTMLElement>(null)
   const contactRef = useRef<HTMLElement>(null)
-  const footerRef = useRef<HTMLDivElement>(null)
   const formStartedAtRef = useRef(0)
 
   const [form, setForm] = useState({ name: '', email: '', phone: '', city: '', category: '', type: '', msg: '', honeypot: '' })
@@ -50,7 +49,6 @@ export default function ProjectControl() {
   const tMethod = useTranslations('Method')
   const tEco = useTranslations('Ecosystem')
   const tContact = useTranslations('Contact')
-  const tFooter = useTranslations('Footer')
 
   const methodTitleLines = tMethod('title').split('\n')
   const ecoTitleLines = tEco('title').split('\n')
@@ -180,17 +178,6 @@ export default function ProjectControl() {
         },
       })
 
-      // Footer
-      gsap.from(footerRef.current, {
-        y: 30,
-        opacity: 0,
-        duration: 0.8,
-        ease: "power3.out",
-        scrollTrigger: {
-          trigger: footerRef.current,
-          start: "top 95%",
-        },
-      })
     })
 
     return () => ctx.revert()
@@ -442,81 +429,7 @@ export default function ProjectControl() {
         </div>
       </section>
 
-      {/* ═══════════════════════════════════════════
-          FOOTER
-          ═══════════════════════════════════════════ */}
-      <footer ref={footerRef} className="bg-[var(--color-eai-charcoal)] text-[var(--color-eai-paper)] px-6 md:px-12 py-10 grid grid-cols-2 md:grid-cols-4 gap-8 text-[11px] relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-white/5 to-transparent pointer-events-none" />
-        
-        <div className="relative z-10">
-          <span className="text-[var(--color-eai-olive)] uppercase tracking-[0.16em] font-semibold text-[10px]">{tFooter('brand')}</span>
-          <p className="text-white/50 mt-4 leading-relaxed text-xs max-w-[250px]">
-            {tFooter('desc')}
-          </p>
-        </div>
-        
-        <div className="hidden md:block relative z-10">
-          <span className="text-[var(--color-eai-olive)] uppercase tracking-[0.16em] font-semibold text-[10px]">{tFooter('navTitle')}</span>
-          <div className="mt-4 flex flex-col gap-2 text-white/60 text-xs">
-            {[
-              { label: 'Accueil', id: 'hero' },
-              { label: 'Expertises', id: 'expertises' },
-              { label: 'Méthode', id: 'methode' },
-              { label: 'Contact', id: 'contact' }
-            ].map((link) => (
-              <span 
-                key={link.label} 
-                onClick={() => {
-                  const element = document.getElementById(link.id);
-                  if (element) {
-                    element.scrollIntoView({ behavior: 'smooth' });
-                  } else if (link.id === 'hero') {
-                    window.scrollTo({ top: 0, behavior: 'smooth' });
-                  }
-                }} 
-                className="hover:text-[var(--color-eai-olive)] transition-colors cursor-pointer w-fit font-semibold"
-              >
-                {link.label}
-              </span>
-            ))}
-            <Link href="/careers" className="hover:text-[var(--color-eai-olive)] transition-colors cursor-pointer w-fit no-underline">Carrières</Link>
-          </div>
-        </div>
-        
-        <div className="hidden md:block relative z-10">
-          <span className="text-[var(--color-eai-olive)] uppercase tracking-[0.16em] font-semibold text-[10px]">{tFooter('expTitle')}</span>
-          <div className="mt-4 flex flex-col gap-2 text-white/60 text-xs">
-            {['Architecture d\'intérieur', 'Urbanisme', 'BIM Consulting', 'Topographie', 'Études de faisabilité'].map((l) => (
-              <span key={l} className="cursor-default">{l}</span>
-            ))}
-          </div>
-        </div>
-        
-        <div className="relative z-10">
-          <span className="text-[var(--color-eai-olive)] uppercase tracking-[0.16em] font-semibold text-[10px]">{tFooter('contactTitle')}</span>
-          <div className="mt-4 flex flex-col gap-2 text-white/60 text-xs font-sans">
-            <a href={`mailto:${siteData.contact.email}`} className="hover:text-[var(--color-eai-olive)] transition-colors w-fit">{siteData.contact.email}</a>
-            <div className="flex flex-col gap-1">
-              <a href="tel:+212666798536" className="hover:text-[var(--color-eai-olive)] transition-colors w-fit">+212 666 798536</a>
-              <a href="tel:+212688018863" className="hover:text-[var(--color-eai-olive)] transition-colors w-fit">+212 688 01 88 63</a>
-              <a href="tel:+212520198738" className="hover:text-[var(--color-eai-olive)] transition-colors w-fit">+212 520 198738</a>
-            </div>
-            <span>{siteData.contact.address}</span>
-          </div>
-        </div>
-        
-        <div className="col-span-2 md:col-span-4 border-t border-white/10 pt-6 mt-4 text-white/40 text-[10px] relative z-10 flex flex-col md:flex-row justify-between items-center gap-4">
-          <div className="flex gap-4">
-            {siteData.socials.map((s) => (
-              <a key={s.platform} href={s.url} target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors" aria-label={s.platform}>
-                {s.platform}
-              </a>
-            ))}
-          </div>
-          <span>© {new Date().getFullYear()} {tFooter('brand')}. {tFooter('rights')}</span>
-          <span className="tracking-[0.14em] uppercase text-[9px]">{tFooter('slogan')}</span>
-        </div>
-      </footer>
+      <SiteFooter />
     </>
   )
 }
